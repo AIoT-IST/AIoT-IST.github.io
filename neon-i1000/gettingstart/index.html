@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Connected Factory :: Connected Factory</title>
+    <title>Getting Start :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1583401226" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/neon-i1000/gettingstart/">
     <nav id="sidebar" class="">
 
 
@@ -150,7 +150,7 @@
   
     
     <li data-nav-id="/neon-i1000/" title="Neon-i1000" class="dd-item 
-        
+        parent
         
         
         ">
@@ -177,8 +177,8 @@
   
     
     <li data-nav-id="/neon-i1000/gettingstart/" title="Getting Start" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/neon-i1000/gettingstart/">
@@ -223,28 +223,84 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Connected Factory</a> > <a href='/neon-i1000/'>Neon-i1000</a> > Getting Start
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Getting Start
+            </h1>
+          
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
+
+	<p>This tutorial will guide you how to getting start with MCM-204 from un-boxing.</p>
+<p><img src="/MCM-204/gettingstart/images/MCM-204_L1.jpg?classes=shadow" alt="MCM204">
+<img src="/MCM-204/gettingstart/images/magic.gif?classes=shadow" alt="Magic"></p>
+<h2 id="basic-configuration">Basic configuration</h2>
+<p>When building the website, you can set a theme by using <code>--theme</code> option. However, we suggest you modify the configuration file (<code>config.toml</code>) and set the theme as the default. You can also add the <code>[outputs]</code> section to enable the search functionality.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># Change the default theme to be use when building the site with Hugo</span>
+<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;hugo-theme-learn&#34;</span>
+
+<span style="color:#75715e"># For search functionality</span>
+[<span style="color:#a6e22e">outputs</span>]
+<span style="color:#a6e22e">home</span> = [ <span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span>]
+</code></pre></div><h2 id="create-your-first-chapter-page">Create your first chapter page</h2>
+<p>Chapters are pages that contain other child pages. It has a special layout style and usually just contains a <em>chapter name</em>, the <em>title</em> and a <em>brief abstract</em> of the section.</p>
+<pre><code></code></pre>
+
+
+
+
+<footer class=" footline" >
 	
-		<h1>ADLINK-IST Connected Factory</h1>
-		<p>
-		  Discover the sharing of technical document and the common question, you could navigate by clicking the left menu or simply type the keyword to search!
-		</p>		
-	
-  
+</footer>
+
         
         </div> 
         
@@ -313,6 +369,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -327,6 +384,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -350,6 +408,8 @@
 
 	 
 	 
+		
+			<a class="nav nav-prev" href="/neon-i1000/" title="Neon-i1000"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/mcm-204/" title="MCM-204" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -382,4 +442,3 @@
 
   </body>
 </html>
-
