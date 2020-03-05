@@ -3,31 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/mcm-204/</loc>
+    <loc>https://aiot-ist.github.io/mcm-204/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/neon-i1000/</loc>
+    <loc>https://aiot-ist.github.io/neon-i1000/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/mcm-204/gettingstart/</loc>
+    <loc>https://aiot-ist.github.io/mcm-204/gettingstart/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/neon-i1000/gettingstart/</loc>
+    <loc>https://aiot-ist.github.io/neon-i1000/gettingstart/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://aiot-ist.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://aiot-ist.github.io/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://aiot-ist.github.io/tags/</loc>
   </url>
   
 </urlset>
