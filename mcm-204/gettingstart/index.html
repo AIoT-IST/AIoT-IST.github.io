@@ -12,18 +12,18 @@
     <title>Getting Start :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1583402415" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1583402415" rel="stylesheet">
-    <link href="/css/hybrid.css?1583402415" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1583402415" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1583402415" rel="stylesheet">
-    <link href="/css/auto-complete.css?1583402415" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1583402415" rel="stylesheet">
-    <link href="/css/theme.css?1583402415" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1583402415" rel="stylesheet">
+    <link href="/css/nucleus.css?1583462666" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1583462666" rel="stylesheet">
+    <link href="/css/hybrid.css?1583462666" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583462666" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583462666" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583462666" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1583462666" rel="stylesheet">
+    <link href="/css/theme.css?1583462666" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583462666" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1583402415"></script>
+    <script src="/js/jquery-3.3.1.min.js?1583462666"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1583402415"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1583402415"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1583462666"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1583462666"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1583402415"></script>
+<script type="text/javascript" src="/js/search.js?1583462666"></script>
 
     
   </div>
@@ -119,6 +119,30 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mcm-204/faq/" title="FAQ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mcm-204/faq/">
+          FAQ
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -143,42 +167,28 @@
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/neon-i1000/gettingstart/" title="Getting Start" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/neon-i1000/gettingstart/">
-          Getting Start
-          
-      </a>
-      
               
     </li>
   
  
 
-            
           
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/neon-i2000/" title="Neon-i2000" class="dd-item 
         
-        </ul>
+        
+        
+        ">
+      <a href="/neon-i2000/">
+          Neon-i2000
+          
+      </a>
+      
               
     </li>
   
@@ -193,7 +203,8 @@
 
     
     <section id="footer">
-      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+      <p>Built with <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/matcornic/hugo-theme-learn">learn theme</a></p>
+<p>Copyright 2020, <a href="https://www.adlinktech.com">ADLINK IST Connected Factory</a></p>
 
     </section>
   </div>
@@ -266,17 +277,12 @@
 	<p>This tutorial will guide you how to getting start with MCM-204 from un-boxing.</p>
 <p><img src="/MCM-204/gettingstart/images/MCM-204_L1.jpg?classes=shadow" alt="MCM204">
 <img src="/MCM-204/gettingstart/images/magic.gif?classes=shadow" alt="Magic"></p>
-<h2 id="basic-configuration">Basic configuration</h2>
-<p>When building the website, you can set a theme by using <code>--theme</code> option. However, we suggest you modify the configuration file (<code>config.toml</code>) and set the theme as the default. You can also add the <code>[outputs]</code> section to enable the search functionality.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># Change the default theme to be use when building the site with Hugo</span>
-<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;hugo-theme-learn&#34;</span>
+<h2 id="get-device-information-by-restful-api">Get Device information by RESTFul API</h2>
+<p>Getting System Info</p>
+<pre><code># CURL
+hugo -X GET -H &quot;Accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: Basic [[basicHash]]&quot; &quot;http://169.254.1.1:6166/system&quot;
 
-<span style="color:#75715e"># For search functionality</span>
-[<span style="color:#a6e22e">outputs</span>]
-<span style="color:#a6e22e">home</span> = [ <span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span>]
-</code></pre></div><h2 id="create-your-first-chapter-page">Create your first chapter page</h2>
-<p>Chapters are pages that contain other child pages. It has a special layout style and usually just contains a <em>chapter name</em>, the <em>title</em> and a <em>brief abstract</em> of the section.</p>
-<pre><code></code></pre>
+</code></pre>
 
 
 
@@ -344,9 +350,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -354,21 +357,6 @@
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -380,6 +368,38 @@
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -396,7 +416,7 @@
 			<a class="nav nav-prev" href="/mcm-204/" title="MCM-204"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/neon-i1000/" title="Neon-i1000" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/mcm-204/faq/" title="FAQ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -406,19 +426,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1583402415"></script>
-    <script src="/js/perfect-scrollbar.min.js?1583402415"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1583402415"></script>
-    <script src="/js/jquery.sticky.js?1583402415"></script>
-    <script src="/js/featherlight.min.js?1583402415"></script>
-    <script src="/js/highlight.pack.js?1583402415"></script>
+    <script src="/js/clipboard.min.js?1583462666"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583462666"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583462666"></script>
+    <script src="/js/jquery.sticky.js?1583462666"></script>
+    <script src="/js/featherlight.min.js?1583462666"></script>
+    <script src="/js/highlight.pack.js?1583462666"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1583402415"></script>
-    <script src="/js/learn.js?1583402415"></script>
-    <script src="/js/hugo-learn.js?1583402415"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1583462666"></script>
+    <script src="/js/learn.js?1583462666"></script>
+    <script src="/js/hugo-learn.js?1583462666"></script>
 
-    <link href="/mermaid/mermaid.css?1583402415" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1583402415"></script>
+    <link href="/mermaid/mermaid.css?1583462666" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583462666"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

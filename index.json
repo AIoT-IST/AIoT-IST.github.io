@@ -14,18 +14,25 @@
 	"content": "ADLINK IST Connected Factory Neon-i1000 Discover how to use the Neon-i1000 and find the releated questions.\n"
 },
 {
+	"uri": "https://aiot-ist.github.io/neon-i2000/",
+	"title": "Neon-i2000",
+	"tags": [],
+	"description": "",
+	"content": "ADLINK IST Connected Factory Neon-i2000 Discover how to use the Neon-i2000 and find the releated questions.\n"
+},
+{
 	"uri": "https://aiot-ist.github.io/mcm-204/gettingstart/",
 	"title": "Getting Start",
 	"tags": [],
 	"description": "",
-	"content": "This tutorial will guide you how to getting start with MCM-204 from un-boxing.\nBasic configuration When building the website, you can set a theme by using --theme option. However, we suggest you modify the configuration file (config.toml) and set the theme as the default. You can also add the [outputs] section to enable the search functionality.\n# Change the default theme to be use when building the site with Hugo theme = \u0026#34;hugo-theme-learn\u0026#34; # For search functionality [outputs] home = [ \u0026#34;HTML\u0026#34;, \u0026#34;RSS\u0026#34;, \u0026#34;JSON\u0026#34;] Create your first chapter page Chapters are pages that contain other child pages. It has a special layout style and usually just contains a chapter name, the title and a brief abstract of the section.\n"
+	"content": "This tutorial will guide you how to getting start with MCM-204 from un-boxing.\nGet Device information by RESTFul API Getting System Info\n# CURL hugo -X GET -H \u0026quot;Accept: application/json\u0026quot; -H \u0026quot;Content-Type: application/json\u0026quot; -H \u0026quot;Authorization: Basic [[basicHash]]\u0026quot; \u0026quot;http://169.254.1.1:6166/system\u0026quot; "
 },
 {
-	"uri": "https://aiot-ist.github.io/neon-i1000/gettingstart/",
-	"title": "Getting Start",
+	"uri": "https://aiot-ist.github.io/mcm-204/faq/",
+	"title": "FAQ",
 	"tags": [],
 	"description": "",
-	"content": "This tutorial will guide you how to getting start with MCM-204 from un-boxing.\nBasic configuration When building the website, you can set a theme by using --theme option. However, we suggest you modify the configuration file (config.toml) and set the theme as the default. You can also add the [outputs] section to enable the search functionality.\n# Change the default theme to be use when building the site with Hugo theme = \u0026#34;hugo-theme-learn\u0026#34; # For search functionality [outputs] home = [ \u0026#34;HTML\u0026#34;, \u0026#34;RSS\u0026#34;, \u0026#34;JSON\u0026#34;] Create your first chapter page Chapters are pages that contain other child pages. It has a special layout style and usually just contains a chapter name, the title and a brief abstract of the section.\n"
+	"content": "Frequently asked questions (FAQ) about MCM-204\nGeneral   What is the default IP address? The default IP is the fixed link local IP address 169.254.1.1   Programming   What kinds of API supported?   RESTFul API : You could get most everything via this.   C/C++ API : Used for get rawdata more effiency.     "
 },
 {
 	"uri": "https://aiot-ist.github.io/categories/",
