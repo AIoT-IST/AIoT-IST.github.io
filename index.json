@@ -35,15 +35,15 @@
 	"content": "Frequently asked questions (FAQ) about MCM-204\nGeneral   What is the default IP address? The default IP is the fixed link local IP address 169.254.1.1   Programming   What kinds of API supported?   RESTFul API : You could get most everything via this.   C/C++ API : Used for getting rawdata more effiency.     "
 },
 {
-	"uri": "https://aiot-ist.github.io/categories/",
-	"title": "Categories",
+	"uri": "https://aiot-ist.github.io/",
+	"title": "ADLINK-IST Connected Factory",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "ADLINK-IST Connected Factory Discover the sharing of technical documents and the common questions. You could navigate from the menu or simply type the keyword to search!\n "
 },
 {
-	"uri": "https://aiot-ist.github.io/",
-	"title": "Connected Factory",
+	"uri": "https://aiot-ist.github.io/categories/",
+	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
