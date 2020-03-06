@@ -32,7 +32,7 @@
 	"title": "FAQ",
 	"tags": [],
 	"description": "",
-	"content": "Frequently asked questions (FAQ) about MCM-204\nGeneral   What is the default IP address? The default IP is the fixed link local IP address 169.254.1.1   Programming   What kinds of API supported?   RESTFul API : You could get most everything via this.   C/C++ API : Used for get rawdata more effiency.     "
+	"content": "Frequently asked questions (FAQ) about MCM-204\nGeneral   What is the default IP address? The default IP is the fixed link local IP address 169.254.1.1   Programming   What kinds of API supported?   RESTFul API : You could get most everything via this.   C/C++ API : Used for getting rawdata more effiency.     "
 },
 {
 	"uri": "https://aiot-ist.github.io/categories/",
