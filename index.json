@@ -28,6 +28,13 @@
 	"content": "This tutorial will guide you how to getting start with MCM-204 from un-boxing.\nGet Device information by RESTFul API Getting System Info\n# CURL hugo -X GET -H \u0026quot;Accept: application/json\u0026quot; -H \u0026quot;Content-Type: application/json\u0026quot; -H \u0026quot;Authorization: Basic [[basicHash]]\u0026quot; \u0026quot;http://169.254.1.1:6166/system\u0026quot; Data will be responsed with JSON format.\nPlease make sure you have connected MCM-204 to your PC/Notebook via ethernet cable.\n "
 },
 {
+	"uri": "https://aiot-ist.github.io/neon-i1000/howtoflashimage/",
+	"title": "How to Flash Image?",
+	"tags": [],
+	"description": "",
+	"content": "Below video is the procedure for NEON-i1000 flash\n  "
+},
+{
 	"uri": "https://aiot-ist.github.io/mcm-204/faq/",
 	"title": "FAQ",
 	"tags": [],
