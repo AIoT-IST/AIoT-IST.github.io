@@ -32,7 +32,7 @@
 	"title": "How to flash image?",
 	"tags": [],
 	"description": "",
-	"content": "It needs to go force recovery mode first before flash image. Here’s the video which guild you how to flash image.\nStep 1: Download image first from your host pc with Ubuntu Download link: https://drive.google.com/open?id=12XSRVi0IwQ5S7I-T75rbN5Aq4Quk0CjN\nStep 2: Follow video and flash image Video link: https://drive.google.com/open?id=1Mu40rDiNP1Jggak3bWoyDDgGCxQXEVyX\n  Power on Neon-i1000.\n  Enter force recovery mode.\nYou can refer to pin define below, and try to enter recover mode.  Step 1: Hold recovery btn (short pin5+pin6) Step 2: Press reset btn (short pin3+pint4)     Below video it the procedure for NEON-i1000 flash   "
+	"content": "It needs to go force recovery mode first before flash image. Here’s the video which guild you how to flash image.\nStep 1: Download image first from your host pc with Ubuntu Download link: https://drive.google.com/open?id=12XSRVi0IwQ5S7I-T75rbN5Aq4Quk0CjN\nStep 2: Follow video and flash image Video link: https://drive.google.com/open?id=1Mu40rDiNP1Jggak3bWoyDDgGCxQXEVyX\n  Power on Neon-i1000.\n  Enter force recovery mode.\nYou can refer to pin define below, and try to enter recover mode.  Step 1: Hold recovery btn (short pin5+pin6) Step 2: Press reset btn (short pin3+pint4)     Below video is the procedure for NEON-i1000 flash   "
 },
 {
 	"uri": "https://aiot-ist.github.io/mcm-204/faq/",
