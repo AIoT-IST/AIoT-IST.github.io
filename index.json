@@ -25,7 +25,7 @@
 	"title": "Getting Start",
 	"tags": [],
 	"description": "",
-	"content": "This tutorial will guide you how to getting start with MCM-204 from un-boxing.\nGet Device information by RESTFul API Getting System Info\n# CURL hugo -X GET -H \u0026quot;Accept: application/json\u0026quot; -H \u0026quot;Content-Type: application/json\u0026quot; -H \u0026quot;Authorization: Basic [[basicHash]]\u0026quot; \u0026quot;http://169.254.1.1:6166/system\u0026quot; Data will be responsed with JSON format.\nPlease make sure you have connected MCM-204 to your PC/Notebook via ethernet cable.\n "
+	"content": "This tutorial will guide you how to getting start with MCM-204 from un-boxing.\nStep 1: Connect Power. Connect the positive and negative wires from a 9 to 30 VDC power source to the terminal block. Step 2: Connect MCM-204 to PC or labtop. Connect MCM-204 to the PC or labtop by ethernet cable Please make sure the PC/labtop network mode is under DHCP or static IP set at 169.254.x.x\n Step 3: Open the web browser to access the build-in web console. Open the web browser (chrome is recommanded) to access http://169.254.1.1 , then the built-in web console will show up.\nOnce acess MCM-204 web console sucessfully, the page will displayed like below. The default username is administrator and password is Adlink6166, after fill in these required information then click LOGIN to login to the web console. Step 4: Device Setting Click menu Device Setting to enter the device setting page. You could control the analog input setting and customize what kind of data to display at this page. You could simply click Apply to apply the default setting at this tutorial.\nAfter done, there will pop up a successful message to notify.\nStep 5: Data Capture Click menu Data Capture to enter the data display page. Simply click refresh button, then all the customized analog data type set at last step will be displayed at this page, if the data include the Voltage data type, you could click Draw to draw the voltage chart.\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/neon-i1000/howtoflashimage/",
@@ -60,7 +60,7 @@
 	"title": "FAQ",
 	"tags": [],
 	"description": "",
-	"content": "Frequently asked questions (FAQ) about MCM-204\nGeneral   What is the default IP address? The default IP is the fixed link local IP address 169.254.1.1   Programming   What kinds of API supported?   RESTFul API : You could get most everything via this.   C/C++ API : Used for getting rawdata more effiency.     "
+	"content": "Frequently asked questions (FAQ) about MCM-204\nGeneral   What is the default IP address? The default IP is the fixed link local IP address 169.254.1.1  How to connect by hostname? The connection via hostname relies on DNS service, please make sure the DNS service is functional.   Programming   What kinds of API supported?   RESTFul API : You could get most everything via this.   C/C++ API : Used for getting rawdata more effiency.     "
 },
 {
 	"uri": "https://aiot-ist.github.io/news/mcm/20200311/",

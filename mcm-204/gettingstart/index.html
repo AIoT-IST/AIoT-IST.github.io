@@ -12,18 +12,18 @@
     <title>Getting Start :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1583915037" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1583915037" rel="stylesheet">
-    <link href="/css/hybrid.css?1583915037" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1583915037" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1583915037" rel="stylesheet">
-    <link href="/css/auto-complete.css?1583915037" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1583915037" rel="stylesheet">
-    <link href="/css/theme.css?1583915037" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1583915037" rel="stylesheet">
+    <link href="/css/nucleus.css?1583995389" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1583995389" rel="stylesheet">
+    <link href="/css/hybrid.css?1583995389" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583995389" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583995389" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583995389" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1583995389" rel="stylesheet">
+    <link href="/css/theme.css?1583995389" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583995389" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1583915037"></script>
+    <script src="/js/jquery-3.3.1.min.js?1583995389"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1583915037"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1583915037"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1583995389"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1583995389"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1583915037"></script>
+<script type="text/javascript" src="/js/search.js?1583995389"></script>
 
     
   </div>
@@ -430,15 +430,24 @@
 
 	<p>This tutorial will guide you how to getting start with MCM-204 from un-boxing.</p>
 <p><img src="/MCM-204/gettingstart/images/MCM-204_L1.jpg?classes=shadow" alt="MCM204"></p>
-<h2 id="get-device-information-by-restful-api">Get Device information by RESTFul API</h2>
-<p>Getting System Info</p>
-<pre><code># CURL
-hugo -X GET -H &quot;Accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: Basic [[basicHash]]&quot; &quot;http://169.254.1.1:6166/system&quot;
-</code></pre><p>Data will be responsed with JSON format.</p>
+<h3 id="step-1-connect-power">Step 1: Connect Power.</h3>
+<p>Connect the positive and negative wires from a 9 to 30 VDC power source to the terminal block.
+<img src="/MCM-204/gettingstart/images/connectPower.jpg" alt="ConnectPower"></p>
+<h3 id="step-2-connect-mcm-204-to-pc-or-labtop">Step 2: Connect MCM-204 to PC or labtop.</h3>
+<p>Connect MCM-204 to the PC or labtop by <strong>ethernet cable</strong>
 
-<div class="notices note" ><p>Please make sure you have connected MCM-204 to your PC/Notebook via ethernet cable.</p>
+<div class="notices note" ><p>Please make sure the PC/labtop network mode is under DHCP or static IP set at 169.254.x.x</p>
 </div>
-
+</p>
+<h3 id="step-3-open-the-web-browser-to-access-the-build-in-web-console">Step 3: Open the web browser to access the build-in web console.</h3>
+<p>Open the web browser (chrome is recommanded) to access http://169.254.1.1 , then the built-in web console will show up.</p>
+<p>Once acess MCM-204 web console sucessfully, the page will displayed like below. The default <em>username</em> is administrator and <em>password</em> is Adlink6166, after fill in these required information then click <strong>LOGIN</strong> to login to the web console.
+<img src="/MCM-204/gettingstart/images/webconsole.PNG" alt="webconsole"></p>
+<h3 id="step-4-device-setting">Step 4: Device Setting</h3>
+<p>Click menu <strong>Device Setting</strong> to enter the device setting page. You could control the analog input setting and customize what kind of data to display at this page. You could simply click <strong>Apply</strong> to apply the default setting at this tutorial.</p>
+<p>After done, there will pop up a successful message to notify.</p>
+<h3 id="step-5-data-capture">Step 5: Data Capture</h3>
+<p>Click menu <strong>Data Capture</strong> to enter the data display page. Simply click <strong>refresh</strong> button, then all the customized analog data type set at last step will be displayed at this page, if the data include the <em>Voltage</em> data type, you could click <strong>Draw</strong> to draw the voltage chart.</p>
 
 
 
@@ -669,19 +678,19 @@ hugo -X GET -H &quot;Accept: application/json&quot; -H &quot;Content-Type: appli
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1583915037"></script>
-    <script src="/js/perfect-scrollbar.min.js?1583915037"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1583915037"></script>
-    <script src="/js/jquery.sticky.js?1583915037"></script>
-    <script src="/js/featherlight.min.js?1583915037"></script>
-    <script src="/js/highlight.pack.js?1583915037"></script>
+    <script src="/js/clipboard.min.js?1583995389"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583995389"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583995389"></script>
+    <script src="/js/jquery.sticky.js?1583995389"></script>
+    <script src="/js/featherlight.min.js?1583995389"></script>
+    <script src="/js/highlight.pack.js?1583995389"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1583915037"></script>
-    <script src="/js/learn.js?1583915037"></script>
-    <script src="/js/hugo-learn.js?1583915037"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1583995389"></script>
+    <script src="/js/learn.js?1583995389"></script>
+    <script src="/js/hugo-learn.js?1583995389"></script>
 
-    <link href="/mermaid/mermaid.css?1583915037" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1583915037"></script>
+    <link href="/mermaid/mermaid.css?1583995389" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583995389"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
