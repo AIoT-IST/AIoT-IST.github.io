@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>MCM-204 :: Connected Factory</title>
+    <title>Custom Algorithm :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1584440267" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/mcm-204/">
+  <body class="" data-url="/mcm-204/customalgorithm/">
     <nav id="sidebar" class="">
 
 
@@ -77,7 +77,7 @@
     
     <li data-nav-id="/mcm-204/" title="MCM-204" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/mcm-204/">
@@ -127,8 +127,8 @@
   
     
     <li data-nav-id="/mcm-204/customalgorithm/" title="Custom Algorithm" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/mcm-204/customalgorithm/">
@@ -417,7 +417,13 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > MCM-204
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/mcm-204/'>MCM-204</a> > Custom Algorithm
+          
+         
           
          
           
@@ -433,9 +439,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Custom Algorithm
+            </h1>
           
 
         
@@ -443,9 +452,54 @@
 
 
 
-	<h3 id="adlink-ist-connected-factory">ADLINK IST Connected Factory</h3>
-<h1 id="mcm-204">MCM-204</h1>
-<p>Discover how to use the MCM-204 and find the releated questions.</p>
+	<p>You could deploy your own algorithm at MCM-204.</p>
+<p>This tutorial will guide you how to build your own algorithm and deploy to MCM-204</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><strong>Operating System</strong> :       Ubuntu 18.04 installed and up-to date</li>
+</ul>
+<hr>
+<h3 id="step-1-download-arm-gcc-tool-chain-and-examples">Step 1: Download ARM gcc tool chain and examples.</h3>
+<p>Please click below link to download zip file compressed of ARM gcc tool chain and examples at Ubuntu.</p>
+<p>Download link: <a href="https://adlinkdxstorage.blob.core.windows.net/file/CustomAlgorithm.zip" title="Title">ARM tool chain with examples</a></p>
+<p>After downloaded, please extract it, then there will be a ARM tool chain folder and a sample folder called CalRMS.</p>
+<p><img src="/MCM-204/CustomAlgorithm/images/customalgorithm_files.png" alt="folder"></p>
+<h3 id="step-2-compile-sample">Step 2: Compile sample.</h3>
+<p>Extract the downloaded file at Step 1.</p>
+<pre><code>$ unzip CustomAlgorithm.zip
+</code></pre><p>Intall make, it&rsquo;s not installed by default.</p>
+<pre><code>$ sudo apt install make
+</code></pre><p>Change directory to the CalRMS</p>
+<pre><code>$ cd CalRMS
+</code></pre><p>Build .so file from sample.</p>
+<pre><code>$ make
+</code></pre><p>The customAlgo.so is build at current directory, you could use this file to upload to MCM-204.</p>
+<pre><code>$ ls
+customAlgo.c  customAlgo.h  customAlgo.o  customAlgo.so  Makefile
+</code></pre><h3 id="step-3-deploy-the-so-file-to-mcm-204">Step 3: Deploy the .so file to MCM-204</h3>
+<p>Once you completed above steps, you will get customAlgo.so. What we need to do next is deploy it to the MCM-204.
+Log in to MCM-204 web portal, if you don&rsquo;t know how to login to web portal, you could click thie <a href="https://aiot-ist.github.io/mcm-204/gettingstart/">link</a> to getting start page.</p>
+<p>After you login to web portal, then click System Setting menu.
+<img src="/MCM-204/CustomAlgorithm/images/menu_setting.png" alt="menu_setting"></p>
+<p>Scroll down to the bottom of page, then find the <strong>Customization library Upload</strong> section then click <strong>Choose File</strong>.
+<img src="/MCM-204/CustomAlgorithm/images/customalgorithm_choosefile.png" alt="menu_setting">
+After choose the customAlgo.so, simply click <strong>UPLOAD</strong> to upload it to the MCM-204
+<img src="/MCM-204/CustomAlgorithm/images/customalgorithm_upload.png" alt="menu_setting"></p>
+<hr>
+<h2 id="programming">Programming</h2>
+<ul>
+<li>
+<h4 id="what-kinds-of-api-supported">What kinds of API supported?</h4>
+<ul>
+<li>
+<h5 id="restful-api--you-could-get-most-everything-via-this">RESTFul API : You could get most everything via this.</h5>
+</li>
+<li>
+<h5 id="cc-api--used-for-getting-rawdata-more-effiency">C/C++ API : Used for getting rawdata more effiency.</h5>
+</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -455,8 +509,6 @@
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -523,6 +575,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -538,6 +591,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -680,10 +736,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="ADLINK-IST Connected Factories"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/mcm-204/gettingstart/" title="Getting Start"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/mcm-204/gettingstart/" title="Getting Start" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/mcm-204/faq/" title="FAQ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
