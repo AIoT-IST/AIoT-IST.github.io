@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://aiot-ist.github.io/eos-iseries/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/mcm-204/</loc>
   </url>
   
@@ -16,6 +20,10 @@
   
   <url>
     <loc>https://aiot-ist.github.io/mcm-204/gettingstart/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/eos-iseries/gettingstart/</loc>
   </url>
   
   <url>
