@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: Connected Factory</title>
+    <title>Getting start with Yolov3 :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1584698326" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/categories/">
+  <body class="" data-url="/eos-iseries/gettingstart/">
     <nav id="sidebar" class="">
 
 
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/eos-iseries/" title="EOS-iSeries" class="dd-item 
-        
+        parent
         
         
         ">
@@ -103,8 +103,8 @@
   
     
     <li data-nav-id="/eos-iseries/gettingstart/" title="Getting start with Yolov3" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/eos-iseries/gettingstart/">
@@ -489,8 +489,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -501,7 +499,13 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > Categories
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/eos-iseries/'>EOS-iSeries</a> > Getting start with Yolov3
+          
+         
           
          
           
@@ -509,13 +513,6 @@
                  
                   </span>
                 </div>
-                
-                    <div class="progress">
-    <div class="wrapper">
-
-    </div>
-</div>
-
                 
               </div>
             </div>
@@ -528,7 +525,7 @@
           
             <h1>
               
-              Categories
+              Getting start with Yolov3
             </h1>
           
 
@@ -537,11 +534,75 @@
 
 
 
+	<p>This tutorial will guide you how to getting start with EOS-iSeries from un-boxing.</p>
+<h3 id="step-1-hardware-wiring">Step 1: Hardware wiring</h3>
+<ol>
+<li>Connect the peripherals, keyboard, mouse, monitor and cameras.</li>
+<li>Connect 110V AC power source to the terminal block</li>
+<li>Power on
+<img src="/EOS-iSeries/GettingStart/images/EOS-iX_Hardware_wiring.gif" alt="hardware wiring"></li>
+</ol>
+<h3 id="step-2-run-inference-with-different-source">Step 2: Run inference with different source</h3>
+<p>The path of inference sample locates on the C:\Users\user\Desktop\ADLINK.
+You can select image, video, webcam or Basler GigE camera as inference source.</p>
+<p>Open <em>Terminal</em> and paste commands below:</p>
+<ul>
+<li><strong>Image</strong></li>
+</ul>
+<pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
+yolo_console_dll.exe data/coco.names yolov3.cfg yolov3.weights C:\Users\user\Desktop\ADLINK\darknet-For_basler_camera\data\dog.jpg
+</code></pre>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/D7IFtSARp3Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 
+
+<div class="notices tip" ><p>Terminate program by close the <em>Terminal</em> or ctrl+c.</p>
+</div>
 
 <ul>
-	
+<li>
+<p><strong>Video</strong></p>
+<pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
+yolo_console_dll.exe data/coco.names yolov3.cfg yolov3.weights test.mp4
+</code></pre>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/7VWZjYYtapo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+</li>
+<li>
+<p><strong>Webcam</strong></p>
+<pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
+yolo_console_dll.exe web_camera
+</code></pre>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/iqVN9JQrSwE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+</li>
+<li>
+<p><strong>Basler GigE camera</strong></p>
+</li>
 </ul>
+<ol>
+<li>Open <strong>pylon Viewer</strong> and make sure GigE camera works.</li>
+<li>Key in commands
+<pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
+yolo_console_dll.exe basler_camera
+</code></pre><p>or
+Click <strong>Run_basler_camera_with_Object_Detection.bat</strong> in folder
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/BEExfRdXLe8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
+</li>
+</ol>
+<hr>
+
+
+
 
 
 <footer class=" footline" >
@@ -579,8 +640,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -596,6 +655,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -615,6 +675,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -820,8 +883,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/eos-iseries/" title="EOS-iSeries"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/eos-iseries/" title="EOS-iSeries" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/mcm-204/" title="MCM-204" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
