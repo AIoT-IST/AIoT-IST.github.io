@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Getting start with Yolov3 :: Connected Factory</title>
+    <title>FAQ :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1585211104" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/eos-iseries/gettingstart/">
+  <body class="" data-url="/neon-i1000/faq/">
     <nav id="sidebar" class="">
 
 
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/eos-iseries/" title="EOS-iSeries" class="dd-item 
-        parent
+        
         
         
         ">
@@ -103,8 +103,8 @@
   
     
     <li data-nav-id="/eos-iseries/gettingstart/" title="Getting start with Yolov3" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/eos-iseries/gettingstart/">
@@ -264,7 +264,7 @@
   
     
     <li data-nav-id="/neon-i1000/" title="Neon-i1000" class="dd-item 
-        
+        parent
         
         
         ">
@@ -315,8 +315,8 @@
   
     
     <li data-nav-id="/neon-i1000/faq/" title="FAQ" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/neon-i1000/faq/">
@@ -527,7 +527,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/eos-iseries/'>EOS-iSeries</a> > Getting start with Yolov3
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-i1000/'>Neon-i1000</a> > FAQ
           
          
           
@@ -549,7 +549,7 @@
           
             <h1>
               
-              Getting start with Yolov3
+              FAQ
             </h1>
           
 
@@ -558,72 +558,135 @@
 
 
 
-	<p>This tutorial will guide you how to getting start with EOS-iSeries from un-boxing.</p>
-<h3 id="step-1-hardware-wiring">Step 1: Hardware wiring</h3>
-<ol>
-<li>Connect the peripherals, keyboard, mouse, monitor and cameras.</li>
-<li>Connect 110V AC power source to the terminal block</li>
-<li>Power on
-<img src="/EOS-iSeries/GettingStart/images/EOS-iX_Hardware_wiring.gif" alt="hardware wiring"></li>
-</ol>
-<h3 id="step-2-run-inference-with-different-source">Step 2: Run inference with different source</h3>
-<p>The path of inference sample locates on the C:\Users\user\Desktop\ADLINK.
-You can select image, video, webcam or Basler GigE camera as inference source.</p>
-<p>Open <em>Terminal</em> and paste commands below:</p>
+	<p>Frequently asked questions (FAQ) about Neon-i1000</p>
 <ul>
-<li><strong>Image</strong></li>
+<li><a href="#neon-i1000-model-and-sensor-specifications">Model and Sensor Specifications</a></li>
+<li><a href="#hardware-specification">Hardware Specifications</a></li>
+<li><a href="#software-environment">Software Specificationonment</a></li>
+<li><a href="#version-check">Software Version check</a></li>
 </ul>
-<pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
-yolo_console_dll.exe data/coco.names yolov3.cfg yolov3.weights C:\Users\user\Desktop\ADLINK\darknet-For_basler_camera\data\dog.jpg
-</code></pre>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/D7IFtSARp3Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-
-<div class="notices tip" ><p>Terminate program by close the <em>Terminal</em> or ctrl+c.</p>
-</div>
-
+<h2 id="general">General</h2>
 <ul>
 <li>
-<p><strong>Video</strong></p>
-<pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
-yolo_console_dll.exe data/coco.names yolov3.cfg yolov3.weights test.mp4
-</code></pre>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/7VWZjYYtapo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</li>
-<li>
-<p><strong>Webcam</strong></p>
-<pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
-yolo_console_dll.exe web_camera
-</code></pre>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/iqVN9JQrSwE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-</li>
-<li>
-<p><strong>Basler GigE camera</strong></p>
+<h4 id="neon-i1000-model-and-sensor-specifications">NEON-i1000 Model and Sensor Specifications</h4>
 </li>
 </ul>
-<ol>
-<li>Open <strong>pylon Viewer</strong> and make sure GigE camera works.</li>
-<li>Key in commands
-<pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
-yolo_console_dll.exe basler_camera
-</code></pre><p>or
-Click <strong>Run_basler_camera_with_Object_Detection.bat</strong> in folder
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/BEExfRdXLe8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</p>
+<table>
+<thead>
+<tr>
+<th align="center">Model Name</th>
+<th align="center">Image Sensor</th>
+<th align="center">Specification Image Sensor Module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">NEON-i101B</td>
+<td align="center">1/  3&rdquo;, 1.2M, Global Shutter , 1280x 960, 54fps, COLOR</td>
+<td align="center">Basler, DAA1280-54UC-CS</td>
+</tr>
+<tr>
+<td align="center">NEON-i102B</td>
+<td align="center">1/1.8&rdquo;, 1.9M, Global Shutter , 1600x1200, 60fps, COLOR</td>
+<td align="center">Basler, DAA1600-60UC-CS</td>
+</tr>
+<tr>
+<td align="center">NEON-i103B</td>
+<td align="center">1/3.7&rdquo;, 2  M, Rolling Shutter, 1920x1080, 30fps, COLOR</td>
+<td align="center">Basler, DAA1920-30UC-CS</td>
+</tr>
+<tr>
+<td align="center">NEON-i104B</td>
+<td align="center">1/2.5&rdquo;, 5  M, Rolling Shutter, 2592x1944, 14fps, COLOR</td>
+<td align="center">Basler, DAA2500-14UC-CS</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<h4 id="hardware-specification">Hardware Specification</h4>
 </li>
-</ol>
-<hr>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Neon-iSeries</th>
+<th align="center">Digital Input</th>
+<th align="center">Digital Output</th>
+<th align="center">UART</th>
+<th align="center">Dimensions</th>
+<th align="center">Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">aa</td>
+<td align="center">4x DI, includes 1x sensor trigger</td>
+<td align="center">4x DO, includes 1x strobe out</td>
+<td align="center">TXD, RXD, GND</td>
+<td align="center">123.3 x 66.81 x 77.5 mm</td>
+<td align="center">700g</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<h4 id="software-environment">Software environment</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Neon-iSeries</th>
+<th align="center">JetPack</th>
+<th align="center">L4T</th>
+<th align="center">Ubuntu</th>
+<th align="center">CUDA</th>
+<th align="center">cuDNN</th>
+<th align="center">TensorRT</th>
+<th align="center">Python2</th>
+<th align="center">Python3</th>
+<th align="center">Pylon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Version</td>
+<td align="center">4.2.1</td>
+<td align="center">32.2</td>
+<td align="center">18.04.2LTS</td>
+<td align="center">10.0</td>
+<td align="center">7.5.0.56</td>
+<td align="center">5.1.6.1</td>
+<td align="center">2.7.15</td>
+<td align="center">3.6.9</td>
+<td align="center">5.0.9</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<h4 id="version-check">Version check</h4>
+<ul>
+<li>
+<h5 id="tensorrt">TensorRT</h5>
+<pre><code>dpkg -l|grep nvinfer
+</code></pre></li>
+<li>
+<h5 id="cuda">CUDA</h5>
+<pre><code>nvcc --version
+</code></pre></li>
+<li>
+<h5 id="cudnn">cuDNN</h5>
+<pre><code>dpkg -l|grep cudnn
+</code></pre></li>
+<li>
+<h5 id="python">Python</h5>
+<pre><code>python --version 
+</code></pre></li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -664,42 +727,6 @@ Click <strong>Run_basler_camera_with_Object_Detection.bat</strong> in folder
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -712,54 +739,6 @@ Click <strong>Run_basler_camera_with_Object_Detection.bat</strong> in folder
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -827,6 +806,19 @@ Click <strong>Run_basler_camera_with_Object_Detection.bat</strong> in folder
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -834,6 +826,83 @@ Click <strong>Run_basler_camera_with_Object_Detection.bat</strong> in folder
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -923,10 +992,10 @@ Click <strong>Run_basler_camera_with_Object_Detection.bat</strong> in folder
 	 
 	 
 		
-			<a class="nav nav-prev" href="/eos-iseries/" title="EOS-iSeries"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/neon-i1000/howtoflashimage/" title="How to flash image?"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/mcm-204/" title="MCM-204" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/neon-i2000/" title="Neon-i2000" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
