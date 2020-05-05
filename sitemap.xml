@@ -51,6 +51,14 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/euresys/easyimage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/eos-iseries/faq/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/mcm-204/faq/</loc>
   </url>
   
@@ -64,6 +72,10 @@
   
   <url>
     <loc>https://aiot-ist.github.io/dex/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/euresys/</loc>
   </url>
   
   <url>

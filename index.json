@@ -84,6 +84,20 @@
 	"content": "This tutorial will guide you how to develope your own custom algorithm but it\u0026rsquo;s still under development. "
 },
 {
+	"uri": "https://aiot-ist.github.io/euresys/easyimage/",
+	"title": "EasyImage",
+	"tags": [],
+	"description": "",
+	"content": "This tutorial will guide you how to getting start EasyImage by Euresys\n Transforming a Gray-Level image into its Black and White Edges Extracting an Object Contour Detecting the Corners of an Object Using Harris Corner Detector Detecting a Horizontal or Vertical Line Using Projection Creating a Flexible Mask Computing Gray-Level Statistics Using a Flexible Mask Detecting the Corners of an Object Using Hit-and-Miss Transform Extracting a Vector Using Profile Function Enhancing an X-ray image Correcting Non-Uniform Illumination Correcting Shear Effect Correcting Skew Effect  Video   Function_1: Thresholding    How to use the singal threshold How to use the dual-threshold How to use the Adaptive Threshold Link on line Doc       Function_2:Extracting an Object Contour   Step 1: Load the source image Step 2: Set the destination vector Step 3: Extract the contour Link on line Doc   "
+},
+{
+	"uri": "https://aiot-ist.github.io/eos-iseries/faq/",
+	"title": "FAQ",
+	"tags": [],
+	"description": "",
+	"content": "Frequently asked questions (FAQ) about Pylon\nHow to grab the Image from the GigE Basler.   Step1 : Set the Lan port IP address ? Assign the TCP/IP4 IP to be 192.168.11.1  Step2: How to set the Camera IP by Pylon? Set the Ip 192.168.11.4 by Pylon IP configurator.   Video   "
+},
+{
 	"uri": "https://aiot-ist.github.io/mcm-204/faq/",
 	"title": "FAQ",
 	"tags": [],
@@ -110,6 +124,13 @@
 	"tags": [],
 	"description": "",
 	"content": "ADLINK IST Connected Factory DEX Discover how to use the DEX series and find the releated questions.\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/euresys/",
+	"title": "Euresys",
+	"tags": [],
+	"description": "",
+	"content": "ADLINK IST Connected Factory Euresys Discover how to use the DEX series and find the releated questions.\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/",
