@@ -120,7 +120,7 @@
 },
 {
 	"uri": "https://aiot-ist.github.io/neon-i1000/howtochooselenses/",
-	"title": "How to choose suitable lens for Neon2?",
+	"title": "How to choose suitable lens for Neon?",
 	"tags": [],
 	"description": "",
 	"content": "Here\u0026rsquo;s the lens selector tool from Basler website. Please enter your criteria and we\u0026rsquo;ll show you suitable lens models.\nStep 1: Select camera series and model Takes Neon-i103B for example\nStep 2: Please enter as many values as possible. Missing values will be calculated automatically. Take example for real case:\n At 75ft(22860 mm) needs to support a field of view that is 406 inches (10312 mm) X 406 inches (10312 mm) And supports a 10ft depth of field  Step 3: Display suitable lenses If you want to use the lens with a CS-mount camera, a distance ring (5 mm) must be attached to the lens.\nStep 4: You can contact with your vendor and find the similar spec of lenses. Kindly remind you that the smaller focal length may cause “fisheye” effect.\nThe document from Basler website explains what you should know when selecting a lens for your camera.\n"
