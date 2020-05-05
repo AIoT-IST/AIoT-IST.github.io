@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/neon-i1000/faq/">
+  <body class="" data-url="/eos-iseries/faq/">
     <nav id="sidebar" class="">
 
 
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/eos-iseries/" title="EOS-iSeries" class="dd-item 
-        
+        parent
         
         
         ">
@@ -127,8 +127,8 @@
   
     
     <li data-nav-id="/eos-iseries/faq/" title="FAQ" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/eos-iseries/faq/">
@@ -288,7 +288,7 @@
   
     
     <li data-nav-id="/neon-i1000/" title="Neon-i1000" class="dd-item 
-        parent
+        
         
         
         ">
@@ -339,8 +339,8 @@
   
     
     <li data-nav-id="/neon-i1000/faq/" title="FAQ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/neon-i1000/faq/">
@@ -631,7 +631,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-i1000/'>Neon-i1000</a> > FAQ
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/eos-iseries/'>EOS-iSeries</a> > FAQ
           
          
           
@@ -662,135 +662,23 @@
 
 
 
-	<p>Frequently asked questions (FAQ) about Neon-i1000</p>
-<ul>
-<li><a href="#neon-i1000-model-and-sensor-specifications">Model and Sensor Specifications</a></li>
-<li><a href="#hardware-specification">Hardware Specifications</a></li>
-<li><a href="#software-environment">Software Specificationonment</a></li>
-<li><a href="#version-check">Software Version check</a></li>
-</ul>
-<h2 id="general">General</h2>
+	<p>Frequently asked questions (FAQ) about Pylon</p>
+<h2 id="how-to-grab-the-image-from-the-gige-basler">How to grab the Image from the GigE Basler.</h2>
 <ul>
 <li>
-<h4 id="neon-i1000-model-and-sensor-specifications">NEON-i1000 Model and Sensor Specifications</h4>
-</li>
+<h4 id="step1--set-the-lan-port-ip-address-">Step1 : Set the Lan port IP address ?</h4>
+Assign the TCP/IP4 IP to be 192.168.11.1</li>
+<li>
+<h4 id="step2-how-to-set-the-camera-ip-by-pylon">Step2: How to set the Camera IP by Pylon?</h4>
+Set the Ip 192.168.11.4 by Pylon IP configurator.</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th align="center">Model Name</th>
-<th align="center">Image Sensor</th>
-<th align="center">Specification Image Sensor Module</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">NEON-i101B</td>
-<td align="center">1/  3&rdquo;, 1.2M, Global Shutter , 1280x 960, 54fps, COLOR</td>
-<td align="center">Basler, DAA1280-54UC-CS</td>
-</tr>
-<tr>
-<td align="center">NEON-i102B</td>
-<td align="center">1/1.8&rdquo;, 1.9M, Global Shutter , 1600x1200, 60fps, COLOR</td>
-<td align="center">Basler, DAA1600-60UC-CS</td>
-</tr>
-<tr>
-<td align="center">NEON-i103B</td>
-<td align="center">1/3.7&rdquo;, 2  M, Rolling Shutter, 1920x1080, 30fps, COLOR</td>
-<td align="center">Basler, DAA1920-30UC-CS</td>
-</tr>
-<tr>
-<td align="center">NEON-i104B</td>
-<td align="center">1/2.5&rdquo;, 5  M, Rolling Shutter, 2592x1944, 14fps, COLOR</td>
-<td align="center">Basler, DAA2500-14UC-CS</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>
-<h4 id="hardware-specification">Hardware Specification</h4>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">Neon-iSeries</th>
-<th align="center">Digital Input</th>
-<th align="center">Digital Output</th>
-<th align="center">UART</th>
-<th align="center">Dimensions</th>
-<th align="center">Weight</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">aa</td>
-<td align="center">4x DI, includes 1x sensor trigger</td>
-<td align="center">4x DO, includes 1x strobe out</td>
-<td align="center">TXD, RXD, GND</td>
-<td align="center">123.3 x 66.81 x 77.5 mm</td>
-<td align="center">700g</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>
-<h4 id="software-environment">Software environment</h4>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">Neon-iSeries</th>
-<th align="center">JetPack</th>
-<th align="center">L4T</th>
-<th align="center">Ubuntu</th>
-<th align="center">CUDA</th>
-<th align="center">cuDNN</th>
-<th align="center">TensorRT</th>
-<th align="center">Python2</th>
-<th align="center">Python3</th>
-<th align="center">Pylon</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Version</td>
-<td align="center">4.2.1</td>
-<td align="center">32.2</td>
-<td align="center">18.04.2LTS</td>
-<td align="center">10.0</td>
-<td align="center">7.5.0.56</td>
-<td align="center">5.1.6.1</td>
-<td align="center">2.7.15</td>
-<td align="center">3.6.9</td>
-<td align="center">5.0.9</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>
-<h4 id="version-check">Version check</h4>
-<ul>
-<li>
-<h5 id="tensorrt">TensorRT</h5>
-<pre><code>dpkg -l|grep nvinfer
-</code></pre></li>
-<li>
-<h5 id="cuda">CUDA</h5>
-<pre><code>nvcc --version
-</code></pre></li>
-<li>
-<h5 id="cudnn">cuDNN</h5>
-<pre><code>dpkg -l|grep cudnn
-</code></pre></li>
-<li>
-<h5 id="python">Python</h5>
-<pre><code>python --version 
-</code></pre></li>
-</ul>
-</li>
-</ul>
+<hr>
+<h2 id="video">Video</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/THuuqRE3JC0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 
 
 
@@ -831,6 +719,61 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -843,6 +786,38 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -926,19 +901,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -946,83 +908,6 @@
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1162,10 +1047,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/neon-i1000/howtoflashimage/" title="How to flash image?"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/eos-iseries/gettingstart/" title="Getting start with Yolov3"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/neon-i2000/" title="Neon-i2000" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/mcm-204/" title="MCM-204" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
