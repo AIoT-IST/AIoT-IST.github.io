@@ -42,13 +42,6 @@
 	"content": "This tutorial will guide you how to getting start with EOS-iSeries from un-boxing.\nStep 1: Hardware wiring  Connect the peripherals, keyboard, mouse, monitor and cameras. Connect 110V AC power source to the terminal block Power on   Step 2: Run inference with different source The path of inference sample locates on the C:\\Users\\user\\Desktop\\ADLINK. You can select image, video, webcam or Basler GigE camera as inference source.\nOpen Terminal and paste commands below:\n Image  cd C:\\Users\\user\\Desktop\\adlink\\darknet-For_basler_camera\\build\\darknet\\x64 yolo_console_dll.exe data/coco.names yolov3.cfg yolov3.weights C:\\Users\\user\\Desktop\\ADLINK\\darknet-For_basler_camera\\data\\dog.jpg    Terminate program by close the Terminal or ctrl+c.\n   Video\ncd C:\\Users\\user\\Desktop\\adlink\\darknet-For_basler_camera\\build\\darknet\\x64 yolo_console_dll.exe data/coco.names yolov3.cfg yolov3.weights test.mp4      Webcam\ncd C:\\Users\\user\\Desktop\\adlink\\darknet-For_basler_camera\\build\\darknet\\x64 yolo_console_dll.exe web_camera      Basler GigE camera\n   Open pylon Viewer and make sure GigE camera works. Key in commands cd C:\\Users\\user\\Desktop\\adlink\\darknet-For_basler_camera\\build\\darknet\\x64 yolo_console_dll.exe basler_camera or Click Run_basler_camera_with_Object_Detection.bat in folder      "
 },
 {
-	"uri": "https://aiot-ist.github.io/neon-i1000/howtochooselenses/",
-	"title": "How to choose suitable lens for Neon?",
-	"tags": [],
-	"description": "",
-	"content": "Here\u0026rsquo;s the lens selector tool from Basler website. Please enter your criteria and we\u0026rsquo;ll show you suitable lens models.\nStep 1: Select camera series and model Takes Neon-i103B for example\nStep 2: Please enter as many values as possible. Missing values will be calculated automatically. Take example for real case:\n At 75ft(22860 mm) needs to support a field of view that is 406 inches (10312 mm) X 406 inches (10312 mm) And supports a 10ft depth of field  Step 3: Display suitable lenses If you want to use the lens with a CS-mount camera, a distance ring (5 mm) must be attached to the lens.\nStep 4: You can contact with your vendor and find the similar spec of lenses. Kindly remind you that the smaller focal length may cause “fisheye” effect.\nThe document from Basler website explains what you should know when selecting a lens for your camera.\n"
-},
-{
 	"uri": "https://aiot-ist.github.io/neon-i1000/howtoflashimage/",
 	"title": "How to flash image?",
 	"tags": [],
@@ -124,6 +117,13 @@
 	"tags": [],
 	"description": "",
 	"content": "  固德科技技術經理許文澤指出，設備狀態監測可大幅提升製造產線效能。DIGITIMES攝    沖壓、焊接是金屬加工中常見的製程動作，在此製程中，設備運作的狀態對產線效能與品質有關鍵影響，像是設備狀態有誤卻仍持續動作，或是設備無故障預警停機，前者會產生大量廢料，後者則是導致產線停擺，這都會造成企業的大量損失，為解決此問題，固德科技以機器學習演算法結合凌華的邊緣推論設備MCM-100，打造出智慧化產線設備狀態監測平台，讓各類型金屬加工業者可透過AI與工業物聯網架構即時掌握產線設備，強化生產效能。\n固德科技技術經理許文澤指出，金屬加工的產線設備多元，依設備動作可分為連續性與非連續性兩種，連續性是指馬達之類隨時處於運轉狀態的設備，非連續性則是像大型機器手臂、沖壓床或自動焊接等設備，無論是連續性或非連續性，這些生產設備都是製造業者最重要的生財工具，一但出錯就會帶來龐大損失。\n  固德科技VMS-ML機器學習系統可進行沖壓、衝孔製程的即時監測。   許文澤以汽車製造為例，沖壓是汽車零組件常見的製程，在此製程中，模具品質異常將會影響沖壓出的產品品質，而這往往要到後端品保環節才會被檢出，但在檢出之前，產線上已然出現大量不合格的產品，此一問題影響所及者不只是金錢，還包括產線停機確認、改善與生產工時增加等時間問題，這些問題不僅出現在汽車製造，小至螺絲、大至航太產業用的金屬件，只要使用到金屬加工的產品都會遇到。\n為了解決此一問題，現在市場上已出現各種設備狀態智慧監診系統，這類型系統都是透過工業物聯網的感測網路與AI，偵測並分析設備狀態，在設備故障前先行警告管理人員，避免上述問題產生，而其中AI的機器學習演算法更是其中關鍵。許文澤指出在金屬加工中，非連續性製程都可透過感測器偵測其動作狀態，像是沖壓的震動、焊接的電流變化都有其模式，在現在製程中，這些模式都是由機台操作人員依靠長期經驗所累積，而在智慧製造體系中，就是將人的經驗轉值給機器學習演算法，當震動或電流模式與之不符，就會警告管理人員。\nAI的機器學習演算法需要大量數據進行訓練，因此現在市場上多數採用機器學習演算法的設備監診系統，都必須先建置感測器收集數據，等待設備出現異常再註記標籤紀錄，讓機器學習從中認知訓練，然而這種方式曠日廢時，製造業者需要耗費大量成本收集數據，因此並非最佳選擇。固德科技的做法則可讓系統可即時上線使用，許文澤表示，固德科技會先在終端先預載經過訓練的震動或電流模型，省去製造業者收集數據的時間，接著再由平台快速學習製造業者指定的數據範圍。學習完成的系統具備了自動追蹤與辨識功能，每一個設備運作的狀態都會被記錄，同時回饋給管理者，管理者可自行調整、決定設備運作。\n固德科技的設備狀態監測系統的上線即用設計中，凌華的MCM-100扮演了關鍵角色。許文澤指出，過去設備監控系統所用的終端設備，都必須由廠商分別購置工業電腦與擷取卡，組裝後再不斷測試，調整出符合需求的架構，這不但會延長系統開發時程，也增加了工程師的工作負擔，MCM-100的出現則解決了這些問題。MCM-100是凌華專為智慧製造所設計的即用型旋轉機械設備振動／狀態監測平台，其特色是具備高效能邊緣運算能力，內建的四通道有24位元、128kS/s同步擷取類比輸入，可同時偵測多感測器所傳回的訊號，多元而豐富的I/O介面也大幅提升其整合性。在MCM-100的高整合與強大效能支援下，固德科技可專注於系統開發，讓在短時間內上線使用。\n許文澤最後表示，智慧化是製造業近年來最重要的趨勢，而設備監測現已被多數業者視為導入智慧製造系統的第一步，不過對製造業說，智慧化仍是全新概念，系統的導入與調整往往需要耗費大量成本，固德科技與凌華合作打造的AI設備監測平台，透過高整合、高效能的軟硬體整合，可讓系統快速導入使用，大幅降低系統上線的成本，提早享受智慧製造所帶來的效益，順利跨出數位轉型的第一步。\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/neon-i1000/howtochooselenses/",
+	"title": "How to choose suitable lens for Neon2?",
+	"tags": [],
+	"description": "",
+	"content": "Here\u0026rsquo;s the lens selector tool from Basler website. Please enter your criteria and we\u0026rsquo;ll show you suitable lens models.\nStep 1: Select camera series and model Takes Neon-i103B for example\nStep 2: Please enter as many values as possible. Missing values will be calculated automatically. Take example for real case:\n At 75ft(22860 mm) needs to support a field of view that is 406 inches (10312 mm) X 406 inches (10312 mm) And supports a 10ft depth of field  Step 3: Display suitable lenses If you want to use the lens with a CS-mount camera, a distance ring (5 mm) must be attached to the lens.\nStep 4: You can contact with your vendor and find the similar spec of lenses. Kindly remind you that the smaller focal length may cause “fisheye” effect.\nThe document from Basler website explains what you should know when selecting a lens for your camera.\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/",
