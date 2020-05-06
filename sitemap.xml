@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://aiot-ist.github.io/neon-i1000/howtobackupneonibymicrosd/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eos-iseries/</loc>
   </url>
   
@@ -64,10 +68,6 @@
   
   <url>
     <loc>https://aiot-ist.github.io/neon-i1000/howtoflashimage/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/neon-i1000/howtobackupneonibymicrosd/</loc>
   </url>
   
   <url>

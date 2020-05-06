@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://aiot-ist.github.io/neon-i1000/howtobackupneonibymicrosd/",
+	"title": "--How to backup Neoni by microSD card?",
+	"tags": [],
+	"description": "",
+	"content": "According to the official document, the boot sequence is decided by U-boot. U-Boot functionality includes a default booting scan sequence. It scans bootable devices in the following order:\n External SD card Internal eMMC (Jetson TX2 series devices only) USB device (Jetson TX2 series devices only) NFS device  U-Boot boots up the kernel by /boot/extlinux/extlinux.conf in the sequence of bootable device. That is to say, if Neon-i1000 equits microSD card with OS, U-Boot boots up accord to /boot/extlinux/extlinux.conf in microSD card instead of extlinux.conf in eMMC.\nRequirements:  16G up microSD card microSD card reader 16G up USB stick Host PC Neon-i1000  Step 1: Format your microSD card as ext4 The total size of image with Jetpack4.3 is 13G. It suggests clone image by 32G microSD card.\nThere\u0026rsquo;s convience tool to format you microSD card: gparted\n Install gparted  sudo apt-get install gparted\r Format your microSD card by gparted  sudo gparted\r Select your microSD card  Gparted \u0026gt; Devices\u0026gt; your microSD card   Create 15G ext4 partition  Partition \u0026gt; New     Step 2: Clone eMMC data to microSD  Make sure Neon-i1000 mounts your microSD card /dev/mmcblk2p1.  Clone eMMC data to microSD sudo cp -ax / '/media/adlink/yourSDcard' \u0026amp;\u0026amp; sync\r  Step 3: Modify extlinux.conf in microSD card for bootup sequence   Edit /boot/extlinux/extlinux.conf in microSD card\n APPEND ${cbootargs} quiet\n  APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait\n   Step 4: Reboot Neon-i1000  It will reboot from microSD card.  Reference\n"
+},
+{
 	"uri": "https://aiot-ist.github.io/eos-iseries/",
 	"title": "EOS-iSeries",
 	"tags": [],
@@ -110,13 +117,6 @@
 	"tags": [],
 	"description": "",
 	"content": "It needs to go force recovery mode first before flash image. Here’s the video which guild you how to flash image.\nStep 1: Download image first from your host pc with Ubuntu Download link\n Jetpack 4.2.1 Jetpack 4.3  Step 2: Follow video and flash image Video link: https://drive.google.com/open?id=1Mu40rDiNP1Jggak3bWoyDDgGCxQXEVyX\n  at Neon-i1000\n Power on Neon-i1000. Enter force recovery mode.    at Host PC\n Unzip the file downloading from Step 1  $ tar -zxvf Linux_for_Tegra_JetPack43.tar.gz\rYou can refer to pin define below, and try to enter recover mode.   Step 1: Hold recovery btn (short pin5+pin6)\n  Step 2: Press reset btn (short pin3+pint4)\n  Go to flash folder\n  cd Linux_for_Tegra_JetPack43/bootloader\r Flash the device  sudo ./multi_tegra_flash.sh\r   Below video it the procedure for NEON-i1000 flash   "
-},
-{
-	"uri": "https://aiot-ist.github.io/neon-i1000/howtobackupneonibymicrosd/",
-	"title": "How to backup Neoni by microSD card?",
-	"tags": [],
-	"description": "",
-	"content": "According to the official document, the boot sequence is decided by U-boot. U-Boot functionality includes a default booting scan sequence. It scans bootable devices in the following order:\n External SD card Internal eMMC (Jetson TX2 series devices only) USB device (Jetson TX2 series devices only) NFS device  U-Boot boots up the kernel by /boot/extlinux/extlinux.conf in the sequence of bootable device. That is to say, if Neon-i1000 equits microSD card with OS, U-Boot boots up accord to /boot/extlinux/extlinux.conf in microSD card instead of extlinux.conf in eMMC.\nRequirements:  16G up microSD card microSD card reader 16G up USB stick Host PC Neon-i1000  Step 1: Format your microSD card as ext4 The total size of image with Jetpack4.3 is 13G. It suggests clone image by 32G microSD card.\nThere\u0026rsquo;s convience tool to format you microSD card: gparted\n Install gparted  sudo apt-get install gparted\r Format your microSD card by gparted  sudo gparted\r Select your microSD card  Gparted \u0026gt; Devices\u0026gt; your microSD card   Create 15G ext4 partition  Partition \u0026gt; New     Step 2: Clone eMMC data to microSD  Make sure Neon-i1000 mounts your microSD card /dev/mmcblk2p1.  Clone eMMC data to microSD sudo cp -ax / '/media/adlink/yourSDcard' \u0026amp;\u0026amp; sync\r  Step 3: Modify extlinux.conf in microSD card for bootup sequence   Edit /boot/extlinux/extlinux.conf in microSD card\n APPEND ${cbootargs} quiet\n  APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait\n   Step 4: Reboot Neon-i1000  It will reboot from microSD card.  Reference\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/neon-i1000/howtochooselenses/",
