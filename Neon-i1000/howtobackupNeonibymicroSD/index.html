@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>News :: Connected Factory</title>
+    <title>How to backup Neoni by microSD card? :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1588747072" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/news/">
+  <body class="" data-url="/neon-i1000/howtobackupneonibymicrosd/">
     <nav id="sidebar" class="">
 
 
@@ -288,7 +288,7 @@
   
     
     <li data-nav-id="/neon-i1000/" title="Neon-i1000" class="dd-item 
-        
+        parent
         
         
         ">
@@ -363,8 +363,8 @@
   
     
     <li data-nav-id="/neon-i1000/howtobackupneonibymicrosd/" title="How to backup Neoni by microSD card?" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/neon-i1000/howtobackupneonibymicrosd/">
@@ -440,8 +440,8 @@
   
     
     <li data-nav-id="/news/" title="News" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/news/">
@@ -675,7 +675,13 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > News
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-i1000/'>Neon-i1000</a> > How to backup Neoni by microSD card?
+          
+         
           
          
           
@@ -695,7 +701,7 @@
           
             <h1>
               
-              News
+              How to backup Neoni by microSD card?
             </h1>
           
 
@@ -704,7 +710,52 @@
 
 
 
-	<h3 id="news-of-adlink-ist-connected-factory">News of ADLINK-IST Connected Factory</h3>
+	<p>According to the <a href="https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3231/index.html#page/Tegra%2520Linux%2520Driver%2520Package%2520Development%2520Guide%2Fuboot_guide.html%23wwpID0E0DF0HA">official document</a>, the boot sequence is decided by U-boot. 
+U-Boot functionality includes a default booting scan sequence. It scans bootable devices in the following order:</p>
+<ul>
+<li>External SD card</li>
+<li>Internal eMMC (Jetson TX2 series devices only)</li>
+<li>USB device (Jetson TX2 series devices only)</li>
+<li>NFS device</li>
+</ul>
+<p>U-Boot boots up the kernel by <strong>/boot/extlinux/extlinux.conf</strong> in the sequence of bootable device. That is to say, if Neon-i1000 equits microSD card with OS,  U-Boot boots up accord to /boot/extlinux/extlinux.conf in microSD card instead of extlinux.conf in eMMC.</p>
+<h3 id="requirements">Requirements:</h3>
+<ul>
+<li>16G up microSD card</li>
+<li>microSD card reader</li>
+<li>16G up USB stick</li>
+<li>Host PC</li>
+<li>Neon-i1000</li>
+</ul>
+<h3 id="step-1-format-your-microsd-card-as-ext4">Step 1: Format your microSD card as ext4</h3>
+<p>The total size of image with Jetpack4.3 is 13G. It suggests clone image by 32G microSD card.</p>
+<h3 id="step-2-clone-emmc-data-to-microsd">Step 2: Clone eMMC data to microSD</h3>
+<ul>
+<li>Make sure Neon-i1000 mounts your microSD card /dev/mmcblk2p1.
+<img src="/Neon-i1000/howtobackupNeonibymicroSD/images/1.png" alt="Step2_1"></li>
+<li>Clone eMMC data to microSD
+<pre><code>sudo cp -ax / '/media/adlink/yourSDcard' &amp;&amp; sync
+</code></pre><p><img src="/Neon-i1000/howtobackupNeonibymicroSD/images/2.png" alt="Step2_2"></p>
+</li>
+</ul>
+<h3 id="step-3-modify-extlinuxconf-in-microsd-card-for-bootup-sequence">Step 3: Modify extlinux.conf in microSD card for bootup sequence</h3>
+<ul>
+<li>
+<p>Edit /boot/extlinux/extlinux.conf in microSD card</p>
+<blockquote>
+<p><del>APPEND ${cbootargs} quiet</del></p>
+</blockquote>
+<blockquote>
+<p>APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/Neon-i1000/howtobackupNeonibymicroSD/images/3.png" alt="Step3_1"></p>
+<h3 id="step-4-reboot-neon-i1000">Step 4: Reboot Neon-i1000</h3>
+<ul>
+<li>It will reboot from microSD card.</li>
+</ul>
+<p><a href="https://medium.com/@ttyUSB0978/nvidia-jetson-tx2-boot-menu-ad929204a70e">Reference</a></p>
 
 
 
@@ -880,6 +931,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -894,6 +946,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -927,6 +982,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -934,6 +990,28 @@
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -954,30 +1032,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -993,9 +1051,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1104,10 +1159,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/neon-i2000/" title="Neon-i2000"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/neon-i1000/howtochooselenses/" title="How to choose suitable lens for Neon?"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/news/mcm/" title="MCM" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/neon-i1000/faq/" title="FAQ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
