@@ -1,12 +1,5 @@
 [
 {
-	"uri": "https://aiot-ist.github.io/neon-i1000/howtobackupneonibymicrosd/",
-	"title": "--How to backup Neoni by microSD card?",
-	"tags": [],
-	"description": "",
-	"content": "According to the official document, the boot sequence is decided by U-boot. U-Boot functionality includes a default booting scan sequence. It scans bootable devices in the following order:\n External SD card Internal eMMC (Jetson TX2 series devices only) USB device (Jetson TX2 series devices only) NFS device  U-Boot boots up the kernel by /boot/extlinux/extlinux.conf in the sequence of bootable device. That is to say, if Neon-i1000 equits microSD card with OS, U-Boot boots up accord to /boot/extlinux/extlinux.conf in microSD card instead of extlinux.conf in eMMC.\nRequirements:  16G up microSD card microSD card reader 16G up USB stick Host PC Neon-i1000  Step 1: Format your microSD card as ext4 The total size of image with Jetpack4.3 is 13G. It suggests clone image by 32G microSD card.\nThere\u0026rsquo;s convience tool to format you microSD card: gparted\n Install gparted  sudo apt-get install gparted\r Format your microSD card by gparted  sudo gparted\r Select your microSD card  Gparted \u0026gt; Devices\u0026gt; your microSD card   Create 15G ext4 partition  Partition \u0026gt; New     Step 2: Clone eMMC data to microSD  Make sure Neon-i1000 mounts your microSD card /dev/mmcblk2p1.  Clone eMMC data to microSD sudo cp -ax / '/media/adlink/yourSDcard' \u0026amp;\u0026amp; sync\r  Step 3: Modify extlinux.conf in microSD card for bootup sequence   Edit /boot/extlinux/extlinux.conf in microSD card\n APPEND ${cbootargs} quiet\n  APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait\n   Step 4: Reboot Neon-i1000  It will reboot from microSD card.  Reference\n"
-},
-{
 	"uri": "https://aiot-ist.github.io/eos-iseries/",
 	"title": "EOS-iSeries",
 	"tags": [],
@@ -70,6 +63,13 @@
 	"content": "  凌華科技產品經理林耿賢指出，凌華遠端監控解決方案的架構完整、功能強大，可為設備供應商創造出全新的商業模式。DIGITIMES攝     工業4.0所帶來的所帶來的智慧化革命，不僅改變了傳統的生產概念，也衝擊了製造業的營運思維，在物聯網、AI、大數據等技術的落地應用下，設備供應商除了單純的產品買賣外，還可將原有的服務加值，進而延展出以服務為導向的商業模式，不過凌華科技產品經理林耿賢指出，要提供這類型商業模式，需要完整的配套方案，在客戶意願未確定前就投入研發，對設備供應商是沉重的負擔，凌華科技近期針對泵浦、壓縮機等設備推出的遠端監控解決方案，則以高完整性特色，提供設備供應商快速打造系統，創造另一波商機。\n穩定度是生產設備的基本要求，尤其是泵浦、壓縮機這類對產線運作有關鍵影響的設備，一但無預警故障，整條產線就會因此停擺，為了避免此一狀況發生，製造業者與設備供應商在商定採購合約時，都會加入定期保養服務條款，而且即便保固到期後，製造業者通常也願意付費維持此服務，確保產線穩定運作。\n  遠端即時監控系統是完整的工業物聯網機制，從終端到雲端都必須完整建置，系統功能才能一如預期的發揮。   定期保養維修雖可大幅提升設備的穩定度，但仍無法完全排除臨時故障的機率，這幾年興起的工業物聯網概念，則可透過感測網路、大數據與AI等技術在線即時偵測設備，並進一步分析可能故障的時間，讓管理者可從遠端掌握設備狀態，從而排定維修時程，讓產線稼動率最大化。\n林耿賢也指出，遠端即時監控系統是完整的工業物聯網機制，從終端到雲端都必須完整建置，系統功能才能一如預期的發揮，然而系統的設計與打造需要高度專業，多數設備供應商並未具備相關技能，因此即便新服務可帶來新商機，資源有限的業者仍無力掌握。\n除此之外，設備業者如果能快速打造遠端即時監控系統，將有機會創造更多商業模式，因此業者凌華針對泵浦、壓縮機等旋轉設備提供一站式整體解決方案，此一方案從最前端感測器到上層的雲端平台一應俱全，且系統穩定度極高，更特別的是在凌華團隊的設計下，此系統大幅簡化導入程序，設備供應商可在短期內完成建置，讓系統快速上線使用。\n林耿賢說明此一解決方案之終端設備採用凌華專為設備監控設計的MCM-204嵌入式邊緣裝置，其小巧精簡的機構設計可快速安裝於製造場域，縮短系統布建導入時間。此外整合ARM處理器和DAQ功能模組的優化設計，完美實現一站式傳感器數據採集、數據分析和數據上傳的邊緣運算能力和優勢，用戶不需再額外配置物聯網網關，節省建置成本。\n在感測器部份，可支援ICP Type壓電式加速規感測器進行設備振動數據，或數位溫度傳感器和轉速計可量測設備溫度和轉速。至於雲端平台部分，則是基於微軟Azure所打造的SaaS –DataConnect Pro\n功能完整、簡單易用、快速上線的特色，讓凌華的一站式遠端監控解決方案，成為設備供應商開拓新商機的最有力幫手。林耿賢指出，透過此一解決方案，設備供應商可擁有三大優勢。首先是強化客戶關係，業者可在既有的產品買賣服務上增加差異化服務，維持企業營收。其次是擴大服務層面，創造出全新的商業模式，例如以年租型的收費方式提供機台監控服務，將以往的定期保養服務進階為在線即時監控維修服務，讓製造業者為自己的機台多買一份保險。最後則是提升維修效能，在全面且即時掌握設備狀態下，業者可彈性安排維修時程，零組件備貨也可更精準，有效活化企業資產。\n隨著智慧化概念的普及，製造設備供應商的市場定位已開始改變，單純的產品銷售與維修服務將難以因應製造業客戶的需求，能夠提供多元、到位服務的業者，才能在競爭日益激烈的產業環境中站穩腳步，而在專業分工的如今，善用外部力量強化自身競爭力，將會是企業營運的最佳策略，凌華的遠端監控解決方案就可讓設備供應商以有限的資源提升效能、擴展商業模式，並為客戶與自身企業創造出更多元的價值。\n"
 },
 {
+	"uri": "https://aiot-ist.github.io/neon-i1000/howtobackupneonibymicrosd/",
+	"title": "-How to backup Neoni by microSD card?",
+	"tags": [],
+	"description": "",
+	"content": "According to the official document, the boot sequence is decided by U-boot. U-Boot functionality includes a default booting scan sequence. It scans bootable devices in the following order:\n External SD card Internal eMMC (Jetson TX2 series devices only) USB device (Jetson TX2 series devices only) NFS device  U-Boot boots up the kernel by /boot/extlinux/extlinux.conf in the sequence of bootable device. That is to say, if Neon-i1000 equits microSD card with OS, U-Boot boots up accord to /boot/extlinux/extlinux.conf in microSD card instead of extlinux.conf in eMMC.\nRequirements:  16G up microSD card microSD card reader 16G up USB stick Host PC Neon-i1000  Step 1: Format your microSD card as ext4 The total size of image with Jetpack4.3 is 13G. It suggests clone image by 32G microSD card.\nThere\u0026rsquo;s convience tool to format you microSD card: gparted\n Install gparted  sudo apt-get install gparted\r Format your microSD card by gparted  sudo gparted\r Select your microSD card  Gparted \u0026gt; Devices\u0026gt; your microSD card   Create 15G ext4 partition  Partition \u0026gt; New     Step 2: Clone eMMC data to microSD  Make sure Neon-i1000 mounts your microSD card /dev/mmcblk2p1.  Clone eMMC data to microSD sudo cp -ax / '/media/adlink/yourSDcard' \u0026amp;\u0026amp; sync\r  Step 3: Modify extlinux.conf in microSD card for bootup sequence   Edit /boot/extlinux/extlinux.conf in microSD card\n APPEND ${cbootargs} quiet\n  APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait\n   Step 4: Reboot Neon-i1000  It will reboot from microSD card.  Reference\n"
+},
+{
 	"uri": "https://aiot-ist.github.io/mcm-204/customalgorithm/",
 	"title": "Custom Algorithm Deploy Sample",
 	"tags": [],
@@ -112,6 +112,13 @@
 	"content": "  固德科技技術經理許文澤指出，設備狀態監測可大幅提升製造產線效能。DIGITIMES攝    沖壓、焊接是金屬加工中常見的製程動作，在此製程中，設備運作的狀態對產線效能與品質有關鍵影響，像是設備狀態有誤卻仍持續動作，或是設備無故障預警停機，前者會產生大量廢料，後者則是導致產線停擺，這都會造成企業的大量損失，為解決此問題，固德科技以機器學習演算法結合凌華的邊緣推論設備MCM-100，打造出智慧化產線設備狀態監測平台，讓各類型金屬加工業者可透過AI與工業物聯網架構即時掌握產線設備，強化生產效能。\n固德科技技術經理許文澤指出，金屬加工的產線設備多元，依設備動作可分為連續性與非連續性兩種，連續性是指馬達之類隨時處於運轉狀態的設備，非連續性則是像大型機器手臂、沖壓床或自動焊接等設備，無論是連續性或非連續性，這些生產設備都是製造業者最重要的生財工具，一但出錯就會帶來龐大損失。\n  固德科技VMS-ML機器學習系統可進行沖壓、衝孔製程的即時監測。   許文澤以汽車製造為例，沖壓是汽車零組件常見的製程，在此製程中，模具品質異常將會影響沖壓出的產品品質，而這往往要到後端品保環節才會被檢出，但在檢出之前，產線上已然出現大量不合格的產品，此一問題影響所及者不只是金錢，還包括產線停機確認、改善與生產工時增加等時間問題，這些問題不僅出現在汽車製造，小至螺絲、大至航太產業用的金屬件，只要使用到金屬加工的產品都會遇到。\n為了解決此一問題，現在市場上已出現各種設備狀態智慧監診系統，這類型系統都是透過工業物聯網的感測網路與AI，偵測並分析設備狀態，在設備故障前先行警告管理人員，避免上述問題產生，而其中AI的機器學習演算法更是其中關鍵。許文澤指出在金屬加工中，非連續性製程都可透過感測器偵測其動作狀態，像是沖壓的震動、焊接的電流變化都有其模式，在現在製程中，這些模式都是由機台操作人員依靠長期經驗所累積，而在智慧製造體系中，就是將人的經驗轉值給機器學習演算法，當震動或電流模式與之不符，就會警告管理人員。\nAI的機器學習演算法需要大量數據進行訓練，因此現在市場上多數採用機器學習演算法的設備監診系統，都必須先建置感測器收集數據，等待設備出現異常再註記標籤紀錄，讓機器學習從中認知訓練，然而這種方式曠日廢時，製造業者需要耗費大量成本收集數據，因此並非最佳選擇。固德科技的做法則可讓系統可即時上線使用，許文澤表示，固德科技會先在終端先預載經過訓練的震動或電流模型，省去製造業者收集數據的時間，接著再由平台快速學習製造業者指定的數據範圍。學習完成的系統具備了自動追蹤與辨識功能，每一個設備運作的狀態都會被記錄，同時回饋給管理者，管理者可自行調整、決定設備運作。\n固德科技的設備狀態監測系統的上線即用設計中，凌華的MCM-100扮演了關鍵角色。許文澤指出，過去設備監控系統所用的終端設備，都必須由廠商分別購置工業電腦與擷取卡，組裝後再不斷測試，調整出符合需求的架構，這不但會延長系統開發時程，也增加了工程師的工作負擔，MCM-100的出現則解決了這些問題。MCM-100是凌華專為智慧製造所設計的即用型旋轉機械設備振動／狀態監測平台，其特色是具備高效能邊緣運算能力，內建的四通道有24位元、128kS/s同步擷取類比輸入，可同時偵測多感測器所傳回的訊號，多元而豐富的I/O介面也大幅提升其整合性。在MCM-100的高整合與強大效能支援下，固德科技可專注於系統開發，讓在短時間內上線使用。\n許文澤最後表示，智慧化是製造業近年來最重要的趨勢，而設備監測現已被多數業者視為導入智慧製造系統的第一步，不過對製造業說，智慧化仍是全新概念，系統的導入與調整往往需要耗費大量成本，固德科技與凌華合作打造的AI設備監測平台，透過高整合、高效能的軟硬體整合，可讓系統快速導入使用，大幅降低系統上線的成本，提早享受智慧製造所帶來的效益，順利跨出數位轉型的第一步。\n"
 },
 {
+	"uri": "https://aiot-ist.github.io/neon-i1000/faq/",
+	"title": "FAQ",
+	"tags": [],
+	"description": "",
+	"content": "Frequently asked questions (FAQ) about Neon-i1000\n Model and Sensor Specifications Hardware Specifications Software Specificationonment Software Version check  General   NEON-i1000 Model and Sensor Specifications      Model Name Image Sensor Specification Image Sensor Module     NEON-i101B 1/ 3\u0026rdquo;, 1.2M, Global Shutter , 1280x 960, 54fps, COLOR Basler, DAA1280-54UC-CS   NEON-i102B 1/1.8\u0026rdquo;, 1.9M, Global Shutter , 1600x1200, 60fps, COLOR Basler, DAA1600-60UC-CS   NEON-i103B 1/3.7\u0026rdquo;, 2 M, Rolling Shutter, 1920x1080, 30fps, COLOR Basler, DAA1920-30UC-CS   NEON-i104B 1/2.5\u0026rdquo;, 5 M, Rolling Shutter, 2592x1944, 14fps, COLOR Basler, DAA2500-14UC-CS      Hardware Specification      Neon-iSeries Digital Input Digital Output UART Dimensions Weight     aa 4x DI, includes 1x sensor trigger 4x DO, includes 1x strobe out TXD, RXD, GND 123.3 x 66.81 x 77.5 mm 700g      Software environment      Neon-iSeries JetPack L4T Ubuntu CUDA cuDNN TensorRT Python2 Python3 Pylon     Version 4.2.1 32.2 18.04.2LTS 10.0 7.5.0.56 5.1.6.1 2.7.15 3.6.9 5.0.9      Version check   TensorRT dpkg -l|grep nvinfer\r  CUDA nvcc --version\r  cuDNN dpkg -l|grep cudnn\r  Python python --version     "
+},
+{
 	"uri": "https://aiot-ist.github.io/neon-i1000/howtoflashimage/",
 	"title": "How to flash image?",
 	"tags": [],
@@ -124,13 +131,6 @@
 	"tags": [],
 	"description": "",
 	"content": "Here\u0026rsquo;s the lens selector tool from Basler website. Please enter your criteria and we\u0026rsquo;ll show you suitable lens models.\nStep 1: Select camera series and model Takes Neon-i103B for example\nStep 2: Please enter as many values as possible. Missing values will be calculated automatically. Take example for real case:\n At 75ft(22860 mm) needs to support a field of view that is 406 inches (10312 mm) X 406 inches (10312 mm) And supports a 10ft depth of field  Step 3: Display suitable lenses If you want to use the lens with a CS-mount camera, a distance ring (5 mm) must be attached to the lens.\nStep 4: You can contact with your vendor and find the similar spec of lenses. Kindly remind you that the smaller focal length may cause “fisheye” effect.\nThe document from Basler website explains what you should know when selecting a lens for your camera.\n"
-},
-{
-	"uri": "https://aiot-ist.github.io/neon-i1000/faq/",
-	"title": "FAQ",
-	"tags": [],
-	"description": "",
-	"content": "Frequently asked questions (FAQ) about Neon-i1000\n Model and Sensor Specifications Hardware Specifications Software Specificationonment Software Version check  General   NEON-i1000 Model and Sensor Specifications      Model Name Image Sensor Specification Image Sensor Module     NEON-i101B 1/ 3\u0026rdquo;, 1.2M, Global Shutter , 1280x 960, 54fps, COLOR Basler, DAA1280-54UC-CS   NEON-i102B 1/1.8\u0026rdquo;, 1.9M, Global Shutter , 1600x1200, 60fps, COLOR Basler, DAA1600-60UC-CS   NEON-i103B 1/3.7\u0026rdquo;, 2 M, Rolling Shutter, 1920x1080, 30fps, COLOR Basler, DAA1920-30UC-CS   NEON-i104B 1/2.5\u0026rdquo;, 5 M, Rolling Shutter, 2592x1944, 14fps, COLOR Basler, DAA2500-14UC-CS      Hardware Specification      Neon-iSeries Digital Input Digital Output UART Dimensions Weight     aa 4x DI, includes 1x sensor trigger 4x DO, includes 1x strobe out TXD, RXD, GND 123.3 x 66.81 x 77.5 mm 700g      Software environment      Neon-iSeries JetPack L4T Ubuntu CUDA cuDNN TensorRT Python2 Python3 Pylon     Version 4.2.1 32.2 18.04.2LTS 10.0 7.5.0.56 5.1.6.1 2.7.15 3.6.9 5.0.9      Version check   TensorRT dpkg -l|grep nvinfer\r  CUDA nvcc --version\r  cuDNN dpkg -l|grep cudnn\r  Python python --version     "
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/",
