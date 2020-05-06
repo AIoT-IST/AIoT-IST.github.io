@@ -39,10 +39,6 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-i1000/howtobackupneonibymicrosd/</loc>
-  </url>
-  
-  <url>
     <loc>https://aiot-ist.github.io/mcm-204/customalgorithm/</loc>
   </url>
   
@@ -67,15 +63,19 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-i1000/faq/</loc>
-  </url>
-  
-  <url>
     <loc>https://aiot-ist.github.io/neon-i1000/howtoflashimage/</loc>
   </url>
   
   <url>
     <loc>https://aiot-ist.github.io/neon-i1000/howtochooselenses/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/neon-i1000/howtobackupneonibymicrosd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/neon-i1000/faq/</loc>
   </url>
   
   <url>

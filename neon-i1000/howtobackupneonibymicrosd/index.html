@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>How to flash image? :: Connected Factory</title>
+    <title>How to backup Neoni by microSD card? :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1588752636" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/neon-i1000/howtoflashimage/">
+  <body class="" data-url="/neon-i1000/howtobackupneonibymicrosd/">
     <nav id="sidebar" class="">
 
 
@@ -315,8 +315,8 @@
   
     
     <li data-nav-id="/neon-i1000/howtoflashimage/" title="How to flash image?" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/neon-i1000/howtoflashimage/">
@@ -363,8 +363,8 @@
   
     
     <li data-nav-id="/neon-i1000/howtobackupneonibymicrosd/" title="How to backup Neoni by microSD card?" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/neon-i1000/howtobackupneonibymicrosd/">
@@ -679,7 +679,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-i1000/'>Neon-i1000</a> > How to flash image?
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-i1000/'>Neon-i1000</a> > How to backup Neoni by microSD card?
           
          
           
@@ -701,7 +701,7 @@
           
             <h1>
               
-              How to flash image?
+              How to backup Neoni by microSD card?
             </h1>
           
 
@@ -710,57 +710,74 @@
 
 
 
-	<p>It needs to go force recovery mode first before flash image. Here’s the video which guild you how to flash image.</p>
-<h3 id="step-1-download-image-first-from-your-host-pc-with-ubuntu">Step 1: Download image first from your host pc with Ubuntu</h3>
-<p>Download link</p>
+	<p>According to the <a href="https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3231/index.html#page/Tegra%2520Linux%2520Driver%2520Package%2520Development%2520Guide%2Fuboot_guide.html%23wwpID0E0DF0HA">official document</a>, the boot sequence is decided by U-boot.
+U-Boot functionality includes a default booting scan sequence. It scans bootable devices in the following order:</p>
 <ul>
-<li><a href="https://drive.google.com/open?id=12XSRVi0IwQ5S7I-T75rbN5Aq4Quk0CjN">Jetpack 4.2.1</a></li>
-<li><a href="http://ftp.adlinktech.com/Linux_for_Tegra_JetPack43.tar.gz">Jetpack 4.3</a></li>
+<li>External SD card</li>
+<li>Internal eMMC (Jetson TX2 series devices only)</li>
+<li>USB device (Jetson TX2 series devices only)</li>
+<li>NFS device</li>
 </ul>
-<h3 id="step-2-follow-video-and-flash-image">Step 2: Follow video and flash image</h3>
-<p>Video link: <a href="https://drive.google.com/open?id=1Mu40rDiNP1Jggak3bWoyDDgGCxQXEVyX">https://drive.google.com/open?id=1Mu40rDiNP1Jggak3bWoyDDgGCxQXEVyX</a></p>
+<p>U-Boot boots up the kernel by <strong>/boot/extlinux/extlinux.conf</strong> in the sequence of bootable device. That is to say, if Neon-i1000 equits microSD card with OS,  U-Boot boots up accord to /boot/extlinux/extlinux.conf in microSD card instead of extlinux.conf in eMMC.</p>
+<h3 id="requirements">Requirements:</h3>
 <ul>
-<li>
-<p>at Neon-i1000</p>
-<ul>
-<li>Power on Neon-i1000.</li>
-<li>Enter force recovery mode.</li>
+<li>16G up microSD card</li>
+<li>microSD card reader</li>
+<li>16G up USB stick</li>
+<li>Host PC</li>
+<li>Neon-i1000</li>
 </ul>
-</li>
-<li>
-<p>at Host PC</p>
+<h3 id="step-1-format-your-microsd-card-as-ext4">Step 1: Format your microSD card as ext4</h3>
+<p>The total size of image with Jetpack4.3 is 13G. It suggests clone image by 32G microSD card.</p>
+<p>There&rsquo;s convience tool to format you microSD card: <a href="https://gparted.org/">gparted</a></p>
 <ul>
-<li>Unzip the file downloading from Step 1</li>
+<li>Install gparted</li>
 </ul>
-<pre><code>$ tar -zxvf Linux_for_Tegra_JetPack43.tar.gz
-</code></pre><p>You can refer to pin define below, and try to enter recover mode.
-<img src="/Neon-i1000/howtoflashimage/images/1.png" alt="pin define 1">
-<img src="/Neon-i1000/howtoflashimage/images/2.png" alt="pin define 2"></p>
-<ul>
-<li>
-<p>Step 1: Hold recovery btn (short pin5+pin6)</p>
-</li>
-<li>
-<p>Step 2: Press reset btn (short pin3+pint4)</p>
-</li>
-<li>
-<p>Go to flash folder</p>
-</li>
-</ul>
-<pre><code>cd Linux_for_Tegra_JetPack43/bootloader
+<pre><code>sudo apt-get install gparted
 </code></pre><ul>
-<li>Flash the device</li>
+<li>Format your microSD card by gparted</li>
 </ul>
-<pre><code>sudo ./multi_tegra_flash.sh
-</code></pre></li>
+<pre><code>sudo gparted
+</code></pre><ul>
+<li>Select your microSD card
+<ul>
+<li>Gparted &gt; Devices&gt; your microSD card</li>
 </ul>
-<hr>
-<p>Below video it the procedure for NEON-i1000 flash
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/MCpVP3L4aSI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</p>
+</li>
+<li>Create 15G ext4 partition
+<ul>
+<li>Partition &gt; New
+<img src="/Neon-i1000/howtobackupNeonibymicroSD/images/4.png" alt="Step1"></li>
+</ul>
+</li>
+</ul>
+<h3 id="step-2-clone-emmc-data-to-microsd">Step 2: Clone eMMC data to microSD</h3>
+<ul>
+<li>Make sure Neon-i1000 mounts your microSD card /dev/mmcblk2p1.
+<img src="/Neon-i1000/howtobackupNeonibymicroSD/images/1.png" alt="Step2_1"></li>
+<li>Clone eMMC data to microSD
+<pre><code>sudo cp -ax / '/media/adlink/yourSDcard' &amp;&amp; sync
+</code></pre><p><img src="/Neon-i1000/howtobackupNeonibymicroSD/images/2.png" alt="Step2_2"></p>
+</li>
+</ul>
+<h3 id="step-3-modify-extlinuxconf-in-microsd-card-for-bootup-sequence">Step 3: Modify extlinux.conf in microSD card for bootup sequence</h3>
+<ul>
+<li>
+<p>Edit /boot/extlinux/extlinux.conf in microSD card</p>
+<blockquote>
+<p><del>APPEND ${cbootargs} quiet</del></p>
+</blockquote>
+<blockquote>
+<p>APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/Neon-i1000/howtobackupNeonibymicroSD/images/3.png" alt="Step3_1"></p>
+<h3 id="step-4-reboot-neon-i1000">Step 4: Reboot Neon-i1000</h3>
+<ul>
+<li>It will reboot from microSD card.</li>
+</ul>
+<p><a href="https://medium.com/@ttyUSB0978/nvidia-jetson-tx2-boot-menu-ad929204a70e">Reference</a></p>
 
 
 
@@ -952,23 +969,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1003,6 +1003,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1161,10 +1181,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/neon-i1000/" title="Neon-i1000"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/neon-i1000/howtochooselenses/" title="How to choose suitable lens for Neon?"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/neon-i1000/howtochooselenses/" title="How to choose suitable lens for Neon?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/neon-i1000/faq/" title="FAQ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
