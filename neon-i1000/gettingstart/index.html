@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Getting Start :: Connected Factory</title>
+    <title>Getting start :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1588843660" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/mcm-204/gettingstart/">
+  <body class="" data-url="/neon-i1000/gettingstart/">
     <nav id="sidebar" class="">
 
 
@@ -158,7 +158,7 @@
   
     
     <li data-nav-id="/mcm-204/" title="MCM-204" class="dd-item 
-        parent
+        
         
         
         ">
@@ -185,8 +185,8 @@
   
     
     <li data-nav-id="/mcm-204/gettingstart/" title="Getting Start" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/mcm-204/gettingstart/">
@@ -288,7 +288,7 @@
   
     
     <li data-nav-id="/neon-i1000/" title="Neon-i1000" class="dd-item 
-        
+        parent
         
         
         ">
@@ -315,8 +315,8 @@
   
     
     <li data-nav-id="/neon-i1000/gettingstart/" title="Getting start" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/neon-i1000/gettingstart/">
@@ -703,7 +703,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/mcm-204/'>MCM-204</a> > Getting Start
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-i1000/'>Neon-i1000</a> > Getting start
           
          
           
@@ -725,7 +725,7 @@
           
             <h1>
               
-              Getting Start
+              Getting start
             </h1>
           
 
@@ -734,33 +734,76 @@
 
 
 
-	<p>This tutorial will guide you how to getting start with MCM-204 from un-boxing</p>
-<p><img src="/MCM-204/gettingstart/images/MCM-204_L1.jpg?classes=shadow" alt="MCM204"></p>
-<h3 id="step-1-connect-power">Step 1: Connect Power.</h3>
-<p>Connect the positive and negative wires from a 9V to 30V DC power source to the terminal block.
-<img src="/MCM-204/gettingstart/images/connectPower.jpg" alt="ConnectPower"></p>
-<h3 id="step-2-connect-mcm-204-to-pc-or-laptop">Step 2: Connect MCM-204 to PC or laptop.</h3>
-<p>Connect MCM-204 to the PC or laptop by <strong>ethernet cable</strong>.
+	<p>This tutorial will guide you how to getting start with Neon-iSeries from un-boxing.</p>
+<ul>
+<li><a href="#hardware-wiring">Hardware wiring</a></li>
+<li><a href="#inferece-by-neon-i1000">Inference by Neon-i1000</a></li>
+<li><a href="#run-dio-sample">Run DI/O Sample</a></li>
+</ul>
+<h2 id="hardware-wiring">Hardware wiring</h2>
+<p>The NEON-i1000 DC power source can be either from a USB Type-C adaptor or DC jack. The USB Type-C connector also supports a DisplayPort video signal and USB3, which can be used to
+connect a keyboard and mouse. The following figures show examples of possible power and peripheral connection configurations.</p>
+<ul>
+<li>Separate Power and Peripheral Connections
+<ul>
+<li>This configuration requires an ADLINK AC/DC power adapter (P/N 31-62156-1000-A0).
+<img src="/Neon-i1000/GettingStart/images/Neon-i1000_Hardware_wiring_3.JPG" alt="Separate Power and Peripheral Connections"></li>
+</ul>
+</li>
+<li>Combined Power and Peripheral Connections
+<ul>
+<li>This configuration requires an ADLINK USB Type-C hub/adapter (P/N 92-99090-1010).
+<img src="/Neon-i1000/GettingStart/images/Neon-i1000_Hardware_wiring_4.JPG" alt="Separate Power and Peripheral Connections">
+<img src="/Neon-i1000/GettingStart/images/Neon-i1000_Hardware_wiring_1.JPG" alt="Separate Power and Peripheral Connections"></li>
+</ul>
+</li>
+</ul>
+<h2 id="inference-by-neon-i1000">Inference by Neon-i1000</h2>
+<p>The inference sample, <em><strong>Capture_and_inference_Sample</strong></em>, is built on the Desktop of Neon-i1000.</p>
+<ul>
+<li>
+<p>inference by image</p>
+<ul>
+<li>./imagenet-console [input_image][output_image]</li>
+</ul>
+<pre><code>cd ~/Desktop/Capture_and_Inference_Sample/build/aarch64/bin
+./imagenet-console ./aarch64/bin/jellyfish.jpg ./aarch64/bin/output.jpg
+</code></pre></li>
+<li>
+<p>inference by camera</p>
+<ul>
+<li>./imagenet-camera [input_width] [input_height]</li>
+</ul>
+<pre><code>cd ~/Desktop/Capture_and_Inference_Sample/build/aarch64/bin
+./imagenet-camera 1920 1080
+</code></pre></li>
+</ul>
 
-<div class="notices note" ><p>Please make sure the PC/laptop network mode is under DHCP or static IP set at 169.254.x.x network segment.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/gjJ14kjw5Y8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-</p>
-<h3 id="step-3-open-the-web-browser-to-access-the-build-in-web-console">Step 3: Open the web browser to access the build-in web console.</h3>
-<p>Open the web browser (chrome is recommanded) to access with the default IP http://169.254.1.1</p>
-<p>Once acess MCM-204 web console sucessfully, the page will displayed like below. The default <strong>username</strong> is <em>administrator</em> and <strong>password</strong> is <em>Adlink6166</em>, after fill in these required information then click <strong>LOGIN</strong> to login to the web console.
-<img src="/MCM-204/gettingstart/images/webconsole.PNG" alt="webconsole"></p>
-<h3 id="step-4-device-setting">Step 4: Device Setting</h3>
-<p>Click menu <strong>Device Setting</strong> to enter the device setting page.
-<img src="/MCM-204/gettingstart/images/devicesetting.jpg" alt="devicesetting">
-You could control the analog input setting and customize what kind of data you want to acquire. You could scroll the page to the bottom and simply click <strong>Apply</strong> to apply the default setting at this tutorial.</p>
-<p><img src="/MCM-204/gettingstart/images/apply.png" alt="devicesetting"></p>
-<p>After done, there will pop up a successful message to notify.</p>
-<h3 id="step-5-data-capture">Step 5: Data Capture</h3>
-<p>Click menu <strong>Data Capture</strong> to enter the data display page and all the data set at last step will be displayed at this page.</p>
-<p><img src="/MCM-204/gettingstart/images/menu_datacapture.png" alt="menu data capture">
-<img src="/MCM-204/gettingstart/images/datacapture.JPG" alt="data capture"></p>
-<p>If the data include the <em>Voltage</em> data type, you could click <strong>Draw</strong> to draw the voltage chart.
-<img src="/MCM-204/gettingstart/images/drawvoltage.png" alt="draw voltage"></p>
+
+<h2 id="run-dio-sample">Run DIO Sample</h2>
+<ul>
+<li>Get hardware and DI/O information</li>
+</ul>
+<pre><code> cd /usr/src/Neoni/Sample/Neoni_Information
+ sudo ./Neoni_Information
+</code></pre>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/DLRnU1L9GqQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<ul>
+<li>Get hardware and DI/O information by python</li>
+</ul>
+<pre><code> cd /usr/src/Neoni/Sample/Neoni_Python
+ sudo python Neoni.py
+</code></pre><h2 id="hahahugoshortcode-s2-hbhb">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/eVVSRgH5AWs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</h2>
 
 
 
@@ -854,7 +897,6 @@ You could control the analog input setting and customize what kind of data you w
             
                 
                     
-                    
                 
                 
 
@@ -869,7 +911,6 @@ You could control the analog input setting and customize what kind of data you w
             
             
                 
-                    
                     
                 
                 
@@ -886,9 +927,6 @@ You could control the analog input setting and customize what kind of data you w
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -941,6 +979,7 @@ You could control the analog input setting and customize what kind of data you w
             
                 
                     
+                    
                 
                 
 
@@ -955,6 +994,7 @@ You could control the analog input setting and customize what kind of data you w
             
             
                 
+                    
                     
                 
                 
@@ -971,6 +1011,9 @@ You could control the analog input setting and customize what kind of data you w
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1177,10 +1220,10 @@ You could control the analog input setting and customize what kind of data you w
 	 
 	 
 		
-			<a class="nav nav-prev" href="/mcm-204/" title="MCM-204"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/neon-i1000/" title="Neon-i1000"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/mcm-204/customalgorithm/" title="Custom Algorithm Deploy Sample" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/neon-i1000/howtoflashimage/" title="How to flash image?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
