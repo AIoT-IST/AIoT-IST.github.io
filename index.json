@@ -14,18 +14,18 @@
 	"content": "ADLINK IST Connected Factory MCM-204 Discover how to use the MCM-204 and find the releated questions.\n"
 },
 {
-	"uri": "https://aiot-ist.github.io/neon-2000-jt2/",
-	"title": "NEON-2000-JT2",
-	"tags": [],
-	"description": "",
-	"content": "ADLINK IST Connected Factory NEON-2000-JT2 Discover how to use the NEON-2000-JT2 and find the releated questions.\n"
-},
-{
 	"uri": "https://aiot-ist.github.io/neon-i2000/",
 	"title": "Neon-i2000",
 	"tags": [],
 	"description": "",
 	"content": "ADLINK IST Connected Factory Neon-i2000 Discover how to use the Neon-i2000 and find the releated questions.\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/neon-2000-jt2/",
+	"title": "NEON-2000-JT2",
+	"tags": [],
+	"description": "",
+	"content": "ADLINK IST Connected Factory NEON-2000-JT2 Discover how to use the NEON-2000-JT2 and find the releated questions.\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/mcm-204/gettingstart/",
