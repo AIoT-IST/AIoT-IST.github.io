@@ -19,10 +19,6 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/eos-iseries/gettingstart/</loc>
-  </url>
-  
-  <url>
     <loc>https://aiot-ist.github.io/news/mcm/</loc>
   </url>
   
@@ -47,19 +43,11 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/eos-iseries/faq/</loc>
-  </url>
-  
-  <url>
     <loc>https://aiot-ist.github.io/mcm-204/faq/</loc>
   </url>
   
   <url>
     <loc>https://aiot-ist.github.io/news/mcm/20200311/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/eos-iseries/</loc>
   </url>
   
   <url>
@@ -80,6 +68,18 @@
   
   <url>
     <loc>https://aiot-ist.github.io/neon-2000-jt2/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/eos-iseries/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/eos-iseries/gettingstart/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/eos-iseries/faq/</loc>
   </url>
   
   <url>
