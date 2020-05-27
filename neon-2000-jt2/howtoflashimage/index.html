@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>FAQ :: Connected Factory</title>
+    <title>How to flash image? :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1590549367" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/mcm-204/faq/">
+  <body class="" data-url="/neon-2000-jt2/howtoflashimage/">
     <nav id="sidebar" class="">
 
 
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/mcm-204/" title="MCM-204" class="dd-item 
-        parent
+        
         
         
         ">
@@ -175,8 +175,8 @@
   
     
     <li data-nav-id="/mcm-204/faq/" title="FAQ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/mcm-204/faq/">
@@ -368,7 +368,7 @@
   
     
     <li data-nav-id="/neon-2000-jt2/" title="NEON-2000-JT2" class="dd-item 
-        
+        parent
         
         
         ">
@@ -443,8 +443,8 @@
   
     
     <li data-nav-id="/neon-2000-jt2/howtoflashimage/" title="How to flash image?" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/neon-2000-jt2/howtoflashimage/">
@@ -703,7 +703,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/mcm-204/'>MCM-204</a> > FAQ
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-2000-jt2/'>NEON-2000-JT2</a> > How to flash image?
           
          
           
@@ -725,7 +725,7 @@
           
             <h1>
               
-              FAQ
+              How to flash image?
             </h1>
           
 
@@ -734,31 +734,59 @@
 
 
 
-	<p>Frequently asked questions (FAQ) about MCM-204</p>
-<h2 id="general">General</h2>
+	<p>It needs to go force recovery mode first before flash image. Here’s the video which guild you how to flash image.</p>
+<h3 id="step-1-download-image-first-from-your-host-pc-with-ubuntu">Step 1: Download image first from your host pc with Ubuntu</h3>
+<p>Download link</p>
+<ul>
+<li><a href="http://ftp.adlinktech.com/image/A2_L4T_32.2_20200116.tar.gz">Jetpack 4.2.1</a></li>
+<li><a href="http://ftp.adlinktech.com/image/Linux_for_Tegra_JetPack43.tar.gz">Jetpack 4.3</a></li>
+</ul>
+<h3 id="step-2-follow-video-and-flash-image">Step 2: Follow video and flash image</h3>
 <ul>
 <li>
-<h4 id="what-is-the-default-ip-address">What is the default IP address?</h4>
-The default IP is the fixed link local IP address 169.254.1.1</li>
+<p><a href="https://drive.google.com/open?id=1Mu40rDiNP1Jggak3bWoyDDgGCxQXEVyX">Video link</a></p>
+</li>
 <li>
-<h4 id="how-to-connect-by-hostname">How to connect by hostname?</h4>
-The connection via hostname relies on DNS service, please make sure the DNS service is functional.</li>
+<p>at NEON-2000-JT2</p>
+<ul>
+<li>Power on NEON-2000-JT2.</li>
+<li>Enter force recovery mode.</li>
+</ul>
+</li>
+<li>
+<p>at Host PC</p>
+<ul>
+<li>Unzip the file downloading from Step 1</li>
+</ul>
+<pre><code>$ tar -zxvf Linux_for_Tegra_JetPack43.tar.gz
+</code></pre><p>You can refer to pin define below, and try to enter recover mode.
+<img src="/NEON-2000-JT2/howtoflashimage/images/1.png" alt="pin define 1">
+<img src="/NEON-2000-JT2/howtoflashimage/images/2.png" alt="pin define 2"></p>
+<ul>
+<li>
+<p>Step 1: Hold recovery btn (short pin5+pin6)</p>
+</li>
+<li>
+<p>Step 2: Press reset btn (short pin3+pint4)</p>
+</li>
+<li>
+<p>Go to flash folder</p>
+</li>
+</ul>
+<pre><code>cd Linux_for_Tegra_JetPack43/bootloader
+</code></pre><ul>
+<li>Flash the device</li>
+</ul>
+<pre><code>sudo ./multi_tegra_flash.sh
+</code></pre></li>
 </ul>
 <hr>
-<h2 id="programming">Programming</h2>
-<ul>
-<li>
-<h4 id="what-kinds-of-api-supported">What kinds of API supported?</h4>
-<ul>
-<li>
-<h5 id="restful-api--you-could-get-most-everything-via-this">RESTFul API : You could get most everything via this.</h5>
-</li>
-<li>
-<h5 id="cc-api--used-for-getting-rawdata-more-effiency">C/C++ API : Used for getting rawdata more effiency.</h5>
-</li>
-</ul>
-</li>
-</ul>
+<p>Below video it the procedure for NEON-2000-JT2 flash
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/MCpVP3L4aSI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
 
 
 
@@ -799,195 +827,8 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1051,6 +892,196 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1175,10 +1206,10 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
 	 
 	 
 		
-			<a class="nav nav-prev" href="/mcm-204/customalgorithmdev/" title="Custom Algorithm Development"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/neon-2000-jt2/howtobackupneonibymicrosd/" title="How to backup Neoni by microSD card?"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/dex/" title="DEX" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/neon-2000-jt2/howtochooselenses/" title="How to choose suitable lens for Neon?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1188,19 +1219,19 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1590549367"></script>
-    <script src="/js/perfect-scrollbar.min.js?1590549367"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1590549367"></script>
-    <script src="/js/jquery.sticky.js?1590549367"></script>
-    <script src="/js/featherlight.min.js?1590549367"></script>
-    <script src="/js/highlight.pack.js?1590549367"></script>
+    <script src="/js/clipboard.min.js?1590549368"></script>
+    <script src="/js/perfect-scrollbar.min.js?1590549368"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1590549368"></script>
+    <script src="/js/jquery.sticky.js?1590549368"></script>
+    <script src="/js/featherlight.min.js?1590549368"></script>
+    <script src="/js/highlight.pack.js?1590549368"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1590549367"></script>
-    <script src="/js/learn.js?1590549367"></script>
-    <script src="/js/hugo-learn.js?1590549367"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1590549368"></script>
+    <script src="/js/learn.js?1590549368"></script>
+    <script src="/js/hugo-learn.js?1590549368"></script>
 
-    <link href="/mermaid/mermaid.css?1590549367" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1590549367"></script>
+    <link href="/mermaid/mermaid.css?1590549368" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1590549368"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

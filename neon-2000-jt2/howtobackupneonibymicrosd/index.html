@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>FAQ :: Connected Factory</title>
+    <title>How to backup Neoni by microSD card? :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1590549367" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/mcm-204/faq/">
+  <body class="" data-url="/neon-2000-jt2/howtobackupneonibymicrosd/">
     <nav id="sidebar" class="">
 
 
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/mcm-204/" title="MCM-204" class="dd-item 
-        parent
+        
         
         
         ">
@@ -175,8 +175,8 @@
   
     
     <li data-nav-id="/mcm-204/faq/" title="FAQ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/mcm-204/faq/">
@@ -368,7 +368,7 @@
   
     
     <li data-nav-id="/neon-2000-jt2/" title="NEON-2000-JT2" class="dd-item 
-        
+        parent
         
         
         ">
@@ -419,8 +419,8 @@
   
     
     <li data-nav-id="/neon-2000-jt2/howtobackupneonibymicrosd/" title="How to backup Neoni by microSD card?" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/neon-2000-jt2/howtobackupneonibymicrosd/">
@@ -703,7 +703,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/mcm-204/'>MCM-204</a> > FAQ
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-2000-jt2/'>NEON-2000-JT2</a> > How to backup Neoni by microSD card?
           
          
           
@@ -725,7 +725,7 @@
           
             <h1>
               
-              FAQ
+              How to backup Neoni by microSD card?
             </h1>
           
 
@@ -734,31 +734,74 @@
 
 
 
-	<p>Frequently asked questions (FAQ) about MCM-204</p>
-<h2 id="general">General</h2>
+	<p>According to the <a href="https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3231/index.html#page/Tegra%2520Linux%2520Driver%2520Package%2520Development%2520Guide%2Fuboot_guide.html%23wwpID0E0DF0HA">official document</a>, the boot sequence is decided by U-boot.
+U-Boot functionality includes a default booting scan sequence. It scans bootable devices in the following order:</p>
+<ul>
+<li>External SD card</li>
+<li>Internal eMMC (Jetson TX2 series devices only)</li>
+<li>USB device (Jetson TX2 series devices only)</li>
+<li>NFS device</li>
+</ul>
+<p>U-Boot boots up the kernel by <strong>/boot/extlinux/extlinux.conf</strong> in the sequence of bootable device. That is to say, if NEON-2000-JT2 equits microSD card with OS,  U-Boot boots up accord to /boot/extlinux/extlinux.conf in microSD card instead of extlinux.conf in eMMC.</p>
+<h3 id="requirements">Requirements:</h3>
+<ul>
+<li>32G up microSD card</li>
+<li>microSD card reader</li>
+<li>32G up USB stick</li>
+<li>Host PC</li>
+<li>NEON-2000-JT2</li>
+</ul>
+<h3 id="step-1-format-your-microsd-card-as-ext4">Step 1: Format your microSD card as ext4</h3>
+<p>The total size of image with Jetpack4.3 is 13G. It suggests clone image by 32G microSD card.</p>
+<p>There&rsquo;s convience tool to format you microSD card: <a href="https://gparted.org/">gparted</a></p>
+<ul>
+<li>Install gparted</li>
+</ul>
+<pre><code>sudo apt-get install gparted
+</code></pre><ul>
+<li>Format your microSD card by gparted</li>
+</ul>
+<pre><code>sudo gparted
+</code></pre><ul>
+<li>Select your microSD card
+<ul>
+<li>Gparted &gt; Devices&gt; your microSD card</li>
+</ul>
+</li>
+<li>Create 15G ext4 partition
+<ul>
+<li>Partition &gt; New
+<img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/4.png" alt="Step1"></li>
+</ul>
+</li>
+</ul>
+<h3 id="step-2-clone-emmc-data-to-microsd">Step 2: Clone eMMC data to microSD</h3>
+<ul>
+<li>Make sure NEON-2000-JT2 mounts your microSD card /dev/mmcblk2p1.
+<img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/1.png" alt="Step2_1"></li>
+<li>Clone eMMC data to microSD
+<pre><code>sudo cp -ax / '/media/adlink/yourSDcard' &amp;&amp; sync
+</code></pre><p><img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/2.png" alt="Step2_2"></p>
+</li>
+</ul>
+<h3 id="step-3-modify-extlinuxconf-in-microsd-card-for-bootup-sequence">Step 3: Modify extlinux.conf in microSD card for bootup sequence</h3>
 <ul>
 <li>
-<h4 id="what-is-the-default-ip-address">What is the default IP address?</h4>
-The default IP is the fixed link local IP address 169.254.1.1</li>
-<li>
-<h4 id="how-to-connect-by-hostname">How to connect by hostname?</h4>
-The connection via hostname relies on DNS service, please make sure the DNS service is functional.</li>
+<p>Edit /boot/extlinux/extlinux.conf in microSD card</p>
+<blockquote>
+<p><del>APPEND ${cbootargs} quiet</del></p>
+</blockquote>
+<blockquote>
+<p>APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait</p>
+</blockquote>
+</li>
 </ul>
-<hr>
-<h2 id="programming">Programming</h2>
+<p><img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/3.png" alt="Step3_1"></p>
+<h3 id="step-4-reboot-neon-2000-jt2">Step 4: Reboot NEON-2000-JT2</h3>
 <ul>
-<li>
-<h4 id="what-kinds-of-api-supported">What kinds of API supported?</h4>
-<ul>
-<li>
-<h5 id="restful-api--you-could-get-most-everything-via-this">RESTFul API : You could get most everything via this.</h5>
-</li>
-<li>
-<h5 id="cc-api--used-for-getting-rawdata-more-effiency">C/C++ API : Used for getting rawdata more effiency.</h5>
-</li>
+<li>It will reboot from microSD card.</li>
 </ul>
-</li>
-</ul>
+<p><a href="https://medium.com/@ttyUSB0978/nvidia-jetson-tx2-boot-menu-ad929204a70e">Reference</a></p>
 
 
 
@@ -799,6 +842,8 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -814,9 +859,6 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -844,76 +886,6 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
                     
                         
             
@@ -960,26 +932,8 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1031,10 +985,102 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1175,10 +1221,10 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
 	 
 	 
 		
-			<a class="nav nav-prev" href="/mcm-204/customalgorithmdev/" title="Custom Algorithm Development"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/neon-2000-jt2/gettingstart/" title="Getting start"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/dex/" title="DEX" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/neon-2000-jt2/howtoflashimage/" title="How to flash image?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1188,19 +1234,19 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1590549367"></script>
-    <script src="/js/perfect-scrollbar.min.js?1590549367"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1590549367"></script>
-    <script src="/js/jquery.sticky.js?1590549367"></script>
-    <script src="/js/featherlight.min.js?1590549367"></script>
-    <script src="/js/highlight.pack.js?1590549367"></script>
+    <script src="/js/clipboard.min.js?1590549368"></script>
+    <script src="/js/perfect-scrollbar.min.js?1590549368"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1590549368"></script>
+    <script src="/js/jquery.sticky.js?1590549368"></script>
+    <script src="/js/featherlight.min.js?1590549368"></script>
+    <script src="/js/highlight.pack.js?1590549368"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1590549367"></script>
-    <script src="/js/learn.js?1590549367"></script>
-    <script src="/js/hugo-learn.js?1590549367"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1590549368"></script>
+    <script src="/js/learn.js?1590549368"></script>
+    <script src="/js/hugo-learn.js?1590549368"></script>
 
-    <link href="/mermaid/mermaid.css?1590549367" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1590549367"></script>
+    <link href="/mermaid/mermaid.css?1590549368" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1590549368"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
