@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="generator" content="Hugo 0.67.0" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>How to flash image? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1590549367" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1590549367" rel="stylesheet">
-    <link href="/css/hybrid.css?1590549367" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1590549367" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1590549367" rel="stylesheet">
-    <link href="/css/auto-complete.css?1590549367" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1590549367" rel="stylesheet">
-    <link href="/css/theme.css?1590549367" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1590549367" rel="stylesheet">
+    <link href="/css/nucleus.css?1591602066" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1591602066" rel="stylesheet">
+    <link href="/css/hybrid.css?1591602066" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1591602066" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1591602066" rel="stylesheet">
+    <link href="/css/auto-complete.css?1591602066" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1591602066" rel="stylesheet">
+    <link href="/css/theme.css?1591602066" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1591602066" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1590549367"></script>
+    <script src="/js/jquery-3.3.1.min.js?1591602066"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1590549367"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1590549367"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1591602066"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1591602066"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1590549367"></script>
+<script type="text/javascript" src="/js/search.js?1591602066"></script>
 
     
   </div>
@@ -736,10 +736,16 @@
 
 	<p>It needs to go force recovery mode first before flash image. Here’s the video which guild you how to flash image.</p>
 <h3 id="step-1-download-image-first-from-your-host-pc-with-ubuntu">Step 1: Download image first from your host pc with Ubuntu</h3>
-<p>Download link</p>
+<h4 id="download-link">Download link</h4>
+<h5 id="neon-2000-jt2">Neon-2000-JT2</h5>
 <ul>
 <li><a href="http://ftp.adlinktech.com/image/A2_L4T_32.2_20200116.tar.gz">Jetpack 4.2.1</a></li>
-<li><a href="http://ftp.adlinktech.com/image/Linux_for_Tegra_JetPack43.tar.gz">Jetpack 4.3</a></li>
+<li><a href="http://ftp.adlinktech.com/image/Linux_for_Tegra_JetPack43.tar.gz">Jetpack 4.3 v1.0.0</a></li>
+<li><a href="http://ftp.adlinktech.com/image/A4_Linux_for_Tegra.20200528_JT2_JP43_v1.0.2.tbz2">Jetpack 4.3 v1.0.2</a></li>
+</ul>
+<h5 id="neon-2000-jt2-x">Neon-2000-JT2-X</h5>
+<ul>
+<li><a href="http://ftp.adlinktech.com/image/A1_Linux_for_Tegra.20200601_JT2-X_JP43_v1.0.2.tbz2">Jetpack 4.3 v1.0.2</a></li>
 </ul>
 <h3 id="step-2-follow-video-and-flash-image">Step 2: Follow video and flash image</h3>
 <ul>
@@ -759,6 +765,8 @@
 <li>Unzip the file downloading from Step 1</li>
 </ul>
 <pre><code>$ tar -zxvf Linux_for_Tegra_JetPack43.tar.gz
+</code></pre><p>or</p>
+<pre><code>$ tar -jxvf A4_Linux_for_Tegra.20200528_JT2_JP43_v1.0.2.tbz2
 </code></pre><p>You can refer to pin define below, and try to enter recover mode.
 <img src="/NEON-2000-JT2/howtoflashimage/images/1.png" alt="pin define 1">
 <img src="/NEON-2000-JT2/howtoflashimage/images/2.png" alt="pin define 2"></p>
@@ -773,11 +781,11 @@
 <p>Go to flash folder</p>
 </li>
 </ul>
-<pre><code>cd Linux_for_Tegra_JetPack43/bootloader
+<pre><code>cd Linux_for_Tegra_JetPack43
 </code></pre><ul>
 <li>Flash the device</li>
 </ul>
-<pre><code>sudo ./multi_tegra_flash.sh
+<pre><code>sudo ./flash.sh -r jetson-tx2 mmcblk0p1
 </code></pre></li>
 </ul>
 <hr>
@@ -1219,19 +1227,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1590549368"></script>
-    <script src="/js/perfect-scrollbar.min.js?1590549368"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1590549368"></script>
-    <script src="/js/jquery.sticky.js?1590549368"></script>
-    <script src="/js/featherlight.min.js?1590549368"></script>
-    <script src="/js/highlight.pack.js?1590549368"></script>
+    <script src="/js/clipboard.min.js?1591602066"></script>
+    <script src="/js/perfect-scrollbar.min.js?1591602066"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1591602066"></script>
+    <script src="/js/jquery.sticky.js?1591602066"></script>
+    <script src="/js/featherlight.min.js?1591602066"></script>
+    <script src="/js/highlight.pack.js?1591602066"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1590549368"></script>
-    <script src="/js/learn.js?1590549368"></script>
-    <script src="/js/hugo-learn.js?1590549368"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1591602066"></script>
+    <script src="/js/learn.js?1591602066"></script>
+    <script src="/js/hugo-learn.js?1591602066"></script>
 
-    <link href="/mermaid/mermaid.css?1590549368" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1590549368"></script>
+    <link href="/mermaid/mermaid.css?1591602066" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1591602066"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
