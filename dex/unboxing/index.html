@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>FAQ :: Connected Factory</title>
+    <title>Unboxing :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1596440377" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/mcm-204/faq/">
+  <body class="" data-url="/dex/unboxing/">
     <nav id="sidebar" class="">
 
 
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/mcm-204/" title="MCM-204" class="dd-item 
-        parent
+        
         
         
         ">
@@ -175,8 +175,8 @@
   
     
     <li data-nav-id="/mcm-204/faq/" title="FAQ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/mcm-204/faq/">
@@ -346,7 +346,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX" class="dd-item 
-        
+        parent
         
         
         ">
@@ -373,8 +373,8 @@
   
     
     <li data-nav-id="/dex/unboxing/" title="Unboxing" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/dex/unboxing/">
@@ -739,7 +739,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/mcm-204/'>MCM-204</a> > FAQ
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > Unboxing
           
          
           
@@ -757,12 +757,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              FAQ
-            </h1>
           
 
         
@@ -770,30 +767,62 @@
 
 
 
-	<p>Frequently asked questions (FAQ) about MCM-204</p>
-<h2 id="general">General</h2>
+	<h3 id="dex-100">DEX-100</h3>
+<h1 id="unboxing">Unboxing</h1>
 <ul>
-<li>
-<h4 id="what-is-the-default-ip-address">What is the default IP address?</h4>
-The default IP is the fixed link local IP address 169.254.1.1</li>
-<li>
-<h4 id="how-to-connect-by-hostname">How to connect by hostname?</h4>
-The connection via hostname relies on DNS service, please make sure the DNS service is functional.</li>
+<li><a href="#equipment-wiring-map">Equipment wiring map </a></li>
+<li><a href="#dex-100-wiring-for-vga">DEX-100 wiring for VGA </a></li>
+<li><a href="#dex-100-wiring-for-dvi">DEX-100 wiring for DVI</a></li>
+<li><a href="#dex-100-wiring-usb">DEX-100 wiring for USB</a></li>
+<li><a href="#dex-100-wiring-ps2">DEX-100 wiring for PS2 </a></li>
+<li><a href="#dex-100-for-editing-environment">DEX-100 for editing environment</a></li>
+<li><a href="#dex-100-for-editing-environment">What is the different between (DP to VAG) and (VGA out) ?</a></li>
 </ul>
-<hr>
-<h2 id="programming">Programming</h2>
+<h2 id="equipment-wiring-map">Equipment wiring map</h2>
+<p>The basic wiring is below the figure.
+<img src="/DEX/Unboxing/images/Basic_wiring.PNG" alt="Normal machine"></p>
+<h2 id="dex-100-wiring-for-vga">DEX-100 wiring for VGA</h2>
 <ul>
-<li>
-<h4 id="what-kinds-of-api-supported">What kinds of API supported?</h4>
+<li>This is PC connected to screen by VGA cable.
+<img src="/DEX/Unboxing/images/VGA_2.PNG" alt="Normal machine"></li>
+<li>Separate the VGA cable that the VGA-INPUT connects to dex-100 then VGA-OUTPUT connects to screen.
+<img src="/DEX/Unboxing/images/VGA_1.PNG" alt="Normal machine"></li>
+</ul>
+<h2 id="dex-100-wiring-for-dvi">DEX-100 wiring for DVI</h2>
 <ul>
-<li>
-<h5 id="restful-api--you-could-get-most-everything-via-this">RESTFul API : You could get most everything via this.</h5>
-</li>
-<li>
-<h5 id="cc-api--used-for-getting-rawdata-more-effiency">C/C++ API : Used for getting rawdata more effiency.</h5>
+<li>This is PC connected to screen by DVI cable.
+<img src="/DEX/Unboxing/images/DVI1.PNG" alt="Normal machine"></li>
+<li>Separate the DVI cable that the DVI -INPUT connects to dex-100 then DVI -OUTPUT connects to screen.
+<img src="/DEX/Unboxing/images/DVI2.PNG" alt="Normal machine">
+
+<div class="notices note" ><p>1.DVI-D is dual-link type please referring.</p>
+</div>
+
+
+<div class="notices note" ><p>2.DVI Output shall display when DVI input and DVI output are connected then restart the dex-100.</p>
+</div>
 </li>
 </ul>
-</li>
+<h2 id="dex-100-wiring-for-usb">DEX-100 wiring for USB</h2>
+<ul>
+<li>These are USB of keyboard and mouse how to wire with DEX.
+<img src="/DEX/Unboxing/images/USB.PNG" alt="Normal machine"></li>
+</ul>
+<h2 id="dex-100-wiring-for-ps2">DEX-100 wiring for PS2</h2>
+<ul>
+<li>These are PS2 of keyboard and mouse how to wire with DEX.
+<img src="/DEX/Unboxing/images/PS2.PNG" alt="Normal machine"></li>
+</ul>
+<h2 id="dex-100-for-editing-environment">DEX-100 for editing environment</h2>
+<ul>
+<li>The dex-100 has one GUI that is dex-pro, the dex-pro can design a script for auto-running and show the exclusive screen by DP.
+Due to editing the script that requires ones pair keyboard and mouse then show in the exclusive screen.
+<img src="/DEX/Unboxing/images/DPtoVGA.PNG" alt="Normal machine"></li>
+</ul>
+<h2 id="what-is-the-different-between-dp-to-vag-and-vga-out-">What is the different between (DP to VAG) and (VGA out) ?</h2>
+<ul>
+<li>Describe the different functions between (PD to VAG) and (VGA OUT), Please referring the below figure.
+<img src="/DEX/Unboxing/images/different.PNG" alt="Normal machine"></li>
 </ul>
 
 
@@ -804,6 +833,8 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -835,6 +866,8 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -845,25 +878,6 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -902,6 +916,21 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -921,9 +950,6 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1009,6 +1035,7 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
             
                 
                     
+                    
                 
                 
 
@@ -1023,6 +1050,7 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
             
             
                 
+                    
                     
                 
                 
@@ -1042,6 +1070,9 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1229,10 +1260,10 @@ The connection via hostname relies on DNS service, please make sure the DNS serv
 	 
 	 
 		
-			<a class="nav nav-prev" href="/mcm-204/customalgorithmdev/" title="Custom Algorithm Development"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dex/" title="DEX"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/eos-iseries/" title="EOS-iSeries" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/neon-2000-jt2/" title="NEON-2000-JT2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
