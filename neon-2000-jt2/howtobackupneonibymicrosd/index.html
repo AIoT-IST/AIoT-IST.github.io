@@ -12,18 +12,18 @@
     <title>How to backup Neon by microSD card? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1596609509" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1596609509" rel="stylesheet">
-    <link href="/css/hybrid.css?1596609509" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1596609509" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1596609509" rel="stylesheet">
-    <link href="/css/auto-complete.css?1596609509" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1596609509" rel="stylesheet">
-    <link href="/css/theme.css?1596609509" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1596609509" rel="stylesheet">
+    <link href="/css/nucleus.css?1596690915" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1596690915" rel="stylesheet">
+    <link href="/css/hybrid.css?1596690915" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1596690915" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1596690915" rel="stylesheet">
+    <link href="/css/auto-complete.css?1596690915" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1596690915" rel="stylesheet">
+    <link href="/css/theme.css?1596690915" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1596690915" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1596609509"></script>
+    <script src="/js/jquery-3.3.1.min.js?1596690915"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1596609509"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1596609509"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1596690915"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1596690915"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1596609509"></script>
+<script type="text/javascript" src="/js/search.js?1596690915"></script>
 
     
   </div>
@@ -773,7 +773,7 @@
 	<ul>
 <li><a href="#clone-neon-data-to-microsd-card">Clone Neon data to microSD card</a></li>
 <li><a href="#backup-microsd-card-as-image">Backup microSD card as image</a></li>
-<li><a href="#Recovery-microSD-card-by-image">Recovery microSD card by image</a></li>
+<li><a href="#recovery-microsd-card-by-image">Recovery microSD card by image</a></li>
 </ul>
 <p>According to the <a href="https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3231/index.html#page/Tegra%2520Linux%2520Driver%2520Package%2520Development%2520Guide%2Fuboot_guide.html%23wwpID0E0DF0HA">official document</a>, the boot sequence is decided by U-boot. 
 U-Boot functionality includes a default booting scan sequence. It scans bootable devices in the following order:</p>
@@ -849,7 +849,7 @@ U-Boot functionality includes a default booting scan sequence. It scans bootable
 </code></pre><p><img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/5.png" alt="the disk of microSD in PC is sdd."></p>
 <h3 id="step-2-image-a-card-with-dd">Step 2. Image a card with <strong>dd</strong></h3>
 <p>if=<strong>path_of_your_image.img</strong> of=**/dev/disk**</p>
-<pre><code>sudo dd bs=4M if=/home/adlink/Neon-2000-JT2-JP44.zip status=progess of=/dev/sdd
+<pre><code>sudo dd bs=4M if=/home/adlink/Neon-2000-JT2-JP43.zip status=progess of=/dev/sdd
 </code></pre><p><img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/6.png" alt="Image microSD and zip it"></p>
 <h2 id="recovery-microsd-card-by-image">Recovery microSD card by image</h2>
 <h3 id="step-1-unzip-the-image">Step 1. Unzip the image</h3>
@@ -1308,19 +1308,19 @@ U-Boot functionality includes a default booting scan sequence. It scans bootable
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1596609509"></script>
-    <script src="/js/perfect-scrollbar.min.js?1596609509"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1596609509"></script>
-    <script src="/js/jquery.sticky.js?1596609509"></script>
-    <script src="/js/featherlight.min.js?1596609509"></script>
-    <script src="/js/highlight.pack.js?1596609509"></script>
+    <script src="/js/clipboard.min.js?1596690915"></script>
+    <script src="/js/perfect-scrollbar.min.js?1596690915"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1596690915"></script>
+    <script src="/js/jquery.sticky.js?1596690915"></script>
+    <script src="/js/featherlight.min.js?1596690915"></script>
+    <script src="/js/highlight.pack.js?1596690915"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1596609509"></script>
-    <script src="/js/learn.js?1596609509"></script>
-    <script src="/js/hugo-learn.js?1596609509"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1596690915"></script>
+    <script src="/js/learn.js?1596690915"></script>
+    <script src="/js/hugo-learn.js?1596690915"></script>
 
-    <link href="/mermaid/mermaid.css?1596609509" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1596609509"></script>
+    <link href="/mermaid/mermaid.css?1596690915" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1596690915"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
