@@ -12,18 +12,18 @@
     <title>Custom Algorithm Development :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1597633691" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1597633691" rel="stylesheet">
-    <link href="/css/hybrid.css?1597633691" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1597633691" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1597633691" rel="stylesheet">
-    <link href="/css/auto-complete.css?1597633691" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1597633691" rel="stylesheet">
-    <link href="/css/theme.css?1597633691" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1597633691" rel="stylesheet">
+    <link href="/css/nucleus.css?1599791671" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1599791671" rel="stylesheet">
+    <link href="/css/hybrid.css?1599791671" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1599791671" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1599791671" rel="stylesheet">
+    <link href="/css/auto-complete.css?1599791671" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1599791671" rel="stylesheet">
+    <link href="/css/theme.css?1599791671" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1599791671" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1597633691"></script>
+    <script src="/js/jquery-3.3.1.min.js?1599791671"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1597633691"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1597633691"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1599791671"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1599791671"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1597633691"></script>
+<script type="text/javascript" src="/js/search.js?1599791671"></script>
 
     
   </div>
@@ -770,7 +770,59 @@
 
 
 
-	<h3 id="this-tutorial-will-guide-you-how-to-develope-your-own-custom-algorithm-but-its-still-under-development">This tutorial will guide you how to develope your own custom algorithm but it&rsquo;s still under development.</h3>
+	<h3 id="this-tutorial-will-guide-you-how-to-develop-your-own-algorithm">This tutorial will guide you how to develop your own algorithm</h3>
+<p>In the previous tutorial, we can get the RMS or Mean value through the sample code CustomAlgorithm.zip.
+this tutorial will modify the sample code to get the RMS and Mean value at the same time.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><strong>Operating System</strong> :       Ubuntu 18.04 installed and up-to date</li>
+</ul>
+<hr>
+<h3 id="step-1-change-the-output-data-from-1-to-2">Step 1: Change the output data from 1 to 2.</h3>
+<p>find the code below.</p>
+<pre><code>double* CustomAlgo(uint16_t chIndex, void *rawData, DeviceInfo devInfo, char* customParams, uint32_t* outCount)
+{
+    uint32_t* raw = (uint32_t*)rawData;
+    double inputRange = devInfo.inputRange == B10 ? 10.0 : 1.25;
+    double scalingFactor = inputRange/8388607.0*1000.0/devInfo.sensor.sensitivity;//for convert rawData to g
+    const uint32_t COUNT = 1;
+    double* data = (double*)malloc(sizeof(double) * COUNT);
+    double* gArray = (double*)malloc(sizeof(double) * devInfo.dataCount);
+    raw = raw + chIndex*devInfo.dataCount;
+    *outCount = COUNT;
+    
+    for(int i = 0; i &lt; devInfo.dataCount; i++)
+        gArray[i] = scalingFactor*(((raw[i] &amp; 0x00800000) == 0x00800000) ? (int32_t)(raw[i] | 0xFF000000) : (int32_t)raw[i]);
+    
+    if(strcmp(customParams, &quot;rms&quot;)==0)
+        data[0] = GetRms(gArray, devInfo.dataCount);  
+    else
+        data[0] = GetMean(gArray, devInfo.dataCount); 
+     
+    free(gArray);
+    return data;
+} 
+</code></pre><p>modify COUNT to 2</p>
+<pre><code>const uint32_t COUNT = 2;
+</code></pre><h3 id="step-2-change-the-output-data">Step 2: Change the output data.</h3>
+<p>Modify conditions, then save and deploy the code.</p>
+<pre><code>if(strcmp(customParams, &quot;rms&quot;)==0)
+    {data[0] = GetRms(gArray, devInfo.dataCount);}  
+    else if(strcmp(customParams,&quot;mean&quot;)==0)
+    {data[0] = GetMean(gArray, devInfo.dataCount);}
+    else
+    {
+    data[0]=GetRms(gArray,devInfo.dataCount);
+    data[1]=GetMean(gArray,devInfo.dataCount);
+    } 
+</code></pre><h3 id="step-3-apply-custom-algorithm-to-device-setting">Step 3: Apply custom algorithm to device setting.</h3>
+<p>Please refer to the previous tutorial.</p>
+<h3 id="step-4-modify-customization-parameter">Step 4: Modify Customization Parameter.</h3>
+<p>Enter <strong>both</strong> in customization parameter.
+<img src="/MCM-204/CustomAlgorithmDev/images/Config.png" alt="customization parameter"></p>
+<h3 id="step-5-display-custom-algorithm-result">Step 5: Display custom algorithm result.</h3>
+<p>Click <strong>Data Capture</strong> and the data will be displayed at <strong>Customization</strong> key of returned JSON data.
+<img src="/MCM-204/CustomAlgorithmDev/images/DataCapture.png" alt=""></p>
 
 
 
@@ -1218,19 +1270,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1597633691"></script>
-    <script src="/js/perfect-scrollbar.min.js?1597633691"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1597633691"></script>
-    <script src="/js/jquery.sticky.js?1597633691"></script>
-    <script src="/js/featherlight.min.js?1597633691"></script>
-    <script src="/js/highlight.pack.js?1597633691"></script>
+    <script src="/js/clipboard.min.js?1599791671"></script>
+    <script src="/js/perfect-scrollbar.min.js?1599791671"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1599791671"></script>
+    <script src="/js/jquery.sticky.js?1599791671"></script>
+    <script src="/js/featherlight.min.js?1599791671"></script>
+    <script src="/js/highlight.pack.js?1599791671"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1597633691"></script>
-    <script src="/js/learn.js?1597633691"></script>
-    <script src="/js/hugo-learn.js?1597633691"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1599791671"></script>
+    <script src="/js/learn.js?1599791671"></script>
+    <script src="/js/hugo-learn.js?1599791671"></script>
 
-    <link href="/mermaid/mermaid.css?1597633691" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1597633691"></script>
+    <link href="/mermaid/mermaid.css?1599791671" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1599791671"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
