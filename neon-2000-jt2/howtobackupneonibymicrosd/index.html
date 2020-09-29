@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>ADLINK-IST Connected Factories :: Connected Factory</title>
+    <title>How to backup Neon by microSD card? :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1601350657" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/neon-2000-jt2/howtobackupneonibymicrosd/">
     <nav id="sidebar" class="">
 
 
@@ -414,7 +414,7 @@
   
     
     <li data-nav-id="/neon-2000-jt2/" title="NEON-2000-JT2" class="dd-item 
-        
+        parent
         
         
         ">
@@ -465,8 +465,8 @@
   
     
     <li data-nav-id="/neon-2000-jt2/howtobackupneonibymicrosd/" title="How to backup Neon by microSD card?" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/neon-2000-jt2/howtobackupneonibymicrosd/">
@@ -724,29 +724,162 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-2000-jt2/'>NEON-2000-JT2</a> > How to backup Neon by microSD card?
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              How to backup Neon by microSD card?
+            </h1>
+          
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i></a>
-</span>
 
- 
-<h1 id="adlink-ist-connected-factory">ADLINK-IST Connected Factory</h1>
-<h3 id="discover-the-sharing-of-technical-documents-and-the-common-questions">Discover the sharing of technical documents and the common questions.</h3>
 
-<div class="notices tip" ><p>You could navigate from the menu or simply type the keyword to search!</p>
-</div>
+	<ul>
+<li><a href="#clone-neon-data-to-microsd-card">Clone Neon data to microSD card</a></li>
+<li><a href="#backup-microsd-card-as-image">Backup microSD card as image</a></li>
+<li><a href="#recovery-microsd-card-by-image">Recovery microSD card by image</a></li>
+</ul>
+<p>According to the <a href="https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3231/index.html#page/Tegra%2520Linux%2520Driver%2520Package%2520Development%2520Guide%2Fuboot_guide.html%23wwpID0E0DF0HA">official document</a>, the boot sequence is decided by U-boot.
+U-Boot functionality includes a default booting scan sequence. It scans bootable devices in the following order:</p>
+<ul>
+<li>External SD card</li>
+<li>Internal eMMC (Jetson TX2 series devices only)</li>
+<li>USB device (Jetson TX2 series devices only)</li>
+<li>NFS device</li>
+</ul>
+<p>U-Boot boots up the kernel by <strong>/boot/extlinux/extlinux.conf</strong> in the sequence of bootable device. That is to say, if NEON-2000-JT2 equits microSD card with OS,  U-Boot boots up accord to /boot/extlinux/extlinux.conf in microSD card instead of extlinux.conf in eMMC.</p>
+<h3 id="requirements">Requirements:</h3>
+<ul>
+<li>32G up microSD card</li>
+<li>NEON-2000-JT2</li>
+<li>MicroSD card reader</li>
+</ul>
+<h2 id="clone-neon-data-to-microsd-card">Clone Neon data to microSD card</h2>
+<h3 id="step-1-format-your-microsd-card-as-ext4">Step 1: Format your microSD card as ext4</h3>
+<p>The total size of image with Jetpack4.3 is 13G. It suggests clone image by 32G microSD card.</p>
+<p>There&rsquo;s convience tool to format you microSD card: <a href="https://gparted.org/">gparted</a></p>
+<ul>
+<li>Install gparted</li>
+</ul>
+<pre><code>sudo apt-get install gparted
+</code></pre><ul>
+<li>Format your microSD card by gparted</li>
+</ul>
+<pre><code>sudo gparted
+</code></pre><ul>
+<li>Select your microSD card
+<ul>
+<li>Gparted &gt; Devices&gt; your microSD card</li>
+</ul>
+</li>
+<li>Create 15G ext4 partition
+<ul>
+<li>Partition &gt; New
+<img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/4.png" alt="Step1"></li>
+</ul>
+</li>
+</ul>
+<h3 id="step-2-clone-emmc-data-to-microsd">Step 2: Clone eMMC data to microSD</h3>
+<ul>
+<li>Make sure NEON-2000-JT2 mounts your microSD card /dev/mmcblk2p1.
+<img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/1.png" alt="Step2_1"></li>
+<li>Clone eMMC data to microSD
+<pre><code>sudo cp -ax / '/media/adlink/yourSDcard' &amp;&amp; sync
+</code></pre><p><img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/2.png" alt="Step2_2"></p>
+</li>
+</ul>
+<h3 id="step-3-modify-extlinuxconf-in-microsd-card-for-bootup-sequence">Step 3: Modify extlinux.conf in microSD card for bootup sequence</h3>
+<ul>
+<li>
+<p>Edit /boot/extlinux/extlinux.conf in microSD card</p>
+<blockquote>
+<p><del>APPEND ${cbootargs} quiet</del></p>
+</blockquote>
+<blockquote>
+<p>APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/3.png" alt="Step3_1"></p>
+<h3 id="step-4-reboot-neon-2000-jt2">Step 4: Reboot NEON-2000-JT2</h3>
+<ul>
+<li>It will boot from microSD card.</li>
+</ul>
+<p><a href="https://medium.com/@ttyUSB0978/nvidia-jetson-tx2-boot-menu-ad929204a70e">Reference</a></p>
+<h2 id="optional">Optional</h2>
+<h2 id="backup-microsd-card-as-image">Backup microSD card as image</h2>
+<h3 id="step-1-use-command-and-check-the-disk-of-microsd-in-pc">Step 1. Use command and check the disk of microSD in PC</h3>
+<pre><code>df -h
+</code></pre><p><img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/5.png" alt="the disk of microSD in PC is sdd."></p>
+<h3 id="step-2-image-a-card-with-dd">Step 2. Image a card with <strong>dd</strong></h3>
+<p>if=<strong>path_of_your_image.img</strong> of=**/dev/disk**</p>
+<pre><code>sudo dd bs=4M if=/dev/sdd status=progress | zip Neon-2000-JT2-JP43.zip -
+</code></pre><p><img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/6.png" alt="Image microSD and zip it"></p>
+<h2 id="recovery-microsd-card-by-image">Recovery microSD card by image</h2>
+<ul>
+<li><a href="http://ftp.adlinktech.com/image/Neon-2000-TX2-JP43.zip">image for microSD, Jetpack 4.3 v1.0.2</a> MD5: ae005ea9624999fb0922c487322680d1s</li>
+</ul>
+<h3 id="step-1-unzip-the-image">Step 1. Unzip the image</h3>
+<pre><code>unzip Neon-2000-JT2-JP43.zip
+</code></pre><h3 id="step-2-rename-it">Step 2. Rename it</h3>
+<pre><code>mv - unzip Neon-2000-JT2-JP43.image
+</code></pre><h3 id="step-3-insert-microsd-and-flash-it-by-etcherhttpswwwbalenaioetcher">Step 3. Insert microSD and flash it by <a href="https://www.balena.io/etcher/">Etcher</a></h3>
+<p><img src="/NEON-2000-JT2/howtobackupNeonibymicroSD/images/7.png" alt="Flash by Etcher (take Jetpack4.4 for example)"></p>
 
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -981,6 +1114,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -995,6 +1129,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1012,6 +1149,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1027,6 +1165,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1167,8 +1308,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/neon-2000-jt2/gettingstart/" title="Getting start"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/mcm-204/" title="MCM-204" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/neon-2000-jt2/howtoflashimage/" title="How to flash image?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1198,4 +1341,3 @@
 
   </body>
 </html>
-

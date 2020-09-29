@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>ADLINK-IST Connected Factories :: Connected Factory</title>
+    <title>How to flash image? :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1601350657" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/neon-2000-jt2/howtoflashimage/">
     <nav id="sidebar" class="">
 
 
@@ -414,7 +414,7 @@
   
     
     <li data-nav-id="/neon-2000-jt2/" title="NEON-2000-JT2" class="dd-item 
-        
+        parent
         
         
         ">
@@ -489,8 +489,8 @@
   
     
     <li data-nav-id="/neon-2000-jt2/howtoflashimage/" title="How to flash image?" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/neon-2000-jt2/howtoflashimage/">
@@ -724,29 +724,141 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-2000-jt2/'>NEON-2000-JT2</a> > How to flash image?
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              How to flash image?
+            </h1>
+          
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i></a>
-</span>
 
- 
-<h1 id="adlink-ist-connected-factory">ADLINK-IST Connected Factory</h1>
-<h3 id="discover-the-sharing-of-technical-documents-and-the-common-questions">Discover the sharing of technical documents and the common questions.</h3>
 
-<div class="notices tip" ><p>You could navigate from the menu or simply type the keyword to search!</p>
+	<p>It needs to go force recovery mode first before flash image. Here’s the video which guild you how to flash image.</p>
+<h3 id="step-1-download-image-first-from-your-host-pc-with-ubuntu">Step 1: Download image first from your host pc with Ubuntu</h3>
+<h4 id="download-link">Download link</h4>
+<h5 id="neon-2000-jt2">Neon-2000-JT2</h5>
+<ul>
+<li><a href="http://ftp.adlinktech.com/image/A2_L4T_32.2_20200116.tar.gz">Jetpack 4.2.1</a></li>
+<li><a href="http://ftp.adlinktech.com/image/Linux_for_Tegra_JetPack43.tar.gz">Jetpack 4.3 v1.0.0</a></li>
+<li><a href="http://ftp.adlinktech.com/image/A4_Linux_for_Tegra.20200528_JT2_JP43_v1.0.2.tar.gz">Jetpack 4.3 v1.0.2</a> MD5:e70d52d564e09b11b76fa74314c96c79</li>
+<li><a href="http://ftp.adlinktech.com/image/A4_Linux_for_Tegra.JP4.4_20200923.tar.gz">Jetpack 4.4 v1.0.3</a> MD5:a79387337f7e527be15a503c4d96d062</li>
+</ul>
+<h5 id="neon-2000-jt2-x">Neon-2000-JT2-X</h5>
+<ul>
+<li><a href="http://ftp.adlinktech.com/image/A1_Linux_for_Tegra.20200601_JT2-X_JP43_v1.0.2.tar.gz">Jetpack 4.3 v1.0.2</a> MD5:17e9d5c0b25505f22c472844051ea528</li>
+<li><a href="http://ftp.adlinktech.com/image/Neon-JT2X/A2_Linux_for_Tegra.20200818.zip">Jetpack 4.4 v1.0.2</a> MD5:2592aa408fbcba2357fd94d623bfa7cb
+<ul>
+<li>
+<pre><code>$ mv A2_Linux_for_Tegra.20200818.zip A2_Linux_for_Tegra.20200818.tbz2
+$ tar -jxvf A2_Linux_for_Tegra.20200818.tbz2
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h3 id="step-2-follow-video-and-flash-image">Step 2: Follow video and flash image</h3>
+<ul>
+<li>
+<p><a href="https://drive.google.com/open?id=1Mu40rDiNP1Jggak3bWoyDDgGCxQXEVyX">Video link</a></p>
+</li>
+<li>
+<p>at NEON-2000-JT2</p>
+<ul>
+<li>Power on NEON-2000-JT2.</li>
+<li>Enter force recovery mode.</li>
+</ul>
+</li>
+<li>
+<p>at Host PC</p>
+<ul>
+<li>Unzip the file downloading from Step 1</li>
+</ul>
+<pre><code>$ tar -zxvf Linux_for_Tegra_JetPack43.tar.gz
+</code></pre><p>or</p>
+<pre><code>$ tar -jxvf A4_Linux_for_Tegra.20200528_JT2_JP43_v1.0.2.tbz2
+</code></pre><p>You can refer to pin define below, and try to enter recover mode.
+<img src="/NEON-2000-JT2/howtoflashimage/images/1.png" alt="pin define 1">
+<img src="/NEON-2000-JT2/howtoflashimage/images/2.png" alt="pin define 2"></p>
+<ul>
+<li>
+<p>Step 1: Hold recovery btn (short pin5+pin6)</p>
+</li>
+<li>
+<p>Step 2: Press reset btn (short pin3+pint4)</p>
+</li>
+<li>
+<p>Go to flash folder</p>
+</li>
+</ul>
+<pre><code>cd Linux_for_Tegra_JetPack43
+</code></pre><ul>
+<li>Flash the device</li>
+</ul>
+<pre><code>sudo ./flash.sh -r jetson-tx2 mmcblk0p1
+</code></pre></li>
+</ul>
+<hr>
+<p>Below video it the procedure for NEON-2000-JT2 flash
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/MCpVP3L4aSI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
+</p>
 
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -981,6 +1093,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -995,6 +1108,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1028,6 +1144,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1043,6 +1160,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1167,8 +1287,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/neon-2000-jt2/howtobackupneonibymicrosd/" title="How to backup Neon by microSD card?"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/mcm-204/" title="MCM-204" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/neon-2000-jt2/howtochooselenses/" title="How to choose suitable lens for Neon?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1198,4 +1320,3 @@
 
   </body>
 </html>
-
