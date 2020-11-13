@@ -35,6 +35,13 @@
 	"content": "ADLINK IST Connected Factory Euresys Discover how to use the DEX series and find the releated questions.\n"
 },
 {
+	"uri": "https://aiot-ist.github.io/dex/faq/",
+	"title": "FAQ",
+	"tags": [],
+	"description": "",
+	"content": "FAQ List  Specifications of DI1 DI2 LED Batch kill dex-pro  Specifications of DI1 DI2 Hardware Figure DI connector pin assignment DI1/2 function LED There are 3 LEDs in the hardware that can light by script command. kill the dex-pro by batch  Please run the cmd as administrator\n input the command taskkill /f /im DEX-Pro.exe\n "
+},
+{
 	"uri": "https://aiot-ist.github.io/dex/unboxing/",
 	"title": "Unboxing",
 	"tags": [],

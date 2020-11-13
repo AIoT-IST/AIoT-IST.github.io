@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>How to choose suitable lens for Neon? :: Connected Factory</title>
+    <title>FAQ :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1605255158" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/neon-2000-jt2/howtochooselenses/">
+  <body class="" data-url="/dex/faq/">
     <nav id="sidebar" class="">
 
 
@@ -356,7 +356,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX" class="dd-item 
-        
+        parent
         
         
         ">
@@ -383,8 +383,8 @@
   
     
     <li data-nav-id="/dex/faq/" title="FAQ" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/dex/faq/">
@@ -438,7 +438,7 @@
   
     
     <li data-nav-id="/neon-2000-jt2/" title="NEON-2000-JT2" class="dd-item 
-        parent
+        
         
         
         ">
@@ -537,8 +537,8 @@
   
     
     <li data-nav-id="/neon-2000-jt2/howtochooselenses/" title="How to choose suitable lens for Neon?" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/neon-2000-jt2/howtochooselenses/">
@@ -773,7 +773,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-2000-jt2/'>NEON-2000-JT2</a> > How to choose suitable lens for Neon?
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > FAQ
           
          
           
@@ -791,12 +791,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              How to choose suitable lens for Neon?
-            </h1>
           
 
         
@@ -804,25 +801,34 @@
 
 
 
-	<p>Here&rsquo;s the lens selector tool from <a href="https://www.baslerweb.com/en/products/tools/lens-selector/#camera-series=s-2071;camera-model=m-49029">Basler website</a>.
-Please enter your criteria and we&rsquo;ll show you suitable lens models.</p>
-<h3 id="step-1-select-camera-series-and-model">Step 1: Select camera series and model</h3>
-<p>Takes <a href="https://aiot-ist.github.io/NEON-2000-JT2/faq/#NEON-2000-JT2-model-and-sensor-specifications">Neon-203B</a> for example</p>
-<p><img src="/NEON-2000-JT2/howtochooseLenses/images/1.PNG" alt="Step1"></p>
-<h3 id="step-2-please-enter-as-many-values-as-possible-missing-values-will-be-calculated-automatically">Step 2: Please enter as many values as possible. Missing values will be calculated automatically.</h3>
-<p>Take example for real case:</p>
-<ol>
-<li>At 75ft(22860 mm) needs to support a field of view that is 406 inches (10312 mm) X 406 inches (10312 mm)</li>
-<li>And supports a 10ft depth of field</li>
-</ol>
-<p><img src="/NEON-2000-JT2/howtochooseLenses/images/2.png" alt="Step2"></p>
-<h3 id="step-3-display-suitable-lenses">Step 3: Display suitable lenses</h3>
-<p>If you want to use the lens with a CS-mount camera, a distance ring (5 mm) must be attached to the lens.</p>
-<p><img src="/NEON-2000-JT2/howtochooseLenses/images/3.png" alt="Step3"></p>
-<h3 id="step-4-you-can-contact-with-your-vendor-and-find-the-similar-spec-of-lenses">Step 4: You can contact with your vendor and find the similar spec of lenses.</h3>
-<p>Kindly remind you that the smaller focal length may cause “fisheye” effect.</p>
-<p><img src="/NEON-2000-JT2/howtochooseLenses/images/4.png" alt="Step4"></p>
-<p>The <a href="https://drive.google.com/open?id=1NEw7rSrPSlcxxpYTWlXV7X0qdY1OHTeI">document</a> from Basler website explains what you should know when selecting a lens for your camera.</p>
+	<h1 id="faq">FAQ</h1>
+<h2 id="list">List</h2>
+<ul>
+<li><a href="#specifications-of-di1-di2">Specifications of DI1 DI2</a></li>
+<li><a href="#led">LED</a></li>
+<li><a href="#kill-the-dex-pro-by-batch">Batch kill dex-pro</a></li>
+</ul>
+<h2 id="specifications-of-di1-di2">Specifications of DI1 DI2</h2>
+<p>Hardware Figure
+<img src="/DEX/FAQ/images/DIfigure.png" alt="DI1/2"></p>
+<p>DI connector pin assignment
+<img src="/DEX/FAQ/images/pintable.png" alt="Pin Circuit diagram"></p>
+<p>DI1/2 function
+<img src="/DEX/FAQ/images/DIFunction.PNG" alt="Pin function"></p>
+<h2 id="led">LED</h2>
+<p>There are 3 LEDs in the hardware that can light by script command.
+<img src="/DEX/FAQ/images/LEDhardware.png" alt="Hardware Figure"></p>
+<h2 id="kill-the-dex-pro-by-batch">kill the dex-pro by batch</h2>
+<p>
+<div class="notices note" ><p>Please run the cmd as administrator</p>
+</div>
+
+input the command
+
+<div class="notices note" ><p>taskkill /f /im DEX-Pro.exe</p>
+</div>
+
+<img src="/DEX/FAQ/images/cmdadministrator.PNG" alt="cmd command"></p>
 
 
 
@@ -832,6 +838,8 @@ Please enter your criteria and we&rsquo;ll show you suitable lens models.</p>
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -1032,6 +1040,61 @@ Please enter your criteria and we&rsquo;ll show you suitable lens models.</p>
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -1074,44 +1137,6 @@ Please enter your criteria and we&rsquo;ll show you suitable lens models.</p>
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1148,26 +1173,6 @@ Please enter your criteria and we&rsquo;ll show you suitable lens models.</p>
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1276,10 +1281,10 @@ Please enter your criteria and we&rsquo;ll show you suitable lens models.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/neon-2000-jt2/howtoflashimage/" title="How to flash image?"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dex/" title="DEX"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/neon-2000-jt2/faq/" title="FAQ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dex/unboxing/" title="Unboxing" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
