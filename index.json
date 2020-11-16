@@ -39,7 +39,7 @@
 	"title": "FAQ",
 	"tags": [],
 	"description": "",
-	"content": "FAQ List  Specifications of DI1 DI2 LED Batch kill dex-pro  Specifications of DI1 DI2 Hardware Figure DI connector pin assignment DI1/2 function LED There are 3 LEDs in the hardware that can light by script command. kill the dex-pro by batch  Please run the cmd as administrator\n input the command taskkill /f /im DEX-Pro.exe\n "
+	"content": "FAQ List  Specifications of DI1 DI2 LED Batch kill dex-pro The mouse follows offset  Specifications of DI1 DI2 Hardware Figure DI connector pin assignment DI1/2 function LED There are 3 LEDs in the hardware that can light by script command. kill the dex-pro by batch  Please run the cmd as administrator\n input the command taskkill /f /im DEX-Pro.exe\n The mouse follows offset  Check the machine PC’s mouse setting, Keep middle speed and disable “Enhance pointer precision”. If the offset distance is not fixed, adjust mouse speed of the machine PC   "
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/unboxing/",
