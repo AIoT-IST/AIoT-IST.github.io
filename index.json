@@ -39,7 +39,7 @@
 	"title": "FAQ",
 	"tags": [],
 	"description": "",
-	"content": "FAQ List  Specifications of DI1 DI2 LED Batch kill dex-pro The mouse follows offset  Specifications of DI1 DI2 Hardware Figure DI connector pin assignment DI1/2 function LED There are 3 LEDs in the hardware that can light by script command. kill the dex-pro by batch  Please run the cmd as administrator\n input the command taskkill /f /im DEX-Pro.exe\n The mouse follows offset  Check the machine PC’s mouse setting, Keep middle speed and disable “Enhance pointer precision”. If the offset distance is not fixed, adjust mouse speed of the machine PC   "
+	"content": "FAQ List  Specifications of DI1 DI2 LED Batch kill dex-pro The mouse follows offset How to restart the MSMQ  Specifications of DI1 DI2 Hardware Figure DI connector pin assignment DI1/2 function LED There are 3 LEDs in the hardware that can light by script command. kill the dex-pro by batch  Please run the cmd as administrator\n input the command taskkill /f /im DEX-Pro.exe\n The mouse follows offset  Check the machine PC’s mouse setting, Keep middle speed and disable “Enhance pointer precision”. If the offset distance is not fixed, adjust mouse speed of the machine PC   How to restart the MSMQ If the Dex-por can\u0026rsquo;t work by MSMQ, Please follow the below steps for Troubleshooting\n Go to \u0026ldquo;control panel\u0026rdquo;  Go to \u0026ldquo;Program\u0026rdquo;  Go to \u0026ldquo;Turn Windows Features on or off\u0026rdquo;  Disable the \u0026ldquo;Microsoft Message Queue(MSMQ) Server\u0026rdquo;  Reboot the DEX-100 Enable the \u0026ldquo;Microsoft Message Queue(MSMQ) Server\u0026rdquo;   "
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/unboxing/",
