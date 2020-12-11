@@ -12,18 +12,18 @@
     <title>FAQ :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1606890448" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1606890448" rel="stylesheet">
-    <link href="/css/hybrid.css?1606890448" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1606890448" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1606890448" rel="stylesheet">
-    <link href="/css/auto-complete.css?1606890448" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1606890448" rel="stylesheet">
-    <link href="/css/theme.css?1606890448" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1606890448" rel="stylesheet">
+    <link href="/css/nucleus.css?1607664411" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1607664411" rel="stylesheet">
+    <link href="/css/hybrid.css?1607664411" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1607664411" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1607664411" rel="stylesheet">
+    <link href="/css/auto-complete.css?1607664411" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1607664411" rel="stylesheet">
+    <link href="/css/theme.css?1607664411" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1607664411" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1606890448"></script>
+    <script src="/js/jquery-3.3.1.min.js?1607664411"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -62,14 +62,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1606890448"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1606890448"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1607664411"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1607664411"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1606890448"></script>
+<script type="text/javascript" src="/js/search.js?1607664411"></script>
 
     
   </div>
@@ -833,6 +833,7 @@
 <li><a href="#kill-the-dex-pro-by-batch">Batch kill dex-pro</a></li>
 <li><a href="#the-mouse-follows-offset">The mouse follows offset</a></li>
 <li><a href="#how-to-restart-the-msmq">How to restart the MSMQ</a></li>
+<li><a href="#how-to-check-the-setting-when-the-dexpro-can-not-grab-the-video">How to check why the dexpro can&rsquo;t grab the video</a></li>
 </ul>
 <h2 id="specifications-of-di1-di2">Specifications of DI1 DI2</h2>
 <p>Hardware Figure
@@ -876,6 +877,29 @@ input the command
 <li>Enable the &ldquo;Microsoft Message Queue(MSMQ) Server&rdquo;
 <img src="/DEX/FAQ/images/EnableMSMQ.PNG" alt="Enable MSMQ"></li>
 </ol>
+<h2 id="how-to-check-the-setting-when-the-dexpro-can-not-grab-the-video">How to check the setting when the dexpro can not grab the video</h2>
+<p>If the Dex-pro can&rsquo;t grab the video, We have several suggestions please follow checking the below steps.</p>
+<ol>
+<li>Please checking the setting is Auto by the dex-pro tool of Fram Grabber Configuration.
+<img src="/DEX/FAQ/images/toolsetting.PNG" alt="Fram Grabber setting"></li>
+<li>Please open the Diagnostic tool.
+<pre><code>Tool-Path &quot;C:\Program Files\ADLINK\DEX-100\utility&quot;
+</code></pre></li>
+</ol>
+<p><img src="/DEX/FAQ/images/Diagnostic1.PNG" alt="Diagnostic tool"></p>
+<ol start="3">
+<li>You shall see both the result for Resolution and Signal if the connection is successful.
+<img src="/DEX/FAQ/images/Diagnostic2.PNG" alt="Diagnostic result"></li>
+<li>If is no signal , please use below steps to help you troubleshooting.</li>
+</ol>
+<ul>
+<li>A. Check the Local machine setting for display resolution.</li>
+<li>B. Reconnect the local machine VGA cable to monitor.</li>
+<li>C. Reboot the local machine.</li>
+<li>D. Check the resolution from the monitor.</li>
+<li>E. Reconnect the VGA to Dex-100</li>
+<li>F. Check Frame Grabber Setting whether the auto mode is selected for any resolution.</li>
+</ul>
 
 
 
@@ -1357,19 +1381,19 @@ input the command
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1606890448"></script>
-    <script src="/js/perfect-scrollbar.min.js?1606890448"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1606890448"></script>
-    <script src="/js/jquery.sticky.js?1606890448"></script>
-    <script src="/js/featherlight.min.js?1606890448"></script>
-    <script src="/js/highlight.pack.js?1606890448"></script>
+    <script src="/js/clipboard.min.js?1607664411"></script>
+    <script src="/js/perfect-scrollbar.min.js?1607664411"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1607664411"></script>
+    <script src="/js/jquery.sticky.js?1607664411"></script>
+    <script src="/js/featherlight.min.js?1607664411"></script>
+    <script src="/js/highlight.pack.js?1607664411"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1606890448"></script>
-    <script src="/js/learn.js?1606890448"></script>
-    <script src="/js/hugo-learn.js?1606890448"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1607664411"></script>
+    <script src="/js/learn.js?1607664411"></script>
+    <script src="/js/hugo-learn.js?1607664411"></script>
 
-    <link href="/mermaid/mermaid.css?1606890448" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1606890448"></script>
+    <link href="/mermaid/mermaid.css?1607664411" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1607664411"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
