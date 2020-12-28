@@ -12,18 +12,18 @@
     <title>EasyImage :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1608258848" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1608258848" rel="stylesheet">
-    <link href="/css/hybrid.css?1608258848" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1608258848" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1608258848" rel="stylesheet">
-    <link href="/css/auto-complete.css?1608258848" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1608258848" rel="stylesheet">
-    <link href="/css/theme.css?1608258848" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1608258848" rel="stylesheet">
+    <link href="/css/nucleus.css?1609134974" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1609134974" rel="stylesheet">
+    <link href="/css/hybrid.css?1609134974" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1609134974" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1609134974" rel="stylesheet">
+    <link href="/css/auto-complete.css?1609134974" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1609134974" rel="stylesheet">
+    <link href="/css/theme.css?1609134974" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1609134974" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1608258848"></script>
+    <script src="/js/jquery-3.3.1.min.js?1609134974"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -62,14 +62,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1608258848"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1608258848"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1609134974"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1609134974"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1608258848"></script>
+<script type="text/javascript" src="/js/search.js?1609134974"></script>
 
     
   </div>
@@ -834,10 +834,9 @@
 <li><a href="#function_2-extracting-an-object-contour">Extracting an Object Contour</a></li>
 <li><a href="#function_3-detecting-the-corners-by-using-harris-corner-detector">Detecting the Corners of an Object Using Harris Corner Detector</a></li>
 <li><a href="#function_4-detecting-a-horizontal-or-vertical-line-using-projection">Detecting a Horizontal or Vertical Line Using Projection</a></li>
-<li><a href="">Creating a Flexible Mask</a></li>
-<li><a href="">Computing Gray-Level Statistics Using a Flexible Mask</a></li>
-<li><a href="">Detecting the Corners of an Object Using Hit-and-Miss Transform</a></li>
-<li><a href="">Extracting a Vector Using Profile Function</a></li>
+<li><a href="#function_5-computing-gray-level-statistics-using-a-flexible-mask">Creating a Flexible Mask &amp; Computing Gray-Level Statistics Using a Flexible Mask</a></li>
+<li><a href="#function_6-detecting-the-corners-of-an-object-using-hit-and-miss-transform">Detecting the Corners of an Object Using Hit-and-Miss Transform</a></li>
+<li><a href="#function_7-extracting-a-vector-using-profile-function">Extracting a Vector Using Profile Function</a></li>
 <li><a href="">Enhancing an X-ray image</a></li>
 <li><a href="">Correcting Non-Uniform Illumination</a></li>
 <li><a href="">Correcting Shear Effect</a></li>
@@ -905,6 +904,54 @@
 <li>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/mirx8gu8B9M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</li>
+</ol>
+<ul>
+<li>
+<h3 id="function_5-computing-gray-level-statistics-using-a-flexible-mask">Function_5 Computing Gray-Level Statistics Using a Flexible Mask</h3>
+</li>
+</ul>
+<ol>
+<li>Load the source image</li>
+<li>Invert the image</li>
+<li>Threshold the image</li>
+<li>Save the flexible mask<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Creating_a_Flexible_Mask.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____6">Link on line Doc</a></li>
+<li>Load the flexible mask image</li>
+<li>Apply the flexible mask on the source image</li>
+<li>Compute the gray-level statistics<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Computing_Gray-Level_Statistics_Using_a_Flexible_Mask.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____7">Link on line Doc</a></li>
+<li>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/hrB3pOzlrfE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</li>
+</ol>
+<ul>
+<li>
+<h3 id="function_6-detecting-the-corners-of-an-object-using-hit-and-miss-transform">Function_6 Detecting the Corners of an Object Using Hit-and-Miss Transform</h3>
+</li>
+</ul>
+<ol>
+<li>Load the source image</li>
+<li>Set the hit-and-miss kernel</li>
+<li>Apply the hit-and-miss transform<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Detecting_the_Corners_of_an_Object_Using_Hit-and-Miss_Transform.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____8">Link on line Doc</a></li>
+<li>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/dC-8oDxI4Ns" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</li>
+</ol>
+<ul>
+<li>
+<h3 id="function_7-extracting-a-vector-using-profile-function">Function_7 Extracting a Vector Using Profile Function</h3>
+</li>
+</ul>
+<ol>
+<li>Load the source image</li>
+<li>Set the destination vector and detecting the scratches<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Extracting_a_Vector_Using_Profile_Function.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____9">Link on line Doc</a></li>
+<li>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/i2se0YjnQrc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 </li>
 </ol>
@@ -1387,19 +1434,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1608258848"></script>
-    <script src="/js/perfect-scrollbar.min.js?1608258848"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1608258848"></script>
-    <script src="/js/jquery.sticky.js?1608258848"></script>
-    <script src="/js/featherlight.min.js?1608258848"></script>
-    <script src="/js/highlight.pack.js?1608258848"></script>
+    <script src="/js/clipboard.min.js?1609134974"></script>
+    <script src="/js/perfect-scrollbar.min.js?1609134974"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1609134974"></script>
+    <script src="/js/jquery.sticky.js?1609134974"></script>
+    <script src="/js/featherlight.min.js?1609134974"></script>
+    <script src="/js/highlight.pack.js?1609134974"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1608258848"></script>
-    <script src="/js/learn.js?1608258848"></script>
-    <script src="/js/hugo-learn.js?1608258848"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1609134974"></script>
+    <script src="/js/learn.js?1609134974"></script>
+    <script src="/js/hugo-learn.js?1609134974"></script>
 
-    <link href="/mermaid/mermaid.css?1608258848" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1608258848"></script>
+    <link href="/mermaid/mermaid.css?1609134974" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1609134974"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
