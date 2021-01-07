@@ -49,6 +49,13 @@
 	"content": "DEX-100 Unboxing  Equipment wiring map  DEX-100 wiring for VGA  DEX-100 wiring for DVI DEX-100 wiring for USB DEX-100 wiring for PS2  DEX-100 for editing environment What is the different between (DP to VAG) and (VGA out) ?  Equipment wiring map The basic wiring is below the figure. DEX-100 wiring for VGA  This is PC connected to screen by VGA cable.  Separate the VGA cable that the VGA-INPUT connects to dex-100 then VGA-OUTPUT connects to screen.   DEX-100 wiring for DVI  This is PC connected to screen by DVI cable.  Separate the DVI cable that the DVI -INPUT connects to dex-100 then DVI -OUTPUT connects to screen. 1.DVI-D is dual-link type please referring.\n 2.DVI Output shall display when DVI input and DVI output are connected then restart the dex-100.\n   DEX-100-wiring-usb  These are USB of keyboard and mouse how to wire with DEX.   DEX-100-wiring-ps2  These are PS2 of keyboard and mouse how to wire with DEX.   DEX-100 for editing environment  The dex-100 has one GUI that is dex-pro, the dex-pro can design a script for auto-running and show the exclusive screen by DP. Due to editing the script that requires ones pair keyboard and mouse then show in the exclusive screen.   What is the different between (DP to VAG) and (VGA out) ?  Describe the different functions between (PD to VAG) and (VGA OUT), Please referring the below figure. e  "
 },
 {
+	"uri": "https://aiot-ist.github.io/euresys/easycolor/",
+	"title": "EasyColor",
+	"tags": [],
+	"description": "",
+	"content": "This tutorial will guide you how to getting start EasyColor by Euresys\n  Performing Thresholding on Color Images\n  Performing Color Segmentation\n  Performing Thresholding on Color Images Following this tutorial, you will learn how to use EasyColor to segment a color source image, by setting a threshold value for each color component of the current color system. For example, to retrieve the solder pads on a PCB, you\u0026rsquo;ll perform a color segmentation based on the golden pixels (H), with a loose discrimination on the brightness (L) and saturation (S), to eliminate surface and lighting effects.\n   Load the source image Create a destination image Create a color lookup table Perform the color segmentation Link on line Doc        Performing Color Segmentation Following this tutorial, you will learn how to use EasyImage to perform color segmentation.   Load the source image Create a color lookup table Perform the color segmentation Link on line Doc      "
+},
+{
 	"uri": "https://aiot-ist.github.io/euresys/easyimage/",
 	"title": "EasyImage",
 	"tags": [],
