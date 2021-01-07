@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>FAQ :: Connected Factory</title>
+    <title>Parameters :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1609998750" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/dex/faq/">
+  <body class="" data-url="/euresys/parameters/">
     <nav id="sidebar" class="">
 
 
@@ -298,7 +298,7 @@
   
     
     <li data-nav-id="/euresys/" title="Euresys" class="dd-item 
-        
+        parent
         
         
         ">
@@ -349,8 +349,8 @@
   
     
     <li data-nav-id="/euresys/parameters/" title="Parameters" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/euresys/parameters/">
@@ -380,7 +380,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX" class="dd-item 
-        parent
+        
         
         
         ">
@@ -407,8 +407,8 @@
   
     
     <li data-nav-id="/dex/faq/" title="FAQ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/dex/faq/">
@@ -821,7 +821,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > FAQ
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/euresys/'>Euresys</a> > Parameters
           
          
           
@@ -839,9 +839,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Parameters
+            </h1>
           
 
         
@@ -849,89 +852,23 @@
 
 
 
-	<h1 id="faq">FAQ</h1>
-<h2 id="list">List</h2>
-<ul>
-<li><a href="#specifications-of-di1-di2">Specifications of DI1 DI2</a></li>
-<li><a href="#led">LED</a></li>
-<li><a href="#kill-the-dex-pro-by-batch">Batch kill dex-pro</a></li>
-<li><a href="#the-mouse-follows-offset">The mouse follows offset</a></li>
-<li><a href="#how-to-restart-the-msmq">How to restart the MSMQ</a></li>
-<li><a href="#how-to-check-the-setting-when-the-dexpro-can-not-grab-the-video">How to check why the dexpro can&rsquo;t grab the video</a></li>
-<li><a href="#how-to-check-the-exception-event">How to check the exception-event</a></li>
+	<ul>
+<li><a href="#color-lookup">Color Lookup</a></li>
 </ul>
-<h2 id="specifications-of-di1-di2">Specifications of DI1 DI2</h2>
-<p>Hardware Figure
-<img src="/DEX/FAQ/images/DIfigure.png" alt="DI1/2"></p>
-<p>DI connector pin assignment
-<img src="/DEX/FAQ/images/pintable.png" alt="Pin Circuit diagram"></p>
-<p>DI1/2 function
-<img src="/DEX/FAQ/images/DIFunction.PNG" alt="Pin function"></p>
-<h2 id="led">LED</h2>
-<p>There are 3 LEDs in the hardware that can light by script command.
-<img src="/DEX/FAQ/images/LEDhardware.png" alt="Hardware Figure"></p>
-<h2 id="kill-the-dex-pro-by-batch">kill the dex-pro by batch</h2>
-<p>
-<div class="notices note" ><p>Please run the cmd as administrator</p>
-</div>
-
-input the command
-
-<div class="notices note" ><p>taskkill /f /im DEX-Pro.exe</p>
-</div>
-
-<img src="/DEX/FAQ/images/cmdadministrator.PNG" alt="cmd command"></p>
-<h2 id="the-mouse-follows-offset">The mouse follows offset</h2>
-<ol>
-<li>Check the machine PC’s mouse setting, Keep middle speed and disable “Enhance pointer precision”.</li>
-<li>If the offset distance is not fixed, adjust mouse speed of the machine PC
-<img src="/DEX/FAQ/images/disableEnhance.PNG" alt="disable Enhance"></li>
-</ol>
-<h2 id="how-to-restart-the-msmq">How to restart the MSMQ</h2>
-<p>If the Dex-por can&rsquo;t work by MSMQ, Please follow the below steps for Troubleshooting</p>
-<ol>
-<li>Go to &ldquo;control panel&rdquo;
-<img src="/DEX/FAQ/images/controlpanel.PNG" alt="control panel image"></li>
-<li>Go to &ldquo;Program&rdquo;
-<img src="/DEX/FAQ/images/programs.PNG" alt="programs image"></li>
-<li>Go to &ldquo;Turn Windows Features on or off&rdquo;
-<img src="/DEX/FAQ/images/TurnWindowsFeatures.PNG" alt="Turn Windows Features"></li>
-<li>Disable the &ldquo;Microsoft Message Queue(MSMQ) Server&rdquo;
-<img src="/DEX/FAQ/images/disableMSMQ.PNG" alt="Disable MSMQ"></li>
-<li>Reboot the DEX-100</li>
-<li>Enable the &ldquo;Microsoft Message Queue(MSMQ) Server&rdquo;
-<img src="/DEX/FAQ/images/EnableMSMQ.PNG" alt="Enable MSMQ"></li>
-</ol>
-<h2 id="how-to-check-the-setting-when-the-dexpro-can-not-grab-the-video">How to check the setting when the dexpro can not grab the video</h2>
-<p>If the Dex-pro can&rsquo;t grab the video, We have several suggestions please follow checking the below steps.</p>
-<ol>
-<li>Please checking the setting is Auto by the dex-pro tool of Fram Grabber Configuration.
-<img src="/DEX/FAQ/images/toolsetting.PNG" alt="Fram Grabber setting"></li>
-<li>Please open the Diagnostic tool.
-<pre><code>Tool-Path &quot;C:\Program Files\ADLINK\DEX-100\utility&quot;
-</code></pre></li>
-</ol>
-<p><img src="/DEX/FAQ/images/Diagnostic1.PNG" alt="Diagnostic tool"></p>
-<ol start="3">
-<li>You shall see both the result for Resolution and Signal if the connection is successful.
-<img src="/DEX/FAQ/images/Diagnostic2.PNG" alt="Diagnostic result"></li>
-<li>If is no signal , please use below steps to help you troubleshooting.</li>
-</ol>
-<ul>
-<li>A. Check the Local machine setting for display resolution.</li>
-<li>B. Reconnect the local machine VGA cable to monitor.</li>
-<li>C. Reboot the local machine.</li>
-<li>D. Check the resolution from the monitor.</li>
-<li>E. Reconnect the VGA to Dex-100</li>
-<li>F. Check Frame Grabber Setting whether the auto mode is selected for any resolution.</li>
-</ul>
-<h2 id="how-to-check-the-exception-event">How to check the exception-event</h2>
-<p>You can track the Event Viewer if dex-pro encounters the Unexpected crashing.</p>
-<pre><code>   1. Enter CMD (Command Prompt)
-   2. Key-in &quot;eventvwr&quot;
-</code></pre><p><img src="/DEX/FAQ/images/eventviewer.PNG" alt="Event viewer"></p>
-<pre><code>   Path : &quot;Event Viewer ==&gt; Windows Logs ==&gt; System&quot;
-</code></pre><p><img src="/DEX/FAQ/images/eventviewer2.PNG" alt="Event viewer"></p>
+<h2 id="color-lookup">Color Lookup</h2>
+<h3 id="indexbits-the-number-of-table-entries-and-the-corresponding-table-size-are-given-below">IndexBits, the number of table entries and the corresponding table size are given below:</h3>
+<p><img src="/Euresys/Parameters/Images/colorindex.png" alt="Normal machine"></p>
+<p>Here are grouped images of those full RGB palettes by 4 bits &amp; 5 bits &amp; 6 bits.</p>
+<pre><code>                                                                4 bits = 12-bit RGB
+</code></pre>
+<p><img src="/Euresys/Parameters/Images/RGB_12bits_palette_sample_image.png" alt="Normal machine"></p>
+<pre><code>                                                                5 bits = 15-bit RGB
+</code></pre>
+<p><img src="/Euresys/Parameters/Images/RGB_15bits_palette_sample_image.png" alt="Normal machine"></p>
+<pre><code>                                                                6 bits = 18-bit RGB
+</code></pre>
+<p><img src="/Euresys/Parameters/Images/RGB_18bits_palette_sample_image.png" alt="Normal machine"></p>
+<p>Reference <a href="https://en.wikipedia.org/wiki/List_of_monochrome_and_RGB_color_formats#4-bit_grayscale_2">https://en.wikipedia.org/wiki/List_of_monochrome_and_RGB_color_formats#4-bit_grayscale_2</a></p>
 
 
 
@@ -941,8 +878,6 @@ input the command
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -1109,6 +1044,64 @@ input the command
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1139,61 +1132,6 @@ input the command
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1416,10 +1354,10 @@ input the command
 	 
 	 
 		
-			<a class="nav nav-prev" href="/dex/" title="DEX"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/euresys/easyimage/" title="EasyImage"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/dex/unboxing/" title="Unboxing" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dex/" title="DEX" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

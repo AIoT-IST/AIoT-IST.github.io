@@ -56,6 +56,13 @@
 	"content": "This tutorial will guide you how to getting start EasyImage by Euresys\n Transforming a Gray-Level image into its Black and White Edges Extracting an Object Contour Detecting the Corners of an Object Using Harris Corner Detector Detecting a Horizontal or Vertical Line Using Projection Creating a Flexible Mask \u0026amp; Computing Gray-Level Statistics Using a Flexible Mask Detecting the Corners of an Object Using Hit-and-Miss Transform Extracting a Vector Using Profile Function Enhancing an X-ray image Correcting Non-Uniform Illumination Correcting Shear Effect Correcting Skew Effect  Video   Function_1 Thresholding    How to use the singal threshold How to use the dual-threshold How to use the Adaptive Threshold Link on line Doc        Function_2 Extracting an Object Contour    Load the source image Set the destination vector Extract the contour Link on line Doc        Function_3 Detecting the Corners by Using Harris Corner Detector    Load the source image Set the hit-and-miss kernel Apply the hit-and-miss transform Link on line Doc        Function_4 Detecting a Horizontal or Vertical Line Using Projection    Load the source image Set the destination vector Detect the defects Link on line Doc        Function_5 Computing Gray-Level Statistics Using a Flexible Mask    Load the source image Invert the image Threshold the image Save the flexible maskLink on line Doc Load the flexible mask image Apply the flexible mask on the source image Compute the gray-level statisticsLink on line Doc        Function_6 Detecting the Corners of an Object Using Hit-and-Miss Transform    Load the source image Set the hit-and-miss kernel Apply the hit-and-miss transformLink on line Doc        Function_7 Extracting a Vector Using Profile Function    Load the source image Set the destination vector and detecting the scratchesLink on line Doc      "
 },
 {
+	"uri": "https://aiot-ist.github.io/euresys/parameters/",
+	"title": "Parameters",
+	"tags": [],
+	"description": "",
+	"content": " Color Lookup  Color Lookup IndexBits, the number of table entries and the corresponding table size are given below: Here are grouped images of those full RGB palettes by 4 bits \u0026amp; 5 bits \u0026amp; 6 bits.\n 4 bits = 12-bit RGB   5 bits = 15-bit RGB   6 bits = 18-bit RGB  Reference https://en.wikipedia.org/wiki/List_of_monochrome_and_RGB_color_formats#4-bit_grayscale_2\n"
+},
+{
 	"uri": "https://aiot-ist.github.io/mcm-204/gettingstart/",
 	"title": "Getting Start",
 	"tags": [],
