@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>FAQ :: Connected Factory</title>
+    <title>EasyGauge :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1610015339" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/neon-2000-jt2/faq/">
+  <body class="" data-url="/euresys/easygauge/">
     <nav id="sidebar" class="">
 
 
@@ -298,7 +298,7 @@
   
     
     <li data-nav-id="/euresys/" title="Euresys" class="dd-item 
-        
+        parent
         
         
         ">
@@ -373,8 +373,8 @@
   
     
     <li data-nav-id="/euresys/easygauge/" title="EasyGauge" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/euresys/easygauge/">
@@ -582,7 +582,7 @@
   
     
     <li data-nav-id="/neon-2000-jt2/" title="NEON-2000-JT2" class="dd-item 
-        parent
+        
         
         
         ">
@@ -729,8 +729,8 @@
   
     
     <li data-nav-id="/neon-2000-jt2/faq/" title="FAQ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/neon-2000-jt2/faq/">
@@ -941,7 +941,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-2000-jt2/'>NEON-2000-JT2</a> > FAQ
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/euresys/'>Euresys</a> > EasyGauge
           
          
           
@@ -963,7 +963,7 @@
           
             <h1>
               
-              FAQ
+              EasyGauge
             </h1>
           
 
@@ -972,159 +972,114 @@
 
 
 
-	<p>Frequently asked questions (FAQ) about NEON-2000-JT2</p>
-<ul>
-<li><a href="#NEON-2000-JT2-model-and-sensor-specifications">Model and Sensor Specifications</a></li>
-<li><a href="#hardware-specification">Hardware Specifications</a></li>
-<li><a href="#software-environment">Software Specificationonment</a></li>
-<li><a href="#version-check">Software Version check</a></li>
-</ul>
-<h2 id="general">General</h2>
+	<p>This tutorial will guide you how to getting start EasyFind by Euresys</p>
 <ul>
 <li>
-<h4 id="neon-2000-jt2-model-and-sensor-specifications">NEON-2000-JT2 Model and Sensor Specifications</h4>
+<p><a href="#measuring-the-rotation-angle-of-an-object">Measuring the Rotation Angle of an Object</a></p>
+</li>
+<li>
+<p><a href="#measuring-the-diameter-of-a-circle">Measuring the Diameter of a Circle</a></p>
+</li>
+<li>
+<p><a href="#measuring-a-distorted-rectangle">Measuring a Distorted Rectangle</a></p>
+</li>
+<li>
+<p><a href="#locating-points-regarding-to-a-coordinate-system">Locating Points Regarding to a Coordinate System</a></p>
+</li>
+<li>
+<p><a href="#unwarping-a-distorted-image">Unwarping a Distorted Image</a></p>
+</li>
+<li>
+<h3 id="measuring-the-rotation-angle-of-an-object">Measuring the Rotation Angle of an Object</h3>
+<p>Following this tutorial, you will learn how to use EasyGauge to measure the rotation angle of a CCD sensor package. As we only need to retrieve an angle value, it&rsquo;s not required to work in a calibrated field of view. All geometrical parameters and results will be express as numbers of pixels.</p>
 </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th align="center">Model Name</th>
-<th align="center">Image Sensor</th>
-<th align="center">Specification Image Sensor Module</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">NEON-201B-JT2</td>
-<td align="center">1/  3&rdquo;, 1.2M, Global Shutter , 1280x 960, 54fps, COLOR</td>
-<td align="center">Basler, DAA1280-54UC-CS</td>
-</tr>
-<tr>
-<td align="center">NEON-202B-JT2</td>
-<td align="center">1/1.8&rdquo;, 1.9M, Global Shutter , 1600x1200, 60fps, COLOR</td>
-<td align="center">Basler, DAA1600-60UC-CS</td>
-</tr>
-<tr>
-<td align="center">NEON-203B-JT2</td>
-<td align="center">1/3.7&rdquo;, 2  M, Rolling Shutter, 1920x1080, 30fps, COLOR</td>
-<td align="center">Basler, DAA1920-30UC-CS</td>
-</tr>
-<tr>
-<td align="center">NEON-204B-JT2</td>
-<td align="center">1/2.5&rdquo;, 5  M, Rolling Shutter, 2592x1944, 14fps, COLOR</td>
-<td align="center">Basler, DAA2500-14UC-CS</td>
-</tr>
-</tbody>
-</table>
-<ul>
+<ol>
+<li>Load the source image</li>
+<li>Attach a line gauge to the image</li>
+<li>Perform the inspection</li>
+<li><a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_6/en-us/Content/05_Resources/01_Tutorials/07_EasyGauge/Measuring_the_Rotation_Angle_of_an_Object.htm?TocPath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyGauge%7C_____1">Link on line Doc</a></li>
 <li>
-<h4 id="hardware-specification">Hardware Specification</h4>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/lYEj45-4YO4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">Neon-iSeries</th>
-<th align="center">Digital Input</th>
-<th align="center">Digital Output</th>
-<th align="center">UART</th>
-<th align="center">Dimensions</th>
-<th align="center">Weight</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Neon-iSeries</td>
-<td align="center">4x DI, includes 1x sensor trigger</td>
-<td align="center">4x DO, includes 1x strobe out</td>
-<td align="center">TXD, RXD, GND</td>
-<td align="center">123.3 x 66.81 x 77.5 mm</td>
-<td align="center">700g</td>
-</tr>
-</tbody>
-</table>
+</ol>
 <ul>
 <li>
-<h4 id="software-environment">Software environment</h4>
+<h3 id="measuring-the-diameter-of-a-circle">Measuring the Diameter of a Circle</h3>
+Following this tutorial, you will learn how to use EasyGauge to measure the diameter of a circle in an image.</li>
+</ul>
+<ol>
+<li>Load the calibration image</li>
+<li>Calibrate the field of view</li>
+<li>Load the source image</li>
+<li>Attach a circle gauge to the image</li>
+<li>Perform the inspection</li>
+<li><a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_6/en-us/Content/05_Resources/01_Tutorials/07_EasyGauge/Measuring_the_Diameter_of_a_Circle.htm?TocPath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyGauge%7C_____2">Link on line Doc</a></li>
+<li>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/wOJQBQ80Qfs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">Neon-iSeries</th>
-<th align="center">JetPack</th>
-<th align="center">L4T</th>
-<th align="center">Ubuntu</th>
-<th align="center">CUDA</th>
-<th align="center">cuDNN</th>
-<th align="center">TensorRT</th>
-<th align="center">Python2</th>
-<th align="center">Python3</th>
-<th align="center">Pylon</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">Version</td>
-<td align="center">4.2.1</td>
-<td align="center">32.2</td>
-<td align="center">18.04.2LTS</td>
-<td align="center">10.0</td>
-<td align="center">7.5.0.56</td>
-<td align="center">5.1.6.1</td>
-<td align="center">2.7.15</td>
-<td align="center">3.6.9</td>
-<td align="center">5.0.9</td>
-</tr>
-<tr>
-<td align="center">Version</td>
-<td align="center">4.3</td>
-<td align="center">32.3.1</td>
-<td align="center">18.04.2LTS</td>
-<td align="center">10.0.326</td>
-<td align="center">7.6.3.28</td>
-<td align="center">6.0.1.10</td>
-<td align="center">2.7.17</td>
-<td align="center">3.6.9</td>
-<td align="center">5.2.0</td>
-</tr>
-<tr>
-<td align="center">Version</td>
-<td align="center">4.4</td>
-<td align="center">32.4.3</td>
-<td align="center">18.04.2LTS</td>
-<td align="center">10.2.89</td>
-<td align="center">8.0.0.180</td>
-<td align="center">7.1.3.0</td>
-<td align="center">2.7.17</td>
-<td align="center">3.6.9</td>
-<td align="center">5.2.0</td>
-</tr>
-</tbody>
-</table>
+</ol>
 <ul>
 <li>
-<h4 id="version-check">Version check</h4>
-<ul>
-<li>
-<h5 id="tensorrt">TensorRT</h5>
-<pre><code>dpkg -l|grep nvinfer
-</code></pre></li>
-<li>
-<h5 id="cuda">CUDA</h5>
-<pre><code>nvcc --version
-</code></pre></li>
-<li>
-<h5 id="cudnn">cuDNN</h5>
-<pre><code>dpkg -l|grep cudnn
-</code></pre></li>
-<li>
-<h5 id="python">Python</h5>
-<pre><code>python --version 
-</code></pre></li>
+<h3 id="measuring-a-distorted-rectangle">Measuring a Distorted Rectangle</h3>
+Following this tutorial, you will learn how to use EasyGauge to perform measurements on a distorted rectangle component..</li>
 </ul>
+<ol>
+<li>Load the calibration image</li>
+<li>Calibrate the field of view</li>
+<li>Load the distorted image</li>
+<li>Attach a rectangle gauge to the image</li>
+<li>Perform the inspection</li>
+<li><a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_6/en-us/Content/05_Resources/01_Tutorials/07_EasyGauge/Measuring_a_Distorted_Rectangle.htm?TocPath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyGauge%7C_____3">Link on line Doc</a></li>
+<li>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/mqFVqyAwGrc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 </li>
+</ol>
+<ul>
+<li>
+<h3 id="locating-points-regarding-to-a-coordinate-system">Locating Points Regarding to a Coordinate System</h3>
+Following this tutorial, you will learn how to use EasyGauge to perform lead frames inspection. This operation determines the dimension, position, curvature, size, angle or diameter of the lead frames with an excellent accuracy. Robustness is ensured by powerful edge-point selection mechanisms that are intuitive and easy to tune, allowing measurement in cluttered images.</li>
 </ul>
+<ol>
+<li>Load the calibration image</li>
+<li>Calibrate the field of view</li>
+<li>Loading a lead frame image</li>
+<li>Setting a coordinate system</li>
+<li>Attaching a point gauge to the frame shape</li>
+<li>Attaching other point gauges to the frame shape</li>
+<li>Loading another lead frame image</li>
+<li>Tuning the coordinate system</li>
+<li>Performing the inspection</li>
+<li><a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_6/en-us/Content/05_Resources/01_Tutorials/07_EasyGauge/Measuring_a_Distorted_Rectangle.htm?TocPath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyGauge%7C_____4">Link on line Doc</a></li>
+<li>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/RbxjKas6iOc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</li>
+</ol>
+<ul>
+<li>
+<h3 id="unwarping-a-distorted-image">Unwarping a Distorted Image</h3>
+Following this tutorial, you will learn how to use EasyGauge to perform grid calibration, and unwarp a distorted image.</li>
+</ul>
+<ol>
+<li>Load the calibration image</li>
+<li>Calibrate the field of view</li>
+<li>Load the distorted image</li>
+<li>Unwarp the distorted image</li>
+<li><a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_6/en-us/Content/05_Resources/01_Tutorials/07_EasyGauge/Measuring_a_Distorted_Rectangle.htm?TocPath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyGauge%7C_____5">Link on line Doc</a></li>
+<li>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/F-HsfL4xRYE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</li>
+</ol>
 
 
 
@@ -1300,6 +1255,194 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -1406,22 +1549,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1429,178 +1556,6 @@
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1690,10 +1645,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/neon-2000-jt2/howtochooselenses/" title="How to choose suitable lens for Neon?"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/euresys/easyfind/" title="EasyFind"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/neon-1000-mdx/" title="Neon-1000-MDX" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/euresys/easyimage/" title="EasyImage" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
