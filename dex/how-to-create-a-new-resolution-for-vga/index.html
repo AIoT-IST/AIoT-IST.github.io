@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>EasyImage :: Connected Factory</title>
+    <title>How to create a new resolution for VGA :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1611107762" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/euresys/easyimage/">
+  <body class="" data-url="/dex/how-to-create-a-new-resolution-for-vga/">
     <nav id="sidebar" class="">
 
 
@@ -298,7 +298,7 @@
   
     
     <li data-nav-id="/euresys/" title="Euresys" class="dd-item 
-        parent
+        
         
         
         ">
@@ -421,8 +421,8 @@
   
     
     <li data-nav-id="/euresys/easyimage/" title="EasyImage" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/euresys/easyimage/">
@@ -524,7 +524,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX" class="dd-item 
-        
+        parent
         
         
         ">
@@ -575,8 +575,8 @@
   
     
     <li data-nav-id="/dex/how-to-create-a-new-resolution-for-vga/" title="How to create a new resolution for VGA" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/dex/how-to-create-a-new-resolution-for-vga/">
@@ -989,7 +989,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/euresys/'>Euresys</a> > EasyImage
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > How to create a new resolution for VGA
           
          
           
@@ -1007,12 +1007,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              EasyImage
-            </h1>
           
 
         
@@ -1020,194 +1017,30 @@
 
 
 
-	<p>This tutorial will guide you how to getting start EasyImage by Euresys</p>
+	<h3 id="how-to-create-a-new-resolution-for-vga">How to create a new resolution for VGA</h3>
+<h1 id="attchments">Attchments</h1>
 <ul>
-<li><a href="#function_1-thresholding">Transforming a Gray-Level image into its Black and White Edges</a></li>
-<li><a href="#function_2-extracting-an-object-contour">Extracting an Object Contour</a></li>
-<li><a href="#function_3-detecting-the-corners-by-using-harris-corner-detector">Detecting the Corners of an Object Using Harris Corner Detector</a></li>
-<li><a href="#function_4-detecting-a-horizontal-or-vertical-line-using-projection">Detecting a Horizontal or Vertical Line Using Projection</a></li>
-<li><a href="#function_5-computing-gray-level-statistics-using-a-flexible-mask">Creating a Flexible Mask &amp; Computing Gray-Level Statistics Using a Flexible Mask</a></li>
-<li><a href="#function_6-detecting-the-corners-of-an-object-using-hit-and-miss-transform">Detecting the Corners of an Object Using Hit-and-Miss Transform</a></li>
-<li><a href="#function_7-extracting-a-vector-using-profile-function">Extracting a Vector Using Profile Function</a></li>
-<li><a href="#enhancing-an-x-ray-image">Enhancing an X-ray image</a></li>
-<li><a href="#correcting-non-uniform-illumination">Correcting Non-Uniform Illumination</a></li>
-<li><a href="#correcting-shear-effect">Correcting Shear Effect</a></li>
-<li><a href="#correcting-skew-effect">Correcting Skew Effect</a></li>
+<li><a href="#equipment-wiring-map">Equipment wiring map </a></li>
+<li><a href="#dex-100-wiring-for-vga">DEX-100 wiring for VGA </a></li>
 </ul>
-<h2 id="video">Video</h2>
+<h1 id="steps">Steps</h1>
+<p>The basic wiring is below the figure.
+<img src="/DEX/Unboxing/images/Basic_wiring.PNG" alt="Normal machine"></p>
+<h2 id="dex-100-wiring-for-dvi">DEX-100 wiring for DVI</h2>
 <ul>
-<li>
-<h3 id="function_1-thresholding">Function_1 Thresholding</h3>
-Following this tutorial, you will learn how to use EasyImage to convert a gray-level source image into a binary destination image. Thresholding an image transforms all the gray pixels into black or white pixels, depending on whether they are below or above a specified threshold. Thresholding an image makes further analysis easier.</li>
-</ul>
-<ol>
-<li>How to use the singal threshold</li>
-<li>How to use the dual-threshold</li>
-<li>How to use the Adaptive Threshold
-<a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_4/en-us/Content/05%20Resources/01%20Tutorials/01%20EasyImage/Extracting%20an%20Object%20Contour.htm">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/4fbXSFLuM9Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<li>This is PC connected to screen by DVI cable.
+<img src="/DEX/Unboxing/images/DVI1.PNG" alt="Normal machine"></li>
+<li>Separate the DVI cable that the DVI -INPUT connects to dex-100 then DVI -OUTPUT connects to screen.
+<img src="/DEX/Unboxing/images/DVI2.PNG" alt="Normal machine">
+
+<div class="notices note" ><p>1.DVI-D is dual-link type please referring.</p>
+</div>
+
+
+<div class="notices note" ><p>2.DVI Output shall display when DVI input and DVI output are connected then restart the dex-100.</p>
 </div>
 </li>
-</ol>
-<ul>
-<li>
-<h3 id="function_2-extracting-an-object-contour">Function_2 Extracting an Object Contour</h3>
-Following this tutorial, you will learn how to use EasyImage to trace an object outline in a gray-level image. The contour extraction allows you to get in a path vector all the points that constitute an object contour, just by clicking an edge of this object.</li>
 </ul>
-<ol>
-<li>Load the source image</li>
-<li>Set the destination vector</li>
-<li>Extract the contour
-<a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_4/en-us/Content/05%20Resources/01%20Tutorials/01%20EasyImage/Extracting%20an%20Object%20Contour.htm">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/QIZ8taqoY9E" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
-<ul>
-<li>
-<h3 id="function_3-detecting-the-corners-by-using-harris-corner-detector">Function_3 Detecting the Corners by Using Harris Corner Detector</h3>
-Following this tutorial, you will learn how to use EasyImage to detect the corners of an object. The detection uses the Harris corner detector algorithm.</li>
-</ul>
-<ol>
-<li>Load the source image</li>
-<li>Set the hit-and-miss kernel</li>
-<li>Apply the hit-and-miss transform
-<a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_4/en-us/Content/05%20Resources/01%20Tutorials/01%20EasyImage/Detecting%20the%20Corners%20of%20an%20Object%20Using%20Hit-and-Miss%20Transform.htm">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/LfJumNYEyF8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
-<ul>
-<li>
-<h3 id="function_4-detecting-a-horizontal-or-vertical-line-using-projection">Function_4 Detecting a Horizontal or Vertical Line Using Projection</h3>
-Following this tutorial, you will learn how to use EasyImage to detect defects (horizontal/vertical line) in a gray-level image.</li>
-</ul>
-<ol>
-<li>Load the source image</li>
-<li>Set the destination vector</li>
-<li>Detect the defects
-<a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_4/en-us/Content/05%20Resources/01%20Tutorials/01%20EasyImage/Detecting%20a%20Horizontal%20or%20Vertical%20Line%20Using%20Projection.htm">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/mirx8gu8B9M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
-<ul>
-<li>
-<h3 id="function_5-computing-gray-level-statistics-using-a-flexible-mask">Function_5 Computing Gray-Level Statistics Using a Flexible Mask</h3>
-Following this tutorial, you will learn how to compute gray-level statistics on an arbitrary-shaped area only.</li>
-</ul>
-<ol>
-<li>Load the source image</li>
-<li>Invert the image</li>
-<li>Threshold the image</li>
-<li>Save the flexible mask<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Creating_a_Flexible_Mask.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____6">Link on line Doc</a></li>
-<li>Load the flexible mask image</li>
-<li>Apply the flexible mask on the source image</li>
-<li>Compute the gray-level statistics<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Computing_Gray-Level_Statistics_Using_a_Flexible_Mask.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____7">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/hrB3pOzlrfE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
-<ul>
-<li>
-<h3 id="function_6-detecting-the-corners-of-an-object-using-hit-and-miss-transform">Function_6 Detecting the Corners of an Object Using Hit-and-Miss Transform</h3>
-Following this tutorial, you will learn how to use EasyImage to detect top corners in an image, using the hit-and-miss transform.</li>
-</ul>
-<ol>
-<li>Load the source image</li>
-<li>Set the hit-and-miss kernel</li>
-<li>Apply the hit-and-miss transform<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Detecting_the_Corners_of_an_Object_Using_Hit-and-Miss_Transform.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____8">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/dC-8oDxI4Ns" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
-<ul>
-<li>
-<h3 id="function_7-extracting-a-vector-using-profile-function">Function_7 Extracting a Vector Using Profile Function</h3>
-Following this tutorial, you will learn how to use EasyImage to detect scratches.</li>
-</ul>
-<ol>
-<li>Load the source image</li>
-<li>Set the destination vector and detecting the scratches<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Extracting_a_Vector_Using_Profile_Function.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____9">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/i2se0YjnQrc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
-<ul>
-<li>
-<h3 id="enhancing-an-x-ray-image">Enhancing an X-ray image</h3>
-Following this tutorial, you will learn how to use EasyImage to enhance an X-ray image.</li>
-</ul>
-<ol>
-<li>Load the source image</li>
-<li>Set the convolution parameter<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Enhancing_an_X-ray_image.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____10">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/z8V5rRT5eW4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
-<ul>
-<li>
-<h3 id="correcting-non-uniform-illumination">Correcting Non-Uniform Illumination</h3>
-Following this tutorial, you will learn how to use EasyImage to correct non-uniform illumination in an image.</li>
-</ul>
-<ol>
-<li>Load the source image</li>
-<li>Load the reference image</li>
-<li>Perform the correction<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Correcting_Non-Uniform_Illumination.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____11">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/dg4xBsOmZec" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
-<ul>
-<li>
-<h3 id="correcting-shear-effect">Correcting Shear Effect</h3>
-Following this tutorial, you will learn how to use EasyImage to correct a shear effect in an image. The following image is taken by a line-scan camera. The camera sensor was misaligned, resulting in a so-called shear effect.</li>
-</ul>
-<ol>
-<li>Load the source image</li>
-<li>Create a destination image</li>
-<li>Set the pivots parameters
-<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Correcting_Shear_Effect.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____12">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/MGdPA2if8Ss" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
-<ul>
-<li>
-<h3 id="correcting-skew-effect">Correcting Skew Effect</h3>
-Following this tutorial, you will learn how to use EasyImage to correct skew effect in an image.</li>
-</ul>
-<ol>
-<li>Load the source image</li>
-<li>Creating a destination image</li>
-<li>Setting the correction angle
-<a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/01_EasyImage/Correcting_Skew_Effect.htm?tocpath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyImage%7C_____13">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/Oet4O7icU2Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
 
 
 
@@ -1217,6 +1050,8 @@ Following this tutorial, you will learn how to use EasyImage to correct skew eff
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -1383,7 +1218,6 @@ Following this tutorial, you will learn how to use EasyImage to correct skew eff
             
                 
                     
-                    
                 
                 
 
@@ -1399,8 +1233,37 @@ Following this tutorial, you will learn how to use EasyImage to correct skew eff
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
                     
                 
                 
@@ -1466,42 +1329,6 @@ Following this tutorial, you will learn how to use EasyImage to correct skew eff
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -1537,6 +1364,7 @@ Following this tutorial, you will learn how to use EasyImage to correct skew eff
             
                 
                     
+                    
                 
                 
 
@@ -1551,6 +1379,9 @@ Following this tutorial, you will learn how to use EasyImage to correct skew eff
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1568,6 +1399,7 @@ Following this tutorial, you will learn how to use EasyImage to correct skew eff
             
                 
                     
+                    
                 
                 
 
@@ -1583,6 +1415,9 @@ Following this tutorial, you will learn how to use EasyImage to correct skew eff
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1805,10 +1640,10 @@ Following this tutorial, you will learn how to use EasyImage to correct skew eff
 	 
 	 
 		
-			<a class="nav nav-prev" href="/euresys/easygauge/" title="EasyGauge"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dex/faq/" title="FAQ"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/euresys/easymatch/" title="EasyMatch" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dex/unboxing/" title="Unboxing" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -42,6 +42,13 @@
 	"content": "FAQ List  Specifications of DI1 DI2 LED Batch kill dex-pro The mouse follows offset How to restart the MSMQ How to check why the dexpro can\u0026rsquo;t grab the video How to check the exception-event  Specifications of DI1 DI2 Hardware Figure DI connector pin assignment DI1/2 function LED There are 3 LEDs in the hardware that can light by script command. kill the dex-pro by batch  Please run the cmd as administrator\n input the command taskkill /f /im DEX-Pro.exe\n The mouse follows offset  Check the machine PC’s mouse setting, Keep middle speed and disable “Enhance pointer precision”. If the offset distance is not fixed, adjust mouse speed of the machine PC   How to restart the MSMQ If the Dex-por can\u0026rsquo;t work by MSMQ, Please follow the below steps for Troubleshooting\n Go to \u0026ldquo;control panel\u0026rdquo;  Go to \u0026ldquo;Program\u0026rdquo;  Go to \u0026ldquo;Turn Windows Features on or off\u0026rdquo;  Disable the \u0026ldquo;Microsoft Message Queue(MSMQ) Server\u0026rdquo;  Reboot the DEX-100 Enable the \u0026ldquo;Microsoft Message Queue(MSMQ) Server\u0026rdquo;   How to check the setting when the dexpro can not grab the video If the Dex-pro can\u0026rsquo;t grab the video, We have several suggestions please follow checking the below steps.\n Please checking the setting is Auto by the dex-pro tool of Fram Grabber Configuration.  Please open the Diagnostic tool. Tool-Path \u0026quot;C:\\Program Files\\ADLINK\\DEX-100\\utility\u0026quot;   You shall see both the result for Resolution and Signal if the connection is successful.  If is no signal , please use below steps to help you troubleshooting.   A. Check the Local machine setting for display resolution. B. Reconnect the local machine VGA cable to monitor. C. Reboot the local machine. D. Check the resolution from the monitor. E. Reconnect the VGA to Dex-100 F. Check Frame Grabber Setting whether the auto mode is selected for any resolution.  How to check the exception-event You can track the Event Viewer if dex-pro encounters the Unexpected crashing.\n 1. Enter CMD (Command Prompt) 2. Key-in \u0026quot;eventvwr\u0026quot;  Path : \u0026quot;Event Viewer ==\u0026gt; Windows Logs ==\u0026gt; System\u0026quot; "
 },
 {
+	"uri": "https://aiot-ist.github.io/dex/how-to-create-a-new-resolution-for-vga/",
+	"title": "How to create a new resolution for VGA",
+	"tags": [],
+	"description": "",
+	"content": "How to create a new resolution for VGA Attchments  Equipment wiring map  DEX-100 wiring for VGA   Steps The basic wiring is below the figure. DEX-100 wiring for DVI  This is PC connected to screen by DVI cable.  Separate the DVI cable that the DVI -INPUT connects to dex-100 then DVI -OUTPUT connects to screen. 1.DVI-D is dual-link type please referring.\n 2.DVI Output shall display when DVI input and DVI output are connected then restart the dex-100.\n   "
+},
+{
 	"uri": "https://aiot-ist.github.io/dex/unboxing/",
 	"title": "Unboxing",
 	"tags": [],
@@ -54,6 +61,13 @@
 	"tags": [],
 	"description": "",
 	"content": "This tutorial will guide you how to getting start EasyColor by Euresys\n  Performing Thresholding on Color Images\n  Performing Color Segmentation\n  Performing Thresholding on Color Images Following this tutorial, you will learn how to use EasyColor to segment a color source image, by setting a threshold value for each color component of the current color system. For example, to retrieve the solder pads on a PCB, you\u0026rsquo;ll perform a color segmentation based on the golden pixels (H), with a loose discrimination on the brightness (L) and saturation (S), to eliminate surface and lighting effects.\n   Load the source image Create a destination image Create a color lookup table Perform the color segmentation Link on line Doc        Performing Color Segmentation Following this tutorial, you will learn how to use EasyImage to perform color segmentation.   Load the source image Create a color lookup table Perform the color segmentation Link on line Doc      "
+},
+{
+	"uri": "https://aiot-ist.github.io/euresys/easydeeplearning/",
+	"title": "EasyDeepLearning",
+	"tags": [],
+	"description": "",
+	"content": "This tutorial will guide you how to getting start DeepLearning by Euresys\n  Performing EasyClassify\n  Performing EasySegment\n  Performing EasyClassify    Open the Deep Learning Studio Choice the Classifier Mode  Import whole lab images of Good \u0026amp; broken \u0026amp; defective. Training the data Testing the inference Link on line Doc        Performing Color Segmentation    Open the Deep Learning Studio Choice the Unsupervised Mode  Import whole folders of Good \u0026amp; NG Training the data Adjust the parameters Testing the inference Link on line Doc      "
 },
 {
 	"uri": "https://aiot-ist.github.io/euresys/easyfind/",
