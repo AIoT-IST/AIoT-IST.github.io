@@ -74,7 +74,7 @@
 	"title": "EasyDeepLearning (Q&amp;A)",
 	"tags": [],
 	"description": "",
-	"content": "Q\u0026amp;A list   How to reduce the working time for EPatternFinder.Find processing time\n  How to reduce the working time for EPatternFinder.Find processing time   Description the senior:   Users would like to reduce the working time or give up the execution when having a high processing time.\n  Fundamental for EasyFinder   EasyFind works internally in 2 stages.\n It selects reasonable candidates for the pattern It makes a finer analysis/positioning of the candidates.    Suggestion way   There is a new parameter that may help by using the number of selected candidates has a direct impact on the processing time. Link on line Doc\n"
+	"content": "Q\u0026amp;A list   How to reduce the working time for EPatternFinder.Find processing time\n  How to reduce the working time for EPatternFinder.Find processing time   Description the scenario:   Users would like to reduce the working time or give up the execution when having a high processing time.\n  Fundamental for EasyFinder   EasyFind works internally in 2 stages.\n It selects reasonable candidates for the pattern It makes a finer analysis/positioning of the candidates.    Suggestion way   There is a new parameter that may help by using the number of selected candidates has a direct impact on the processing time. Link on line Doc\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/euresys/easyfind/",
