@@ -70,6 +70,13 @@
 	"content": "This tutorial will guide you how to getting start DeepLearning by Euresys\n  Performing EasyClassify\n  Performing EasySegment\n  Performing EasyClassify    Open the Deep Learning Studio Choice the Classifier Mode  Import whole lab images of Good \u0026amp; broken \u0026amp; defective. Training the data Testing the inference Link on line Doc        Performing EasySegment    Open the Deep Learning Studio Choice the Unsupervised Mode  Import whole folders of Good \u0026amp; NG Training the data Adjust the parameters Testing the inference Link on line Doc      "
 },
 {
+	"uri": "https://aiot-ist.github.io/euresys/easydeeplearning/qa/",
+	"title": "EasyDeepLearning (Q&amp;A)",
+	"tags": [],
+	"description": "",
+	"content": "Q\u0026amp;A list   How to reduce the working time for EPatternFinder.Find processing time\n  How to reduce the working time for EPatternFinder.Find processing time   Description the senior:   Users would like to reduce the working time or give up the execution when having a high processing time.\n  Fundamental for EasyFinder   EasyFind works internally in 2 stages.\n It selects reasonable candidates for the pattern It makes a finer analysis/positioning of the candidates.    Suggestion way   There is a new parameter that may help by using the number of selected candidates has a direct impact on the processing time. Link on line Doc\n"
+},
+{
 	"uri": "https://aiot-ist.github.io/euresys/easyfind/",
 	"title": "EasyFind",
 	"tags": [],
