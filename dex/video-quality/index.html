@@ -9,21 +9,21 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>MCM :: Connected Factory</title>
+    <title>Video quality adjustment :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1614334173" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1614334173" rel="stylesheet">
-    <link href="/css/hybrid.css?1614334173" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1614334173" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1614334173" rel="stylesheet">
-    <link href="/css/auto-complete.css?1614334173" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1614334173" rel="stylesheet">
-    <link href="/css/theme.css?1614334173" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1614334173" rel="stylesheet">
+    <link href="/css/nucleus.css?1614334172" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1614334172" rel="stylesheet">
+    <link href="/css/hybrid.css?1614334172" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1614334172" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1614334172" rel="stylesheet">
+    <link href="/css/auto-complete.css?1614334172" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1614334172" rel="stylesheet">
+    <link href="/css/theme.css?1614334172" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1614334172" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1614334173"></script>
+    <script src="/js/jquery-3.3.1.min.js?1614334172"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/news/mcm/">
+  <body class="" data-url="/dex/video-quality/">
     <nav id="sidebar" class="">
 
 
@@ -62,14 +62,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1614334173"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1614334173"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1614334172"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1614334172"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1614334173"></script>
+<script type="text/javascript" src="/js/search.js?1614334172"></script>
 
     
   </div>
@@ -560,7 +560,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX" class="dd-item 
-        
+        parent
         
         
         ">
@@ -659,8 +659,8 @@
   
     
     <li data-nav-id="/dex/video-quality/" title="Video quality adjustment" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/dex/video-quality/">
@@ -890,7 +890,7 @@
   
     
     <li data-nav-id="/news/" title="News" class="dd-item 
-        parent
+        
         
         
         ">
@@ -917,8 +917,8 @@
   
     
     <li data-nav-id="/news/mcm/" title="MCM" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/news/mcm/">
@@ -1049,7 +1049,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/news/'>News</a> > MCM
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > Video quality adjustment
           
          
           
@@ -1067,12 +1067,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              MCM
-            </h1>
           
 
         
@@ -1080,7 +1077,90 @@
 
 
 
-	<h3 id="news-of-mcm-series">News of MCM series</h3>
+	<h2 id="how-to-adjust-quality-when-inputting-the-bad-video">How to adjust quality when inputting the bad video</h2>
+<h3 id="steps">Steps</h3>
+<h4 id="1-boot-up-the-dex-100">1. Boot up the dex-100</h4>
+<h4 id="2-input-the-video-source-vga-or-dvi">2. Input the Video source (VGA or DVI)</h4>
+<h4 id="3-using-the-diagexe">3. Using the Diag.exe</h4>
+<pre><code> Path  -&gt; C:\Program Files\ADLINK\DEX-100\utility\Diag.exe
+</code></pre>
+<p><img src="/DEX/Video-Quality/images/1.PNG" alt="Normal machine"></p>
+<h4 id="4-select-source--resolution">4. Select source &amp; resolution</h4>
+<ul>
+<li>Select source</li>
+<li><img src="/DEX/Video-Quality/images/2.PNG" alt="Normal machine"></li>
+<li>Select resolution</li>
+<li><img src="/DEX/Video-Quality/images/3.PNG" alt="Normal machine"></li>
+</ul>
+<h4 id="5-draw-the-image-by-clicking-the-start">5. Draw the image by clicking the &ldquo;Start&rdquo;</h4>
+<p><img src="/DEX/Video-Quality/images/5.PNG" alt="Normal machine"></p>
+<p>You shall see the result when grabbing is successful.</p>
+<ul>
+<li>
+<p><img src="/DEX/Video-Quality/images/6.PNG" alt="Normal machine"></p>
+<ul>
+<li>
+<ol>
+<li>It is the current source</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>It is the current resolution</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>It is succeful or filed</li>
+</ol>
+</li>
+</ul>
+
+<div class="notices note" ><p>If the resolution can&rsquo;t match your choose resolution or the signal can&rsquo;t be detected , please follow the below steps.</p>
+</div>
+
+<ul>
+<li>Dex-Pro -&gt; Tools -&gt; Config -&gt; Fram Grabber Setting</li>
+<li><img src="/DEX/Video-Source/images/toolsetting.PNG" alt="Normal machine"></li>
+</ul>
+</li>
+</ul>
+<h4 id="6-confirm-the-current-image-that-is-right">6. Confirm the current image that is right</h4>
+<ul>
+<li>It is not right, please retrying Step 2~5 again.</li>
+</ul>
+<h4 id="7-using-the-video-quality-analysis">7. Using the &ldquo;Video Quality Analysis&rdquo;</h4>
+<ul>
+<li>
+<p>Test VGA video quality for a long time and give suggested parameters</p>
+</li>
+<li>
+<p>(Ensure that the video quality of the machine is almost the same throughout the day.)</p>
+</li>
+<li>
+<p><img src="/DEX/Video-Quality/images/7.PNG" alt="Normal machine"></p>
+</li>
+</ul>
+<h4 id="8-choose-the-test-interval-and-start-the-testing">8. Choose the test interval and start the testing</h4>
+<p>Choose the test interval
+There are several parameters for your requirement.</p>
+<ul>
+<li><img src="/DEX/Video-Quality/images/8.PNG" alt="Normal machine">
+Click the &ldquo;start&rdquo; button.</li>
+<li><img src="/DEX/Video-Quality/images/9.PNG" alt="Normal machine"></li>
+</ul>
+<h4 id="9-cancel-the-testing-log-or-save-it-in-storage">9. Cancel the testing log or save it in storage.</h4>
+<p>You shall see the report after automatically test the video quality.</p>
+<ul>
+<li><img src="/DEX/Video-Quality/images/10.PNG" alt="Normal machine">
+Click the ok button.
+
+<div class="notices note" ><p>The system only brings into the testing result of the sampling phase in the right parameter.</p>
+</div>
+
+It is successful when you see the value be set in &ldquo;Sampling Phase&rdquo; from the testing result.</li>
+<li><img src="/DEX/Video-Quality/images/11.PNG" alt="Normal machine"></li>
+</ul>
 
 
 
@@ -1090,6 +1170,8 @@
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -1420,6 +1502,96 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1494,88 +1666,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1632,7 +1722,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1648,7 +1737,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1663,9 +1751,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1709,10 +1794,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/news/" title="News"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dex/unboxing/" title="Unboxing"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/news/mcm/20200310/" title="簡化管理成本 一站式遠端即時監控成設備業者新利器" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/neon-2000-jt2/" title="NEON-2000-JT2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1722,19 +1807,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1614334173"></script>
-    <script src="/js/perfect-scrollbar.min.js?1614334173"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1614334173"></script>
-    <script src="/js/jquery.sticky.js?1614334173"></script>
-    <script src="/js/featherlight.min.js?1614334173"></script>
-    <script src="/js/highlight.pack.js?1614334173"></script>
+    <script src="/js/clipboard.min.js?1614334172"></script>
+    <script src="/js/perfect-scrollbar.min.js?1614334172"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1614334172"></script>
+    <script src="/js/jquery.sticky.js?1614334172"></script>
+    <script src="/js/featherlight.min.js?1614334172"></script>
+    <script src="/js/highlight.pack.js?1614334172"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1614334173"></script>
-    <script src="/js/learn.js?1614334173"></script>
-    <script src="/js/hugo-learn.js?1614334173"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1614334172"></script>
+    <script src="/js/learn.js?1614334172"></script>
+    <script src="/js/hugo-learn.js?1614334172"></script>
 
-    <link href="/mermaid/mermaid.css?1614334173" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1614334173"></script>
+    <link href="/mermaid/mermaid.css?1614334172" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1614334172"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
