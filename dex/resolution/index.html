@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>EasyFind (Q&amp;A) :: Connected Factory</title>
+    <title>Create new resolution :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1614766632" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/euresys/easyfind/qa/">
+  <body class="" data-url="/dex/resolution/">
     <nav id="sidebar" class="">
 
 
@@ -298,7 +298,7 @@
   
     
     <li data-nav-id="/euresys/" title="Euresys" class="dd-item 
-        parent
+        
         
         
         ">
@@ -373,7 +373,7 @@
   
     
     <li data-nav-id="/euresys/easyfind/" title="EasyFind" class="dd-item 
-        parent
+        
         
         
         ">
@@ -400,8 +400,8 @@
   
     
     <li data-nav-id="/euresys/easyfind/qa/" title="EasyFind (Q&amp;A)" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/euresys/easyfind/qa/">
@@ -560,7 +560,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX" class="dd-item 
-        
+        parent
         
         
         ">
@@ -611,8 +611,8 @@
   
     
     <li data-nav-id="/dex/resolution/" title="Create new resolution" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/dex/resolution/">
@@ -1073,13 +1073,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/euresys/'>Euresys</a> > <a href='/euresys/easyfind/'>EasyFind</a> > EasyFind (Q&A)
-          
-         
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > Create new resolution
           
          
           
@@ -1097,12 +1091,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              EasyFind (Q&amp;A)
-            </h1>
           
 
         
@@ -1110,37 +1101,68 @@
 
 
 
-	<h2 id="qa-list">Q&amp;A list</h2>
+	<h1 id="how-to-increase-a-new-resolution">How to increase a new resolution</h1>
+<ul>
+<li><a href="#equipment-wiring-map">Frame Grabber Setting </a></li>
+<li><a href="#dex-100-wiring-for-vga">DEX-100 wiring for VGA </a></li>
+</ul>
+<h3 id="frame-grabber-setting">Frame Grabber Setting</h3>
+<pre><code> Path  -&gt; DEX-Pro -&gt; Tool -&gt; Config -&gt; Frame Grabber Setting 
+</code></pre>
+<p>Selecte Auto mode in &ldquo;Frame Grabbe Configuration&rdquo;</p>
+<ul>
+<li><img src="/DEX/Resolution/images/1.PNG" alt="Normal machine"></li>
+</ul>
+<h3 id="steps-">Steps ()</h3>
+<h3 id="1-open-the-tool-of-adlink_sfdt">1. Open the tool of &ldquo;ADLINK_SFDT&rdquo;</h3>
+<pre><code> Path  -&gt; C:\Program Files\ADLINK\DEX-100\utility\ADLINK_SFDT
+</code></pre>
 <ul>
 <li>
-<p><a href="#how-to-reduce-the-working-time-for-epatternfinder.find-processing-time">How to reduce the working time for EPatternFinder.Find processing time</a></p>
+<p>Click the ADLINK_SFDT.exe</p>
 </li>
 <li>
-<h3 id="how-to-reduce-the-working-time-for-epatternfinderfind-processing-time">How to reduce the working time for EPatternFinder.Find processing time</h3>
-</li>
-<li>
-<h4 id="description-the-scenario">Description the scenario:</h4>
+<p><img src="/DEX/Resolution/images/2.PNG" alt="Normal machine"></p>
 </li>
 </ul>
-<p>Users would like to reduce the working time or give up the execution when having a high processing time.</p>
+<h3 id="2-detect-the-parameters-from-the-current-video">2. Detect the parameters from the current video</h3>
 <ul>
 <li>
-<h4 id="fundamental-for-easyfinder">Fundamental for EasyFinder</h4>
+<p>You can get the parameters from the current resolution after clicking the “Sense ”button.</p>
 </li>
-</ul>
-<p>EasyFind works internally in 2 stages.</p>
-<ol>
-<li>It selects reasonable candidates for the pattern</li>
-<li>It makes a finer analysis/positioning of the candidates.</li>
-</ol>
-<ul>
 <li>
-<h4 id="suggestion-way">Suggestion way</h4>
+<p><img src="/DEX/Resolution/images/3.PNG" alt="Normal machine"></p>
 </li>
 </ul>
-<p>There is a new parameter that may help by using the number of selected candidates has a direct impact on the processing time.
-<img src="/Euresys/EasyDeepLearning/Q&amp;A/images/1.jpg" alt="Normal machine"></p>
-<p><a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/reference/epatternfinder-maxinitialcandidates.htm?Highlight=SetMaxInitialCandidates%20">Link on line Doc</a></p>
+<p>
+<div class="notices note" ><p>1.DVI-D is dual-link type please referring.</p>
+</div>
+
+
+<div class="notices note" ><p>2.DVI Output shall display when DVI input and DVI output are connected then restart the dex-100.</p>
+</div>
+</p>
+<h2 id="dex-100-wiring-usb">DEX-100-wiring-usb</h2>
+<ul>
+<li>These are USB of keyboard and mouse how to wire with DEX.
+<img src="/DEX/Unboxing/images/USB.PNG" alt="Normal machine"></li>
+</ul>
+<h2 id="dex-100-wiring-ps2">DEX-100-wiring-ps2</h2>
+<ul>
+<li>These are PS2 of keyboard and mouse how to wire with DEX.
+<img src="/DEX/Unboxing/images/PS21.PNG" alt="Normal machine"></li>
+</ul>
+<h2 id="dex-100-for-editing-environment">DEX-100 for editing environment</h2>
+<ul>
+<li>The dex-100 has one GUI that is dex-pro, the dex-pro can design a script for auto-running and show the exclusive screen by DP.
+Due to editing the script that requires ones pair keyboard and mouse then show in the exclusive screen.
+<img src="/DEX/Unboxing/images/DPtoVGA.PNG" alt="Normal machine"></li>
+</ul>
+<h2 id="what-is-the-different-between-dp-to-vag-and-vga-out-">What is the different between (DP to VAG) and (VGA out) ?</h2>
+<ul>
+<li>Describe the different functions between (PD to VAG) and (VGA OUT), Please referring the below figure.
+<img src="/DEX/Unboxing/images/different.PNG" alt="Normal machine">  e</li>
+</ul>
 
 
 
@@ -1150,6 +1172,8 @@
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -1316,7 +1340,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1331,9 +1354,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1367,7 +1387,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1382,7 +1401,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -1402,9 +1420,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1489,6 +1504,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1503,6 +1519,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1520,6 +1539,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1535,6 +1555,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1789,10 +1812,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/euresys/easyfind/" title="EasyFind"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dex/video-source/" title="Choice the Dex-100 Video Source"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/euresys/easygauge/" title="EasyGauge" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dex/faq/" title="FAQ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
