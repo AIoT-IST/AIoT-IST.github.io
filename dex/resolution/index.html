@@ -12,18 +12,18 @@
     <title>Create new resolution :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1614766632" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1614766632" rel="stylesheet">
-    <link href="/css/hybrid.css?1614766632" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1614766632" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1614766632" rel="stylesheet">
-    <link href="/css/auto-complete.css?1614766632" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1614766632" rel="stylesheet">
-    <link href="/css/theme.css?1614766632" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1614766632" rel="stylesheet">
+    <link href="/css/nucleus.css?1614938707" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1614938707" rel="stylesheet">
+    <link href="/css/hybrid.css?1614938707" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1614938707" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1614938707" rel="stylesheet">
+    <link href="/css/auto-complete.css?1614938707" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1614938707" rel="stylesheet">
+    <link href="/css/theme.css?1614938707" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1614938707" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1614766632"></script>
+    <script src="/js/jquery-3.3.1.min.js?1614938707"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -62,14 +62,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1614766632"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1614766632"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1614938707"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1614938707"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1614766632"></script>
+<script type="text/javascript" src="/js/search.js?1614938707"></script>
 
     
   </div>
@@ -1104,64 +1104,69 @@
 	<h1 id="how-to-increase-a-new-resolution">How to increase a new resolution</h1>
 <ul>
 <li><a href="#equipment-wiring-map">Frame Grabber Setting </a></li>
-<li><a href="#dex-100-wiring-for-vga">DEX-100 wiring for VGA </a></li>
+<li><a href="#1-run-the-adlink_sfdt">Run the ADLINK_SFDT</a></li>
+<li><a href="#2-detect-the-parameters-from-the-current-video">Get the parameters from current resolution</a></li>
 </ul>
 <h3 id="frame-grabber-setting">Frame Grabber Setting</h3>
 <pre><code> Path  -&gt; DEX-Pro -&gt; Tool -&gt; Config -&gt; Frame Grabber Setting 
 </code></pre>
-<p>Selecte Auto mode in &ldquo;Frame Grabbe Configuration&rdquo;</p>
 <ul>
-<li><img src="/DEX/Resolution/images/1.PNG" alt="Normal machine"></li>
+<li>
+<p>Selecte Auto mode in &ldquo;Frame Grabbe Configuration&rdquo;</p>
+</li>
+<li>
+<p><img src="/DEX/Resolution/images/1.PNG" alt="Normal machine"></p>
+</li>
 </ul>
-<h3 id="steps-">Steps ()</h3>
-<h3 id="1-open-the-tool-of-adlink_sfdt">1. Open the tool of &ldquo;ADLINK_SFDT&rdquo;</h3>
+<h1 id="steps-">Steps ()</h1>
+<h2 id="1-run-the-adlink_sfdt">1 Run the ADLINK_SFDT</h2>
+<p>Run the ADLINK_SFDT.exe follow the below path.</p>
 <pre><code> Path  -&gt; C:\Program Files\ADLINK\DEX-100\utility\ADLINK_SFDT
 </code></pre>
 <ul>
-<li>
-<p>Click the ADLINK_SFDT.exe</p>
-</li>
-<li>
-<p><img src="/DEX/Resolution/images/2.PNG" alt="Normal machine"></p>
-</li>
+<li><img src="/DEX/Resolution/images/2.PNG" alt="Normal machine"></li>
 </ul>
-<h3 id="2-detect-the-parameters-from-the-current-video">2. Detect the parameters from the current video</h3>
-<ul>
-<li>
+<h2 id="2-detect-the-parameters-from-the-current-video">2 Detect the parameters from the current video</h2>
 <p>You can get the parameters from the current resolution after clicking the “Sense ”button.</p>
-</li>
-<li>
-<p><img src="/DEX/Resolution/images/3.PNG" alt="Normal machine"></p>
-</li>
+<ul>
+<li><img src="/DEX/Resolution/images/3.PNG" alt="Normal machine"></li>
 </ul>
-<p>
-<div class="notices note" ><p>1.DVI-D is dual-link type please referring.</p>
+
+<div class="notices note" ><p>If no parameters are displayed, please refer to the below link (troubleshooting)</p>
 </div>
 
-
-<div class="notices note" ><p>2.DVI Output shall display when DVI input and DVI output are connected then restart the dex-100.</p>
-</div>
-</p>
-<h2 id="dex-100-wiring-usb">DEX-100-wiring-usb</h2>
+<p><a href="https://aiot-ist.github.io/dex/video-source/">video-source</a></p>
+<h2 id="3-zoom-out-the-adlink_sfdt">3 Zoom out the ADLINK_SFDT</h2>
 <ul>
-<li>These are USB of keyboard and mouse how to wire with DEX.
-<img src="/DEX/Unboxing/images/USB.PNG" alt="Normal machine"></li>
+<li><img src="/DEX/Resolution/images/4.PNG" alt="Normal machine"></li>
 </ul>
-<h2 id="dex-100-wiring-ps2">DEX-100-wiring-ps2</h2>
+<h2 id="4-backup-the-dex100_rgbtxt">4 Backup the dex100_rgb.txt</h2>
+<p>Clone the dex100.rgb to desktop and copy one more to be a backup file.</p>
+<pre><code> Path  -&gt; C:\Windows\dex100_rgb.txt
+</code></pre>
 <ul>
-<li>These are PS2 of keyboard and mouse how to wire with DEX.
-<img src="/DEX/Unboxing/images/PS21.PNG" alt="Normal machine"></li>
+<li><img src="/DEX/Resolution/images/5.PNG" alt="Normal machine"></li>
 </ul>
-<h2 id="dex-100-for-editing-environment">DEX-100 for editing environment</h2>
+<h2 id="5-increase-a-new-resolution-table">5 Increase a new resolution table</h2>
+<blockquote>
+<p>Please search for a set of resolution closest to what you desire and copy it to the top of the &ldquo;dex100_rgb.txt&rdquo;.</p>
+</blockquote>
 <ul>
-<li>The dex-100 has one GUI that is dex-pro, the dex-pro can design a script for auto-running and show the exclusive screen by DP.
-Due to editing the script that requires ones pair keyboard and mouse then show in the exclusive screen.
-<img src="/DEX/Unboxing/images/DPtoVGA.PNG" alt="Normal machine"></li>
+<li><img src="/DEX/Resolution/images/6.PNG" alt="Normal machine"></li>
 </ul>
-<h2 id="what-is-the-different-between-dp-to-vag-and-vga-out-">What is the different between (DP to VAG) and (VGA out) ?</h2>
+<h2 id="6-edit-the-resolution-name">6 Edit the resolution name</h2>
+<blockquote>
+<p>Name the title and modify the parameters (Width、Height 、FPS) for easily selected the resolution list.</p>
+</blockquote>
 <ul>
-<li>Describe the different functions between (PD to VAG) and (VGA OUT), Please referring the below figure.
-<img src="/DEX/Unboxing/images/different.PNG" alt="Normal machine">  e</li>
+<li><img src="/DEX/Resolution/images/7.PNG" alt="Normal machine"></li>
+</ul>
+<h2 id="7-fill-in-the-parameters">7 Fill in the parameters</h2>
+<p>Fill in the parameters from ADLINK_SFDT tool</p>
+<pre><code> Skip the unknown parameters.
+</code></pre>
+<ul>
+<li><img src="/DEX/Resolution/images/8.PNG" alt="Normal machine"></li>
 </ul>
 
 
@@ -1825,19 +1830,19 @@ Due to editing the script that requires ones pair keyboard and mouse then show i
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1614766632"></script>
-    <script src="/js/perfect-scrollbar.min.js?1614766632"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1614766632"></script>
-    <script src="/js/jquery.sticky.js?1614766632"></script>
-    <script src="/js/featherlight.min.js?1614766632"></script>
-    <script src="/js/highlight.pack.js?1614766632"></script>
+    <script src="/js/clipboard.min.js?1614938707"></script>
+    <script src="/js/perfect-scrollbar.min.js?1614938707"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1614938707"></script>
+    <script src="/js/jquery.sticky.js?1614938707"></script>
+    <script src="/js/featherlight.min.js?1614938707"></script>
+    <script src="/js/highlight.pack.js?1614938707"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1614766632"></script>
-    <script src="/js/learn.js?1614766632"></script>
-    <script src="/js/hugo-learn.js?1614766632"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1614938707"></script>
+    <script src="/js/learn.js?1614938707"></script>
+    <script src="/js/hugo-learn.js?1614938707"></script>
 
-    <link href="/mermaid/mermaid.css?1614766632" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1614766632"></script>
+    <link href="/mermaid/mermaid.css?1614938707" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1614938707"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
