@@ -12,18 +12,18 @@
     <title>How to use NEON to control DI/O? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1614938707" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1614938707" rel="stylesheet">
-    <link href="/css/hybrid.css?1614938707" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1614938707" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1614938707" rel="stylesheet">
-    <link href="/css/auto-complete.css?1614938707" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1614938707" rel="stylesheet">
-    <link href="/css/theme.css?1614938707" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1614938707" rel="stylesheet">
+    <link href="/css/nucleus.css?1615197042" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1615197042" rel="stylesheet">
+    <link href="/css/hybrid.css?1615197042" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1615197042" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1615197042" rel="stylesheet">
+    <link href="/css/auto-complete.css?1615197042" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1615197042" rel="stylesheet">
+    <link href="/css/theme.css?1615197042" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1615197042" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1614938707"></script>
+    <script src="/js/jquery-3.3.1.min.js?1615197042"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -62,14 +62,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1614938707"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1614938707"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1615197042"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1615197042"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1614938707"></script>
+<script type="text/javascript" src="/js/search.js?1615197042"></script>
 
     
   </div>
@@ -1105,7 +1105,39 @@
 
 
 	<p>Here is the list for our demo devices. Different devices might have different default settings. Please adjust the procedures based on your corresponding devices.</p>
+<ul>
+<li><a href="#easy">Easy</a></li>
+<li><a href="#intermediate">Intermediate</a></li>
+</ul>
+<h2 id="easy">Easy</h2>
 <h3 id="devices-list">Devices List:</h3>
+<ul>
+<li>ADLINK NEON-1000-MDX</li>
+<li>ADLINK DIN-37D-01</li>
+<li>Tend TPTL4 LED</li>
+<li>24V Power Supply</li>
+</ul>
+<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/1111.png" alt="whole"></p>
+<h3 id="step-1">Step 1.</h3>
+<p>Connect the Neon with the din board through a connector.
+<img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/001.jpg" alt="step1"></p>
+<h3 id="step-2">Step 2.</h3>
+<p>Connect the LED&rsquo;s negative wire in pin 4 for device output.
+<img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/002.jpg" alt="step2"></p>
+<h3 id="step-3">Step 3.</h3>
+<p>Plug the 24V power supply&rsquo;s negative wire in Din board&rsquo;s pin 10 for grounding.
+<img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/003.jpg" alt="step3"></p>
+<h3 id="step-4">Step 4.</h3>
+<p>Coneect the positive of power supply with the positive of LED.
+<img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/005.jpg" alt="step4"></p>
+<h3 id="step-5">Step 5.</h3>
+<p>Use Neon to control the LED.</p>
+<ul>
+<li>Use the command <code>cd /usr/src/Neon/Sample/Neon_Setting</code> to adjust Neon setting.</li>
+<li>Use <code>sudo ./Neon_Setting DO 1 1</code> to turn on the LED, use <code>sudo ./Neon_Setting DO 1 0 </code> to turn off the LED conversely.</li>
+</ul>
+<h2 id="intermediate">Intermediate</h2>
+<h3 id="devices-list-1">Devices List:</h3>
 <ul>
 <li>ADLINK NEON-1000-MDX</li>
 <li>ADLINK DIN-37D-01</li>
@@ -1113,21 +1145,21 @@
 <li>5V Power Supply</li>
 </ul>
 <p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/whole.jpg" alt="whole"></p>
-<h3 id="step-1">Step 1.</h3>
+<h3 id="step-1-1">Step 1.</h3>
 <p>Connect the light with the light controller at channel 1.</p>
 <p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/1-1.jpg" alt="step1"></p>
-<h3 id="step-2">Step 2.</h3>
+<h3 id="step-2-1">Step 2.</h3>
 <p>Connect the light controller with din board at strobe channel 1. Plug the positive wire in pin 3 for device output, and plug the negative wire in the pin 10 for grounding.</p>
 <p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/2-12.jpg" alt="step2-1&2">
 <img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/2-3.jpg" alt="step2-3"></p>
-<h3 id="step-3">Step 3.</h3>
+<h3 id="step-3-1">Step 3.</h3>
 <p>Connect the Neon with the din board through a connector.</p>
 <p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/3-1.jpg" alt="step3-1"></p>
-<h3 id="step-4">Step 4.</h3>
+<h3 id="step-4-1">Step 4.</h3>
 <p>Connect a trigger device on the din board. Insert the positive wire at pin 11 for trigger in, insert the negative wire at pin 10 for grounding. Here we used a 5V power supply for demonstration, you could connect your own device for your own purposes.</p>
 <p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/4-12.jpg" alt="step4-1&2">
 <img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/4-3.jpg" alt="step4-3"></p>
-<h3 id="step-5">Step 5.</h3>
+<h3 id="step-5-1">Step 5.</h3>
 <p>Adjust the default settings from Neon. Please enter the specific file path to adjust the settings. We modified the strobe-out polarity to set turning off the light as default, this step might be different due to your controller devices. Once the Neon reboots, the setting would be restored.</p>
 <ul>
 <li>Use command <code>sudo -i</code> to get in root mode.</li>
@@ -1815,19 +1847,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1614938707"></script>
-    <script src="/js/perfect-scrollbar.min.js?1614938707"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1614938707"></script>
-    <script src="/js/jquery.sticky.js?1614938707"></script>
-    <script src="/js/featherlight.min.js?1614938707"></script>
-    <script src="/js/highlight.pack.js?1614938707"></script>
+    <script src="/js/clipboard.min.js?1615197042"></script>
+    <script src="/js/perfect-scrollbar.min.js?1615197042"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1615197042"></script>
+    <script src="/js/jquery.sticky.js?1615197042"></script>
+    <script src="/js/featherlight.min.js?1615197042"></script>
+    <script src="/js/highlight.pack.js?1615197042"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1614938707"></script>
-    <script src="/js/learn.js?1614938707"></script>
-    <script src="/js/hugo-learn.js?1614938707"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1615197042"></script>
+    <script src="/js/learn.js?1615197042"></script>
+    <script src="/js/hugo-learn.js?1615197042"></script>
 
-    <link href="/mermaid/mermaid.css?1614938707" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1614938707"></script>
+    <link href="/mermaid/mermaid.css?1615197042" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1615197042"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
