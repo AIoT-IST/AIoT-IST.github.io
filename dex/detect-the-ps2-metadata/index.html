@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Getting start :: Connected Factory</title>
+    <title>Detect the PS2 metadata :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1617176777" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/neon-2000-jt2/gettingstart/">
+  <body class="" data-url="/dex/detect-the-ps2-metadata/">
     <nav id="sidebar" class="">
 
 
@@ -560,7 +560,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX" class="dd-item 
-        
+        parent
         
         
         ">
@@ -635,8 +635,8 @@
   
     
     <li data-nav-id="/dex/detect-the-ps2-metadata/" title="Detect the PS2 metadata" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/dex/detect-the-ps2-metadata/">
@@ -762,7 +762,7 @@
   
     
     <li data-nav-id="/neon-2000-jt2/" title="NEON-2000-JT2" class="dd-item 
-        parent
+        
         
         
         ">
@@ -789,8 +789,8 @@
   
     
     <li data-nav-id="/neon-2000-jt2/gettingstart/" title="Getting start" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/neon-2000-jt2/gettingstart/">
@@ -1121,7 +1121,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-2000-jt2/'>NEON-2000-JT2</a> > Getting start
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > Detect the PS2 metadata
           
          
           
@@ -1139,12 +1139,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              Getting start
-            </h1>
           
 
         
@@ -1152,76 +1149,71 @@
 
 
 
-	<p>This tutorial will guide you how to getting start with Neon-iSeries from un-boxing.</p>
+	<h1 id="how-to-acquit-the-ps2-metadata-for-kb-or-mouse">How to acquit the ps2 metadata for KB or Mouse.</h1>
 <ul>
-<li><a href="#hardware-wiring">Hardware wiring</a></li>
-<li><a href="#inference-by-neon">Inference by NEON</a></li>
-<li><a href="#run-dio-sample">Run DI/O Sample</a></li>
+<li><a href="#power-off-both-of-dex-100-and-host-machine">Step1: Power off both Dex-100 &amp; host-machine</a></li>
+<li><a href="#boot-up-the-dex-100-and-run-the-dbgview-as-administrator">Step2: Boot up the Dex-100 and run the Dbgview as administrator </a></li>
+<li><a href="#enable-the-function-to-follow-the-below-image">Step3: Enable the function to follow the below image</a></li>
+<li><a href="#dex-100-wiring-usb">Step4: Setting the diffrent filter-string</a></li>
+<li><a href="#power-on-the-host-machine">Step5: Power on the host-machine</a></li>
+<li><a href="#drecord-the-logs-by-dbgview">Step6: Record the logs by Dbgview </a></li>
+<li><a href="#save-the-log">Step7: Save the log </a></li>
+<li><a href="#troubleshooting-for-debugview">Troubleshooting for DebugView</a></li>
 </ul>
-<h2 id="hardware-wiring">Hardware wiring</h2>
-<p>The NEON-2000-JT2 DC power source can be either from a USB Type-C adaptor or DC jack. The USB Type-C connector also supports a DisplayPort video signal and USB3, which can be used to
-connect a keyboard and mouse. The following figures show examples of possible power and peripheral connection configurations.</p>
-<ul>
-<li>Separate Power and Peripheral Connections
-<ul>
-<li>This configuration requires an ADLINK AC/DC power adapter (P/N 31-62156-1000-A0).
-<img src="/NEON-2000-JT2/GettingStart/images/Neon-i1000_Hardware_wiring_3.JPG" alt="Separate Power and Peripheral Connections"></li>
-</ul>
-</li>
-<li>Combined Power and Peripheral Connections
-<ul>
-<li>This configuration requires an ADLINK USB Type-C hub/adapter (P/N 92-99090-1010).
-<img src="/NEON-2000-JT2/GettingStart/images/Neon-i1000_Hardware_wiring_4.JPG" alt="Separate Power and Peripheral Connections">
-<img src="/NEON-2000-JT2/GettingStart/images/Neon-i1000_Hardware_wiring_1.JPG" alt="Separate Power and Peripheral Connections"></li>
-</ul>
-</li>
-</ul>
-<h2 id="inference-by-neon">Inference by NEON</h2>
-<p>The inference sample, <em><strong>Capture_and_inference_Sample</strong></em>, is built on the Desktop of NEON-2000-JT2.</p>
+<h3 id="power-off-both-of-dex-100-and-host-machine">Power off both of Dex-100 and host-machine</h3>
+<p>The Dex-100 choices the USB or PS2 protocol by both keyboard and mouse successful connection with host-machine, but the handshake is beginning when power on for PS2 mode.</p>
+<h3 id="boot-up-the-dex-100-and-run-the-dbgview-as-administrator">Boot up the Dex-100 and run the Dbgview as administrator</h3>
+<p><img src="/DEX/PS2metadata/images/1.PNG" alt="Normal machine"></p>
+<h3 id="enable-the-function-to-follow-the-below-image">Enable the function to follow the below image</h3>
+<p><img src="/DEX/PS2metadata/images/2.PNG" alt="Normal machine"></p>
+<h3 id="dex-100-wiring-usb">DEX-100-wiring-usb</h3>
+<p>Setting the diffrent filter-string
+Key-in the different filter-string for collecting the data of the mouse or keyboard and click ok.</p>
 <ul>
 <li>
-<p>inference by image</p>
-<ul>
-<li>./imagenet-console [input_image][output_image]</li>
-</ul>
-<pre><code>cd ~/Desktop/Capture_and_Inference_Sample/build/aarch64/bin
-./imagenet-console ./aarch64/bin/jellyfish.jpg ./aarch64/bin/output.jpg
-</code></pre></li>
+<p>For log keyboard matamata : KBD</p>
+<p><img src="/DEX/PS2metadata/images/3.PNG" alt="Normal machine"></p>
+</li>
 <li>
-<p>inference by camera</p>
-<ul>
-<li>./imagenet-camera [input_width] [input_height]</li>
+<p>For log Mouse matamata : KVM2</p>
+<p><img src="/DEX/PS2metadata/images/4.PNG" alt="Normal machine"></p>
+</li>
 </ul>
-<pre><code>cd ~/Desktop/Capture_and_Inference_Sample/build/aarch64/bin
-./imagenet-camera 1920 1080
-</code></pre></li>
-</ul>
+<p><img src="/DEX/PS2metadata/images/5.PNG" alt="Normal machine">
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/gjJ14kjw5Y8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<div class="notices note" ><p>You can click the button and choose each string for collecting the data of the mouse or keyboard.</p>
+</div>
+</p>
+<h3 id="power-on-the-host-machine">Power on the host-machine</h3>
+<p>Dex-100 choices the PS2 mode when hand-shake is successful both with the PS2 mouse and host-machine after power on the host-machine.</p>
+
+<div class="notices note" ><p>Dex-100 has only one rule for choosing PS2 or USB protocol by detecting the ps2 mouse.</p>
 </div>
 
-<h2 id="run-dio-sample">Run DIO Sample</h2>
-<ul>
-<li>Get hardware and DI/O information</li>
-</ul>
-<pre><code> cd /usr/src/Neon/Sample/Neon_Information
- sudo ./Neon_Information
-</code></pre>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/DLRnU1L9GqQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<h3 id="record-the-logs-by-dbgview">Record the logs by Dbgview</h3>
+<p>You can see some metadata to show on the Debug Print , if it is successful.</p>
+<p><img src="/DEX/PS2metadata/images/6.PNG" alt="Normal machine"></p>
+<p>It recordes logs when moving mouse or key-in any keyboard.</p>
+<p><img src="/DEX/PS2metadata/images/7.PNG" alt="Normal machine">
 
-<ul>
-<li>Get hardware and DI/O information by python</li>
-</ul>
-<pre><code> cd /usr/src/Neon/Sample/Neon_Python
- sudo python Neon.py
-</code></pre><h2 id="hahahugoshortcode-s2-hbhb">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/eVVSRgH5AWs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<div class="notices note" ><p>Please record both of Bypass mode &amp; control mode.</p>
 </div>
-</h2>
+</p>
+<h3 id="save-the-log">Save the log</h3>
+<p>Save the log and sent back for Adlink contact window.</p>
+<p><img src="/DEX/PS2metadata/images/8.PNG" alt="Normal machine"></p>
+<h3 id="troubleshooting-for-debugview">Troubleshooting for DebugView</h3>
+<p>Please follow the troubleshooting when you see the warning message</p>
+<p><img src="/DEX/PS2metadata/images/9.PNG" alt="Normal machine"></p>
+<ol>
+<li>Remove the Dbgv.sys as administrator
+<img src="/DEX/PS2metadata/images/10.PNG" alt="Normal machine">
+
+<div class="notices note" ><p>Path : C:\Windows\System32\drivers</p>
+</div>
+</li>
+<li>Retry step1 to step7.</li>
+</ol>
 
 
 
@@ -1231,6 +1223,8 @@ connect a keyboard and mouse. The following figures show examples of possible po
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -1561,6 +1555,7 @@ connect a keyboard and mouse. The following figures show examples of possible po
             
                 
                     
+                    
                 
                 
 
@@ -1575,6 +1570,61 @@ connect a keyboard and mouse. The following figures show examples of possible po
             
             
                 
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1635,6 +1685,24 @@ connect a keyboard and mouse. The following figures show examples of possible po
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
                         
             
             
@@ -1655,77 +1723,6 @@ connect a keyboard and mouse. The following figures show examples of possible po
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1898,10 +1895,10 @@ connect a keyboard and mouse. The following figures show examples of possible po
 	 
 	 
 		
-			<a class="nav nav-prev" href="/neon-2000-jt2/" title="NEON-2000-JT2"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dex/resolution/" title="Create new resolution"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/neon-2000-jt2/howtobackupneonibymicrosd/" title="How to backup Neon by microSD card?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dex/ps2metadata/" title="Detect the PS2 metadata" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
