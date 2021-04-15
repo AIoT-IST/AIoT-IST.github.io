@@ -111,11 +111,19 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/neon-2000-jnx/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon-2000-jt2/howtobackupneonibymicrosd/</loc>
   </url>
   
   <url>
     <loc>https://aiot-ist.github.io/neon-2000-jt2/howtouseneontocontroldio/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/neon-2000-jnx/howtoflashimage/</loc>
   </url>
   
   <url>
