@@ -53,7 +53,7 @@
 	"title": "Disable Mouse accelerator",
 	"tags": [],
 	"description": "",
-	"content": "How to turn off the Mouse accelerator?  Step0: Disable Mouse accelerator by UI  Step1: Run the Registry Editor Step2: Change the Mouse speed setting  Disable Mouse accelerator by UI Wake up the Mouse Properties and disable the \u0026ldquo;Enhance pointer presision\u0026rdquo;\nPath:Control Panel\\All Control Panel Items\\Mouse\n Please follow the next step if you can\u0026rsquo;t find the UI of Mouse properties.\nRun the registry editor Using the hot-ky \u0026ldquo;Win+R\u0026rdquo;\nWake up the Registry Editor\nChange the mouse speed setting Edite the Mouse speed setting from 1 to 0. Define 1 = Enable 0 = Disabl\nPath:HKEY_CURRENT_USER\\Control Panel\\Mouse\\MouseSpeed\n "
+	"content": "How to turn off the Mouse accelerator?  Step0: Disable Mouse accelerator by UI  Step1: Run the Registry Editor Step2: Change the Mouse speed setting  Disable Mouse accelerator by UI Wake up the Mouse Properties and disable the \u0026ldquo;Enhance pointer precision\u0026rdquo;\nPath:Control Panel\\All Control Panel Items\\Mouse\n Please follow the next step if you can\u0026rsquo;t find the UI of Mouse properties.\nRun the registry editor Using the hot-ky \u0026ldquo;Win+R\u0026rdquo;\nWake up the Registry Editor\nChange the mouse speed setting Edite the Mouse speed setting from 1 to 0. Define 1 = Enable 0 = Disabl\nPath:HKEY_CURRENT_USER\\Control Panel\\Mouse\\MouseSpeed\n "
 },
 {
 	"uri": "https://aiot-ist.github.io/euresys/",
