@@ -28,28 +28,49 @@
 	"content": "Frequently asked questions (FAQ) about Pylon\nHow to grab the Image from the GigE Basler.   Step1 : Set the Lan port IP address ? Assign the TCP/IP4 IP to be 192.168.11.1  Step2: How to set the Camera IP by Pylon? Set the Ip 192.168.11.4 by Pylon IP configurator.   Video   "
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/video-source/",
-	"title": "Choice the Dex-100 Video Source",
+	"uri": "https://aiot-ist.github.io/dex/script/get-bmp-by-dex-pro/",
+	"title": "01-Layer",
+	"tags": [],
+	"description": "",
+	"content": "How to add the bmp(layer) and select the folder for project. How to use classic functions in the script.\nVideo Video\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/unboxing/",
+	"title": "01-Unboxing",
+	"tags": [],
+	"description": "",
+	"content": "DEX-100 Unboxing  Equipment wiring map  DEX-100 wiring for VGA  DEX-100 wiring for DVI DEX-100 wiring for USB DEX-100 wiring for PS2  DEX-100 for editing environment What is the different between (DP to VAG) and (VGA out) ?  Equipment wiring map The basic wiring is below the figure. DEX-100 wiring for VGA  This is PC connected to screen by VGA cable.  Separate the VGA cable that the VGA-INPUT connects to dex-100 then VGA-OUTPUT connects to screen.   DEX-100 wiring for DVI  This is PC connected to screen by DVI cable.  Separate the DVI cable that the DVI -INPUT connects to dex-100 then DVI -OUTPUT connects to screen. 1.DVI-D is dual-link type please referring.\n 2.DVI Output shall display when DVI input and DVI output are connected then restart the dex-100.\n   DEX-100-wiring-usb  These are USB of keyboard and mouse how to wire with DEX.   DEX-100-wiring-ps2  These are PS2 of keyboard and mouse how to wire with DEX.   DEX-100 for editing environment  The dex-100 has one GUI that is dex-pro, the dex-pro can design a script for auto-running and show the exclusive screen by DP. Due to editing the script that requires ones pair keyboard and mouse then show in the exclusive screen.   What is the different between (DP to VAG) and (VGA out) ?  Describe the different functions between (PD to VAG) and (VGA OUT), Please referring the below figure. e  "
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/video/video-source/",
+	"title": "1 - Choice the Dex-100 Video Source",
 	"tags": [],
 	"description": "",
 	"content": "Choice the Dex-100 Video Source Click the Frame Grabber Setting and choice the Source input.  Dex-Pro -\u0026gt; Tools -\u0026gt; Config -\u0026gt; Fram Grabber Setting  Use the Diag.exe for checking the current video information.  Path -\u0026gt; -\u0026gt; C:\\Program Files\\ADLINK\\DEX-100\\utility\\Diag.exe  Clear horizontal and vertical offset values  Click the button of \u0026quot;Frame Adjust\u0026quot;   Please set 0 for all the offset\n  Select source and resolution  Select source from VGA or DVI   Select resolution \u0026ldquo;Auto\u0026rdquo;  Get the Video informations   Check the both result for Resolution and Signal, if the connection is successful.\n  If doesn\u0026rsquo;t detected the signal, follow the steps for troubleshooting.    Check the Local machine setting for display resolution.    Reconnect the local machine VGA cable to monitor.    Reboot the local machine.    Check the resolution from the monitor.    Reconnect the VGA to Dex-100.    Check Frame Grabber Setting whether the auto mode is selected for any resolution.    "
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/resolution/",
-	"title": "Create new resolution",
+	"uri": "https://aiot-ist.github.io/dex/video/video-quality/",
+	"title": "2 - Video quality adjustment",
+	"tags": [],
+	"description": "",
+	"content": "How to adjust quality when inputting the bad video  3. Using the Diag.exe 4. Select source \u0026amp; resolution 5. Draw the image by clicking the \u0026ldquo;Start\u0026rdquo; 6. Confirm the current image that is right 7. Using the \u0026ldquo;Video Quality Analysis\u0026rdquo; 8. Choose the test interval and start the testing 9. Cancel the testing log or save it in storage 10. System auto full in the result in the parameter of the sampling phas 11. Trobleshooting  Steps 1 Boot up the dex-100 Power on the DEX-100\n2 Input the Video source (VGA or DVI) Plug-in the video source cable.\n3 Using the Diag  Path -\u0026gt; C:\\Program Files\\ADLINK\\DEX-100\\utility\\Diag.exe  4 Select source and resolution  Select source  Select resolution   5 Draw the image by clicking the button of Start You shall see the result when grabbing is successful.\n     It is the current source    It is the current resolution    It is succeful or filed    If the resolution can\u0026rsquo;t match your choose resolution or the signal can\u0026rsquo;t be detected , please follow the below steps.\n  Dex-Pro -\u0026gt; Tools -\u0026gt; Config -\u0026gt; Fram Grabber Setting     6 Confirm the current image that is right   It is not right, please retrying Step 2~5 again.\nDex-100 can\u0026rsquo;t process some Intel chips that can\u0026rsquo;t output your required resolution, because the resolution always keeps in one resolution.\n   7 Using the Video Quality Analysis   Test VGA video quality for a long time and give suggested parameters\n  (Ensure that the video quality of the machine is almost the same throughout the day.)\n    8 Choose the test interval and start the testing Choose the test interval There are several parameters for your requirement.\n Click the \u0026ldquo;start\u0026rdquo; button.   9 Cancel the testing log or save it in storage You shall see the report after automatically test the video quality.\n Click the ok button.  10 System auto full in the result in the parameter of the sampling phas It is successful when you see the value be set in \u0026ldquo;Sampling Phase\u0026rdquo; from the testing result.\nThe system only brings into the testing result of the sampling phase in the right parameter.\n    11 Trobleshooting   If you get the large value from \u0026ldquo;Average Dynamic Noise\u0026rdquo;, we suggest you that replace the VGA cable with anti-noise (EMI CORES) when getting the bad value after using Video Quality Analysis.\n    "
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/video/resolution/",
+	"title": "3 - Create new resolution",
 	"tags": [],
 	"description": "",
 	"content": "How to increase a new resolution  Frame Grabber Setting  Attachments   Frame Grabber Setting  Path -\u0026gt; DEX-Pro -\u0026gt; Tool -\u0026gt; Config -\u0026gt; Frame Grabber Setting    Selecte Auto mode in \u0026ldquo;Frame Grabbe Configuration\u0026rdquo;\n    Steps () 1 Get the new resolution by Screen.    2 Run the ADLINK_SFDT Run the ADLINK_SFDT.exe follow the below path.\n Path -\u0026gt; C:\\Program Files\\ADLINK\\DEX-100\\utility\\ADLINK_SFDT     3 Detect the parameters from the current video You can get the parameters from the current resolution after clicking the “Sense ”button.\n   If no parameters are displayed, please refer to the below link (troubleshooting)\n video-source\n4 Backup the dex100_rgb.txt Clone the dex100.rgb to desktop and copy one more to be a backup file.\n Path -\u0026gt; C:\\Windows\\dex100_rgb.txt     5 Increase a new resolution table  Please search for a set of resolution closest to what you desire and copy it to the top of the \u0026ldquo;dex100_rgb.txt\u0026rdquo;.\n    6 Edit the resolution name [Width Height fps Interlace]  Name the new title and modify the parameters (Width、Height 、FPS) for easily selected the resolution list.\n    7 Fill in the parameters [HF VF VTotal Vsw]  Fill in the parameters from ADLINK_SFDT tool in “dex100_rgb.txt”\n    8 Get the unknown parameters  Get the unknown parameters by filling in the new resolution((Width、Height 、FPS) in the first sheet “CVT” of VesaCVT.xlsx\n    9 Fill in the parameters to Way_2 Fill in the parameters from the ADLINK_SFD in the sheet of Way_2.\n   10 Fill in the parameters [Hf HTotal Hsv Hbp Vf VTotal Vsw Vbp PClock Cr] Please key-in each color-bound box parameter to dex100_rgb.\n   11 Fill in the parameters in content of the new resolution set Please key-in each color-bound box parameter to dex100_rgb.\n   12 Save the txt 13 Replace the dex100_rgb.txt Replace the new dex100_rgb.txt to this C:\\Windows\\dex100_rgb.txt.\n14 Reboot the Dex-100 15 Reuse the Diag.exe  Path -\u0026gt; C:\\Program Files\\ADLINK\\DEX-100\\utility\\Diag.exe  15 Checking the resolution table can be choiced.    16 Choice the new list and click the button on start    17 Align the screen edge by button of Frame Adjust    Attachments VesaCVT.xlsx\ndex100_rgb.txt\n"
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/ps2metadata/",
+	"uri": "https://aiot-ist.github.io/dex/mouse/ps2metadata/",
 	"title": "Detect the PS2 metadata",
 	"tags": [],
 	"description": "",
 	"content": "How to acquit the ps2 metadata for KB or Mouse.  Step1: Power off both Dex-100 \u0026amp; host-machine Step2: Boot up the Dex-100 and run the Dbgview as administrator  Step3: Enable the function to follow the below image Step4: Setting the diffrent filter-string Step5: Power on the host-machine Step6: Record the logs by Dbgview  Step7: Save the log  Troubleshooting for DebugView DebugView download  Power off both of Dex-100 and host-machine The Dex-100 choices the USB or PS2 protocol by both keyboard and mouse successful connection with host-machine, but the handshake is beginning when power on for PS2 mode.\nBoot up the Dex-100 and run the Dbgview as administrator Enable the function to follow the below image DEX-100-wiring-usb Setting the diffrent filter-string Key-in the different filter-string for collecting the data of the mouse or keyboard and click ok.\n  For log keyboard matamata : KBD\n  For log Mouse matamata : KVM2\n  You can click the button and choose each string for collecting the data of the mouse or keyboard.\n Power on the host-machine Dex-100 choices the PS2 mode when hand-shake is successful both with the PS2 mouse and host-machine after power on the host-machine.\nDex-100 has only one rule for choosing PS2 or USB protocol by detecting the ps2 mouse.\n Record the logs by Dbgview You can see some metadata to show on the Debug Print , if it is successful.\nIt recordes logs when moving mouse or key-in any keyboard.\nPlease record both of Bypass mode \u0026amp; control mode.\n Save the log Save the log and sent back for Adlink contact window.\nTroubleshooting for DebugView Please follow the troubleshooting when you see the warning message\n Remove the Dbgv.sys as administrator or renmae it. Path : C:\\Windows\\System32\\drivers\n  Retry step1 to step7.  Attachment DebugView(save as to your computer)\n"
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/disablemouseaccelerator/",
+	"uri": "https://aiot-ist.github.io/dex/mouse/disablemouseaccelerator/",
 	"title": "Disable Mouse accelerator",
 	"tags": [],
 	"description": "",
@@ -61,27 +82,6 @@
 	"tags": [],
 	"description": "",
 	"content": "ADLINK IST Connected Factory Euresys Tutorials about Easy Tool series\n"
-},
-{
-	"uri": "https://aiot-ist.github.io/dex/faq/",
-	"title": "FAQ",
-	"tags": [],
-	"description": "",
-	"content": "FAQ List  Specifications of DI1 DI2 LED Batch kill dex-pro The mouse follows offset How to restart the MSMQ How to check why the dexpro can\u0026rsquo;t grab the video How to check the exception-event  Specifications of DI1 DI2 Hardware Figure DI connector pin assignment DI1/2 function LED There are 3 LEDs in the hardware that can light by script command. kill the dex-pro by batch  Please run the cmd as administrator\n input the command taskkill /f /im DEX-Pro.exe\n The mouse follows offset  Check the machine PC’s mouse setting, Keep middle speed and disable “Enhance pointer precision”. If the offset distance is not fixed, adjust mouse speed of the machine PC   How to restart the MSMQ If the Dex-por can\u0026rsquo;t work by MSMQ, Please follow the below steps for Troubleshooting\n Go to \u0026ldquo;control panel\u0026rdquo;  Go to \u0026ldquo;Program\u0026rdquo;  Go to \u0026ldquo;Turn Windows Features on or off\u0026rdquo;  Disable the \u0026ldquo;Microsoft Message Queue(MSMQ) Server\u0026rdquo;  Reboot the DEX-100 Enable the \u0026ldquo;Microsoft Message Queue(MSMQ) Server\u0026rdquo;   How to check the setting when the dexpro can not grab the video If the Dex-pro can\u0026rsquo;t grab the video, We have several suggestions please follow checking the below steps.\n Please checking the setting is Auto by the dex-pro tool of Fram Grabber Configuration.  Please open the Diagnostic tool. Tool-Path \u0026quot;C:\\Program Files\\ADLINK\\DEX-100\\utility\u0026quot;   You shall see both the result for Resolution and Signal if the connection is successful.  If is no signal , please use below steps to help you troubleshooting.   A. Check the Local machine setting for display resolution. B. Reconnect the local machine VGA cable to monitor. C. Reboot the local machine. D. Check the resolution from the monitor. E. Reconnect the VGA to Dex-100 F. Check Frame Grabber Setting whether the auto mode is selected for any resolution.  How to check the exception-event You can track the Event Viewer if dex-pro encounters the Unexpected crashing.\n 1. Enter CMD (Command Prompt) 2. Key-in \u0026quot;eventvwr\u0026quot;  Path : \u0026quot;Event Viewer ==\u0026gt; Windows Logs ==\u0026gt; System\u0026quot; "
-},
-{
-	"uri": "https://aiot-ist.github.io/dex/unboxing/",
-	"title": "Unboxing",
-	"tags": [],
-	"description": "",
-	"content": "DEX-100 Unboxing  Equipment wiring map  DEX-100 wiring for VGA  DEX-100 wiring for DVI DEX-100 wiring for USB DEX-100 wiring for PS2  DEX-100 for editing environment What is the different between (DP to VAG) and (VGA out) ?  Equipment wiring map The basic wiring is below the figure. DEX-100 wiring for VGA  This is PC connected to screen by VGA cable.  Separate the VGA cable that the VGA-INPUT connects to dex-100 then VGA-OUTPUT connects to screen.   DEX-100 wiring for DVI  This is PC connected to screen by DVI cable.  Separate the DVI cable that the DVI -INPUT connects to dex-100 then DVI -OUTPUT connects to screen. 1.DVI-D is dual-link type please referring.\n 2.DVI Output shall display when DVI input and DVI output are connected then restart the dex-100.\n   DEX-100-wiring-usb  These are USB of keyboard and mouse how to wire with DEX.   DEX-100-wiring-ps2  These are PS2 of keyboard and mouse how to wire with DEX.   DEX-100 for editing environment  The dex-100 has one GUI that is dex-pro, the dex-pro can design a script for auto-running and show the exclusive screen by DP. Due to editing the script that requires ones pair keyboard and mouse then show in the exclusive screen.   What is the different between (DP to VAG) and (VGA out) ?  Describe the different functions between (PD to VAG) and (VGA OUT), Please referring the below figure. e  "
-},
-{
-	"uri": "https://aiot-ist.github.io/dex/video-quality/",
-	"title": "Video quality adjustment",
-	"tags": [],
-	"description": "",
-	"content": "How to adjust quality when inputting the bad video  3. Using the Diag.exe 4. Select source \u0026amp; resolution 5. Draw the image by clicking the \u0026ldquo;Start\u0026rdquo; 6. Confirm the current image that is right 7. Using the \u0026ldquo;Video Quality Analysis\u0026rdquo; 8. Choose the test interval and start the testing 9. Cancel the testing log or save it in storage 10. System auto full in the result in the parameter of the sampling phas 11. Trobleshooting  Steps 1 Boot up the dex-100 Power on the DEX-100\n2 Input the Video source (VGA or DVI) Plug-in the video source cable.\n3 Using the Diag  Path -\u0026gt; C:\\Program Files\\ADLINK\\DEX-100\\utility\\Diag.exe  4 Select source and resolution  Select source  Select resolution   5 Draw the image by clicking the button of Start You shall see the result when grabbing is successful.\n     It is the current source    It is the current resolution    It is succeful or filed    If the resolution can\u0026rsquo;t match your choose resolution or the signal can\u0026rsquo;t be detected , please follow the below steps.\n  Dex-Pro -\u0026gt; Tools -\u0026gt; Config -\u0026gt; Fram Grabber Setting     6 Confirm the current image that is right   It is not right, please retrying Step 2~5 again.\nDex-100 can\u0026rsquo;t process some Intel chips that can\u0026rsquo;t output your required resolution, because the resolution always keeps in one resolution.\n   7 Using the Video Quality Analysis   Test VGA video quality for a long time and give suggested parameters\n  (Ensure that the video quality of the machine is almost the same throughout the day.)\n    8 Choose the test interval and start the testing Choose the test interval There are several parameters for your requirement.\n Click the \u0026ldquo;start\u0026rdquo; button.   9 Cancel the testing log or save it in storage You shall see the report after automatically test the video quality.\n Click the ok button.  10 System auto full in the result in the parameter of the sampling phas It is successful when you see the value be set in \u0026ldquo;Sampling Phase\u0026rdquo; from the testing result.\nThe system only brings into the testing result of the sampling phase in the right parameter.\n    11 Trobleshooting   If you get the large value from \u0026ldquo;Average Dynamic Noise\u0026rdquo;, we suggest you that replace the VGA cable with anti-noise (EMI CORES) when getting the bad value after using Video Quality Analysis.\n    "
 },
 {
 	"uri": "https://aiot-ist.github.io/euresys/easycolor/",
@@ -145,6 +145,34 @@
 	"tags": [],
 	"description": "",
 	"content": " Color Lookup  Color Lookup IndexBits, the number of table entries and the corresponding table size are given below: Here are grouped images of those full RGB palettes by 4 bits \u0026amp; 5 bits \u0026amp; 6 bits.\n 4 bits = 12-bit RGB   5 bits = 15-bit RGB   6 bits = 18-bit RGB  Reference https://en.wikipedia.org/wiki/List_of_monochrome_and_RGB_color_formats#4-bit_grayscale_2\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/video/",
+	"title": "02-Video Source",
+	"tags": [],
+	"description": "",
+	"content": "ADLINK IST Connected Factory Video Source There are some know how for sharing.\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/mouse/",
+	"title": "03-Mouse",
+	"tags": [],
+	"description": "",
+	"content": "ADLINK IST Connected Factory Mouse There are several note for sharing.\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/script/",
+	"title": "04-Layer",
+	"tags": [],
+	"description": "",
+	"content": "How to add the bmp(layer) and select the folder for project. How to use classic functions in the script.\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/faq/",
+	"title": "10-FAQ",
+	"tags": [],
+	"description": "",
+	"content": "FAQ List  Specifications of DI1 DI2 LED Batch kill dex-pro The mouse follows offset How to restart the MSMQ How to check why the dexpro can\u0026rsquo;t grab the video How to check the exception-event  Specifications of DI1 DI2 Hardware Figure DI connector pin assignment DI1/2 function LED There are 3 LEDs in the hardware that can light by script command. kill the dex-pro by batch  Please run the cmd as administrator\n input the command taskkill /f /im DEX-Pro.exe\n The mouse follows offset  Check the machine PC’s mouse setting, Keep middle speed and disable “Enhance pointer precision”. If the offset distance is not fixed, adjust mouse speed of the machine PC   How to restart the MSMQ If the Dex-por can\u0026rsquo;t work by MSMQ, Please follow the below steps for Troubleshooting\n Go to \u0026ldquo;control panel\u0026rdquo;  Go to \u0026ldquo;Program\u0026rdquo;  Go to \u0026ldquo;Turn Windows Features on or off\u0026rdquo;  Disable the \u0026ldquo;Microsoft Message Queue(MSMQ) Server\u0026rdquo;  Reboot the DEX-100 Enable the \u0026ldquo;Microsoft Message Queue(MSMQ) Server\u0026rdquo;   How to check the setting when the dexpro can not grab the video If the Dex-pro can\u0026rsquo;t grab the video, We have several suggestions please follow checking the below steps.\n Please checking the setting is Auto by the dex-pro tool of Fram Grabber Configuration.  Please open the Diagnostic tool. Tool-Path \u0026quot;C:\\Program Files\\ADLINK\\DEX-100\\utility\u0026quot;   You shall see both the result for Resolution and Signal if the connection is successful.  If is no signal , please use below steps to help you troubleshooting.   A. Check the Local machine setting for display resolution. B. Reconnect the local machine VGA cable to monitor. C. Reboot the local machine. D. Check the resolution from the monitor. E. Reconnect the VGA to Dex-100 F. Check Frame Grabber Setting whether the auto mode is selected for any resolution.  How to check the exception-event You can track the Event Viewer if dex-pro encounters the Unexpected crashing.\n 1. Enter CMD (Command Prompt) 2. Key-in \u0026quot;eventvwr\u0026quot;  Path : \u0026quot;Event Viewer ==\u0026gt; Windows Logs ==\u0026gt; System\u0026quot; "
 },
 {
 	"uri": "https://aiot-ist.github.io/mcm-204/gettingstart/",

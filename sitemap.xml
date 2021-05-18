@@ -19,27 +19,7 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/dex/video-source/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/dex/resolution/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/dex/ps2metadata/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/dex/disablemouseaccelerator/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/euresys/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/dex/faq/</loc>
+    <loc>https://aiot-ist.github.io/dex/script/get-bmp-by-dex-pro/</loc>
   </url>
   
   <url>
@@ -47,7 +27,27 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/dex/video-quality/</loc>
+    <loc>https://aiot-ist.github.io/dex/video/video-source/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/dex/video/video-quality/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/dex/video/resolution/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/dex/mouse/ps2metadata/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/dex/mouse/disablemouseaccelerator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/euresys/</loc>
   </url>
   
   <url>
@@ -84,6 +84,22 @@
   
   <url>
     <loc>https://aiot-ist.github.io/euresys/parameters/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/dex/video/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/dex/mouse/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/dex/script/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/dex/faq/</loc>
   </url>
   
   <url>
