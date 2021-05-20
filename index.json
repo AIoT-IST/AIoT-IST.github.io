@@ -28,11 +28,25 @@
 	"content": "Frequently asked questions (FAQ) about Pylon\nHow to grab the Image from the GigE Basler.   Step1 : Set the Lan port IP address ? Assign the TCP/IP4 IP to be 192.168.11.1  Step2: How to set the Camera IP by Pylon? Set the Ip 192.168.11.4 by Pylon IP configurator.   Video   "
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/script/get-bmp-by-dex-pro/",
-	"title": "01-Layer",
+	"uri": "https://aiot-ist.github.io/dex/script/newloadproject/",
+	"title": "00-New project &amp; Run Script &amp; combine Script",
 	"tags": [],
 	"description": "",
-	"content": "How to add the bmp(layer) and select the folder for project. How to use classic functions in the script.\nVideo Video\n"
+	"content": " How to create a new project Reload a project(blf) when remodifying  How to combine a script before running Run the script (.SPT) What is the difference between with SPT VS BLF  How to create a new project Step:  1 Click New 2 Click Select 3 Choice the folder for save the script data 4 Click Ok  Reload a project when remodifying Step  1 Click load 2 Choice the .blf list file  How to combine a script before running Step  1 Click mouse button of right in any one getting.bmp 2 Combine Script -\u0026gt; General 3 Inupt the name and click ok  Run the script Step  1 Click load 2 Choice the .spt list file 3 select the file 4 Click open   Click Run Scripts  What is the difference between with SPT VS BLF Pleas see below list\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/script/addscript/",
+	"title": "01-Add script",
+	"tags": [],
+	"description": "",
+	"content": " Choice the bmp which you want to design Click mouse button of left side then Add the Script Select the instruction   How to add script Choice the bmp which you want to design Click mouse button of left side then Add the Script Select the instruction "
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/script/construction/goto/",
+	"title": "01-Jump",
+	"tags": [],
+	"description": "",
+	"content": " Use GoTo fulfill JUMP function Use both element of GoTo with Lebel fulfill JUMP function  Use PageID fulfill JUMP function Use both element of PageID with Lebel fulfill JUMP function Use Table Compare fulfill JUMP function  How to design \u0026ldquo;Jump function\u0026rdquo; by GOTO \u0026amp; PageIdentify \u0026amp; label \u0026amp; Table compare. There are three function can fulfill JUMP\n GOTO : Directly jump to other command line. PageID : It is like the pattern match and jump to other command line. Compare Table : Compare the OCR Table and jump to other command line.  Use GoTo fulfill JUMP function Discription Use both element of GoTo with Lebel fulfill JUMP function Discription Use PageID fulfill JUMP function Discription Use both element of PageID with Lebel fulfill JUMP function Discription Use Table Compare fulfill JUMP function Discription "
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/unboxing/",
@@ -40,6 +54,27 @@
 	"tags": [],
 	"description": "",
 	"content": "DEX-100 Unboxing  Equipment wiring map  DEX-100 wiring for VGA  DEX-100 wiring for DVI DEX-100 wiring for USB DEX-100 wiring for PS2  DEX-100 for editing environment What is the different between (DP to VAG) and (VGA out) ?  Equipment wiring map The basic wiring is below the figure. DEX-100 wiring for VGA  This is PC connected to screen by VGA cable.  Separate the VGA cable that the VGA-INPUT connects to dex-100 then VGA-OUTPUT connects to screen.   DEX-100 wiring for DVI  This is PC connected to screen by DVI cable.  Separate the DVI cable that the DVI -INPUT connects to dex-100 then DVI -OUTPUT connects to screen. 1.DVI-D is dual-link type please referring.\n 2.DVI Output shall display when DVI input and DVI output are connected then restart the dex-100.\n   DEX-100-wiring-usb  These are USB of keyboard and mouse how to wire with DEX.   DEX-100-wiring-ps2  These are PS2 of keyboard and mouse how to wire with DEX.   DEX-100 for editing environment  The dex-100 has one GUI that is dex-pro, the dex-pro can design a script for auto-running and show the exclusive screen by DP. Due to editing the script that requires ones pair keyboard and mouse then show in the exclusive screen.   What is the different between (DP to VAG) and (VGA out) ?  Describe the different functions between (PD to VAG) and (VGA OUT), Please referring the below figure. e  "
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/script/getbmpbydexpro/",
+	"title": "02-Layer",
+	"tags": [],
+	"description": "",
+	"content": "How to add the bmp(layer) and select the folder for project. You can flow the below steps or watch the link below Video.\nSOP  Select one folder to save the script data.  Click Connect  Select the browser of Remote Control  Click Control   Move mouse or key the keyboard to you want page(bmp)\n  Click snapshot\n  Video "
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/script/pageid/",
+	"title": "03-PageID",
+	"tags": [],
+	"description": "",
+	"content": "How to identify the feature for each bmp(layer) You can flow the below steps or watch the link below Video.\nSOP  Open you desing\u0026rsquo;s [.blf] file. Select the page of Page Identfy Define and draw the region(ROI) Example   The ROI all parameter values of pixel size must be multiples 4.\n Save config the region of the feature(ROI) after adjust the threshold for each bmp(layer).  The larger threshold can tolerate more noise however it shall loss prcision.\n Load config for checking PageIdentify enabled. Click the button of connect again then seeing the Light blue bar, It is successful.   Video "
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/script/construction/",
+	"title": "04-Construction",
+	"tags": [],
+	"description": "",
+	"content": "Overview Video Video Funtions list How to design \u0026ldquo;Jump function\u0026rdquo;  jump to flag or next step by goto Jump to flag when this page is right. Jump to next or previous step when comparing the OCR table.  How to design \u0026ldquo;click function\u0026rdquo;  Left-button,right-button and midel-button all can single-click and double-click. Left-button,right-button and midel-button all can click-down or click-up. The mouse can click multi-point by dynamically update the OCR table.  How to design \u0026ldquo;key-in function\u0026rdquo;  key-in string is fixed. key-in string is from OCR Table. key-in string is from text.  Add OCR and save the log  How add OCR in script How to save the OCR table in CSV  How to design a for loop  Use the single loop. use the dual loop.  "
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/video/video-source/",
@@ -162,7 +197,7 @@
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/script/",
-	"title": "04-Layer",
+	"title": "04-Dex-pro",
 	"tags": [],
 	"description": "",
 	"content": "How to add the bmp(layer) and select the folder for project. How to use classic functions in the script.\n"
