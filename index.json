@@ -28,21 +28,21 @@
 	"content": "Frequently asked questions (FAQ) about Pylon\nHow to grab the Image from the GigE Basler.   Step1 : Set the Lan port IP address ? Assign the TCP/IP4 IP to be 192.168.11.1  Step2: How to set the Camera IP by Pylon? Set the Ip 192.168.11.4 by Pylon IP configurator.   Video   "
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/script/newloadproject/",
+	"uri": "https://aiot-ist.github.io/dex/dexpro/newloadproject/",
 	"title": "00-New project &amp; Run Script &amp; combine Script",
 	"tags": [],
 	"description": "",
 	"content": " How to create a new project Reload a project(blf) when remodifying  How to combine a script before running Run the script (.SPT) What is the difference between with SPT VS BLF  How to create a new project Step:  1 Click New 2 Click Select 3 Choice the folder for save the script data 4 Click Ok  Reload a project when remodifying Step  1 Click load 2 Choice the .blf list file  How to combine a script before running Step  1 Click mouse button of right in any one getting.bmp 2 Combine Script -\u0026gt; General 3 Inupt the name and click ok  Run the script Step  1 Click load 2 Choice the .spt list file 3 select the file 4 Click open   Click Run Scripts  What is the difference between with SPT VS BLF Pleas see below list\n"
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/script/addscript/",
+	"uri": "https://aiot-ist.github.io/dex/dexpro/addscript/",
 	"title": "01-Add script",
 	"tags": [],
 	"description": "",
 	"content": " Choice the bmp which you want to design Click mouse button of left side then Add the Script Select the instruction   How to add script Choice the bmp which you want to design Click mouse button of left side then Add the Script Select the instruction "
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/script/construction/goto/",
+	"uri": "https://aiot-ist.github.io/dex/dexpro/instruction/goto/",
 	"title": "01-Jump",
 	"tags": [],
 	"description": "",
@@ -56,22 +56,29 @@
 	"content": "DEX-100 Unboxing  Equipment wiring map  DEX-100 wiring for VGA  DEX-100 wiring for DVI DEX-100 wiring for USB DEX-100 wiring for PS2  DEX-100 for editing environment What is the different between (DP to VAG) and (VGA out) ?  Equipment wiring map The basic wiring is below the figure. DEX-100 wiring for VGA  This is PC connected to screen by VGA cable.  Separate the VGA cable that the VGA-INPUT connects to dex-100 then VGA-OUTPUT connects to screen.   DEX-100 wiring for DVI  This is PC connected to screen by DVI cable.  Separate the DVI cable that the DVI -INPUT connects to dex-100 then DVI -OUTPUT connects to screen. 1.DVI-D is dual-link type please referring.\n 2.DVI Output shall display when DVI input and DVI output are connected then restart the dex-100.\n   DEX-100-wiring-usb  These are USB of keyboard and mouse how to wire with DEX.   DEX-100-wiring-ps2  These are PS2 of keyboard and mouse how to wire with DEX.   DEX-100 for editing environment  The dex-100 has one GUI that is dex-pro, the dex-pro can design a script for auto-running and show the exclusive screen by DP. Due to editing the script that requires ones pair keyboard and mouse then show in the exclusive screen.   What is the different between (DP to VAG) and (VGA out) ?  Describe the different functions between (PD to VAG) and (VGA OUT), Please referring the below figure. e  "
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/script/getbmpbydexpro/",
+	"uri": "https://aiot-ist.github.io/dex/dexpro/layer/",
 	"title": "02-Layer",
 	"tags": [],
 	"description": "",
-	"content": "How to add the bmp(layer) and select the folder for project. You can flow the below steps or watch the link below Video.\nSOP  Select one folder to save the script data.  Click Connect  Select the browser of Remote Control  Click Control   Move mouse or key the keyboard to you want page(bmp)\n  Click snapshot\n  Video "
+	"content": "How to add the bmp(layer) and select the folder for project You can flow the below steps or watch the video link.\n Quickly guide Video  SOP  Select one folder to save the script data.  Click Connect  Select the browser of Remote Control  Click Control   Move mouse or key the keyboard to you want page(bmp)\n  Click snapshot\n  "
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/script/pageid/",
+	"uri": "https://aiot-ist.github.io/dex/dexpro/instruction/mouse/",
+	"title": "02-Mouse",
+	"tags": [],
+	"description": "",
+	"content": " Click Dclick Up Down Coordinate refer from OCR Table  How to Click、Dclick the mouse in the script Instruction can simulat those command for mouse button of left,middle and right.\nFollow the steps:\n1. Choice the getting_xxx.bmp 2. Screen capture mode 3. Use mouse click the bmp in right side 4. Show the coordinate X and Y 5. Can add bye hotkey or add-Script 6. You can see the click/Dclick instruction in the script How to shift the popup form in instruction       Follow the steps:\n1. Click the Starting poistion 2. Recorder the coordinate X \u0026amp; Y. 3. Choice the instruction of \u0026ldquo;left click down\u0026rdquo; and keyin the coordinate X \u0026amp; Y. 4. Click the second poistion 5. Recorder the coordinate X \u0026amp; Y. 6. Choice the instruction of \u0026ldquo;move\u0026rdquo; and keyin the coordinate X \u0026amp; Y. 7. Click the ended poistion 8. Recorder the coordinate X \u0026amp; Y. 9. hoice the instruction of \u0026ldquo;left click up\u0026rdquo; and keyin the coordinate X \u0026amp; Y. How the position coordinate refer the dynamic OCR Table   sample data\n Script.7z restful.py SOP.zip  "
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/dexpro/pageid/",
 	"title": "03-PageID",
 	"tags": [],
 	"description": "",
-	"content": "How to identify the feature for each bmp(layer) You can flow the below steps or watch the link below Video.\nSOP  Open you desing\u0026rsquo;s [.blf] file. Select the page of Page Identfy Define and draw the region(ROI) Example   The ROI all parameter values of pixel size must be multiples 4.\n Save config the region of the feature(ROI) after adjust the threshold for each bmp(layer).  The larger threshold can tolerate more noise however it shall loss prcision.\n Load config for checking PageIdentify enabled. Click the button of connect again then seeing the Light blue bar, It is successful.   Video "
+	"content": "How to identify the feature for each bmp(layer) You can flow the below steps or watch the link below Video.\n Quickly guide Video  SOP  Open you desing\u0026rsquo;s [.blf] file. Select the page of Page Identfy Define and draw the region(ROI) Example   The ROI all parameter values of pixel size must be multiples 4.\n Save config the region of the feature(ROI) after adjust the threshold for each bmp(layer).  The larger threshold can tolerate more noise however it shall loss prcision.\n Load config for checking PageIdentify enabled. Click the button of connect again then seeing the Light blue bar, It is successful.   "
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/script/construction/",
-	"title": "04-Construction",
+	"uri": "https://aiot-ist.github.io/dex/dexpro/instruction/",
+	"title": "04-Instruction",
 	"tags": [],
 	"description": "",
 	"content": "Overview Video Video Funtions list How to design \u0026ldquo;Jump function\u0026rdquo;  jump to flag or next step by goto Jump to flag when this page is right. Jump to next or previous step when comparing the OCR table.  How to design \u0026ldquo;click function\u0026rdquo;  Left-button,right-button and midel-button all can single-click and double-click. Left-button,right-button and midel-button all can click-down or click-up. The mouse can click multi-point by dynamically update the OCR table.  How to design \u0026ldquo;key-in function\u0026rdquo;  key-in string is fixed. key-in string is from OCR Table. key-in string is from text.  Add OCR and save the log  How add OCR in script How to save the OCR table in CSV  How to design a for loop  Use the single loop. use the dual loop.  "
@@ -196,7 +203,7 @@
 	"content": "ADLINK IST Connected Factory Mouse There are several note for sharing.\n"
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/script/",
+	"uri": "https://aiot-ist.github.io/dex/dexpro/",
 	"title": "04-Dex-pro",
 	"tags": [],
 	"description": "",
