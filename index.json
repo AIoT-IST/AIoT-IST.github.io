@@ -70,6 +70,13 @@
 	"content": " Click Dclick Up Down Coordinate refer from OCR Table  How to Click、Dclick the mouse in the script Instruction can simulat those command for mouse button of left,middle and right.\nFollow the steps:\n1. Choice the getting_xxx.bmp 2. Screen capture mode 3. Use mouse click the bmp in right side 4. Show the coordinate X and Y 5. Can add bye hotkey or add-Script 6. You can see the click/Dclick instruction in the script How to shift the popup form in instruction       Follow the steps:\n1. Click the Starting poistion 2. Recorder the coordinate X \u0026amp; Y. 3. Choice the instruction of \u0026ldquo;left click down\u0026rdquo; and keyin the coordinate X \u0026amp; Y. 4. Click the second poistion 5. Recorder the coordinate X \u0026amp; Y. 6. Choice the instruction of \u0026ldquo;move\u0026rdquo; and keyin the coordinate X \u0026amp; Y. 7. Click the ended poistion 8. Recorder the coordinate X \u0026amp; Y. 9. hoice the instruction of \u0026ldquo;left click up\u0026rdquo; and keyin the coordinate X \u0026amp; Y. How the position coordinate refer the dynamic OCR Table   sample data\n Script.7z restful.py SOP.zip  "
 },
 {
+	"uri": "https://aiot-ist.github.io/dex/dexpro/instruction/keyin/",
+	"title": "03-Keyin",
+	"tags": [],
+	"description": "",
+	"content": " From Text From OCR Table From external txt Choice Number key  From Text The instrction can key in the statice string.\nFollow the steps:\n Choice the getting_xxx.bmp Screen capture mode Add script and select instruction of key-in  Key-in from Text x = 1 from text Text = \u0026ldquo;ADLINK GOGO\u0026rdquo;   From OCR Table   Choice the getting_xxx.bmp\n  Screen capture mode\n  Add script and select instruction of key-in   Key-in from Text\n   x = 3 from text Y = 1 OCR Table PS: Key-in value from the \u0026ldquo;OCR Table 1 = ABCD1234 \u0026quot;\n  From external txt   Choice the getting_xxx.bmp\n  Screen capture mode\n  Add script and select instruction of key-in   Key-in from external text   Choice Number key Keyboard\u0026rsquo;s 0 to 9 there are two types for sent the different ASCII, so one parameter can switch it. "
+},
+{
 	"uri": "https://aiot-ist.github.io/dex/dexpro/pageid/",
 	"title": "03-PageID",
 	"tags": [],
