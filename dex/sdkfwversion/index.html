@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>How to use NEON to control DI/O? :: Connected Factory</title>
+    <title>11-SDK &amp; FW Version :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1622007235" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/neon-2000-jt2/howtouseneontocontroldio/">
+  <body class="" data-url="/dex/sdkfwversion/">
     <nav id="sidebar" class="">
 
 
@@ -560,7 +560,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1091,8 +1091,8 @@
   
     
     <li data-nav-id="/dex/sdkfwversion/" title="11-SDK &amp; FW Version" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/dex/sdkfwversion/">
@@ -1122,7 +1122,7 @@
   
     
     <li data-nav-id="/neon-2000-jt2/" title="NEON-2000-JT2" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1197,8 +1197,8 @@
   
     
     <li data-nav-id="/neon-2000-jt2/howtouseneontocontroldio/" title="How to use NEON to control DI/O?" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/neon-2000-jt2/howtouseneontocontroldio/">
@@ -1539,7 +1539,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon-2000-jt2/'>NEON-2000-JT2</a> > How to use NEON to control DI/O?
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > 11-SDK & FW Version
           
          
           
@@ -1557,12 +1557,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              How to use NEON to control DI/O?
-            </h1>
           
 
         
@@ -1570,89 +1567,18 @@
 
 
 
-	<p>Here is the list for our demo devices. Different devices might have different default settings. Please adjust the procedures based on your corresponding devices.</p>
+	<h2 id="sdk-v4httpftpadlinktechcomimagedex-100versiondex-100_sdk_x64_122_0505exe"><a href="http://ftp.adlinktech.com/image/DEX-100/Version/Dex-100_SDK_x64_1.2.2_0505.exe">SDK V4</a></h2>
+<p>Internal version : 1.2.2 2021/05/05</p>
+<p>Offical version : V4</p>
 <ul>
-<li><a href="#easy">Easy</a></li>
-<li><a href="#intermediate">Intermediate</a></li>
+<li><a href="http://ftp.adlinktech.com/image/DEX-100/Version/Release_Notes.txt">Release note</a></li>
 </ul>
-<h2 id="easy">Easy</h2>
-<h3 id="devices-list">Devices List:</h3>
+<h2 id="fw">FW</h2>
+<p><a href="http://ftp.adlinktech.com/image/DEX-100/Version/dex100_c5_20191114_1400.bit">C5</a>
+<a href="http://ftp.adlinktech.com/image/DEX-100/Version/dex100_c7_20191114_1400.bit">C7</a></p>
 <ul>
-<li>ADLINK NEON-2000-JT2</li>
-<li>ADLINK DIN-37D-01</li>
-<li>Tend TPTL4 LED</li>
-<li>24V Power Supply</li>
+<li><a href="http://ftp.adlinktech.com/image/DEX-100/Version/revision_history.txt">revision_history</a></li>
 </ul>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/led.jpg" alt="whole"></p>
-<h3 id="step-1">Step 1.</h3>
-<p>Connect the Neon with the din board through a connector.
-<img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/001.jpg" alt="step1"></p>
-<h3 id="step-2">Step 2.</h3>
-<p>Connect the LED&rsquo;s negative wire in pin 4 for digital output (we take DO1 as an example).
-<img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/002.jpg" alt="step2"></p>
-<h3 id="step-3">Step 3.</h3>
-<p>Plug the 24V power supply&rsquo;s negative wire in Din board&rsquo;s pin 10 for grounding.
-<img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/003.jpg" alt="step3"></p>
-<h3 id="step-4">Step 4.</h3>
-<p>Coneect the positive of power supply with the positive of LED.
-<img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/005.jpg" alt="step4"></p>
-<h3 id="step-5">Step 5.</h3>
-<p>Use Neon to control the LED.</p>
-<ul>
-<li>Use the command <code>cd /usr/src/Neon/Sample/Neon_Setting</code> to adjust Neon setting.</li>
-<li>Use <code>sudo ./Neon_Setting DO 1 1</code> to turn on the LED, use <code>sudo ./Neon_Setting DO 1 0 </code> to turn off the LED conversely.</li>
-</ul>
-<h2 id="intermediate">Intermediate</h2>
-<h3 id="devices-list-1">Devices List:</h3>
-<ul>
-<li>ADLINK NEON-1000-MDX</li>
-<li>ADLINK DIN-37D-01</li>
-<li>High Bright Tech PC-24V24W-2-S</li>
-<li>5V Power Supply</li>
-</ul>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/whole.jpg" alt="whole"></p>
-<h3 id="step-1-1">Step 1.</h3>
-<p>Connect the light with the light controller at channel 1.</p>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/1-1.jpg" alt="step1"></p>
-<h3 id="step-2-1">Step 2.</h3>
-<p>Connect the light controller with din board at strobe channel 1. Plug the positive wire in pin 3 for device output, and plug the negative wire in the pin 10 for grounding.</p>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/2-12.jpg" alt="step2-1&2">
-<img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/2-3.jpg" alt="step2-3"></p>
-<h3 id="step-3-1">Step 3.</h3>
-<p>Connect the Neon with the din board through a connector.</p>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/3-1.jpg" alt="step3-1"></p>
-<h3 id="step-4-1">Step 4.</h3>
-<p>Connect a trigger device on the din board. Insert the positive wire at pin 11 for trigger in, insert the negative wire at pin 10 for grounding. Here we used a 5V power supply for demonstration, you could connect your own device for your own purposes.</p>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/4-12.jpg" alt="step4-1&2">
-<img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/4-3.jpg" alt="step4-3"></p>
-<h3 id="step-5-1">Step 5.</h3>
-<p>Adjust the default settings from Neon. Please enter the specific file path to adjust the settings. We modified the strobe-out polarity to set turning off the light as default, this step might be different due to your controller devices. Once the Neon reboots, the setting would be restored.</p>
-<ul>
-<li>Use command <code>sudo -i</code> to get in root mode.</li>
-</ul>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/5-1.jpg" alt="step5-1"></p>
-<ul>
-<li>Use the command <code>cd /sys/class/neon_camctrl</code> to change directory.</li>
-</ul>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/5-2.jpg" alt="step5-2"></p>
-<ul>
-<li>Use <code>cat</code> command to check current status. To change the default setting of strobe-out polarity, use the command <code>echo 1 &gt;StrobeOutPolarity</code>.</li>
-</ul>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/5-3.jpg" alt="step5-3"></p>
-<h3 id="step-6">Step 6.</h3>
-<p>To extend or narrow the device strobe out time, please follow the steps</p>
-<ul>
-<li>Use the command <code>cd /usr/src/Neon/Sample/Neon_Setting</code> to change the current working directory.</li>
-</ul>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/6-1.jpg" alt="step6-1"></p>
-<ul>
-<li>To adjust the strobe out time, use the command <code>sudo ./NeonSet StrobeOutPulseWidth N</code>. The parameter N is the time of the width, the unit is us(10^-6 second).</li>
-</ul>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/6-2.jpg" alt="step6-2"></p>
-<ul>
-<li>For checking current infos of Neon, please change the directory with the command <code>cd /usr/src/Neon/Sample/Neon_Information</code>. Use <code>sudo ./NeonInformation</code> to get current status.</li>
-</ul>
-<p><img src="/NEON-2000-JT2/howtouseNeontocontrolDIO/images/6-3.jpg" alt="step6-3"></p>
 
 
 
@@ -1662,6 +1588,8 @@
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -1992,6 +1920,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2006,6 +1935,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2048,56 +1980,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
                     
                         
             
@@ -2181,35 +2063,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -2292,11 +2145,20 @@
             
         
                     
+                        
             
-        
+            
+                
                     
-            
-        
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
                     
                         
             
@@ -2330,32 +2192,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -2384,11 +2224,16 @@
             
         
                     
+            
+        
+                    
+            
+        
+                    
                         
             
             
                 
-                    
                     
                 
                 
@@ -2406,8 +2251,91 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2582,10 +2510,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/neon-2000-jt2/howtobackupneonibymicrosd/" title="How to backup Neon by microSD card?"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dex/faq/" title="10-FAQ"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/neon-2000-jt2/howtoflashimage/" title="How to flash image?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/neon-2000-jt2/" title="NEON-2000-JT2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
