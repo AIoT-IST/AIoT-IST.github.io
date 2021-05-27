@@ -232,10 +232,10 @@
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/sdkfwversion/",
-	"title": "11-SDK &amp; FW Version",
+	"title": "11-SDK &amp; FW Version &amp; Manual",
 	"tags": [],
 	"description": "",
-	"content": "SDK V4 Internal version : 1.2.2 2021/05/05\nOffical version : V4\n  SDK V4 (Download)\n  Release note\n  FW   FW-C5 (Download)\n  FW-C7 (Download)\n  revision_history\n  Utility_Manual Utility_Manual_20210426 (Download)\n"
+	"content": "SDK V4 Internal version : 1.2.2 2021/05/05\nOffical version : V4\n  SDK V4 (Download)\n  Release note\n  FW   FW-C5 (Download)\n  FW-C7 (Download)\n  revision_history\n  Utility_Manual Utility_Manual_20210426 (Download)\nHardware Hardware-Manual(Download)\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/mcm-204/gettingstart/",
