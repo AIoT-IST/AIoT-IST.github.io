@@ -291,7 +291,7 @@
 	"title": "How to flash image?",
 	"tags": [],
 	"description": "",
-	"content": "It needs to go force recovery mode first before flash image. Here’s the video which guild you how to flash image.\nStep 1: Download image first from your host pc with Ubuntu Download link Neon-2000-JNX  Jetpack 4.5 v1.0.2   MicroSD image MD5:089bfd89dc5d94f0c4dfb6c10b84281d\n  eMMC MD5:22487eccedfac7ee916839f87f7af6c0\n    Check sum  check md5 check sum to make sure image file is correct  Linux   $ md5sum [file]   $ md5sum JNX_JP45_microSD_v1.0.2.tar.gz    Windows 10   $ certutil -hashfile [file] MD5   $ certutil -hashfile JNX_JP45_microSD_v1.0.2.tar.gz MD5       Step 2: Follow video and flash microSD card image   unzip the image   $ tar -zxvf JNX_JP45_microSD_v1.0.2.tar.gz    Follow the video to flash image  Video of flash SOP    Step 3: Follow document and flash eMMC image  SOP of Flash eMMC  "
+	"content": "It needs to go force recovery mode first before flash image. Here’s the video which guild you how to flash image.\nStep 1: Download image first from your host pc with Ubuntu Download link Neon-2000-JNX  Jetpack 4.5 v1.0.2   MicroSD image MD5:089bfd89dc5d94f0c4dfb6c10b84281d\n  eMMC MD5:e603db76e8ab1bbe5596760d40adb90c\n    Check sum  check md5 check sum to make sure image file is correct  Linux   $ md5sum [file]   $ md5sum JNX_JP45_microSD_v1.0.2.tar.gz    Windows 10   $ certutil -hashfile [file] MD5   $ certutil -hashfile JNX_JP45_microSD_v1.0.2.tar.gz MD5       Step 2: Follow video and flash microSD card image   unzip the image   $ tar -zxvf JNX_JP45_microSD_v1.0.2.tar.gz    Follow the video to flash image  Video of flash SOP    Step 3: Follow document and flash eMMC image  SOP of Flash eMMC  "
 },
 {
 	"uri": "https://aiot-ist.github.io/neon-2000-jnx/",
