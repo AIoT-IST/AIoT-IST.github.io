@@ -9,21 +9,21 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Neon-1000-MDX :: Connected Factory</title>
+    <title>06-PageIdentify :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1624862758" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1624862758" rel="stylesheet">
-    <link href="/css/hybrid.css?1624862758" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1624862758" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1624862758" rel="stylesheet">
-    <link href="/css/auto-complete.css?1624862758" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1624862758" rel="stylesheet">
-    <link href="/css/theme.css?1624862758" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1624862758" rel="stylesheet">
+    <link href="/css/nucleus.css?1624862757" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1624862757" rel="stylesheet">
+    <link href="/css/hybrid.css?1624862757" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1624862757" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1624862757" rel="stylesheet">
+    <link href="/css/auto-complete.css?1624862757" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1624862757" rel="stylesheet">
+    <link href="/css/theme.css?1624862757" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1624862757" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1624862758"></script>
+    <script src="/js/jquery-3.3.1.min.js?1624862757"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/neon-1000-mdx/">
+  <body class="" data-url="/dex/dexpro/instruction/pageidetify/">
     <nav id="sidebar" class="">
 
 
@@ -62,14 +62,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1624862758"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1624862758"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1624862757"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1624862757"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1624862758"></script>
+<script type="text/javascript" src="/js/search.js?1624862757"></script>
 
     
   </div>
@@ -560,7 +560,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX" class="dd-item 
-        
+        parent
         
         
         ">
@@ -827,7 +827,7 @@
   
     
     <li data-nav-id="/dex/dexpro/" title="04-Dex-pro" class="dd-item 
-        
+        parent
         
         
         ">
@@ -950,7 +950,7 @@
   
     
     <li data-nav-id="/dex/dexpro/instruction/" title="04-Instruction" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1097,8 +1097,8 @@
   
     
     <li data-nav-id="/dex/dexpro/instruction/pageidetify/" title="06-PageIdentify" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/dex/dexpro/instruction/pageidetify/">
@@ -1430,8 +1430,8 @@
   
     
     <li data-nav-id="/neon-1000-mdx/" title="Neon-1000-MDX" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/neon-1000-mdx/">
@@ -1607,7 +1607,25 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > Neon-1000-MDX
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > <a href='/dex/dexpro/'>04-Dex-pro</a> > <a href='/dex/dexpro/instruction/'>04-Instruction</a> > 06-PageIdentify
+          
+         
+          
+         
+          
+         
           
          
           
@@ -1633,9 +1651,34 @@
 
 
 
-	<h3 id="adlink-ist-connected-factory">ADLINK IST Connected Factory</h3>
-<h1 id="neon-1000-mdx">Neon-1000-MDX</h1>
-<p>Discover how to use the Neon-1000-MDX and find the releated questions.</p>
+	<ul>
+<li><a href="#how-to-the-loop">How to use the PageIdentify </a></li>
+</ul>
+<h2 id="how-to-the-loop">How to the loop</h2>
+<h3 id="x-number-of-instructions-to-jump">X: number of instructions to jump</h3>
+<ul>
+<li>X&gt;0: go to previous steps</li>
+<li>X=0: go to the last instruction</li>
+<li>X&lt;0: go to next steps</li>
+</ul>
+<h3 id="y-jump-mode">Y: jump mode.</h3>
+<ul>
+<li>0: jump by instruction number</li>
+<li>1: jump by label</li>
+</ul>
+<h3 id="w-target-page-id">W: target page id</h3>
+<ul>
+<li>Referring the number of bmp
+<img src="/DEX/Dexpro/Instruction/Pageidetify/image/3.PNG" alt="Normal machine"></li>
+</ul>
+<h3 id="pleas-referring-the-sample-1">Pleas referring the sample 1:</h3>
+<p>The pattern matches(Yes) then going to the &ldquo;Jump&rdquo; label.</p>
+<p>The pattern doesn&rsquo;t match(No) then go to the next step.</p>
+<p><img src="/DEX/Dexpro/Instruction/Pageidetify/image/1.PNG" alt="Normal machine"></p>
+<h3 id="pleas-referring-the-sample-2">Pleas referring the sample 2:</h3>
+<p>The pattern matches(Yes) then going to the next 4 steps.</p>
+<p>The pattern doesn&rsquo;t match(No) then go to the next step.</p>
+<p><img src="/DEX/Dexpro/Instruction/Pageidetify/image/2.PNG" alt="Normal machine"></p>
 
 
 
@@ -1977,6 +2020,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1991,6 +2035,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2140,6 +2187,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2154,6 +2202,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2219,157 +2270,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2385,6 +2285,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2466,6 +2369,162 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -2519,7 +2578,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2535,9 +2593,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2611,10 +2666,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/neon-2000-jnx/howtoflashimage/" title="How to flash image?"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dex/dexpro/instruction/loop/" title="05-LOOP"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/news/" title="News" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dex/faq/" title="10-FAQ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2624,19 +2679,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1624862758"></script>
-    <script src="/js/perfect-scrollbar.min.js?1624862758"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1624862758"></script>
-    <script src="/js/jquery.sticky.js?1624862758"></script>
-    <script src="/js/featherlight.min.js?1624862758"></script>
-    <script src="/js/highlight.pack.js?1624862758"></script>
+    <script src="/js/clipboard.min.js?1624862757"></script>
+    <script src="/js/perfect-scrollbar.min.js?1624862757"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1624862757"></script>
+    <script src="/js/jquery.sticky.js?1624862757"></script>
+    <script src="/js/featherlight.min.js?1624862757"></script>
+    <script src="/js/highlight.pack.js?1624862757"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1624862758"></script>
-    <script src="/js/learn.js?1624862758"></script>
-    <script src="/js/hugo-learn.js?1624862758"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1624862757"></script>
+    <script src="/js/learn.js?1624862757"></script>
+    <script src="/js/hugo-learn.js?1624862757"></script>
 
-    <link href="/mermaid/mermaid.css?1624862758" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1624862758"></script>
+    <link href="/mermaid/mermaid.css?1624862757" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1624862757"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

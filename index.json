@@ -32,7 +32,7 @@
 	"title": "00-New project &amp; Run Script &amp; combine Script",
 	"tags": [],
 	"description": "",
-	"content": " How to create a new project Reload a project(blf) when remodifying  How to combine a script before running Run the script (.SPT) What is the difference between with SPT VS BLF  How to create a new project Step:  1 Click New 2 Click Select 3 Choice the folder for save the script data 4 Click Ok  Reload a project when remodifying Step  1 Click load 2 Choice the .blf list file  How to combine a script before running Step  1 Click mouse button of right in any one getting.bmp 2 Combine Script -\u0026gt; General 3 Inupt the name and click ok  Run the script Step  1 Click load 2 Choice the .spt list file 3 select the file 4 Click open   Click Run Scripts  What is the difference between with SPT VS BLF Pleas see below list\n"
+	"content": " How to create a new project Reload a project(blf) when remodifying  How to combine a script before running Run the script (.SPT) What is the difference between with SPT VS BLF  How to create a new project Step:  1 Click New 2 Click Select 3 Choice the folder for save the script data 4 Click Ok  Reload a project when remodifying Step  1 Click load 2 Choice the .blf list file  How to combine a script before running Step  1 Click mouse button of right in any one getting.bmp 2 Combine Script -\u0026gt; General (It\u0026rsquo;s ok for choicing any one bmp) 3 Inupt the name and click ok  Run the script Step  1 Click load 2 Choice the .spt list file 3 select the file 4 Click open   Click Run Scripts  What is the difference between with SPT VS BLF Pleas see below list\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/quicklystart/",
@@ -110,6 +110,13 @@
 	"tags": [],
 	"description": "",
 	"content": " How to use the loop  How to use both loop2 with loop  How to the loop X: Loop in execution.\n 0: go to previous steps; =0: go to the last instruction \u0026lt;0: go to next steps\n Y: Loop is ended.\n 0: go to next steps =0: go to the last instruction \u0026lt;0: go to previous steps;\n W: This value denotes the iteration times of the loop\n Pleas referring the sample:   How to use both loop2 with loop They are a pair both loop2 and loop when you use the double loop.\n Pleas referring the sample: The loop2\u0026rsquo;s start instruction must be the first loop.   "
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/dexpro/instruction/pageidetify/",
+	"title": "06-PageIdentify",
+	"tags": [],
+	"description": "",
+	"content": " How to use the PageIdentify   How to the loop X: number of instructions to jump  X\u0026gt;0: go to previous steps X=0: go to the last instruction X\u0026lt;0: go to next steps  Y: jump mode.  0: jump by instruction number 1: jump by label  W: target page id  Referring the number of bmp   Pleas referring the sample 1: The pattern matches(Yes) then going to the \u0026ldquo;Jump\u0026rdquo; label.\nThe pattern doesn\u0026rsquo;t match(No) then go to the next step.\nPleas referring the sample 2: The pattern matches(Yes) then going to the next 4 steps.\nThe pattern doesn\u0026rsquo;t match(No) then go to the next step.\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/video/video-source/",
