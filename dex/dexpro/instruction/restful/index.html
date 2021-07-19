@@ -12,18 +12,18 @@
     <title>07-Restful :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1625737500" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1625737500" rel="stylesheet">
-    <link href="/css/hybrid.css?1625737500" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1625737500" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1625737500" rel="stylesheet">
-    <link href="/css/auto-complete.css?1625737500" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1625737500" rel="stylesheet">
-    <link href="/css/theme.css?1625737500" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1625737500" rel="stylesheet">
+    <link href="/css/nucleus.css?1626662725" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1626662725" rel="stylesheet">
+    <link href="/css/hybrid.css?1626662725" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1626662725" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1626662725" rel="stylesheet">
+    <link href="/css/auto-complete.css?1626662725" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1626662725" rel="stylesheet">
+    <link href="/css/theme.css?1626662725" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1626662725" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1625737500"></script>
+    <script src="/js/jquery-3.3.1.min.js?1626662725"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -62,14 +62,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1625737500"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1625737500"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1626662725"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1626662725"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1625737500"></script>
+<script type="text/javascript" src="/js/search.js?1626662725"></script>
 
     
   </div>
@@ -1678,8 +1678,9 @@
 	<ul>
 <li><a href="#how-to-add-the-instruction-for-restful-api">How to add the instruction for RESTFUL API</a></li>
 <li><a href="#upload-all-items-once">Upload all items once</a></li>
-<li><a href="#upload-the-select-items-once">Upload the select items once</a></li>
 <li><a href="#upload-one-by-one">Uplaod one by one</a></li>
+<li><a href="#restful-function-list">RESTFUL function list</a></li>
+<li><a href="#restful-sample-code">RESTFUL sample code</a></li>
 </ul>
 <h2 id="how-to-add-the-instruction-for-restful-api">How to add the instruction for RESTFUL API</h2>
 <h3 id="sop">Sop</h3>
@@ -1705,26 +1706,13 @@
 <p>Get the all items by Submachinestatus of RESTFUL API.</p>
 <blockquote>
 <ul>
-<li>The items auto upload once based on your design OCR amount</li>
+<li>The items auto upload once based on your design OCR amount when executing this instruciton.</li>
 </ul>
 </blockquote>
 <p>There are 4 ROI case.</p>
 <p><img src="/DEX/Dexpro/Instruction/Restful/image/5.PNG" alt="Normal machine"></p>
 <p>There are 9 ROI case</p>
 <p><img src="/DEX/Dexpro/Instruction/Restful/image/4.PNG" alt="Normal machine"></p>
-<h3 id="upload-the-select-items-once">Upload the select items once</h3>
-<ul>
-<li>Q : 0,Upload all once through RESTFUL(Submachinestatus)</li>
-<li>X : 1,Save selected items</li>
-</ul>
-<blockquote>
-<ul>
-<li>Text : 1~4;7 (This case is selected 1 to 4 and 7 for upload)</li>
-</ul>
-</blockquote>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/7.PNG" alt="Normal machine"></p>
-<p>Upload items once that are based on your selection 1&rsquo;2&rsquo;3&rsquo;4&rsquo;7.</p>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/6.PNG" alt="Normal machine"></p>
 <h3 id="upload-one-by-one">Upload one by one</h3>
 <ul>
 <li>Q : 1,Upload one bye one through RESTFUL</li>
@@ -1739,15 +1727,52 @@
 <p><img src="/DEX/Dexpro/Instruction/Restful/image/7.PNG" alt="Normal machine"></p>
 <p>You can see the relationship in the below image.</p>
 <p><img src="/DEX/Dexpro/Instruction/Restful/image/8.PNG" alt="Normal machine"></p>
-<h4 id="what-is-one-by-one">What is one by one</h4>
-<p>The RESTFUL&rsquo;s Get function can get one data once from you select OCR table items and without parsing anything metadata.</p>
+<h3 id="what-is-one-by-one">What is one by one</h3>
+<p>The RESTFUL&rsquo;s Get function can get one data once for you select OCR table items and without parsing anything metadata.</p>
 <p>The RESTFUL&rsquo;s Set function can set one data to OCR table for handshaking with other app.</p>
 
-<div class="notices note" ><p>1.Set the data to OCR table anytime.</p>
+<div class="notices note" ><p>1.Set the data to OCR table by anytime.</p>
 <p>2.Get the current data from OCR table after executing this command.</p>
 <p>3.It wait more time by more you select OCR items.</p>
 </div>
 
+<h3 id="restful-function-list">RESTFUL function list</h3>
+<p>They support two format both XML and Json.
+<a href="http://ftp.adlinktech.com/image/DEX-100/DEX-100_SW_User_Manual_Modules&amp;EdgeServer_V1.1_20200907.pdf">Doc</a></p>
+<h4 id="1-submachinestatuse">1. SubmachineStatuse</h4>
+<ul>
+<li>You can get all the OCR tables that you design for sharing,but mabye you shall analyze it by yourself.</li>
+</ul>
+<h4 id="2-get">2. Get</h4>
+<ul>
+<li>
+<p>You can get one metadata from OCR Table that you design for sharing.</p>
+</li>
+<li>
+<p>Those OCR TABLE are update after executing this MSG_SAVE_TABLE_TO_LOG instrution.</p>
+</li>
+</ul>
+
+<div class="notices note" ><p>The 0 in the OCR table cannot be obtained</p>
+</div>
+
+<h4 id="3-set">3. Set</h4>
+<ul>
+<li>You can set any data to OCR Table.</li>
+</ul>
+<h4 id="4-executescript">4. Executescript</h4>
+<ul>
+<li>It can trigg the script that you want to autorun.</li>
+</ul>
+<h4 id="5-stopscript">5. Stopscript</h4>
+<ul>
+<li>It can stop the current script.</li>
+</ul>
+<h3 id="restful-sample-code">RESTFUL Sample code</h3>
+<ol>
+<li><a href="http://ftp.adlinktech.com/image/DEX-100/REST-Full.zip">C# sample</a></li>
+<li><a href="http://ftp.adlinktech.com/image/DEX-100/RestfulAPIfordex100.py">Python sample</a></li>
+</ol>
 
 
 
@@ -2764,19 +2789,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1625737500"></script>
-    <script src="/js/perfect-scrollbar.min.js?1625737500"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1625737500"></script>
-    <script src="/js/jquery.sticky.js?1625737500"></script>
-    <script src="/js/featherlight.min.js?1625737500"></script>
-    <script src="/js/highlight.pack.js?1625737500"></script>
+    <script src="/js/clipboard.min.js?1626662725"></script>
+    <script src="/js/perfect-scrollbar.min.js?1626662725"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1626662725"></script>
+    <script src="/js/jquery.sticky.js?1626662725"></script>
+    <script src="/js/featherlight.min.js?1626662725"></script>
+    <script src="/js/highlight.pack.js?1626662725"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1625737500"></script>
-    <script src="/js/learn.js?1625737500"></script>
-    <script src="/js/hugo-learn.js?1625737500"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1626662725"></script>
+    <script src="/js/learn.js?1626662725"></script>
+    <script src="/js/hugo-learn.js?1626662725"></script>
 
-    <link href="/mermaid/mermaid.css?1625737500" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1625737500"></script>
+    <link href="/mermaid/mermaid.css?1626662725" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1626662725"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
