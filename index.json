@@ -42,18 +42,18 @@
 	"content": "DEX-100 Quckly start (video) Follow those videos you can quickly finish one project by yourself.  You can check other links for getting more tips, samples, and notes.\n -製作圖層篇,How to make the layer\n-設定Page ID篇,How to set the PageID\n-編輯腳本篇,How to edit the instruction\n-OCR使用REST上拋資料篇,How to get the OCR by restful\n-設定OP Screen篇,How to set the OP Screen\n-自動執行腳本篇,How to set for autorun the script\n-OCR設定篇,How to add the OCR\n-OCR 字庫訓練工具篇,How to train OCR to improve accuracy\n"
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/dexpro/addscript/",
-	"title": "01-Add script",
-	"tags": [],
-	"description": "",
-	"content": " Choice the bmp which you want to design Click mouse button of left side then Add the Script Select the instruction   How to add script Choice the bmp which you want to design Click mouse button of left side then Add the Script Select the instruction "
-},
-{
 	"uri": "https://aiot-ist.github.io/dex/dexpro/instruction/goto/",
 	"title": "01-Jump",
 	"tags": [],
 	"description": "",
 	"content": " Use GoTo fulfill JUMP function Use both element of GoTo with Lebel fulfill JUMP function  Use PageID fulfill JUMP function Use both element of PageID with Lebel fulfill JUMP function Use Table Compare fulfill JUMP function  How to design \u0026ldquo;Jump function\u0026rdquo; by GOTO \u0026amp; PageIdentify \u0026amp; label \u0026amp; Table compare. There are three function can fulfill JUMP\n GOTO : Directly jump to other command line. PageID : It is like the pattern match and jump to other command line. Compare Table : Compare the OCR Table and jump to other command line.  Use GoTo fulfill JUMP function Discription Use both element of GoTo with Lebel fulfill JUMP function Discription Use PageID fulfill JUMP function Discription Use both element of PageID with Lebel fulfill JUMP function Discription Use Table Compare fulfill JUMP function Discription "
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/dexpro/layer/",
+	"title": "01-Layer",
+	"tags": [],
+	"description": "",
+	"content": "How to add the bmp(layer) and select the folder for project You can flow the below steps or watch the video link.\n Quickly guide Video  SOP  Select one folder to save the script data.  Click Connect  Select the browser of Remote Control  Click Control   Move mouse or key the keyboard to you want page(bmp)\n  Click snapshot\n  "
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/unboxing/",
@@ -63,11 +63,11 @@
 	"content": "DEX-100 Unboxing  Equipment wiring map  DEX-100 wiring for VGA  DEX-100 wiring for DVI DEX-100 wiring for USB DEX-100 wiring for PS2  DEX-100 for editing environment What is the different between (DP to VAG) and (VGA out) ?  Equipment wiring map The basic wiring is below the figure. DEX-100 wiring for VGA  This is PC connected to screen by VGA cable.  Separate the VGA cable that the VGA-INPUT connects to dex-100 then VGA-OUTPUT connects to screen.   DEX-100 wiring for DVI  This is PC connected to screen by DVI cable.  Separate the DVI cable that the DVI -INPUT connects to dex-100 then DVI -OUTPUT connects to screen. 1.DVI-D is dual-link type please referring.\n 2.DVI Output shall display when DVI input and DVI output are connected then restart the dex-100.\n   DEX-100-wiring-usb  These are USB of keyboard and mouse how to wire with DEX.   DEX-100-wiring-ps2  These are PS2 of keyboard and mouse how to wire with DEX.   DEX-100 for editing environment  The dex-100 has one GUI that is dex-pro, the dex-pro can design a script for auto-running and show the exclusive screen by DP. Due to editing the script that requires ones pair keyboard and mouse then show in the exclusive screen.   What is the different between (DP to VAG) and (VGA out) ?  Describe the different functions between (PD to VAG) and (VGA OUT), Please referring the below figure. e  "
 },
 {
-	"uri": "https://aiot-ist.github.io/dex/dexpro/layer/",
-	"title": "02-Layer",
+	"uri": "https://aiot-ist.github.io/dex/dexpro/addscript/",
+	"title": "02-Add script",
 	"tags": [],
 	"description": "",
-	"content": "How to add the bmp(layer) and select the folder for project You can flow the below steps or watch the video link.\n Quickly guide Video  SOP  Select one folder to save the script data.  Click Connect  Select the browser of Remote Control  Click Control   Move mouse or key the keyboard to you want page(bmp)\n  Click snapshot\n  "
+	"content": " Choice the bmp which you want to design Click mouse button of left side then Add the Script Select the instruction   How to add script Choice the bmp which you want to design Click mouse button of left side then Add the Script Select the instruction "
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/dexpro/instruction/mouse/",
@@ -263,7 +263,7 @@
 	"title": "11-SDK &amp; FW Version &amp; Manual",
 	"tags": [],
 	"description": "",
-	"content": "SDK V4 Internal version : 1.2.5 2021/07/14\nOffical version : V5\n  SDK V5 (Download)\n  Release note\nHow to install SOP\n Uninstall Reboot Install V5    FW  FW-C5 (Download) FW-C7 (Download)\n   revision_history\nHow to intsll SOP\n Use this tool   C:\\Program Files\\ADLINK\\DEX-100\\utility\\BurnDex100_x64   Check the version that is C5 or C7\n  Upload the right bit\n  Note: The FPGA shall be null when you install the error bit.\n Cold boot    Utility_Manual Utility_Manual_20210426 (Download)\nHardware Hardware-Manual(Download)\n"
+	"content": "SDK Internal version : 1.2.5 2021/07/14\nOffical version : V5\n  SDK V5 (Download)\n  Release note\nHow to install SOP\n   Uninstall    Reboot    Install V5    Reboot    FW  FW-C5 (Download) FW-C7 (Download)\n   revision_history\nHow to intsll SOP\n Use this tool   C:\\Program Files\\ADLINK\\DEX-100\\utility\\BurnDex100_x64   Check the version that is C5 or C7\n  Upload the right bit\n  Note: The FPGA shall be null when you install the error bit.\n Cold boot    Utility_Manual Utility_Manual_20210426 (Download)\nHardware Hardware-Manual(Download)\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/mcm-204/gettingstart/",
