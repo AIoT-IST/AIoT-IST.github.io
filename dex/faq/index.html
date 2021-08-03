@@ -12,18 +12,18 @@
     <title>10-FAQ :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1626751314" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1626751314" rel="stylesheet">
-    <link href="/css/hybrid.css?1626751314" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1626751314" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1626751314" rel="stylesheet">
-    <link href="/css/auto-complete.css?1626751314" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1626751314" rel="stylesheet">
-    <link href="/css/theme.css?1626751314" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1626751314" rel="stylesheet">
+    <link href="/css/nucleus.css?1627967307" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1627967307" rel="stylesheet">
+    <link href="/css/hybrid.css?1627967307" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1627967307" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1627967307" rel="stylesheet">
+    <link href="/css/auto-complete.css?1627967307" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1627967307" rel="stylesheet">
+    <link href="/css/theme.css?1627967307" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1627967307" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1626751314"></script>
+    <script src="/js/jquery-3.3.1.min.js?1627967307"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -62,14 +62,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1626751314"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1626751314"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1627967307"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1627967307"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1626751314"></script>
+<script type="text/javascript" src="/js/search.js?1627967307"></script>
 
     
   </div>
@@ -1673,6 +1673,8 @@
 <li><a href="#how-to-restart-the-msmq">How to restart the MSMQ</a></li>
 <li><a href="#how-to-check-the-setting-when-the-dexpro-can-not-grab-the-video">How to check why the dexpro can&rsquo;t grab the video</a></li>
 <li><a href="#how-to-check-the-exception-event">How to check the exception-event</a></li>
+<li><a href="#how-to-backup-or-restore-the-traineddata-to-other-machines">How to backup or restore the traineddata to other machines</a></li>
+<li><a href="#how-to-quckly-select-tesseractdb-for-mutil-roi">How to quckly select TesseractDB for mutil-ROI</a></li>
 </ul>
 <h2 id="specifications-of-di1-di2">Specifications of DI1 DI2</h2>
 <p>Hardware Figure
@@ -1746,6 +1748,74 @@ input the command
 </code></pre><p><img src="/DEX/FAQ/images/eventviewer.PNG" alt="Event viewer"></p>
 <pre><code>   Path : &quot;Event Viewer ==&gt; Windows Logs ==&gt; System&quot;
 </code></pre><p><img src="/DEX/FAQ/images/eventviewer2.PNG" alt="Event viewer"></p>
+<h2 id="how-to-backup-or-restore-the-traineddata-to-other-machines">How to backup or restore the traineddata to other machines</h2>
+<ul>
+<li>A. Tools-&gt;Config-&gt;Tesseract OCR Setting-&gt;Model and Config Management</li>
+</ul>
+<p><img src="/DEX/FAQ/images/1.PNG" alt="Event viewer"></p>
+<ul>
+<li>B. Bakcup</li>
+</ul>
+<blockquote>
+<ul>
+<li>Select all</li>
+<li>Export</li>
+</ul>
+</blockquote>
+<p><img src="/DEX/FAQ/images/2.PNG" alt="Event viewer"></p>
+<blockquote>
+<ul>
+<li>Click Yes</li>
+<li>Select the folder ==&gt; OK</li>
+</ul>
+</blockquote>
+<p><img src="/DEX/FAQ/images/4.PNG" alt="Event viewer"></p>
+<ul>
+<li>C. Restore</li>
+</ul>
+<blockquote>
+<ul>
+<li>Select all</li>
+<li>import (select the Folder name)</li>
+</ul>
+</blockquote>
+<p><img src="/DEX/FAQ/images/3.PNG" alt="Event viewer"></p>
+<blockquote>
+<ul>
+<li>Select the folder  ==&gt; Ok</li>
+</ul>
+</blockquote>
+<p><img src="/DEX/FAQ/images/5.PNG" alt="Event viewer"></p>
+<h2 id="how-to-quckly-select-tesseractdb-for-mutil-roi">How to quckly select TesseractDB for mutil-ROI</h2>
+<ul>
+<li>A. In the blf mode</li>
+</ul>
+<p><img src="/DEX/FAQ/images/6.PNG" alt="Event viewer"></p>
+<ul>
+<li>B. Select an image layer that has many ROI for OCR.</li>
+<li>C. Tools-&gt;Config-&gt;Tesseract OCR Setting-&gt;Model and Config Management</li>
+</ul>
+<p><img src="/DEX/FAQ/images/7.PNG" alt="Event viewer"></p>
+<ul>
+<li>D. Can be selected in batches and edit the ROI setting.</li>
+</ul>
+<p><img src="/DEX/FAQ/images/8.PNG" alt="Event viewer"></p>
+<ul>
+<li>E. Click the Replace</li>
+</ul>
+<p><img src="/DEX/FAQ/images/9.PNG" alt="Event viewer"></p>
+<ul>
+<li>F. Exit without change</li>
+</ul>
+<p><img src="/DEX/FAQ/images/10.PNG" alt="Event viewer"></p>
+<ul>
+<li>G. Save Script</li>
+</ul>
+<p><img src="/DEX/FAQ/images/11.PNG" alt="Event viewer"></p>
+<ul>
+<li>H. Recombine the script</li>
+</ul>
+<p><img src="/DEX/FAQ/images/12.PNG" alt="Event viewer"></p>
 
 
 
@@ -2754,19 +2824,19 @@ input the command
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1626751314"></script>
-    <script src="/js/perfect-scrollbar.min.js?1626751314"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1626751314"></script>
-    <script src="/js/jquery.sticky.js?1626751314"></script>
-    <script src="/js/featherlight.min.js?1626751314"></script>
-    <script src="/js/highlight.pack.js?1626751314"></script>
+    <script src="/js/clipboard.min.js?1627967307"></script>
+    <script src="/js/perfect-scrollbar.min.js?1627967307"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1627967307"></script>
+    <script src="/js/jquery.sticky.js?1627967307"></script>
+    <script src="/js/featherlight.min.js?1627967307"></script>
+    <script src="/js/highlight.pack.js?1627967307"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1626751314"></script>
-    <script src="/js/learn.js?1626751314"></script>
-    <script src="/js/hugo-learn.js?1626751314"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1627967307"></script>
+    <script src="/js/learn.js?1627967307"></script>
+    <script src="/js/hugo-learn.js?1627967307"></script>
 
-    <link href="/mermaid/mermaid.css?1626751314" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1626751314"></script>
+    <link href="/mermaid/mermaid.css?1627967307" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1627967307"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
