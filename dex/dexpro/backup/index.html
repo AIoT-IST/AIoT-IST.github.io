@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>EasyObject :: Connected Factory</title>
+    <title>05-Backup/Restore :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1628046369" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/euresys/easyobject/">
+  <body class="" data-url="/dex/dexpro/backup/">
     <nav id="sidebar" class="">
 
 
@@ -298,7 +298,7 @@
   
     
     <li data-nav-id="/euresys/" title="Euresys" class="dd-item 
-        parent
+        
         
         
         ">
@@ -505,8 +505,8 @@
   
     
     <li data-nav-id="/euresys/easyobject/" title="EasyObject" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/euresys/easyobject/">
@@ -560,7 +560,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX" class="dd-item 
-        
+        parent
         
         
         ">
@@ -827,7 +827,7 @@
   
     
     <li data-nav-id="/dex/dexpro/" title="04-Dex-pro" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1154,8 +1154,8 @@
   
     
     <li data-nav-id="/dex/dexpro/backup/" title="05-Backup/Restore" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/dex/dexpro/backup/">
@@ -1659,7 +1659,13 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/euresys/'>Euresys</a> > EasyObject
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > <a href='/dex/dexpro/'>04-Dex-pro</a> > 05-Backup/Restore
+          
+         
           
          
           
@@ -1677,12 +1683,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              EasyObject
-            </h1>
           
 
         
@@ -1690,67 +1693,83 @@
 
 
 
-	<p>This tutorial will guide you how to getting start EasyObject by Euresys</p>
-<ul>
-<li>
-<p><a href="#removing-non-significant-objects-after-image-segmentation">Removing Non-Significant Objects After Image Segmentation</a></p>
-</li>
-<li>
-<p><a href="#detecting-differences-between-images-using-min-max-references">Detecting Differences Between Images Using Min-Max References</a></p>
-</li>
-<li>
-<p><a href="#detecting-printing-errors-using-a-flexible-mask">Detecting Printing Errors Using a Flexible Mask</a></p>
-</li>
-<li>
-<h3 id="removing-non-significant-objects-after-image-segmentation">Removing Non-Significant Objects After Image Segmentation</h3>
-</li>
+	<ul>
+<li><a href="#dex-pro-backup">DEX Pro Backup</a></li>
+<li><a href="#dex-pro-restore">DEX Pro Restore</a></li>
+<li><a href="#backup-config">Backup Config</a></li>
+<li><a href="#replace-config">Replace Config</a></li>
+<li><a href="#factory-restore">Factory Restore</a></li>
+<li><a href="#ocr-restore">OCR Restore</a></li>
 </ul>
-<p>Following this tutorial, you will learn how to use EasyObject to detect bad rice grains (largely dark) among many normal rice grains (largely light).</p>
-<ol>
-<li>Load the source image</li>
-<li>Perform image segmentation</li>
-<li>Remove the smallest objects</li>
-<li>Remove the smallest objects</li>
-<li><a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/04_EasyObject/Removing_Non-Significant_Objects_After_Image_Segmentation.htm?TocPath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyObject%7C_____1">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/5XZ9ZdX8sE8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
+<h2 id="when-you-backuprestore-the-machine-">When you backup/restore the machine ?</h2>
+<h3 id="you-want-to-exchange-to-another-dex-100-and-going-to-run-that-you-design-script-and-parameter">You want to exchange to another DEX-100 and going to run that you design script and parameter.</h3>
+<h2 id="dex-pro-backup">DEX Pro Backup</h2>
 <ul>
-<li>
-<h3 id="detecting-differences-between-images-using-min-max-references">Detecting Differences Between Images Using Min-Max References</h3>
-Following this tutorial, you will learn how to use EasyObject to compare images. In this example, we will check the quality of a PCB film.</li>
+<li>Content</li>
 </ul>
 <ol>
-<li>Load the source image</li>
-<li>Build min and max reference images</li>
-<li>Load an image to be inspected</li>
-<li>Compare the image with the reference images</li>
-<li><a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/04_EasyObject/Detecting_Differences_Between_Images_Using_Min-Max_References.htm?TocPath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyObject%7C_____2">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/HiBFTGzk1Zw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
+<li>OCR data base</li>
+<li>Schedule file</li>
+<li>Program</li>
 </ol>
+<p><img src="/DEX/Dexpro/Backup/image/1.PNG" alt="Normal machine"></p>
+<h2 id="dex-pro-restore">DEX Pro Restore</h2>
 <ul>
-<li>
-<h3 id="detecting-printing-errors-using-a-flexible-mask">Detecting Printing Errors Using a Flexible Mask</h3>
-Following this tutorial, you will learn how to use a flexible mask to target and search specific areas in the image.</li>
+<li>Content</li>
 </ul>
 <ol>
-<li>Load the source image</li>
-<li>Load the flexible mask image</li>
-<li>Inspect the image</li>
-<li><a href="https://documentation.euresys.com/Products/OPEN_EVISION/OPEN_EVISION/en-us/Content/05_Resources/01_Tutorials/04_EasyObject/Detecting_Printing_Errors_Using_a_Flexible_Mask.htm?TocPath=Resources%7CTutorials%20for%20Open%20eVision%20Studio%7CEasyObject%7C_____3">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/ziiszlkdol8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
+<li>OCR data base</li>
+<li>Schedule file</li>
+<li>Program</li>
 </ol>
+<p><img src="/DEX/Dexpro/Backup/image/2.PNG" alt="Normal machine"></p>
+<h2 id="backup-config">Backup Config</h2>
+<ul>
+<li>Content</li>
+</ul>
+<ol>
+<li>DDS/LOG Config</li>
+<li>Modbus Config</li>
+<li>Machineini</li>
+<li>Page Definition</li>
+</ol>
+
+<div class="notices note" ><p>The backup folder saving path is in C:\Users\USER\Documents\RVM_Config</p>
+</div>
+
+<p><img src="/DEX/Dexpro/Backup/image/3.PNG" alt="Normal machine">)</p>
+<h2 id="replace-config">Replace Config</h2>
+<ul>
+<li>Content</li>
+</ul>
+<ol>
+<li>DDS/LOG Config</li>
+<li>Modbus Config</li>
+<li>Machineini</li>
+<li>Page Definition</li>
+</ol>
+
+<div class="notices note" ><p>The backup folder saving path is in C:\Users\USER\Documents\RVM_Config</p>
+</div>
+
+<p><img src="/DEX/Dexpro/Backup/image/4.PNG" alt="Normal machine">)</p>
+<h2 id="factory-restore">Factory Restore</h2>
+<ul>
+<li>Content</li>
+</ul>
+<ol>
+<li>Machineini</li>
+</ol>
+<p><img src="/DEX/Dexpro/Backup/image/5.PNG" alt="Normal machine">)</p>
+<h2 id="ocr-restore">OCR Restore</h2>
+<h3 id="sop">SOP</h3>
+<ol>
+<li>Download the <a href="http://ftp.adlinktech.com/image/DEX-100/OCRClean.bat">OCRClean.bat</a></li>
+<li>Run the OCRClean.bat</li>
+<li>Download the <a href="http://ftp.adlinktech.com/image/DEX-100/OCRDB.zip">OCRDB.zip</a> and unzip it.</li>
+<li>Using the DEX Pro Restore and choice the OCRDB folder.</li>
+</ol>
+<p><img src="/DEX/Dexpro/Backup/image/2.PNG" alt="Normal machine"></p>
 
 
 
@@ -1760,6 +1779,8 @@ Following this tutorial, you will learn how to use a flexible mask to target and
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -1926,178 +1947,6 @@ Following this tutorial, you will learn how to use a flexible mask to target and
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -2170,214 +2019,6 @@ Following this tutorial, you will learn how to use a flexible mask to target and
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -2470,6 +2111,104 @@ Following this tutorial, you will learn how to use a flexible mask to target and
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -2488,6 +2227,292 @@ Following this tutorial, you will learn how to use a flexible mask to target and
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2760,10 +2785,10 @@ Following this tutorial, you will learn how to use a flexible mask to target and
 	 
 	 
 		
-			<a class="nav nav-prev" href="/euresys/easymatch/" title="EasyMatch"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dex/dexpro/instruction/restful/" title="07-Restful"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/euresys/parameters/" title="Parameters" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dex/faq/" title="10-FAQ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
