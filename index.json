@@ -109,7 +109,7 @@
 	"title": "05-Backup/Restore",
 	"tags": [],
 	"description": "",
-	"content": " DEX Pro Backup DEX Pro Restore Backup Config Replace Config Factory Restore OCR Restore  When you backup/restore the machine ? You want to exchange to another DEX-100 and going to run that you design script and parameter. DEX Pro Backup  Content   OCR data base Schedule file Program  DEX Pro Restore  Content   OCR data base Schedule file Program  Backup Config  Content   DDS/LOG Config Modbus Config Machineini Page Definition  The backup folder saving path is in C:\\Users\\USER\\Documents\\RVM_Config\n )\nReplace Config  Content   DDS/LOG Config Modbus Config Machineini Page Definition  The backup folder saving path is in C:\\Users\\USER\\Documents\\RVM_Config\n )\nFactory Restore  Content   Machineini  )\nOCR Restore SOP  Download the OCRClean.bat Run the OCRClean.bat Download the OCRDB.zip and unzip it. Using the DEX Pro Restore and choice the OCRDB folder.  "
+	"content": " DEX Pro Backup DEX Pro Restore Backup Config Replace Config Factory Restore OCR Restore  When you backup/restore the machine ? You want to exchange to another DEX-100 and going to run that you design script and parameter. DEX Pro Backup  Content   OCR data base Schedule file Program  DEX Pro Restore  Content   OCR data base Schedule file Program  Backup Config  Content   DDS/LOG Config Modbus Config Machineini Page Definition  The backup folder saving path is in C:\\Users\\USER\\Documents\\RVM_Config\n Replace Config  Content   DDS/LOG Config Modbus Config Machineini Page Definition  The backup folder saving path is in C:\\Users\\USER\\Documents\\RVM_Config\n Factory Restore  Content   Machineini  OCR Restore SOP  Download the OCRClean.bat Run the OCRClean.bat Download the OCRDB.zip and unzip it. Using the DEX Pro Restore and choice the OCRDB folder.  "
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/dexpro/instruction/loop/",
@@ -124,6 +124,13 @@
 	"tags": [],
 	"description": "",
 	"content": " How to use the PageIdentify  How to the use the PAgeIdentify Introduction the parameter X: number of instructions to jump  X\u0026gt;0: go to previous steps X=0: go to the last instruction X\u0026lt;0: go to next steps  Y: jump mode.  0: jump by instruction number 1: jump by label  W: target page id  Referring the number of bmp   Pleas referring the sample 1: The pattern matches(Yes) then going to the \u0026ldquo;Jump\u0026rdquo; label.\nThe pattern doesn\u0026rsquo;t match(No) then go to the next step.\nPleas referring the sample 2: The pattern matches(Yes) then going to the next 4 steps.\nThe pattern doesn\u0026rsquo;t match(No) then go to the next step.\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/dexpro/autorun/",
+	"title": "06-Script seetting",
+	"tags": [],
+	"description": "",
+	"content": " \u0026laquo; Script Setting \u0026raquo; AutoRun  \u0026laquo; Script Setting \u0026raquo;  Time Stop: Wait the time after executing each instruction. Spt Step Speed: It is the minimum waiting time between instructions.  Example : Time Stop Use the both setting.\nLook at the below figure that the second instruction adds 3s than the first instruction.\n How to get the 3s ?\n  \u0026ldquo;Time stop\u0026rdquo; is 1000ms \u0026ldquo;Sleep\u0026rdquo; is 3 3s = Time stop * Sleep  Example : Spt Step Speed Use the setting that the \u0026ldquo;Spt Step Spped\u0026rdquo; is 1000ms.\nWatch the result that the second instruction running only delay 1s after the first instruction.\nAutoRun It is goint to auto run the script that you design.\nYou also can clikc the Start(Auto) without select the \u0026ldquo;.spt\u0026rdquo; again when selected the script file.\nHID idle time : AutoRun the script when both keyboard \u0026amp; mouse are idle over the setting time.\nAuto run screensaver timeout : The 10 seconds will count down before automatic execution\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/dexpro/instruction/restful/",
