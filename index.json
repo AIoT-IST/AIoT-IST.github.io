@@ -127,7 +127,7 @@
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/dexpro/autorun/",
-	"title": "06-Script seetting",
+	"title": "06-Script seetting &amp; AutoRun",
 	"tags": [],
 	"description": "",
 	"content": " \u0026laquo; Script Setting \u0026raquo; AutoRun  \u0026laquo; Script Setting \u0026raquo;  Time Stop: Wait the time after executing each instruction. Spt Step Speed: It is the minimum waiting time between instructions.  Example : Time Stop Use the both setting.\nLook at the below figure that the second instruction adds 3s than the first instruction.\n How to get the 3s ?\n  \u0026ldquo;Time stop\u0026rdquo; is 1000ms \u0026ldquo;Sleep\u0026rdquo; is 3 3s = Time stop * Sleep  Example : Spt Step Speed Use the setting that the \u0026ldquo;Spt Step Spped\u0026rdquo; is 1000ms.\nWatch the result that the second instruction running only delay 1s after the first instruction.\nAutoRun Run the Background Schedule setting\n Path : Tool ==\u0026gt; Config ==\u0026gt; Bakground Schedule Setting\n Select the \u0026ldquo;Script File\u0026rdquo; that you want to run your design script.\n Note : Enable the \u0026ldquo;Run script if HID keeps idling over timeout\u0026rdquo;.\n You also can clikc the Start(Auto) without select the \u0026ldquo;.spt\u0026rdquo; again when selected the script file.\nHID idle time : AutoRun the script when both keyboard \u0026amp; mouse are idle over the setting time.\nAuto run screensaver timeout : The 10 seconds will count down before automatic execution\n"
@@ -284,7 +284,7 @@
 	"title": "11-SDK &amp; FW Version &amp; Manual",
 	"tags": [],
 	"description": "",
-	"content": "SDK Internal version : 1.2.5 2021/07/14\nOffical version : V5\n  SDK V5 (Download)\n  Release note\nHow to install SOP\n   Uninstall    Reboot    Install V5    Reboot    FW  FW-C5 (Download) FW-C7 (Download)\n   revision_history\nHow to intsll SOP\n Use this tool   C:\\Program Files\\ADLINK\\DEX-100\\utility\\BurnDex100_x64   Check the version that is C5 or C7\n  Upload the right bit\n  Note: The FPGA shall be null when you install the error bit.\n Cold boot    Utility_Manual Utility_Manual_20210426 (Download)\nHardware Hardware-Manual(Download)\n"
+	"content": "SDK Internal version : 1.2.5 2021/08/09\nOffical version : V5\n  SDK V5 (Download)\n  Release note\nHow to install SOP\n   Uninstall    Reboot    Install V5    Reboot    FW  FW-C5 (Download) FW-C7 (Download)\n   revision_history\nHow to intsll SOP\n Use this tool   C:\\Program Files\\ADLINK\\DEX-100\\utility\\BurnDex100_x64   Check the version that is C5 or C7\n  Upload the right bit\n  Note: The FPGA shall be null when you install the error bit.\n Cold boot    Utility_Manual Utility_Manual_20210426 (Download)\nModules\u0026amp;EdgeServe DEX-100_SW_User_Manual (Download)\nHardware Hardware-Manual(Download)\nCE DEX-100 CE EMC TEST REPORT(Download)\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/mcm-204/gettingstart/",
