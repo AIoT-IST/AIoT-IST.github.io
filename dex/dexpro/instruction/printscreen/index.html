@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>03-Mouse :: Connected Factory</title>
+    <title>08-Printscreen :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1630305521" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/dex/mouse/">
+  <body class="" data-url="/dex/dexpro/instruction/printscreen/">
     <nav id="sidebar" class="">
 
 
@@ -743,8 +743,8 @@
   
     
     <li data-nav-id="/dex/mouse/" title="03-Mouse" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/dex/mouse/">
@@ -827,7 +827,7 @@
   
     
     <li data-nav-id="/dex/dexpro/" title="04-Dex-pro" class="dd-item 
-        
+        parent
         
         
         ">
@@ -950,7 +950,7 @@
   
     
     <li data-nav-id="/dex/dexpro/instruction/" title="04-Instruction" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1169,8 +1169,8 @@
   
     
     <li data-nav-id="/dex/dexpro/instruction/printscreen/" title="08-Printscreen" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/dex/dexpro/instruction/printscreen/">
@@ -1731,7 +1731,19 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > 03-Mouse
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX</a> > <a href='/dex/dexpro/'>04-Dex-pro</a> > <a href='/dex/dexpro/instruction/'>04-Instruction</a> > 08-Printscreen
+          
+         
+          
+         
           
          
           
@@ -1759,9 +1771,45 @@
 
 
 
-	<h3 id="adlink-ist-connected-factory">ADLINK IST Connected Factory</h3>
-<h1 id="mouse">Mouse</h1>
-<p>There are several note for sharing.</p>
+	<ul>
+<li><a href="#how-to-print-screen">How to Print Screen </a></li>
+<li><a href="#print-screen-for-tracing-with-ocr">Print Screen for tracing with OCR</a></li>
+<li><a href="#how-to-choose-png-or-jpeg-for-storing-image">How to choose PNG or JPEG for storing image</a></li>
+</ul>
+<h2 id="how-to-print-screen">How to Print Screen</h2>
+<p>Sometimes you need to store the current screen for analysis by another tool without using the OCR.</p>
+<h3 id="1-add-one-ocr-of-instruction">1. Add one OCR of instruction</h3>
+<p>Please feel free to add a position of OCR (this OCR is meaningless and only for creating instruction) in .blf mode and combine it after saving the Script.</p>
+<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/1.PNG" alt="Normal machine"></p>
+<h3 id="2-modify-the-get-bmp-rect-array">2. Modify the &ldquo;Get bmp rect array&rdquo;</h3>
+<ul>
+<li>Load the .spt of your design before modifying the parameter.</li>
+<li>Select the “Get bmp rect arry” then setting the Q parameter as one and saving the image in the assigned path.</li>
+</ul>
+<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/3.PNG" alt="Normal machine"></p>
+
+<div class="notices note" ><p>The storing path is in : C:\Users\adlink\Documents\RVM_OCR_IMG</p>
+</div>
+
+<h2 id="print-screen-for-tracing-with-ocr">Print Screen for tracing with OCR</h2>
+<p>To verify the results of OCR with the current screen, you can refer to the below steps.</p>
+<h3 id="1-add-the-ocr-of-instruction">1. Add the OCR of instruction</h3>
+<p>This sample has 4 OCR and one instruction of “MSG_SAVE_TABLE_LOG” in .blf mode and combines it after saving the Script.</p>
+<blockquote>
+<p>Note: To log the results of OCR in CSV, that needs the “MSG_SAVE_TABLE_LOG.”</p>
+</blockquote>
+<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/4.PNG" alt="Normal machine"></p>
+<h3 id="2-modify-the-get-bmp-rect-array-1">2. Modify the &ldquo;Get bmp rect array&rdquo;</h3>
+<p>Select the “Get bmp rect arry” then setting the Q parameter as one and saving the image in the assigned path.</p>
+<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/6.PNG" alt="Normal machine"></p>
+
+<div class="notices note" ><p>The storing path is in : C:\Users\adlink\Documents\RVM_OCR_IMG</p>
+</div>
+
+<h3 id="sample-sharing">Sample sharing</h3>
+<h2 id="how-to-choose-png-or-jpeg-for-storing-image">How to choose PNG or JPEG for storing image</h2>
+<p>Mabey, you have different considerations about your tools to choose the saving type of images.</p>
+<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/8.PNG" alt="Normal machine"></p>
 
 
 
@@ -2220,6 +2268,56 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -2266,24 +2364,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
                         
             
             
@@ -2321,37 +2401,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2368,21 +2417,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -2507,6 +2543,23 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2514,6 +2567,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2821,10 +2877,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/dex/video/resolution/" title="3 - Create new resolution"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dex/dexpro/instruction/ledcontrol/" title="08-LED control"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/dex/mouse/ps2metadata/" title="Detect the PS2 metadata" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dex/dexpro/backup/" title="05-Backup/Restore" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
