@@ -148,7 +148,7 @@
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/dexpro/instruction/printscreen/",
-	"title": "08-Printscreen",
+	"title": "09-Printscreen",
 	"tags": [],
 	"description": "",
 	"content": " How to Print Screen  Print Screen for tracing with OCR How to choose PNG or JPEG for storing image  How to Print Screen Sometimes you need to store the current screen for analysis by another tool without using the OCR.\n1. Add one OCR of instruction Please feel free to add a position of OCR (this OCR is meaningless and only for creating instruction) in .blf mode and combine it after saving the Script.\n2. Modify the \u0026ldquo;Get bmp rect array\u0026rdquo;  Load the .spt of your design before modifying the parameter. Select the “Get bmp rect arry” then setting the Q parameter as one and saving the image in the assigned path.  The storing path is in : C:\\Users\\adlink\\Documents\\RVM_OCR_IMG\n Print Screen for tracing with OCR To verify the results of OCR with the current screen, you can refer to the below steps.\n1. Add the OCR of instruction This sample has 4 OCR and one instruction of “MSG_SAVE_TABLE_LOG” in .blf mode and combines it after saving the Script.\n Note: To log the results of OCR in CSV, that needs the “MSG_SAVE_TABLE_LOG.”\n 2. Modify the \u0026ldquo;Get bmp rect array\u0026rdquo; Select the “Get bmp rect arry” then setting the Q parameter as one and saving the image in the assigned path.\nThe storing path is in : C:\\Users\\adlink\\Documents\\RVM_OCR_IMG\n Sample sharing How to choose PNG or JPEG for storing image Mabey, you have different considerations about your tools to choose the saving type of images.\n"
@@ -159,6 +159,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Choice the Dex-100 Video Source Click the Frame Grabber Setting and choice the Source input.  Dex-Pro -\u0026gt; Tools -\u0026gt; Config -\u0026gt; Fram Grabber Setting  Use the Diag.exe for checking the current video information.  Path -\u0026gt; -\u0026gt; C:\\Program Files\\ADLINK\\DEX-100\\utility\\Diag.exe  Clear horizontal and vertical offset values  Click the button of \u0026quot;Frame Adjust\u0026quot;   Please set 0 for all the offset\n  Select source and resolution  Select source from VGA or DVI   Select resolution \u0026ldquo;Auto\u0026rdquo;  Get the Video informations   Check the both result for Resolution and Signal, if the connection is successful.\n  If doesn\u0026rsquo;t detected the signal, follow the steps for troubleshooting.    Check the Local machine setting for display resolution.    Reconnect the local machine VGA cable to monitor.    Reboot the local machine.    Check the resolution from the monitor.    Reconnect the VGA to Dex-100.    Check Frame Grabber Setting whether the auto select for unexpected resolution.    "
+},
+{
+	"uri": "https://aiot-ist.github.io/dex/dexpro/instruction/opscreen/",
+	"title": "10-OPScreen",
+	"tags": [],
+	"description": "",
+	"content": " How to use the OPSCreen  Print Screen for tracing with OCR  When to use the OPscreen The operator or engineer wants to view the specified page when DEX-100 is running. At this moment this function will be very suitable.   The OPScreen supports a max of 5 pages of all.\n  Those 5 pages are not the current frame. However, dex-100 can autosave the image when the script is running to the required page.\n  The Operator or Engineer only can select any pages of 5, and keyboard \u0026amp; mouse are disabled to control the machine. (This moment Dex-100 is working)\n  Need to know OPScreen is a special mode that screen is from VGA out and the mouse only can control by Mouse Input. How to use the OPSCreen -VIDEO,How to set the OP Screen\nSOP 1. Open the OP Screen setting 2. Select the Host view 3. Click the Done when you finish the setting. If you saw \u0026ldquo;Fail to load image: page X is undefined.\u0026quot;, Please recheck the Pageidentify setting.\n How to stop by the trigger of external or internal? 1. Trigger by internal (software) Use the mouse click the button of Full Operation. 2. Trigger by external (hardware) The DI2 ON can alse stop the OPScreen mode.\n kill switch is enable. ![Normal machine](/DEX/Dexpro/Instruction/Opscreen/image/8.PNG\n "
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/video/video-quality/",
@@ -323,7 +330,7 @@
 },
 {
 	"uri": "https://aiot-ist.github.io/dex/",
-	"title": "DEX",
+	"title": "DEX-100",
 	"tags": [],
 	"description": "",
 	"content": "ADLINK IST Connected Factory DEX-100 Discover how to use the DEX series and find the releated questions.\n"
