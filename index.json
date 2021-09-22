@@ -298,7 +298,7 @@
 	"title": "11-SDK &amp; FW Version &amp; Manual",
 	"tags": [],
 	"description": "",
-	"content": "SDK Internal version : 1.2.5 2021/08/09\nOffical version : V5\n  Autoinstall Download\n  SDK V5 (Download)\n  Release note\nHow to install SOP\n  1. Uninstall   2. Reboot   3. Install V5   4. Reboot   FW  FW-C5 (Download) FW-C7 (Download)\n   revision_history\nHow to intsll SOP\n Use this tool   C:\\Program Files\\ADLINK\\DEX-100\\utility\\BurnDex100_x64   Check the version that is C5 or C7\n  Upload the right bit\n  Note: The FPGA shall be null when you install the error bit.\n Cold boot    Utility_Manual Utility_Manual_20210426 (Download)\nModules\u0026amp;EdgeServe DEX-100_SW_User_Manual (Download)\nHardware Hardware-Manual(Download)\nCE DEX-100 CE EMC TEST REPORT(Download)\n"
+	"content": "SDK Internal version : 1.2.5 2021/08/09\nOffical version : V5\n Autoinstall Download   Pls unzip and double-click this .bat file.\n   SDK V5 (Download)\n  Release note\nHow to install SOP\n  1. Uninstall   2. Reboot   3. Install V5   4. Reboot   FW  FW-C5 (Download) FW-C7 (Download)\n   revision_history\nHow to intsll SOP\n Use this tool   C:\\Program Files\\ADLINK\\DEX-100\\utility\\BurnDex100_x64   Check the version that is C5 or C7\n  Upload the right bit\n  Note: The FPGA shall be null when you install the error bit.\n Cold boot    Utility_Manual Utility_Manual_20210426 (Download)\nModules\u0026amp;EdgeServe DEX-100_SW_User_Manual (Download)\nHardware Hardware-Manual(Download)\nCE DEX-100 CE EMC TEST REPORT(Download)\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/mcm-204/gettingstart/",
