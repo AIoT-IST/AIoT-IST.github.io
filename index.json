@@ -406,6 +406,20 @@
 	"content": "ADLINK IST Connected Factory Neon-1000-MDX Discover how to use the Neon-1000-MDX and find the releated questions.\n"
 },
 {
+	"uri": "https://aiot-ist.github.io/eos-jnx/",
+	"title": "EOS-JNX",
+	"tags": [],
+	"description": "",
+	"content": "ADLINK IST Connected Factory EOS-JNX Discover how to use the EOS-JNX and find the releated questions.\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/eos-jnx/howtoflashimage/",
+	"title": "How to flash image?",
+	"tags": [],
+	"description": "",
+	"content": "Coming soon!!!\n"
+},
+{
 	"uri": "https://aiot-ist.github.io/news/",
 	"title": "News",
 	"tags": [],
