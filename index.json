@@ -417,7 +417,7 @@
 	"title": "How to flash image?",
 	"tags": [],
 	"description": "",
-	"content": "Coming soon!!!\n"
+	"content": "EOS-JNX   eMMC image\n v1.2  Un-archive the EOS-JNX-emmc_vX.Y.tar.gz file   $ sudo tar xvf EOS-JNX-emmc_v1.2.tar.gz    Recoery emmc command:   $ sudo ./nvmflash.sh         microSD image\n v1.0.0 SOP  Windows  video tool   Linux  video        "
 },
 {
 	"uri": "https://aiot-ist.github.io/news/",
