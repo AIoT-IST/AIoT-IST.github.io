@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="generator" content="Hugo 0.66.0" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>4 Template :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1642472710" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1642472710" rel="stylesheet">
-    <link href="/css/hybrid.css?1642472710" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1642472710" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1642472710" rel="stylesheet">
-    <link href="/css/auto-complete.css?1642472710" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1642472710" rel="stylesheet">
-    <link href="/css/theme.css?1642472710" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1642472710" rel="stylesheet">
+    <link href="/css/nucleus.css?1642483200" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1642483200" rel="stylesheet">
+    <link href="/css/hybrid.css?1642483200" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1642483200" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1642483200" rel="stylesheet">
+    <link href="/css/auto-complete.css?1642483200" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1642483200" rel="stylesheet">
+    <link href="/css/theme.css?1642483200" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1642483200" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1642472710"></script>
+    <script src="/js/jquery-3.3.1.min.js?1642483200"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1642472710"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1642472710"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1642483200"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1642483200"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1642472710"></script>
+<script type="text/javascript" src="/js/search.js?1642483200"></script>
 
     
   </div>
@@ -2023,80 +2023,66 @@
 
 
 
-	
-
-<p>Here&rsquo;s common command line for each case.</p>
-
-<h2 id="get-camera-video-source">Get camera/video Source</h2>
-
+	<p>Here&rsquo;s common command line for each case.</p>
+<h2 id="get-cameravideo-source">Get camera/video Source</h2>
 <ul>
-<li>video<br />
+<li>video<br>
 <code>gst-launch-1.0 filesrc location=pexels-george-morina-5372874.mp4 ! qtdemux ! h264parse ! nvv4l2decoder ! nvvideoconvert ! videoconvert ! xvimagesink sync=false</code></li>
-<li>Basler<br />
-<code>gst-launch-1.0 pylonsrc pixel-format=BayerRG8 width=1280 height=720 fps=7 ! ! videoconvert ! xvimagesink</code></li>
-
-<li><p>Appropho
-<code>gst-launch-1.0 v4l2src io-mode=0 device=/dev/video0 do-timestamp=true ! 'video/x-raw, width=1920, height=1080, framerate=30/1, format=UYVY' ! xvimagesink sync=false</code></p>
-
-<h2 id="pre-processing-post-process">Pre-processing / Post-process</h2></li>
+<li>Basler  <br>
+<code>gst-launch-1.0 pylonsrc pixel-format=BayerRG8 width=1280 height=720 fps=7 ! videoconvert ! xvimagesink sync=false</code></li>
+<li>Appropho
+<code>gst-launch-1.0 v4l2src io-mode=0 device=/dev/video0 do-timestamp=true ! 'video/x-raw, width=1920, height=1080, framerate=30/1, format=UYVY' ! xvimagesink sync=false</code></li>
 </ul>
-
+<h2 id="pre-processing--post-process">Pre-processing / Post-process</h2>
 <h2 id="ai-inferece">AI inferece</h2>
-
 <ul>
 <li>Classification
-
 <ul>
 <li>googlenet
 <code>gst-launch-1.0 pylonsrc camera=0 fps=20 ! videoconvert ! adrt model=/home/adlink/Downloads/model/googlenet.engine batch=1 ! adtrans_classifier label=&quot;/home/adlink/Desktop/EVA Sample/EVA_IDE/model/googlenet-v2_RT_labels.txt&quot; ! admetadrawer ! videoconvert ! fpsdisplaysink video-sink=xvimagesink text-overlay=true</code></li>
-</ul></li>
-<li>Object detection<br />
-
-<ul>
-<li>yolov3-tiny<br />
-<code>gst-launch-1.0 filesrc location=pexels-george-morina-5372874.mp4 ! qtdemux ! h264parse ! nvv4l2decoder ! nvvideoconvert ! videoconvert ! adrt rgbconv=true model=yolov3-tiny-288-1012.engine device=0 scale=0.0039 mean=&quot;0 0 0&quot; batch=1 ! adtrans_yolotrt label-file=label.txt blob-size=&quot;9,18&quot; mask=&quot;(3,4,5),(0,1,2)&quot; anchor=&quot;(10,14),(23,27),(37,58),(81,82),(135,169),(344,319)&quot; input_width=288 class-num=80 input_height=288 threshold=0.4 ! admetadrawer ! videoconvert ! xvimagesink</code></li>
-<li>yolov3<br />
-<code>gst-launch-1.0 pylonsrc camera=0 fps=6 ! videoconvert ! adrt model=yolov3-416_test.engine scale=0.004 mean=&quot;0 0 0&quot; device=0 batch=1 ! adtrans_yolo label=label.txt class-num=2 ! admetadrawer ! videoconvert ! xvimagesink sync=false</code></li>
-<li>ssd inception<br />
-<code>gst-launch-1.0 pylonsrc camera=0 fps=15 ! videoscale ! video/x-raw, width=800, height=600 ! videoconvert ! adrt model=/home/adlink/Downloads/model/ssdv2.engine batch=1 device=0 scale=0.0078 mean=&quot;0 0 0&quot; norm=false ! adtrans_ssd label=/home/adlink/Downloads/model/ssd_coco_labels.txt ! admetadrawer ! videoconvert ! fpsdisplaysink video-sink=xvimagesink text-overlay=true</code></li>
-</ul></li>
-<li>Pose detection<br />
-<code>gst-launch-1.0 pylonsrc pixel-format=BayerRG8 width=1280 height=720 fps=7 ! bayer2rgb ! videoconvert ! adrt model=&quot;/home/adlink/Desktop/EVA Sample/EVA_IDE/model/pose-b1.engine&quot; scale=0.0039 rgbconv=true ! adtrans_openpose_py ! admetadrawer ! videoconvert ! xvimagesink</code></li>
-<li>Segmentation<br />
-
-<ul>
-<li>fcn<br />
-<code>gst-launch-1.0 videotestsrc ! adrt model=road.engine scale=1.0 mean=&quot;0 0 0&quot; device=0 batch=1 ! adtrans_segment class-num=4 blob-height=512 blob-width=896 ! ximagesink</code></li>
-</ul></li>
 </ul>
-
+</li>
+<li>Object detection
+<ul>
+<li>yolov3-tiny<br>
+<code>gst-launch-1.0 filesrc location=pexels-george-morina-5372874.mp4 ! qtdemux ! h264parse ! nvv4l2decoder ! nvvideoconvert ! videoconvert ! adrt rgbconv=true model=yolov3-tiny-288-1012.engine device=0 scale=0.0039 mean=&quot;0 0 0&quot; batch=1 ! adtrans_yolotrt label-file=label.txt blob-size=&quot;9,18&quot; mask=&quot;(3,4,5),(0,1,2)&quot; anchor=&quot;(10,14),(23,27),(37,58),(81,82),(135,169),(344,319)&quot; input_width=288 class-num=80 input_height=288 threshold=0.4 ! admetadrawer ! videoconvert ! xvimagesink sync=false</code></li>
+<li>yolov3 <br>
+<code>gst-launch-1.0 pylonsrc camera=0 fps=6 ! videoconvert ! adrt model=yolov3-416_test.engine scale=0.004 mean=&quot;0 0 0&quot; device=0 batch=1 ! adtrans_yolo label=label.txt class-num=2 ! admetadrawer ! videoconvert ! xvimagesink sync=false</code></li>
+<li>ssd inception  <br>
+<code>gst-launch-1.0 pylonsrc camera=0 fps=15 ! videoscale ! video/x-raw, width=800, height=600 ! videoconvert ! adrt model=/home/adlink/Downloads/model/ssdv2.engine batch=1 device=0 scale=0.0078 mean=&quot;0 0 0&quot; norm=false ! adtrans_ssd label=/home/adlink/Downloads/model/ssd_coco_labels.txt ! admetadrawer ! videoconvert ! fpsdisplaysink video-sink=xvimagesink text-overlay=true</code></li>
+</ul>
+</li>
+<li>Pose detection <br>
+<code>gst-launch-1.0 pylonsrc pixel-format=BayerRG8 width=1280 height=720 fps=7 ! bayer2rgb ! videoconvert ! adrt model=&quot;/home/adlink/Desktop/EVA Sample/EVA_IDE/model/pose-b1.engine&quot; scale=0.0039 rgbconv=true ! adtrans_openpose_py ! admetadrawer ! videoconvert ! xvimagesink sync=false</code></li>
+<li>Segmentation
+<ul>
+<li>fcn <br>
+<code>gst-launch-1.0 videotestsrc ! adrt model=road.engine scale=1.0 mean=&quot;0 0 0&quot; device=0 batch=1 ! adtrans_segment class-num=4 blob-height=512 blob-width=896 ! xvimagesink sync=false</code></li>
+</ul>
+</li>
+</ul>
 <h2 id="rtsp">RTSP</h2>
-
 <h4 id="launch-rtsp-server-before-every-operation">Launch RTSP server before every operation</h4>
-
 <pre><code> $ /opt/adlink/eva/bin/rtsp-simple-server
 </code></pre>
-
 <ul>
-<li>Video file streaming out<br />
+<li>Video file streaming out <br>
 <code>gst-launch-1.0 videotestsrc ! videoconvert ! nvvideoconvert ! nvv4l2h264enc ! rtspclientsink location=rtsp://localhost:8554/test</code></li>
-<li>Appropho camera streaming out<br />
+<li>Appropho camera streaming out <br>
 <code>gst-launch-1.0 v4l2src io-mode=4 ! videoconvert ! nvvideoconvert ! nvv4l2h264enc ! rtspclientsink location=rtsp://localhost:8554/test</code>
 <code>gst-launch-1.0 v4l2src io-mode=0 ! 'video/x-raw, width=1920, height=1080, framerate=30/1, format=UYVY' ! nvvideoconvert ! 'video/x-raw(memory:NVMM)' ! nvv4l2h265enc bitrate=4000000 ! rtspclientsink location=rtsp://localhost:8554/test</code></li>
-
-<li><p>Receive RTSP streaming<br />
-<code>gst-launch-1.0 rtspsrc location=rtsp://localhost:8554/test ! rtph265depay ! h264parse ! avdec_h264 ! xvimagesink</code></p>
-
-<h2 id="save-file">Save file</h2></li>
-
-<li><p>Save as mkv file<br />
-<code>gst-launch-1.0 v4l2src io-mode=0 device=/dev/video0 do-timestamp=true ! nvvideoconvert ! 'video/x-raw(memory:NVMM)' ! nvv4l2h264enc bitrate=4000000 ! h264parse ! matroskamux ! filesink location=test.mkv</code></p></li>
-
-<li><p>Preview<br />
-<code>st-launch-1.0 v4l2src io-mode=0 device=/dev/video0 do-timestamp=true ! 'video/x-raw, width=1920, height=1080, framerate=30/1, format=UYVY' ! xvimagesink sync=false</code></p></li>
-
-<li><p>Preview &amp; save<br />
-<code>gst-launch-1.0 v4l2src io-mode=0 device=/dev/video0 do-timestamp=true ! 'video/x-raw, width=1920, height=1080, framerate=30/1, format=UYVY' ! videoconvert ! tee name=t ! queue ! 'video/x-raw, format=(string)UYVY' ! nvvideoconvert ! 'video/x-raw(memory:NVMM)' ! nvv4l2h264enc bitrate=4000000 ! h264parse ! matroskamux ! filesink location=test.mkv sync=false t. ! queue ! xvimagesink</code></p></li>
+<li>Receive RTSP streaming <br>
+<code>gst-launch-1.0 rtspsrc location=rtsp://localhost:8554/test ! rtph265depay ! h264parse ! avdec_h264 ! xvimagesink</code>
+<code>gst-launch-1.0 rtspsrc location=rtsp://localhost:8554/test user-id=admin user-pw=admin ! rtph264depay ! h264parse ! nvv4l2decoder ! nvvideoconvert ! &quot;video/x-raw(memory:NVMM),format=RGBA&quot; ! nvegltransform ! nveglglessink sync=false</code></li>
+</ul>
+<h2 id="save-file">Save file</h2>
+<ul>
+<li>Save as mkv file <br>
+<code>gst-launch-1.0 v4l2src io-mode=0 device=/dev/video0 do-timestamp=true ! nvvideoconvert ! 'video/x-raw(memory:NVMM)' ! nvv4l2h264enc bitrate=4000000 ! h264parse ! matroskamux ! filesink location=test.mkv</code></li>
+<li>Preview <br>
+<code>st-launch-1.0 v4l2src io-mode=0 device=/dev/video0 do-timestamp=true ! 'video/x-raw, width=1920, height=1080, framerate=30/1, format=UYVY' ! xvimagesink sync=false</code></li>
+<li>Preview &amp; save <br>
+<code>gst-launch-1.0 v4l2src io-mode=0 device=/dev/video0 do-timestamp=true ! 'video/x-raw, width=1920, height=1080, framerate=30/1, format=UYVY' ! videoconvert ! tee name=t ! queue ! 'video/x-raw, format=(string)UYVY' ! nvvideoconvert ! 'video/x-raw(memory:NVMM)' ! nvv4l2h264enc bitrate=4000000 ! h264parse ! matroskamux ! filesink location=test.mkv sync=false t. ! queue ! xvimagesink sync=false</code></li>
 </ul>
 
 
@@ -3332,19 +3318,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1642472710"></script>
-    <script src="/js/perfect-scrollbar.min.js?1642472710"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1642472710"></script>
-    <script src="/js/jquery.sticky.js?1642472710"></script>
-    <script src="/js/featherlight.min.js?1642472710"></script>
-    <script src="/js/highlight.pack.js?1642472710"></script>
+    <script src="/js/clipboard.min.js?1642483200"></script>
+    <script src="/js/perfect-scrollbar.min.js?1642483200"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1642483200"></script>
+    <script src="/js/jquery.sticky.js?1642483200"></script>
+    <script src="/js/featherlight.min.js?1642483200"></script>
+    <script src="/js/highlight.pack.js?1642483200"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1642472710"></script>
-    <script src="/js/learn.js?1642472710"></script>
-    <script src="/js/hugo-learn.js?1642472710"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1642483200"></script>
+    <script src="/js/learn.js?1642483200"></script>
+    <script src="/js/hugo-learn.js?1642483200"></script>
 
-    <link href="/mermaid/mermaid.css?1642472710" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1642472710"></script>
+    <link href="/mermaid/mermaid.css?1642483200" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1642483200"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

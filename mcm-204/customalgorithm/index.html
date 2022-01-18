@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="generator" content="Hugo 0.66.0" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>Custom Algorithm Deploy Sample :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1642472710" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1642472710" rel="stylesheet">
-    <link href="/css/hybrid.css?1642472710" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1642472710" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1642472710" rel="stylesheet">
-    <link href="/css/auto-complete.css?1642472710" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1642472710" rel="stylesheet">
-    <link href="/css/theme.css?1642472710" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1642472710" rel="stylesheet">
+    <link href="/css/nucleus.css?1642483200" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1642483200" rel="stylesheet">
+    <link href="/css/hybrid.css?1642483200" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1642483200" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1642483200" rel="stylesheet">
+    <link href="/css/auto-complete.css?1642483200" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1642483200" rel="stylesheet">
+    <link href="/css/theme.css?1642483200" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1642483200" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1642472710"></script>
+    <script src="/js/jquery-3.3.1.min.js?1642483200"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1642472710"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1642472710"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1642483200"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1642483200"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1642472710"></script>
+<script type="text/javascript" src="/js/search.js?1642483200"></script>
 
     
   </div>
@@ -2023,91 +2023,51 @@
 
 
 
-	
-
-<h3 id="this-tutorial-will-guide-you-how-to-build-your-own-algorithm-and-deploy-to-mcm-204">This tutorial will guide you how to build your own algorithm and deploy to MCM-204</h3>
-
+	<h3 id="this-tutorial-will-guide-you-how-to-build-your-own-algorithm-and-deploy-to-mcm-204">This tutorial will guide you how to build your own algorithm and deploy to MCM-204</h3>
 <p>You could deploy your own algorithm at MCM-204.</p>
-
 <h3 id="prerequisites">Prerequisites</h3>
-
 <ul>
 <li><strong>Operating System</strong> :       Ubuntu 18.04 installed and up-to date</li>
 </ul>
-
-<hr />
-
+<hr>
 <h3 id="step-1-download-arm-gcc-tool-chain-and-examples">Step 1: Download ARM gcc tool chain and examples.</h3>
-
 <p>Please click below link to download zip file compressed of ARM gcc tool chain and examples at Ubuntu.</p>
-
 <p>Download link: <a href="https://adlinkdxstorage.blob.core.windows.net/file/CustomAlgorithm.zip" title="Title">ARM tool chain with examples</a></p>
-
 <p>After downloaded, please extract it, then there will be a ARM tool chain folder and a sample folder called CalRMS.</p>
-
-<p><img src="/MCM-204/CustomAlgorithm/images/customalgorithm_files.png" alt="folder" /></p>
-
+<p><img src="/MCM-204/CustomAlgorithm/images/customalgorithm_files.png" alt="folder"></p>
 <h3 id="step-2-compile-sample">Step 2: Compile sample.</h3>
-
 <p>Extract the downloaded file at Step 1.</p>
-
 <pre><code>$ unzip CustomAlgorithm.zip
-</code></pre>
-
-<p>Intall make, it&rsquo;s not installed by default.</p>
-
+</code></pre><p>Intall make, it&rsquo;s not installed by default.</p>
 <pre><code>$ sudo apt install make
-</code></pre>
-
-<p>Change directory to the CalRMS</p>
-
+</code></pre><p>Change directory to the CalRMS</p>
 <pre><code>$ cd CalRMS
-</code></pre>
-
-<p>Build .so file from sample.</p>
-
+</code></pre><p>Build .so file from sample.</p>
 <pre><code>$ make
-</code></pre>
-
-<p>The customAlgo.so is build at current directory, you could use this file to upload to MCM-204.</p>
-
+</code></pre><p>The customAlgo.so is build at current directory, you could use this file to upload to MCM-204.</p>
 <pre><code>$ ls
 customAlgo.c  customAlgo.h  customAlgo.o  customAlgo.so  Makefile
-</code></pre>
-
-<h3 id="step-3-deploy-the-so-file-to-mcm-204">Step 3: Deploy the .so file to MCM-204</h3>
-
+</code></pre><h3 id="step-3-deploy-the-so-file-to-mcm-204">Step 3: Deploy the .so file to MCM-204</h3>
 <p>Once you completed above steps, you will get customAlgo.so. What we need to do next is deploy it to the MCM-204.
 Log in to MCM-204 web portal, if you don&rsquo;t know how to login to web portal, you could click thie <a href="https://aiot-ist.github.io/mcm-204/gettingstart/">link</a> to getting start page.</p>
-
 <p>After you login to web portal, then click System Setting menu.
-<img src="/MCM-204/CustomAlgorithm/images/menu_setting.png" alt="menu system setting" /></p>
-
+<img src="/MCM-204/CustomAlgorithm/images/menu_setting.png" alt="menu system setting"></p>
 <p>Scroll down to the bottom of page, then find the <strong>Customization library Upload</strong> section then click <strong>Choose File</strong>.</p>
-
-<p><img src="/MCM-204/CustomAlgorithm/images/customalgorithm_choosefile.png" alt="choose file" />
+<p><img src="/MCM-204/CustomAlgorithm/images/customalgorithm_choosefile.png" alt="choose file">
 After choose the customAlgo.so, simply click <strong>UPLOAD</strong> to upload it to the MCM-204
-<img src="/MCM-204/CustomAlgorithm/images/customalgorithm_upload.png" alt="upload" /></p>
-
+<img src="/MCM-204/CustomAlgorithm/images/customalgorithm_upload.png" alt="upload"></p>
 <p>The upload process will finished at about 30 seconds, there will pop up a re login dialog until done. Simply click re-login link to re login to web portal.
-<img src="/MCM-204/CustomAlgorithm/images/customalgorithm_relogin.png" alt="relogin" /></p>
-
+<img src="/MCM-204/CustomAlgorithm/images/customalgorithm_relogin.png" alt="relogin"></p>
 <h3 id="step-4-apply-custom-algorithm-to-device-setting">Step 4 Apply custom algorithm to device setting.</h3>
-
 <p>Click <strong>Device Setting</strong> at MCM-204 web portal, then scroll down to <strong>Channel Config</strong> section
 At this tutorial we use the default setting of AI0, simply click <strong>ADD DATATYPE</strong>, then choose <strong>Data Type</strong> to <strong>Customization</strong> and input <strong>rms</strong> at Customization Parameter.
-<img src="/MCM-204/CustomAlgorithm/images/devicesetting_adddatatype.png" alt="add data type" />
-<img src="/MCM-204/CustomAlgorithm/images/customalgorithm_datatype.png" alt="data type select" /></p>
-
+<img src="/MCM-204/CustomAlgorithm/images/devicesetting_adddatatype.png" alt="add data type">
+<img src="/MCM-204/CustomAlgorithm/images/customalgorithm_datatype.png" alt="data type select"></p>
 <p>Scroll down to the bottom of page then click Apply</p>
-
-<p><img src="/MCM-204/gettingstart/images/apply.png" alt="apply" />)</p>
-
+<p><img src="/MCM-204/gettingstart/images/apply.png" alt="apply">)</p>
 <h3 id="step-5-display-custom-algorithm-result">Step 5 Display custom algorithm result.</h3>
-
 <p>Click <strong>Data Capture</strong> and the data will be displayed at <strong>Customization</strong> key of returned JSON data.
-<img src="/MCM-204/CustomAlgorithm/images/customalgorithm_datadisplay.png" alt="" /></p>
-
+<img src="/MCM-204/CustomAlgorithm/images/customalgorithm_datadisplay.png" alt=""></p>
 <p>You could enter to next <a href="https://aiot-ist.github.io/mcm-204/customalgorithmdev/">tutorial</a> to learn how to develope your own algorithm.</p>
 
 
@@ -3340,19 +3300,19 @@ At this tutorial we use the default setting of AI0, simply click <strong>ADD DAT
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1642472710"></script>
-    <script src="/js/perfect-scrollbar.min.js?1642472710"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1642472710"></script>
-    <script src="/js/jquery.sticky.js?1642472710"></script>
-    <script src="/js/featherlight.min.js?1642472710"></script>
-    <script src="/js/highlight.pack.js?1642472710"></script>
+    <script src="/js/clipboard.min.js?1642483200"></script>
+    <script src="/js/perfect-scrollbar.min.js?1642483200"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1642483200"></script>
+    <script src="/js/jquery.sticky.js?1642483200"></script>
+    <script src="/js/featherlight.min.js?1642483200"></script>
+    <script src="/js/highlight.pack.js?1642483200"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1642472710"></script>
-    <script src="/js/learn.js?1642472710"></script>
-    <script src="/js/hugo-learn.js?1642472710"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1642483200"></script>
+    <script src="/js/learn.js?1642483200"></script>
+    <script src="/js/hugo-learn.js?1642483200"></script>
 
-    <link href="/mermaid/mermaid.css?1642472710" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1642472710"></script>
+    <link href="/mermaid/mermaid.css?1642483200" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1642483200"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
