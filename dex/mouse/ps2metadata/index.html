@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="generator" content="Hugo 0.58.2" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>Detect the PS2 metadata :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1642145893" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1642145893" rel="stylesheet">
-    <link href="/css/hybrid.css?1642145893" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1642145893" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1642145893" rel="stylesheet">
-    <link href="/css/auto-complete.css?1642145893" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1642145893" rel="stylesheet">
-    <link href="/css/theme.css?1642145893" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1642145893" rel="stylesheet">
+    <link href="/css/nucleus.css?1642468350" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1642468350" rel="stylesheet">
+    <link href="/css/hybrid.css?1642468350" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1642468350" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1642468350" rel="stylesheet">
+    <link href="/css/auto-complete.css?1642468350" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1642468350" rel="stylesheet">
+    <link href="/css/theme.css?1642468350" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1642468350" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1642145893"></script>
+    <script src="/js/jquery-3.3.1.min.js?1642468350"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1642145893"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1642145893"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1642468350"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1642468350"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1642145893"></script>
+<script type="text/javascript" src="/js/search.js?1642468350"></script>
 
     
   </div>
@@ -2026,7 +2026,10 @@
 
 
 
-	<h1 id="how-to-acquit-the-ps2-metadata-for-kb-or-mouse">How to acquit the ps2 metadata for KB or Mouse.</h1>
+	
+
+<h1 id="how-to-acquit-the-ps2-metadata-for-kb-or-mouse">How to acquit the ps2 metadata for KB or Mouse.</h1>
+
 <ul>
 <li><a href="#power-off-both-of-dex-100-and-host-machine">Step1: Power off both Dex-100 &amp; host-machine</a></li>
 <li><a href="#boot-up-the-dex-100-and-run-the-dbgview-as-administrator">Step2: Boot up the Dex-100 and run the Dbgview as administrator </a></li>
@@ -2038,61 +2041,86 @@
 <li><a href="#troubleshooting-for-debugview">Troubleshooting for DebugView</a></li>
 <li><a href="#attachment">DebugView download</a></li>
 </ul>
+
 <h3 id="power-off-both-of-dex-100-and-host-machine">Power off both of Dex-100 and host-machine</h3>
+
 <p>The Dex-100 choices the USB or PS2 protocol by both keyboard and mouse successful connection with host-machine, but the handshake is beginning when power on for PS2 mode.</p>
+
 <h3 id="boot-up-the-dex-100-and-run-the-dbgview-as-administrator">Boot up the Dex-100 and run the Dbgview as administrator</h3>
-<p><img src="/DEX/Mouse/PS2metadata/images/1.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Mouse/PS2metadata/images/1.PNG" alt="Normal machine" /></p>
+
 <h3 id="enable-the-function-to-follow-the-below-image">Enable the function to follow the below image</h3>
-<p><img src="/DEX/Mouse/PS2metadata/images/2.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Mouse/PS2metadata/images/2.PNG" alt="Normal machine" /></p>
+
 <h3 id="dex-100-wiring-usb">DEX-100-wiring-usb</h3>
+
 <p>Setting the diffrent filter-string
 Key-in the different filter-string for collecting the data of the mouse or keyboard and click ok.</p>
+
 <ul>
-<li>
-<p>For log keyboard matamata : KBD</p>
-<p><img src="/DEX/Mouse/PS2metadata/images/3.PNG" alt="Normal machine"></p>
-</li>
-<li>
-<p>For log Mouse matamata : KVM2</p>
-<p><img src="/DEX/Mouse/PS2metadata/images/4.PNG" alt="Normal machine"></p>
-</li>
+<li>For log keyboard matamata : KBD</li>
 </ul>
-<p><img src="/DEX/Mouse/PS2metadata/images/5.PNG" alt="Normal machine">
+
+<p><img src="/DEX/Mouse/PS2metadata/images/3.PNG" alt="Normal machine" />
+- For log Mouse matamata : KVM2</p>
+
+<p><img src="/DEX/Mouse/PS2metadata/images/4.PNG" alt="Normal machine" /></p>
+
+<p><img src="/DEX/Mouse/PS2metadata/images/5.PNG" alt="Normal machine" />
 
 <div class="notices note" ><p>You can click the button and choose each string for collecting the data of the mouse or keyboard.</p>
 </div>
 </p>
+
 <h3 id="power-on-the-host-machine">Power on the host-machine</h3>
+
 <p>Dex-100 choices the PS2 mode when hand-shake is successful both with the PS2 mouse and host-machine after power on the host-machine.</p>
+
 
 <div class="notices note" ><p>Dex-100 has only one rule for choosing PS2 or USB protocol by detecting the ps2 mouse.</p>
 </div>
 
+
 <h3 id="record-the-logs-by-dbgview">Record the logs by Dbgview</h3>
+
 <p>You can see some metadata to show on the Debug Print , if it is successful.</p>
-<p><img src="/DEX/Mouse/PS2metadata/images/6.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Mouse/PS2metadata/images/6.PNG" alt="Normal machine" /></p>
+
 <p>It recordes logs when moving mouse or key-in any keyboard.</p>
-<p><img src="/DEX/Mouse/PS2metadata/images/7.PNG" alt="Normal machine">
+
+<p><img src="/DEX/Mouse/PS2metadata/images/7.PNG" alt="Normal machine" />
 
 <div class="notices note" ><p>Please record both of Bypass mode &amp; control mode.</p>
 </div>
 </p>
+
 <h3 id="save-the-log">Save the log</h3>
+
 <p>Save the log and sent back for Adlink contact window.</p>
-<p><img src="/DEX/Mouse/PS2metadata/images/8.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Mouse/PS2metadata/images/8.PNG" alt="Normal machine" /></p>
+
 <h3 id="troubleshooting-for-debugview">Troubleshooting for DebugView</h3>
+
 <p>Please follow the troubleshooting when you see the warning message</p>
-<p><img src="/DEX/Mouse/PS2metadata/images/9.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Mouse/PS2metadata/images/9.PNG" alt="Normal machine" /></p>
+
 <ol>
 <li>Remove the Dbgv.sys as administrator or renmae it.
-<img src="/DEX/Mouse/PS2metadata/images/10.PNG" alt="Normal machine">
+<img src="/DEX/Mouse/PS2metadata/images/10.PNG" alt="Normal machine" />
 
 <div class="notices note" ><p>Path : C:\Windows\System32\drivers</p>
 </div>
 </li>
 <li>Retry step1 to step7.</li>
 </ol>
+
 <h3 id="attachment">Attachment</h3>
+
 <p><a href="http://ftp.adlinktech.com/image/DEX-100/DebugView_481.zip">DebugView(save as to your computer)</a></p>
 
 
@@ -3331,19 +3359,19 @@ Key-in the different filter-string for collecting the data of the mouse or keybo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1642145894"></script>
-    <script src="/js/perfect-scrollbar.min.js?1642145894"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1642145894"></script>
-    <script src="/js/jquery.sticky.js?1642145894"></script>
-    <script src="/js/featherlight.min.js?1642145894"></script>
-    <script src="/js/highlight.pack.js?1642145894"></script>
+    <script src="/js/clipboard.min.js?1642468350"></script>
+    <script src="/js/perfect-scrollbar.min.js?1642468350"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1642468350"></script>
+    <script src="/js/jquery.sticky.js?1642468350"></script>
+    <script src="/js/featherlight.min.js?1642468350"></script>
+    <script src="/js/highlight.pack.js?1642468350"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1642145894"></script>
-    <script src="/js/learn.js?1642145894"></script>
-    <script src="/js/hugo-learn.js?1642145894"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1642468350"></script>
+    <script src="/js/learn.js?1642468350"></script>
+    <script src="/js/hugo-learn.js?1642468350"></script>
 
-    <link href="/mermaid/mermaid.css?1642145894" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1642145894"></script>
+    <link href="/mermaid/mermaid.css?1642468350" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1642468350"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
