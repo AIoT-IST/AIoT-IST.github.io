@@ -7,11 +7,46 @@
 	"content": "ADLINK IST Connected Factory MCM-204 Discover how to use the MCM-204 and find the releated questions.\n"
 },
 {
+	"uri": "https://aiot-ist.github.io/visioncard/hdv/hdv62/",
+	"title": "PCIe-HDV62/A",
+	"tags": [],
+	"description": "",
+	"content": "ADLINK\u0026rsquo;s HDV62A series high definition video and audio capture cards enable single-card acquisition of full analog/digital video and digital audio signals (PCIe-HDV62A/PXIe-HDV62A only). Featuring uncompressed full HD up to 1080p at 60 fps and 10-bit high-resolution ADC and HDCP support (PCIe-HDV62A/PXIe-HDV62A only), the HDV62A series deliver serious benefits and reduced TCO for applications requiring simultaneous capture from both video and audio sources, such as multimedia device testing and medical imaging\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/visioncard/usb3vision/u300/",
+	"title": "PCIe-U300 Series",
+	"tags": [],
+	"description": "",
+	"content": "ADLINK\u0026rsquo;s PCIe-U300 Series is a PCI Express x4 Gen2 USB3 Vision frame grabber supporting 4/8/12 USB 3.1 Gen 1 ports for multiple USB3 Vision device connections with data transfer up to 5 Gb/s per port.\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/visioncard/usb3vision/",
+	"title": "USB3 Vision",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://aiot-ist.github.io/eos-iseries/",
 	"title": "EOS-iSeries",
 	"tags": [],
 	"description": "",
 	"content": "ADLINK IST Connected Factory EOS-iSeries Discover how to use the EOS-iSeries and find the releated questions.\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/visioncard/gigevision/",
+	"title": "GigE Vision",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://aiot-ist.github.io/visioncard/gigevision/gie7/",
+	"title": "PCIe-GIE7x Series",
+	"tags": [],
+	"description": "",
+	"content": "ADLINK\u0026rsquo;s ADLINK\u0026rsquo;s PCIe-GIE7x series PCI Express® PoE+ frame grabber supports 2/4-CH independent Gigabit Ethernet ports for multiple GigE Vision connections transferring up to 1 Gb/s per port. PoE+ provides up to 30W power and automatic detection for stable, reliable connections, reducing costs, simplifying installation, and easing maintenance burdens.\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/eos-iseries/gettingstart/",
@@ -203,6 +238,13 @@
 	"content": "ADLINK IST Connected Factory Euresys Tutorials about Easy Tool series\n"
 },
 {
+	"uri": "https://aiot-ist.github.io/visioncard/hdv/",
+	"title": "Frame Grabbers Cards",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://aiot-ist.github.io/euresys/easycolor/",
 	"title": "EasyColor",
 	"tags": [],
@@ -299,6 +341,13 @@
 	"tags": [],
 	"description": "",
 	"content": "SDK Internal version : 1.2.6 2021/11/18\nOffical version : V6\n Autoinstall Download   Pls unzip and double-click this .bat file.\n   SDK V6 (Download)\n  Release note\nHow to install SOP\n  1. Uninstall   2. Reboot   3. Install V5   4. Reboot   FW  FW-C5 (Download) FW-C7 (Download)\n   revision_history\nHow to intsll SOP\n Use this tool   C:\\Program Files\\ADLINK\\DEX-100\\utility\\BurnDex100_x64   Check the version that is C5 or C7\n  Upload the right bit\n  Note: The FPGA shall be null when you install the error bit.\n Cold boot    Utility_Manual Utility_Manual_20210426 (Download)\nModules\u0026amp;EdgeServe DEX-100_SW_User_Manual (Download)\nHardware Hardware-Manual(Download)\nCE DEX-100 CE EMC TEST REPORT(Download)\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/visioncard/",
+	"title": "Vision Card",
+	"tags": [],
+	"description": "",
+	"content": "ADLINK IST Connected Factory ADLINK Vision Card Find the releated questions.\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/mcm-204/gettingstart/",
