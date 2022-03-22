@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="generator" content="Hugo 0.58.2" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>How to flash image? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1647499911" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1647499911" rel="stylesheet">
-    <link href="/css/hybrid.css?1647499911" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1647499911" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1647499911" rel="stylesheet">
-    <link href="/css/auto-complete.css?1647499911" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1647499911" rel="stylesheet">
-    <link href="/css/theme.css?1647499911" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1647499911" rel="stylesheet">
+    <link href="/css/nucleus.css?1647920291" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1647920291" rel="stylesheet">
+    <link href="/css/hybrid.css?1647920291" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1647920291" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1647920291" rel="stylesheet">
+    <link href="/css/auto-complete.css?1647920291" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1647920291" rel="stylesheet">
+    <link href="/css/theme.css?1647920291" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1647920291" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1647499911"></script>
+    <script src="/js/jquery-3.3.1.min.js?1647920291"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1647499911"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1647499911"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1647920291"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1647920291"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1647499911"></script>
+<script type="text/javascript" src="/js/search.js?1647920291"></script>
 
     
   </div>
@@ -2237,75 +2237,80 @@
 
 
 
-	<p>It needs to go force recovery mode first before flash image. Here’s the video which guild you how to flash image.</p>
-<h3 id="step-1--download-image-first-from-your-host-pc-with-ubuntu">Step 1:  Download image first from your host pc with Ubuntu</h3>
+	
+
+<p>It needs to go force recovery mode first before flash image. Here’s the video which guild you how to flash image.</p>
+
+<h3 id="step-1-download-image-first-from-your-host-pc-with-ubuntu">Step 1:  Download image first from your host pc with Ubuntu</h3>
+
 <h4 id="download-link">Download link</h4>
+
 <h5 id="neon-2000-jnx">Neon-2000-JNX</h5>
+
 <ul>
-<li>
-<p>eMMC image</p>
+<li><p>eMMC image</p>
+
 <ul>
 <li>Optional if update from v1.0.3 to v1.0.4</li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP45_emmc_v1.0.3.tar.gz">eMMC image</a>   MD5:e603db76e8ab1bbe5596760d40adb90c</li>
-</ul>
-</li>
-<li>
-<p>Jetpack 4.5 v1.0.3</p>
+</ul></li>
+
+<li><p>Jetpack 4.5 v1.0.3</p>
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP45_microSD_v1.0.3.tar.gz">MicroSD image</a>  MD5:243b98f10a873f2830e4f635eab7c80d</li>
-</ul>
-</li>
-<li>
-<p>Jetpack 4.5 v1.0.4 (with EVA 3.5)</p>
+</ul></li>
+
+<li><p>Jetpack 4.5 v1.0.4 (with EVA 3.5)</p>
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP45_microSD_v1.0.4.tar.gz">MicroSD image</a>  MD5:43b5931b625e3b598423e0bb4a131d6e</li>
+</ul></li>
 </ul>
-</li>
-</ul>
+
 <h4 id="check-sum">Check sum</h4>
+
 <ul>
-<li>check md5 check sum to make sure image file is correct
+<li><p>check md5 check sum to make sure image file is correct</p>
+
 <ul>
-<li>Linux
-<ul>
-<li>
-<pre><code>$ md5sum [file]
+<li>Linux</li>
+
+<li><pre><code>$ md5sum [file]
 </code></pre></li>
-<li>
-<pre><code>$ md5sum JNX_JP45_microSD_v1.0.4.tar.gz
+
+<li><pre><code>$ md5sum JNX_JP45_microSD_v1.0.4.tar.gz
 </code></pre></li>
-</ul>
-</li>
-<li>Windows 10
-<ul>
-<li>
-<pre><code>$ certutil -hashfile [file] MD5
+
+<li><p>Windows 10</p></li>
+
+<li><pre><code>$ certutil -hashfile [file] MD5
 </code></pre></li>
-<li>
-<pre><code>$ certutil -hashfile JNX_JP45_microSD_v1.0.4.tar.gz MD5
+
+<li><pre><code>$ certutil -hashfile JNX_JP45_microSD_v1.0.4.tar.gz MD5
 </code></pre></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
+
 <h3 id="step-2-follow-video-and-flash-microsd-card-image">Step 2: Follow video and flash microSD card image</h3>
+
 <ul>
-<li>
-<h4 id="unzip-the-image">unzip the image</h4>
+<li><h4 id="unzip-the-image">unzip the image</h4>
+
 <ul>
-<li>
-<pre><code>$ tar -zxvf JNX_JP45_microSD_v1.0.4.tar.gz
+<li><pre><code>$ tar -zxvf JNX_JP45_microSD_v1.0.4.tar.gz
 </code></pre></li>
-</ul>
-</li>
-<li>Follow the video to flash image
+</ul></li>
+
+<li><p>Follow the video to flash image</p>
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/Flash_Neon_microSD.mp4">Video of flash SOP</a></li>
+</ul></li>
 </ul>
-</li>
-</ul>
+
 <h3 id="step-3-follow-document-and-flash-emmc-image">Step 3: Follow document and flash eMMC image</h3>
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/Flash_Neon_eMMC.pdf">SOP of Flash eMMC</a></li>
 </ul>
@@ -3660,19 +3665,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1647499911"></script>
-    <script src="/js/perfect-scrollbar.min.js?1647499911"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1647499911"></script>
-    <script src="/js/jquery.sticky.js?1647499911"></script>
-    <script src="/js/featherlight.min.js?1647499911"></script>
-    <script src="/js/highlight.pack.js?1647499911"></script>
+    <script src="/js/clipboard.min.js?1647920291"></script>
+    <script src="/js/perfect-scrollbar.min.js?1647920291"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1647920291"></script>
+    <script src="/js/jquery.sticky.js?1647920291"></script>
+    <script src="/js/featherlight.min.js?1647920291"></script>
+    <script src="/js/highlight.pack.js?1647920291"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1647499911"></script>
-    <script src="/js/learn.js?1647499911"></script>
-    <script src="/js/hugo-learn.js?1647499911"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1647920291"></script>
+    <script src="/js/learn.js?1647920291"></script>
+    <script src="/js/hugo-learn.js?1647920291"></script>
 
-    <link href="/mermaid/mermaid.css?1647499911" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1647499911"></script>
+    <link href="/mermaid/mermaid.css?1647920291" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1647920291"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="generator" content="Hugo 0.58.2" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>09-Printscreen :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1647499910" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1647499910" rel="stylesheet">
-    <link href="/css/hybrid.css?1647499910" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1647499910" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1647499910" rel="stylesheet">
-    <link href="/css/auto-complete.css?1647499910" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1647499910" rel="stylesheet">
-    <link href="/css/theme.css?1647499910" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1647499910" rel="stylesheet">
+    <link href="/css/nucleus.css?1647920290" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1647920290" rel="stylesheet">
+    <link href="/css/hybrid.css?1647920290" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1647920290" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1647920290" rel="stylesheet">
+    <link href="/css/auto-complete.css?1647920290" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1647920290" rel="stylesheet">
+    <link href="/css/theme.css?1647920290" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1647920290" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1647499910"></script>
+    <script src="/js/jquery-3.3.1.min.js?1647920290"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1647499910"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1647499910"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1647920290"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1647920290"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1647499910"></script>
+<script type="text/javascript" src="/js/search.js?1647920290"></script>
 
     
   </div>
@@ -2246,45 +2246,70 @@
 
 
 
-	<ul>
+	
+
+<ul>
 <li><a href="#how-to-print-screen">How to Print Screen </a></li>
 <li><a href="#print-screen-for-tracing-with-ocr">Print Screen for tracing with OCR</a></li>
 <li><a href="#how-to-choose-png-or-jpeg-for-storing-image">How to choose PNG or JPEG for storing image</a></li>
 </ul>
+
 <h2 id="how-to-print-screen">How to Print Screen</h2>
+
 <p>Sometimes you need to store the current screen for analysis by another tool without using the OCR.</p>
+
 <h3 id="1-add-one-ocr-of-instruction">1. Add one OCR of instruction</h3>
+
 <p>Please feel free to add a position of OCR (this OCR is meaningless and only for creating instruction) in .blf mode and combine it after saving the Script.</p>
-<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/1.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/1.PNG" alt="Normal machine" /></p>
+
 <h3 id="2-modify-the-get-bmp-rect-array">2. Modify the &ldquo;Get bmp rect array&rdquo;</h3>
+
 <ul>
 <li>Load the .spt of your design before modifying the parameter.</li>
 <li>Select the “Get bmp rect arry” then setting the Q parameter as one and saving the image in the assigned path.</li>
 </ul>
-<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/3.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/3.PNG" alt="Normal machine" /></p>
+
 
 <div class="notices note" ><p>The storing path is in : C:\Users\adlink\Documents\RVM_OCR_IMG</p>
 </div>
 
+
 <h2 id="print-screen-for-tracing-with-ocr">Print Screen for tracing with OCR</h2>
+
 <p>To verify the results of OCR with the current screen, you can refer to the below steps.</p>
+
 <h3 id="1-add-the-ocr-of-instruction">1. Add the OCR of instruction</h3>
+
 <p>This sample has 4 OCR and one instruction of “MSG_SAVE_TABLE_LOG” in .blf mode and combines it after saving the Script.</p>
+
 <blockquote>
 <p>Note: To log the results of OCR in CSV, that needs the “MSG_SAVE_TABLE_LOG.”</p>
 </blockquote>
-<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/4.PNG" alt="Normal machine"></p>
-<h3 id="2-modify-the-get-bmp-rect-array-1">2. Modify the &ldquo;Get bmp rect array&rdquo;</h3>
+
+<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/4.PNG" alt="Normal machine" /></p>
+
+<p>### 2. Modify the &ldquo;Get bmp rect array&rdquo;</p>
+
 <p>Select the “Get bmp rect arry” then setting the Q parameter as one and saving the image in the assigned path.</p>
-<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/6.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/6.PNG" alt="Normal machine" /></p>
+
 
 <div class="notices note" ><p>The storing path is in : C:\Users\adlink\Documents\RVM_OCR_IMG</p>
 </div>
 
+
 <h3 id="sample-sharing">Sample sharing</h3>
+
 <h2 id="how-to-choose-png-or-jpeg-for-storing-image">How to choose PNG or JPEG for storing image</h2>
+
 <p>Mabey, you have different considerations about your tools to choose the saving type of images.</p>
-<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/8.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Dexpro/Instruction/Printscreen/image/8.PNG" alt="Normal machine" /></p>
 
 
 
@@ -3649,19 +3674,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1647499910"></script>
-    <script src="/js/perfect-scrollbar.min.js?1647499910"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1647499910"></script>
-    <script src="/js/jquery.sticky.js?1647499910"></script>
-    <script src="/js/featherlight.min.js?1647499910"></script>
-    <script src="/js/highlight.pack.js?1647499910"></script>
+    <script src="/js/clipboard.min.js?1647920290"></script>
+    <script src="/js/perfect-scrollbar.min.js?1647920290"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1647920290"></script>
+    <script src="/js/jquery.sticky.js?1647920290"></script>
+    <script src="/js/featherlight.min.js?1647920290"></script>
+    <script src="/js/highlight.pack.js?1647920290"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1647499910"></script>
-    <script src="/js/learn.js?1647499910"></script>
-    <script src="/js/hugo-learn.js?1647499910"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1647920290"></script>
+    <script src="/js/learn.js?1647920290"></script>
+    <script src="/js/hugo-learn.js?1647920290"></script>
 
-    <link href="/mermaid/mermaid.css?1647499910" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1647499910"></script>
+    <link href="/mermaid/mermaid.css?1647920290" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1647920290"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
