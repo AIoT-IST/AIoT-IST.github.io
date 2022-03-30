@@ -340,7 +340,7 @@
 	"title": "11-SDK &amp; FW Version &amp; Manual",
 	"tags": [],
 	"description": "",
-	"content": " SDK Internal version : 1.2.6 2021/11/18\nOffical version : V6\n Autoinstall Download   Pls unzip and double-click this .bat file.\n  SDK V6 (Download)\n Release note\n  ### How to install SOP - #### 1. Uninstall - #### 2. Reboot - #### 3. Install V5 - #### 4. Reboot\nFW  FW-C5 (Download) FW-C7 (Download)\n  revision_history  ## How to intsll SOP\n Use this tool C:\\Program Files\\ADLINK\\DEX-100\\utility\\BurnDex100_x64   Check the version that is C5 or C7\n Upload the right bit\n  Note: The FPGA shall be null when you install the error bit.\n  Cold boot  Utility_Manual Utility_Manual_20210426 (Download)\nModules\u0026amp;EdgeServe DEX-100_SW_User_Manual (Download)\nHardware Hardware-Manual(Download)\nCE DEX-100 CE EMC TEST REPORT(Download)\n"
+	"content": " SDK Internal version : 1.2.7 2022/03/28\nOffical version : V7\n SDK V7 (Download)\n Release note\n Autoinstall Download\n   Pls unzip and double-click this .bat file.\n ### How to install SOP - #### 1. Uninstall - #### 2. Reboot - #### 3. Install SDK - #### 4. Reboot\nFW  FW-C5 (Download) FW-C7 (Download)\n  Vision_history  ## How to intsll SOP\n Use this tool C:\\Program Files\\ADLINK\\DEX-100\\utility\\BurnDex100_x64   Check the version that is C5 or C7\n Upload the right bit\n  Note: The FPGA shall be null when you install the error bit.\n  Cold boot  Utility_Manual Utility_Manual_20210426 (Download)\nModules\u0026amp;EdgeServe DEX-100_SW_User_Manual (Download)\nHardware Hardware-Manual(Download)\nCE DEX-100 CE EMC TEST REPORT(Download)\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/visioncard/",
