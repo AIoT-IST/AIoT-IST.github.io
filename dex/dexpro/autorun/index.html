@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="generator" content="Hugo 0.66.0" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>06-Script seetting &amp; AutoRun :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1650359968" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1650359968" rel="stylesheet">
-    <link href="/css/hybrid.css?1650359968" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1650359968" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1650359968" rel="stylesheet">
-    <link href="/css/auto-complete.css?1650359968" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1650359968" rel="stylesheet">
-    <link href="/css/theme.css?1650359968" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1650359968" rel="stylesheet">
+    <link href="/css/nucleus.css?1650424521" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1650424521" rel="stylesheet">
+    <link href="/css/hybrid.css?1650424521" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1650424521" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1650424521" rel="stylesheet">
+    <link href="/css/auto-complete.css?1650424521" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1650424521" rel="stylesheet">
+    <link href="/css/theme.css?1650424521" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1650424521" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1650359968"></script>
+    <script src="/js/jquery-3.3.1.min.js?1650424521"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1650359968"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1650359968"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1650424521"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1650424521"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1650359968"></script>
+<script type="text/javascript" src="/js/search.js?1650424521"></script>
 
     
   </div>
@@ -2032,6 +2032,30 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/eos-jnx/howtobackupbymicrosd/" title="How to backup from microSD card?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/eos-jnx/howtobackupbymicrosd/">
+          How to backup from microSD card?
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -2240,126 +2264,83 @@
 
 
 
-	
-
-<ul>
-<li><a href="#script-setting">&lt;&lt; Script Setting &gt;&gt;</a></li>
+	<ul>
+<li><a href="#script-setting">&laquo; Script Setting &raquo;</a></li>
 <li><a href="#scripts-managment">Scripts Managment</a></li>
 <li><a href="#autorun">AutoRun</a></li>
 </ul>
-
 <h2 id="script-setting">Script Setting</h2>
-
 <ol>
 <li>Time Stop: Wait the time after executing each instruction.</li>
 <li>Spt Step Speed: It is the minimum waiting time between instructions.</li>
 </ol>
-
-<p><img src="/DEX/Dexpro/Autorun/image/0.PNG" alt="Normal machine" /></p>
-
-<h3 id="example-time-stop">Example :  Time Stop</h3>
-
+<p><img src="/DEX/Dexpro/Autorun/image/0.PNG" alt="Normal machine"></p>
+<h3 id="example---time-stop">Example :  Time Stop</h3>
 <p>Use the both setting.</p>
-
-<p><img src="/DEX/Dexpro/Autorun/image/1.PNG" alt="Normal machine" /></p>
-
-<p><img src="/DEX/Dexpro/Autorun/image/2.PNG" alt="Normal machine" /></p>
-
+<p><img src="/DEX/Dexpro/Autorun/image/1.PNG" alt="Normal machine"></p>
+<p><img src="/DEX/Dexpro/Autorun/image/2.PNG" alt="Normal machine"></p>
 <p>Look at the below figure that the second instruction adds 3s than the first instruction.</p>
-
-<p><img src="/DEX/Dexpro/Autorun/image/3.PNG" alt="Normal machine" /></p>
-
+<p><img src="/DEX/Dexpro/Autorun/image/3.PNG" alt="Normal machine"></p>
 <blockquote>
-<p>How to get the 3s ?
-- &ldquo;Time stop&rdquo; is 1000ms
-- &ldquo;Sleep&rdquo; is 3
-- 3s  =  Time stop * Sleep</p>
+<p>How to get the 3s ?</p>
 </blockquote>
-
-<h3 id="example-spt-step-speed">Example : Spt Step Speed</h3>
-
+<ul>
+<li>&ldquo;Time stop&rdquo; is 1000ms</li>
+<li>&ldquo;Sleep&rdquo; is 3</li>
+<li>3s  =  Time stop * Sleep</li>
+</ul>
+<h3 id="example--spt-step-speed">Example : Spt Step Speed</h3>
 <p>Use the setting that the &ldquo;Spt Step Speed&rdquo; is 1000ms.</p>
-
-<p><img src="/DEX/Dexpro/Autorun/image/4.PNG" alt="Normal machine" /></p>
-
+<p><img src="/DEX/Dexpro/Autorun/image/4.PNG" alt="Normal machine"></p>
 <p>Watch that the second instruction is running delay 1s after the first instruction.</p>
-
-<p><img src="/DEX/Dexpro/Autorun/image/5.PNG" alt="Normal machine" /></p>
-
+<p><img src="/DEX/Dexpro/Autorun/image/5.PNG" alt="Normal machine"></p>
 <h2 id="scripts-managment">Scripts Managment</h2>
-
 <p>Provide Multi-Script Management to define the trigger command table.</p>
-
 <p>In other words, You can use RESTFUL or MSMQ to trigger the required script.</p>
-
 <h3 id="open-the-msmq-execute-scripts-management">Open the MSMQ Execute Scripts Management</h3>
-
 <p>Path ==&gt; Tools ==&gt; MSMQ Execute Scripts Management
-<img src="/DEX/Dexpro/Autorun/image/11.PNG" alt="Normal machine" /></p>
-
+<img src="/DEX/Dexpro/Autorun/image/11.PNG" alt="Normal machine"></p>
 <h3 id="1-choose-the-msmq-cmd">1. Choose the MSMQ Cmd</h3>
-
-<p><img src="/DEX/Dexpro/Autorun/image/12.PNG" alt="Normal machine" /></p>
-
+<p><img src="/DEX/Dexpro/Autorun/image/12.PNG" alt="Normal machine"></p>
 <h3 id="2-select-the-scripts-file">2. Select the Scripts file</h3>
-
 <h3 id="3-click-the-change">3. Click the Change.</h3>
-
-<p><img src="/DEX/Dexpro/Autorun/image/14.PNG" alt="Normal machine" /></p>
-
-<h3 id="attachments-msmq-restful-sample">Attachments MSMQ &amp; RESTFUL sample</h3>
-
+<p><img src="/DEX/Dexpro/Autorun/image/14.PNG" alt="Normal machine"></p>
+<h3 id="attachments-msmq--restful-sample">Attachments MSMQ &amp; RESTFUL sample</h3>
 <ul>
 <li>MSMQ C# Sample  <a href="http://ftp.adlinktech.com/image/DEX-100/MSMQ.zip">(Download)</a></li>
 <li>Python Sample
-
 <ol>
 <li>Download(<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>) and install the python</li>
 <li>pip3 install requests</li>
-<li>Run the below sample
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
-#trigger script. Because there are only 10 scripts, Please don&rsquo;t use beyond the tenth group.</li>
-</ol></li>
+<li>Run the below sample</li>
+</ol>
+</li>
 </ul>
-
+<hr>
+<p>#trigger script. Because there are only 10 scripts, Please don&rsquo;t use beyond the tenth group.</p>
 <p>import requests</p>
-
 <p>import json</p>
-
-<p>url3 = &ldquo;<a href="http://127.0.0.1:5555/executescript/2&quot;">http://127.0.0.1:5555/executescript/2&quot;</a></p>
-
+<p>url3 = &ldquo;http://127.0.0.1:5555/executescript/2&rdquo;</p>
 <p>headers = {&lsquo;Content-Type&rsquo;: &lsquo;application/json&rsquo;}</p>
-
 <p>response3 = requests.post(url3,headers=headers)</p>
-
 <p>print(response3.text)</p>
-
-<hr />
-
+<hr>
 <h2 id="autorun">AutoRun</h2>
-
-<p>Run the Background Schedule setting
-&gt; Path : Tool ==&gt; Config ==&gt; Bakground Schedule Setting</p>
-
-<p><img src="/DEX/Dexpro/Autorun/image/6.PNG" alt="Normal machine" /></p>
-
+<p>Run the Background Schedule setting</p>
+<blockquote>
+<p>Path : Tool ==&gt; Config ==&gt; Bakground Schedule Setting</p>
+</blockquote>
+<p><img src="/DEX/Dexpro/Autorun/image/6.PNG" alt="Normal machine"></p>
 <p>Select the &ldquo;Script File&rdquo; that you want to run your design script.</p>
-
 <blockquote>
 <p>Note: Enable the &ldquo;Run script if HID keeps idling over timeout.&rdquo;</p>
 </blockquote>
-
-<p><img src="/DEX/Dexpro/Autorun/image/10.PNG" alt="Normal machine" /></p>
-
+<p><img src="/DEX/Dexpro/Autorun/image/10.PNG" alt="Normal machine"></p>
 <p>You also can click the Start(Auto) without select the &ldquo;.spt&rdquo; again when selected the script file.</p>
-
-<p><img src="/DEX/Dexpro/Autorun/image/9.PNG" alt="Normal machine" /></p>
-
+<p><img src="/DEX/Dexpro/Autorun/image/9.PNG" alt="Normal machine"></p>
 <p>HID idle time: AutoRun the script when both keyboard &amp; mouse are idle over the set time.</p>
-
 <p>Autorun screensaver timeout: The 10 seconds will count down before automatic execution</p>
-
-<p><img src="/DEX/Dexpro/Autorun/image/11.gif" alt="Normal machine" /></p>
+<p><img src="/DEX/Dexpro/Autorun/image/11.gif" alt="Normal machine"></p>
 
 
 
@@ -3627,6 +3608,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -3720,19 +3717,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1650359968"></script>
-    <script src="/js/perfect-scrollbar.min.js?1650359968"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1650359968"></script>
-    <script src="/js/jquery.sticky.js?1650359968"></script>
-    <script src="/js/featherlight.min.js?1650359968"></script>
-    <script src="/js/highlight.pack.js?1650359968"></script>
+    <script src="/js/clipboard.min.js?1650424521"></script>
+    <script src="/js/perfect-scrollbar.min.js?1650424521"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1650424521"></script>
+    <script src="/js/jquery.sticky.js?1650424521"></script>
+    <script src="/js/featherlight.min.js?1650424521"></script>
+    <script src="/js/highlight.pack.js?1650424521"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1650359968"></script>
-    <script src="/js/learn.js?1650359968"></script>
-    <script src="/js/hugo-learn.js?1650359968"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1650424521"></script>
+    <script src="/js/learn.js?1650424521"></script>
+    <script src="/js/hugo-learn.js?1650424521"></script>
 
-    <link href="/mermaid/mermaid.css?1650359968" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1650359968"></script>
+    <link href="/mermaid/mermaid.css?1650424521" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1650424521"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

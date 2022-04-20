@@ -1,0 +1,11 @@
+Please refer to manual and see chapter 2.3  about internal storage installation.
+   image-2022-04-20-10-57-15-032.png
+Refer to SOP video. Take 256Gb m.2 SSD for example.
+
+a. format your storage as ext4
+b. $ sudo rsync -axHAWX --numeric-ids --info=progress2 / /media/adlink/ssd
+c. Modify extlinux.conf in emmc
+     APPEND ${cbootargs} quiet root=/dev/nvme0n1p1 rw rootwait rootfstype=ext4
+d. Reboot
+
+http://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_backup_from_microSD_card.mp4
