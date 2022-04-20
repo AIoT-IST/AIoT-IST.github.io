@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>01-Jump :: Connected Factory</title>
+    <title>How to boot from m.2 SSD? :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1650424962" rel="stylesheet">
@@ -44,7 +44,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/dex/dexpro/instruction/goto/">
+  <body class="" data-url="/eos-jnx/howtobootfromssd/">
     <nav id="sidebar" class="">
 
 
@@ -775,7 +775,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX-100" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1042,7 +1042,7 @@
   
     
     <li data-nav-id="/dex/dexpro/" title="04-Dex-pro" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1165,7 +1165,7 @@
   
     
     <li data-nav-id="/dex/dexpro/instruction/" title="04-Instruction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1192,8 +1192,8 @@
   
     
     <li data-nav-id="/dex/dexpro/instruction/goto/" title="01-Jump" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/dex/dexpro/instruction/goto/">
@@ -1989,7 +1989,7 @@
   
     
     <li data-nav-id="/eos-jnx/" title="EOS-JNX" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2040,8 +2040,8 @@
   
     
     <li data-nav-id="/eos-jnx/howtobootfromssd/" title="How to boot from m.2 SSD?" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/eos-jnx/howtobootfromssd/">
@@ -2230,19 +2230,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX-100</a> > <a href='/dex/dexpro/'>04-Dex-pro</a> > <a href='/dex/dexpro/instruction/'>04-Instruction</a> > 01-Jump
-          
-         
-          
-         
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/eos-jnx/'>EOS-JNX</a> > How to boot from m.2 SSD?
           
          
           
@@ -2260,9 +2248,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              How to boot from m.2 SSD?
+            </h1>
           
 
         
@@ -2270,36 +2261,33 @@
 
 
 
-	<ul>
-<li><a href="#use-goto-fulfill-jump-function">Use GoTo fulfill JUMP function</a></li>
-<li><a href="#use-both-element-of-goto-with-lebel-fulfill-jump-function">Use both element of GoTo with Lebel fulfill JUMP function
-</a></li>
-<li><a href="#use-pageid-fulfill-jump-function">Use PageID fulfill JUMP function</a></li>
-<li><a href="#use-both-element-of-pageid-with-lebel-fulfill-jump-function">Use both element of PageID with Lebel fulfill JUMP function</a></li>
-<li><a href="#use-table-compare-fulfill-jump-function">Use Table Compare fulfill JUMP function</a></li>
-</ul>
-<h2 id="how-to-design-jump-function-by-goto--pageidentify--label--table-compare">How to design &ldquo;Jump function&rdquo; by GOTO &amp; PageIdentify &amp; label &amp; Table compare.</h2>
-<p>There are three function can fulfill JUMP</p>
+	<h2 id="internal-storage-installation">Internal Storage Installation</h2>
+<p>Refer to <a href="http://www.adlinktech.com/Products/Download.ashx?type=MDownload&amp;isManual=yes&amp;file=1966%5cEOS-JNX_50M-00054-1010_11.pdf">manual</a> chapter 2.3 internal storage installation of EOS-JNX.</p>
+<p><img src="/EOS-JNX/howtobootfromSSD/images/1.png" alt="1">
+<img src="/EOS-JNX/howtobootfromSSD/images/2.png" alt="2">
+<img src="/EOS-JNX/howtobootfromSSD/images/3.png" alt="3">
+<img src="/EOS-JNX/howtobootfromSSD/images/4.png" alt="4">
+<img src="/EOS-JNX/howtobootfromSSD/images/5.png" alt="5"></p>
+<h2 id="step-2-clone-emmc-data-to-microsd">Step 2: Clone eMMC data to microSD</h2>
 <ul>
-<li>GOTO : Directly jump to other command line.</li>
-<li>PageID : It is like the pattern match and jump to other command line.</li>
-<li>Compare Table : Compare the OCR Table and jump to other command line.</li>
+<li>
+<p>Refer to SOP <a href="http://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_backup_from_microSD_card.mp4">video</a>. Take 256Gb m.2 SSD for example.</p>
+</li>
+<li>
+<p>format your storage as ext4</p>
+</li>
+<li>
+<p>copy the files</p>
+<pre><code> sudo rsync -axHAWX --numeric-ids --info=progress2 / /media/adlink/ssd
+</code></pre></li>
+<li>
+<p>Modify extlinux.conf in emmc</p>
+<pre><code>APPEND ${cbootargs} quiet root=/dev/nvme0n1p1 rw rootwait rootfstype=ext4
+</code></pre></li>
+<li>
+<p>Reboot</p>
+</li>
 </ul>
-<h2 id="use-goto-fulfill-jump-function">Use GoTo fulfill JUMP function</h2>
-<p>Discription
-<img src="/DEX/Dexpro/Instruction/Goto/Image/1.PNG" alt="Normal machine"></p>
-<h2 id="use-both-element-of-goto-with-lebel-fulfill-jump-function">Use both element of GoTo with Lebel fulfill JUMP function</h2>
-<p>Discription
-<img src="/DEX/Dexpro/Instruction/Goto/Image/2.PNG" alt="Normal machine"></p>
-<h2 id="use-pageid-fulfill-jump-function">Use PageID fulfill JUMP function</h2>
-<p>Discription
-<img src="/DEX/Dexpro/Instruction/Goto/Image/3.PNG" alt="Normal machine"></p>
-<h2 id="use-both-element-of-pageid-with-lebel-fulfill-jump-function">Use both element of PageID with Lebel fulfill JUMP function</h2>
-<p>Discription
-<img src="/DEX/Dexpro/Instruction/Goto/Image/4.PNG" alt="Normal machine"></p>
-<h2 id="use-table-compare-fulfill-jump-function">Use Table Compare fulfill JUMP function</h2>
-<p>Discription
-<img src="/DEX/Dexpro/Instruction/Goto/Image/5.PNG" alt="Normal machine"></p>
 
 
 
@@ -2309,8 +2297,6 @@
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -2761,6 +2747,52 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2777,8 +2809,153 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2842,210 +3019,6 @@
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -3542,6 +3515,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3556,6 +3530,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3573,6 +3550,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3591,6 +3569,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3664,10 +3645,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/dex/dexpro/instruction/" title="04-Instruction"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/eos-jnx/howtoflashimage/" title="How to flash image?"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/dex/dexpro/instruction/mouse/" title="02-Mouse" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/news/" title="News" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

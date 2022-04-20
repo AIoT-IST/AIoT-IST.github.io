@@ -518,11 +518,11 @@
 	"content": "EOS-JNX   eMMC image\n Set EOS-JNX as recovery mode  hold RECOVERY button on front panel push RESET button on front panel release RECOVERY button   flash eMMC image  Download eMMC image jetpack4.6 ,jetpack4.5 Un-archive the EOS-JNX-emmc_vX.Y.tar.gz file   $ sudo tar xvf EOS-JNX-emmc_v3.2.1.tar.gz    Recoery emmc command:   $ sudo ./nvmflash.sh         microSD image\n jetpack4.6 ,jetpack4.5 SOP  Windows  video tool   Linux  video        Check sum Jetpack 4.6\n$ md5sum EOS-JNX-emmc_v3.2.1.tar.gz 23f7aab8984f566ec4d360d71edb3916 EOS-JNX-emmc_v3.2.1.tar.gz $ md5sum EOS-JNX_JP46_microSD_v1.0.1.tar.gz c0d3c72af213fa617f565aca137a874e EOS-JNX_JP46_microSD_v1.0.1.tar.gz  check md5 check sum to make sure image file is correct  Linux   $ md5sum [file]   $ md5sum files.tar.gz    Windows 10   $ certutil -hashfile [file] MD5   $ certutil -hashfile files.tar.gz MD5       "
 },
 {
-	"uri": "https://aiot-ist.github.io/eos-jnx/howtobackupbymicrosd/",
-	"title": "How to backup from microSD card?",
+	"uri": "https://aiot-ist.github.io/eos-jnx/howtobootfromssd/",
+	"title": "How to boot from m.2 SSD?",
 	"tags": [],
 	"description": "",
-	"content": " Internal Storage Installation Format Storage Device [Backup from microSD card](#backup-from -microsd-card)  U-Boot boots up the kernel by /boot/extlinux/extlinux.conf in the sequence of bootable device. That is to say, if\nInternal Storage Installation Refer to manual chapter 2.3 internal storage installation of EOS-JNX.\nStep 2: Clone eMMC data to microSD   Refer to SOP video. Take 256Gb m.2 SSD for example.\n  format your storage as ext4\n  copy the files\n sudo rsync -axHAWX --numeric-ids --info=progress2 / /media/adlink/ssd   Modify extlinux.conf in emmc\nAPPEND ${cbootargs} quiet root=/dev/nvme0n1p1 rw rootwait rootfstype=ext4   Reboot\n  "
+	"content": "Internal Storage Installation Refer to manual chapter 2.3 internal storage installation of EOS-JNX.\nStep 2: Clone eMMC data to microSD   Refer to SOP video. Take 256Gb m.2 SSD for example.\n  format your storage as ext4\n  copy the files\n sudo rsync -axHAWX --numeric-ids --info=progress2 / /media/adlink/ssd   Modify extlinux.conf in emmc\nAPPEND ${cbootargs} quiet root=/dev/nvme0n1p1 rw rootwait rootfstype=ext4   Reboot\n  "
 },
 {
 	"uri": "https://aiot-ist.github.io/news/",
