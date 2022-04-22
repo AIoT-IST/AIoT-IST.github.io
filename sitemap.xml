@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -127,11 +127,19 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/euresys-grab-card/coaxlink-quad/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/mouse/ps2metadata/</loc>
   </url>
   
   <url>
     <loc>https://aiot-ist.github.io/dex/mouse/disablemouseaccelerator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/euresys-grab-card/</loc>
   </url>
   
   <url>
@@ -296,10 +304,6 @@
   
   <url>
     <loc>https://aiot-ist.github.io/eos-jnx/howtoflashimage/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/eos-jnx/howtobootfromssd/</loc>
   </url>
   
   <url>
