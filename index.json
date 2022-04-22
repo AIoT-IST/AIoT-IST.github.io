@@ -238,18 +238,18 @@
 	"content": " How to turn off the Mouse accelerator?  Step0: Disable Mouse accelerator by UI  Step1: Run the Registry Editor Step2: Change the Mouse speed setting  How to turn off the Mouse accelerator for Linux ?  Disable the mouse acceleartor in Terminal  Disable Mouse accelerator by UI in local machine Wake up the Mouse Properties and disable the \u0026ldquo;Enhance pointer precision\u0026rdquo; in the local machine\nPath:Control Panel\\All Control Panel Items\\Mouse\n Please follow the next step if you can\u0026rsquo;t find the UI of Mouse properties.\nRun the registry editor in local machine Using the hot-ky \u0026ldquo;Win+R\u0026rdquo;\nWake up the Registry Editor\nChange the mouse speed setting in local machine Edite the Mouse speed setting from 1 to 0. Define 1 = Enable 0 = Disabl\nPath:HKEY_CURRENT_USER\\Control Panel\\Mouse\\MouseSpeed\n Disable the mouse acceleration by command line in terminal for Linux  Step 1 : Call the Terminal by the hotkey \u0026ldquo;Alt + Ctrl + T\u0026rdquo;.\n Step 2 : Key-in the command line \u0026ldquo;xset m 1 1\u0026rdquo;  Sometimes your terminal is not the admin, maybe you can change the command line, \u0026ldquo;Sudo xset m 1 1\u0026rdquo; , if you know the admin\u0026rsquo;s password.\n "
 },
 {
+	"uri": "https://aiot-ist.github.io/euresys/",
+	"title": "Euresys",
+	"tags": [],
+	"description": "",
+	"content": " ADLINK IST Connected Factory Euresys Tutorials about Easy Tool series\n"
+},
+{
 	"uri": "https://aiot-ist.github.io/euresys-grab-card/",
 	"title": "Euresys Grab card",
 	"tags": [],
 	"description": "",
 	"content": " ADLINK IST Connected Factory Euresys Grab Card Tutorials about the Grablink for Cameralink\nTutorials about the Coaxlink for CoaXPress\n"
-},
-{
-	"uri": "https://aiot-ist.github.io/euresys/",
-	"title": "Euresys Open Evision",
-	"tags": [],
-	"description": "",
-	"content": " ADLINK IST Connected Factory Euresys Tutorials about Easy Tool series\n"
 },
 {
 	"uri": "https://aiot-ist.github.io/visioncard/hdv/",
@@ -529,7 +529,14 @@
 	"title": "How to flash image?",
 	"tags": [],
 	"description": "",
-	"content": " EOS-JNX  eMMC image\n Set EOS-JNX as recovery mode hold RECOVERY button on front panel push RESET button on front panel release RECOVERY button flash eMMC image Download eMMC image jetpack4.6 ,jetpack4.5 Un-archive the EOS-JNX-emmc_vX.Y.tar.gz file\n $ sudo tar xvf EOS-JNX-emmc_v3.2.1.tar.gz  Recoery emmc command:\n $ sudo ./nvmflash.sh    microSD image\n jetpack4.6 ,jetpack4.5 SOP Windows  video tool  Linux  video    Check sum Jetpack 4.6\n$ md5sum EOS-JNX-emmc_v3.2.1.tar.gz 23f7aab8984f566ec4d360d71edb3916 EOS-JNX-emmc_v3.2.1.tar.gz $ md5sum EOS-JNX_JP46_microSD_v1.0.1.tar.gz c0d3c72af213fa617f565aca137a874e EOS-JNX_JP46_microSD_v1.0.1.tar.gz   check md5 check sum to make sure image file is correct\n Linux $ md5sum [file]  $ md5sum files.tar.gz  Windows 10\n $ certutil -hashfile [file] MD5  $ certutil -hashfile files.tar.gz MD5    "
+	"content": " EOS-JNX  eMMC image\n Set EOS-JNX as recovery mode hold RECOVERY button on front panel push RESET button on front panel release RECOVERY button flash eMMC image Download eMMC image\n jetpack4.6 jetpack4.5  Un-archive the EOS-JNX-emmc_vX.Y.tar.gz file\n $ sudo tar xvf EOS-JNX-emmc_v3.2.1.tar.gz  Recoery emmc command:\n $ sudo ./nvmflash.sh    microSD image\n jetpack4.6 ,jetpack4.5 SOP Windows  video tool  Linux  video    Check sum Jetpack 4.6\n$ md5sum EOS-JNX-emmc_v3.2.1.tar.gz 23f7aab8984f566ec4d360d71edb3916 EOS-JNX-emmc_v3.2.1.tar.gz $ md5sum EOS-JNX_JP46_microSD_v1.0.1.tar.gz c0d3c72af213fa617f565aca137a874e EOS-JNX_JP46_microSD_v1.0.1.tar.gz   check md5 check sum to make sure image file is correct\n Linux $ md5sum [file]  $ md5sum files.tar.gz  Windows 10\n $ certutil -hashfile [file] MD5  $ certutil -hashfile files.tar.gz MD5    "
+},
+{
+	"uri": "https://aiot-ist.github.io/eos-jnx/howtobootfromssd/",
+	"title": "How to boot from m.2 SSD?",
+	"tags": [],
+	"description": "",
+	"content": "  Internal Storage Installation Clone sd card data to m2 SSD  Internal Storage Installation Refer to manual chapter 2.3 internal storage installation of EOS-JNX.\nClone sd card data to m.2 SSD  Refer to SOP video. Take 256Gb m.2 SSD for example.\n format your storage as ext4\n copy the files\nsudo rsync -axHAWX --numeric-ids --info=progress2 / /media/adlink/ssd  Modify /boot/extlinux/extlinux.conf in emmc, emmc, emmc !!!\nAPPEND ${cbootargs} quiet root=/dev/nvme0n1p1 rw rootwait rootfstype=ext4  Reboot\n  "
 },
 {
 	"uri": "https://aiot-ist.github.io/news/",

@@ -139,11 +139,11 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/euresys-grab-card/</loc>
+    <loc>https://aiot-ist.github.io/euresys/</loc>
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/euresys/</loc>
+    <loc>https://aiot-ist.github.io/euresys-grab-card/</loc>
   </url>
   
   <url>
@@ -304,6 +304,10 @@
   
   <url>
     <loc>https://aiot-ist.github.io/eos-jnx/howtoflashimage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/eos-jnx/howtobootfromssd/</loc>
   </url>
   
   <url>
