@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="generator" content="Hugo 0.66.0" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>How to flash image? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1652058772" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1652058772" rel="stylesheet">
-    <link href="/css/hybrid.css?1652058772" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1652058772" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1652058772" rel="stylesheet">
-    <link href="/css/auto-complete.css?1652058772" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1652058772" rel="stylesheet">
-    <link href="/css/theme.css?1652058772" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1652058772" rel="stylesheet">
+    <link href="/css/nucleus.css?1652087777" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1652087777" rel="stylesheet">
+    <link href="/css/hybrid.css?1652087777" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1652087777" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1652087777" rel="stylesheet">
+    <link href="/css/auto-complete.css?1652087777" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1652087777" rel="stylesheet">
+    <link href="/css/theme.css?1652087777" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1652087777" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1652058772"></script>
+    <script src="/js/jquery-3.3.1.min.js?1652087777"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1652058772"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1652058772"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1652087777"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1652087777"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1652058772"></script>
+<script type="text/javascript" src="/js/search.js?1652087777"></script>
 
     
   </div>
@@ -2377,90 +2377,101 @@
 
 
 
-	
-
-<h2 id="eos-jnx">EOS-JNX</h2>
-
+	<h2 id="eos-jnx">EOS-JNX</h2>
 <ul>
-<li><p>eMMC image</p>
-
+<li>
+<p>eMMC image</p>
 <ul>
-<li>Set EOS-JNX as recovery mode</li>
+<li>Set EOS-JNX as recovery mode
+<ul>
 <li>hold <em>RECOVERY</em> button on front panel</li>
 <li>push <em>RESET</em> button on front panel</li>
 <li>release <em>RECOVERY</em> button</li>
-<li>flash eMMC image</li>
-
-<li><p>Download eMMC image</p>
-
+</ul>
+</li>
+<li>flash eMMC image
+<ul>
+<li>
+<p>Download eMMC image</p>
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX-emmc_v3.2.1.tar.gz">jetpack4.6</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX-emmc_v1.2.tar.gz">jetpack4.5</a></li>
-</ul></li>
-
-<li><p>Un-archive the EOS-JNX-emmc_vX.Y.tar.gz file</p>
-
+</ul>
+</li>
+<li>
+<p>Un-archive the EOS-JNX-emmc_vX.Y.tar.gz file</p>
 <ul>
-<li><pre><code>$ sudo tar xvf EOS-JNX-emmc_v3.2.1.tar.gz
+<li>
+<pre><code>$ sudo tar xvf EOS-JNX-emmc_v3.2.1.tar.gz
 </code></pre></li>
-
-<li><p>Recoery emmc command:</p></li>
-
-<li><pre><code>$ sudo ./nvmflash.sh
+</ul>
+</li>
+<li>
+<p>Recoery emmc command:</p>
+<ul>
+<li>
+<pre><code>$ sudo ./nvmflash.sh
 </code></pre></li>
-</ul></li>
-</ul></li>
-
-<li><p>microSD image</p>
-
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>microSD image</p>
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP46_microSD_v1.0.1.tar.gz">jetpack4.6</a>  ,<a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP45_microSD_v1.0.0.zip">jetpack4.5</a></li>
-<li>SOP</li>
+<li>SOP
+<ul>
 <li>Windows
-
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/Flash_microSD_image_on_Windows.mp4">video</a></li>
 <li><a href="https://sourceforge.net/projects/win32diskimager/">tool</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Linux
-
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/Flash_microSD_image_on_Linux.mp4">video</a></li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h5 id="check-sum">Check sum</h5>
-
 <p>Jetpack 4.6</p>
-
 <pre><code>$ md5sum EOS-JNX-emmc_v3.2.1.tar.gz 
 23f7aab8984f566ec4d360d71edb3916  EOS-JNX-emmc_v3.2.1.tar.gz
 
 $ md5sum EOS-JNX_JP46_microSD_v1.0.1.tar.gz 
 c0d3c72af213fa617f565aca137a874e  EOS-JNX_JP46_microSD_v1.0.1.tar.gz
-</code></pre>
-
+</code></pre><ul>
+<li>check md5 check sum to make sure image file is correct
 <ul>
-<li><p>check md5 check sum to make sure image file is correct</p>
-
+<li>Linux
 <ul>
-<li>Linux</li>
-
-<li><pre><code>$ md5sum [file]
+<li>
+<pre><code>$ md5sum [file]
 </code></pre></li>
-
-<li><pre><code>$ md5sum files.tar.gz
+<li>
+<pre><code>$ md5sum files.tar.gz
 </code></pre></li>
-
-<li><p>Windows 10</p></li>
-
-<li><pre><code>$ certutil -hashfile [file] MD5
+</ul>
+</li>
+<li>Windows 10
+<ul>
+<li>
+<pre><code>$ certutil -hashfile [file] MD5
 </code></pre></li>
-
-<li><pre><code>$ certutil -hashfile files.tar.gz MD5
+<li>
+<pre><code>$ certutil -hashfile files.tar.gz MD5
 </code></pre></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 
@@ -3897,19 +3908,19 @@ c0d3c72af213fa617f565aca137a874e  EOS-JNX_JP46_microSD_v1.0.1.tar.gz
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1652058772"></script>
-    <script src="/js/perfect-scrollbar.min.js?1652058772"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1652058772"></script>
-    <script src="/js/jquery.sticky.js?1652058772"></script>
-    <script src="/js/featherlight.min.js?1652058772"></script>
-    <script src="/js/highlight.pack.js?1652058772"></script>
+    <script src="/js/clipboard.min.js?1652087777"></script>
+    <script src="/js/perfect-scrollbar.min.js?1652087777"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1652087777"></script>
+    <script src="/js/jquery.sticky.js?1652087777"></script>
+    <script src="/js/featherlight.min.js?1652087777"></script>
+    <script src="/js/highlight.pack.js?1652087777"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1652058772"></script>
-    <script src="/js/learn.js?1652058772"></script>
-    <script src="/js/hugo-learn.js?1652058772"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1652087777"></script>
+    <script src="/js/learn.js?1652087777"></script>
+    <script src="/js/hugo-learn.js?1652087777"></script>
 
-    <link href="/mermaid/mermaid.css?1652058772" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1652058772"></script>
+    <link href="/mermaid/mermaid.css?1652087777" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1652087777"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
