@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="generator" content="Hugo 0.58.2" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>07-Restful :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1652414777" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1652414777" rel="stylesheet">
-    <link href="/css/hybrid.css?1652414777" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1652414777" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1652414777" rel="stylesheet">
-    <link href="/css/auto-complete.css?1652414777" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1652414777" rel="stylesheet">
-    <link href="/css/theme.css?1652414777" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1652414777" rel="stylesheet">
+    <link href="/css/nucleus.css?1652431675" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1652431675" rel="stylesheet">
+    <link href="/css/hybrid.css?1652431675" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1652431675" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1652431675" rel="stylesheet">
+    <link href="/css/auto-complete.css?1652431675" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1652431675" rel="stylesheet">
+    <link href="/css/theme.css?1652431675" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1652431675" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1652414777"></script>
+    <script src="/js/jquery-3.3.1.min.js?1652431675"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1652414777"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1652414777"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1652431675"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1652431675"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1652414777"></script>
+<script type="text/javascript" src="/js/search.js?1652431675"></script>
 
     
   </div>
@@ -1637,6 +1637,30 @@
  
   
     
+    <li data-nav-id="/dex_kvm/datasheet/" title="00-Datasheet" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex_kvm/datasheet/">
+          00-Datasheet
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
     <li data-nav-id="/dex_kvm/unboxing/" title="01-Unboxing the KVM" class="dd-item 
         
         
@@ -2386,140 +2410,186 @@
 
 
 
-	<ul>
+	
+
+<ul>
 <li><a href="#how-to-add-the-instruction-for-restful-api">How to add the instruction for RESTFUL API</a></li>
 <li><a href="#upload-all-items-once">Upload all items once</a></li>
 <li><a href="#upload-one-by-one">Uplaod one by one</a></li>
 <li><a href="#restful-function-list">RESTFUL function list</a></li>
 <li><a href="#restful-sample-code-postman-application">RESTFUL sample code and Postman application</a></li>
 </ul>
+
 <h2 id="how-to-add-the-instruction-for-restful-api">How to add the instruction for RESTFUL API</h2>
+
 <h3 id="sop">Sop</h3>
+
 <h4 id="0-please-enable-the-ocr-table">0. Please enable the OCR Table</h4>
+
 <p>you can refer the
 <a href="https://aiot-ist.github.io/dex/dexpro/instruction/ocrandlog/#how-to-save-the-roi-result-in-csv">Enable the sharing OCR Table items</a>,if you don&rsquo;t how to set.
-<img src="/DEX/Dexpro/Instruction/Restful/image/2.PNG" alt="Normal machine"></p>
+ <img src="/DEX/Dexpro/Instruction/Restful/image/2.PNG" alt="Normal machine" /></p>
+
 <h4 id="1-add-the-script">1. Add the script</h4>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/0.PNG" alt="Normal machine"></p>
-<h4 id="2-select-the-msg_save_table_to_log">2. Select the MSG_SAVE_TABLE_TO_LOG</h4>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/1.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/0.PNG" alt="Normal machine" /></p>
+
+<h4 id="2-select-the-msg-save-table-to-log">2. Select the MSG_SAVE_TABLE_TO_LOG</h4>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/1.PNG" alt="Normal machine" /></p>
+
 <h3 id="upload-all-items-once">Upload all items once</h3>
+
 <ul>
 <li>Q : 0,Upload all once through RESTFUL(Submachinestatus)</li>
-<li>X : 0,Save all items</li>
+<li>X : 0,Save all items
+&gt; - Text : Bypass the parameter when X is 0 and recode the ROI Table referring to the items of True status</li>
 </ul>
-<blockquote>
-<ul>
-<li>Text : Bypass the parameter when X is 0 and recode the ROI Table referring to the items of True status</li>
-</ul>
-</blockquote>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/3.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/3.PNG" alt="Normal machine" /></p>
+
 <p>Get the all items by Submachinestatus of RESTFUL API.</p>
+
 <blockquote>
 <ul>
 <li>The items auto upload once based on your design OCR amount when executing this instruciton.</li>
 </ul>
 </blockquote>
+
 <p>There are 5 ROI case.</p>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/5.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/5.PNG" alt="Normal machine" /></p>
+
 <p>There are 9 ROI case</p>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/4.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/4.PNG" alt="Normal machine" /></p>
+
 <h3 id="upload-one-by-one">Upload one by one</h3>
+
 <ul>
 <li>Q : 1,Upload one bye one through RESTFUL</li>
 <li>X : 1,Save selected items</li>
-<li>Text : 1~4;7</li>
+<li>Text : 1~4;7
+&gt; - (This case is only allowed those 1 to 4 and 7 of OCR table Set or Get by RESTFUL API.)</li>
 </ul>
-<blockquote>
-<ul>
-<li>(This case is only allowed those 1 to 4 and 7 of OCR table Set or Get by RESTFUL API.)</li>
-</ul>
-</blockquote>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/7.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/7.PNG" alt="Normal machine" /></p>
+
 <p>You can see the relationship in the below image.</p>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/8.PNG" alt="Normal machine"></p>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/8.PNG" alt="Normal machine" /></p>
+
 <h3 id="what-is-one-by-one">What is one by one</h3>
+
 <p>The RESTFUL&rsquo;s Get function can get one data once for you select OCR table items and without parsing anything metadata.</p>
+
 <p>The RESTFUL&rsquo;s Set function can set one data to OCR table for handshaking with other app.</p>
 
+
 <div class="notices note" ><p>1.Set the data to OCR table by anytime.</p>
+
 <p>2.Get the current data from OCR table after executing this command.</p>
+
 <p>3.It wait more time by more you select OCR items.</p>
 </div>
 
+
 <h3 id="restful-function-list">RESTFUL function list</h3>
+
 <p>They support two format both XML and Json.
 <a href="https://sftp.adlinktech.com/image/DEX-100/DEX-100_SW_User_Manual_Modules&amp;EdgeServer_V1.1_20200907.pdf">Doc</a></p>
+
 <blockquote>
 <p>The port is 5555 for RESTFUL. (Exapmle for local : 127.0.0.1:5555)</p>
 </blockquote>
+
 <h4 id="1-submachinestatuse">1. SubmachineStatuse</h4>
+
 <ul>
 <li>You can get all the OCR tables that you design for sharing,but mabye you shall analyze it by yourself.</li>
 </ul>
+
 <h4 id="2-get">2. Get</h4>
+
 <ul>
 <li>You can get one metadata from OCR Table that you design for sharing.</li>
 <li>Those OCR TABLE are update after executing this MSG_SAVE_TABLE_TO_LOG instrution.</li>
 </ul>
 
+
 <div class="notices note" ><p>The 0 in the OCR table cannot be obtained</p>
 </div>
 
+
 <h4 id="3-set">3. Set</h4>
+
 <ul>
 <li>You can set any data to OCR Table.</li>
 </ul>
+
 <h4 id="4-executescript">4. Executescript</h4>
+
 <ul>
 <li>It can trigg the script that you want to autorun.</li>
 </ul>
+
 <h4 id="5-stopscript">5. Stopscript</h4>
+
 <ul>
 <li>It can stop the current script.</li>
 </ul>
+
 <h3 id="restful-sample-code-and-postman-applictation">RESTFUL Sample code and Postman applictation</h3>
+
 <ol>
-<li>
-<p><a href="https://sftp.adlinktech.com/image/DEX-100/REST-Full.zip">C# sample</a></p>
-</li>
-<li>
-<p><a href="https://sftp.adlinktech.com/image/DEX-100/RestfulAPIfordex100.zip">Python sample</a></p>
-</li>
-<li>
-<p>Postman Application</p>
-<h3 id="31-submachinestatuse">3.1 SubmachineStatuse</h3>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/11.PNG" alt="Normal machine"></p>
+<li><a href="https://sftp.adlinktech.com/image/DEX-100/REST-Full.zip">C# sample</a></li>
+<li><a href="https://sftp.adlinktech.com/image/DEX-100/RestfulAPIfordex100.zip">Python sample</a></li>
+
+<li><p>Postman Application</p>
+
+<h3 id="3-1-submachinestatuse">3.1 SubmachineStatuse</h3>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/11.PNG" alt="Normal machine" /></p>
+
 <blockquote>
-<p>For Command content: <a href="http://x.x.x.x">http://x.x.x.x</a>:5555/submachinestatus  (exchange the ip by yourself)</p>
-</blockquote>
-<blockquote>
+<p>For Command content: <a href="http://x.x.x.x:5555/submachinestatus">http://x.x.x.x:5555/submachinestatus</a>  (exchange the ip by yourself)</p>
+
 <p>For Body content:  {&ldquo;DES&rdquo;:{&ldquo;MachineStatus&rdquo;: {&ldquo;SubDataType&rdquo;: &ldquo;RAW_DATA&rdquo;}}}</p>
 </blockquote>
-<h3 id="32-set-value">3.2 Set value</h3>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/12.PNG" alt="Normal machine"></p>
+
+<h3 id="3-2-set-value">3.2 Set value</h3>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/12.PNG" alt="Normal machine" /></p>
+
 <blockquote>
-<p>For Command content: <a href="http://x.x.x.x">http://x.x.x.x</a>:5555/setocrdata (exchange the ip by yourself )</p>
-</blockquote>
-<blockquote>
+<p>For Command content: <a href="http://x.x.x.x:5555/setocrdata">http://x.x.x.x:5555/setocrdata</a> (exchange the ip by yourself )</p>
+
 <p>For Body content : OCRID : 22 (OCR Table 22),OCRValue : 7878</p>
 </blockquote>
-<h3 id="33-get-value">3.3 Get value</h3>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/13.PNG" alt="Normal machine"></p>
+
+<h3 id="3-3-get-value">3.3 Get value</h3>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/13.PNG" alt="Normal machine" /></p>
+
 <blockquote>
-<p>For Command content: <a href="http://x.x.x.x">http://x.x.x.x</a>:5555/getocrdata/3 (exchange the ip and 3 ,it is ocr table address, by yourself )</p>
+<p>For Command content: <a href="http://x.x.x.x:5555/getocrdata/3">http://x.x.x.x:5555/getocrdata/3</a> (exchange the ip and 3 ,it is ocr table address, by yourself )</p>
 </blockquote>
-<h3 id="34-executescript">3.4 Executescript</h3>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/14.PNG" alt="Normal machine"></p>
+
+<h3 id="3-4-executescript">3.4 Executescript</h3>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/14.PNG" alt="Normal machine" /></p>
+
 <blockquote>
-<p>For Command content: <a href="http://x.x.x.x">http://x.x.x.x</a>:5555/executescript/1 (exchange the ip and 1 ,MSMQ cmd number, by yourself )</p>
+<p>For Command content: <a href="http://x.x.x.x:5555/executescript/1">http://x.x.x.x:5555/executescript/1</a> (exchange the ip and 1 ,MSMQ cmd number, by yourself )</p>
 </blockquote>
-<h3 id="35-stopscript">3.5 Stopscript</h3>
-<p><img src="/DEX/Dexpro/Instruction/Restful/image/15.PNG" alt="Normal machine"></p>
+
+<h3 id="3-5-stopscript">3.5 Stopscript</h3>
+
+<p><img src="/DEX/Dexpro/Instruction/Restful/image/15.PNG" alt="Normal machine" /></p>
+
 <blockquote>
-<p>For Command content: <a href="http://x.x.x.x">http://x.x.x.x</a>:5555/stopscript (exchange the ip by yourself )</p>
-</blockquote>
-</li>
+<p>For Command content: <a href="http://x.x.x.x:5555/stopscript">http://x.x.x.x:5555/stopscript</a> (exchange the ip by yourself )</p>
+</blockquote></li>
 </ol>
 
 
@@ -3548,6 +3618,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -3969,19 +4055,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1652414777"></script>
-    <script src="/js/perfect-scrollbar.min.js?1652414777"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1652414777"></script>
-    <script src="/js/jquery.sticky.js?1652414777"></script>
-    <script src="/js/featherlight.min.js?1652414777"></script>
-    <script src="/js/highlight.pack.js?1652414777"></script>
+    <script src="/js/clipboard.min.js?1652431675"></script>
+    <script src="/js/perfect-scrollbar.min.js?1652431675"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1652431675"></script>
+    <script src="/js/jquery.sticky.js?1652431675"></script>
+    <script src="/js/featherlight.min.js?1652431675"></script>
+    <script src="/js/highlight.pack.js?1652431675"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1652414777"></script>
-    <script src="/js/learn.js?1652414777"></script>
-    <script src="/js/hugo-learn.js?1652414777"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1652431675"></script>
+    <script src="/js/learn.js?1652431675"></script>
+    <script src="/js/hugo-learn.js?1652431675"></script>
 
-    <link href="/mermaid/mermaid.css?1652414777" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1652414777"></script>
+    <link href="/mermaid/mermaid.css?1652431675" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1652431675"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
