@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="generator" content="Hugo 0.66.0" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>Getting start :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1652431675" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1652431675" rel="stylesheet">
-    <link href="/css/hybrid.css?1652431675" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1652431675" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1652431675" rel="stylesheet">
-    <link href="/css/auto-complete.css?1652431675" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1652431675" rel="stylesheet">
-    <link href="/css/theme.css?1652431675" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1652431675" rel="stylesheet">
+    <link href="/css/nucleus.css?1652672787" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1652672787" rel="stylesheet">
+    <link href="/css/hybrid.css?1652672787" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1652672787" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1652672787" rel="stylesheet">
+    <link href="/css/auto-complete.css?1652672787" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1652672787" rel="stylesheet">
+    <link href="/css/theme.css?1652672787" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1652672787" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1652431675"></script>
+    <script src="/js/jquery-3.3.1.min.js?1652672787"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1652431675"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1652431675"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1652672787"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1652672787"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1652431675"></script>
+<script type="text/javascript" src="/js/search.js?1652672787"></script>
 
     
   </div>
@@ -2401,85 +2401,76 @@
 
 
 
-	
-
-<p>This tutorial will guide you how to getting start with Neon-iSeries from un-boxing.</p>
-
+	<p>This tutorial will guide you how to getting start with Neon-iSeries from un-boxing.</p>
 <ul>
 <li><a href="#hardware-wiring">Hardware wiring</a></li>
 <li><a href="#inference-by-neon">Inference by NEON</a></li>
 <li><a href="#run-dio-sample">Run DI/O Sample</a></li>
 </ul>
-
 <h2 id="hardware-wiring">Hardware wiring</h2>
-
 <p>The NEON-2000-JT2 DC power source can be either from a USB Type-C adaptor or DC jack. The USB Type-C connector also supports a DisplayPort video signal and USB3, which can be used to
-connect a keyboard and mouse. The following figures show examples of possible power and peripheral connection configurations.
-- Separate Power and Peripheral Connections
-  - This configuration requires an ADLINK AC/DC power adapter (P/N 31-62156-1000-A0).
-  <img src="/NEON-2000-JT2/GettingStart/images/Neon-i1000_Hardware_wiring_3.JPG" alt="Separate Power and Peripheral Connections" />
-- Combined Power and Peripheral Connections
-  - This configuration requires an ADLINK USB Type-C hub/adapter (P/N 92-99090-1010).
-  <img src="/NEON-2000-JT2/GettingStart/images/Neon-i1000_Hardware_wiring_4.JPG" alt="Separate Power and Peripheral Connections" />
-  <img src="/NEON-2000-JT2/GettingStart/images/Neon-i1000_Hardware_wiring_1.JPG" alt="Separate Power and Peripheral Connections" /></p>
-
+connect a keyboard and mouse. The following figures show examples of possible power and peripheral connection configurations.</p>
+<ul>
+<li>Separate Power and Peripheral Connections
+<ul>
+<li>This configuration requires an ADLINK AC/DC power adapter (P/N 31-62156-1000-A0).
+<img src="/NEON-2000-JT2/GettingStart/images/Neon-i1000_Hardware_wiring_3.JPG" alt="Separate Power and Peripheral Connections"></li>
+</ul>
+</li>
+<li>Combined Power and Peripheral Connections
+<ul>
+<li>This configuration requires an ADLINK USB Type-C hub/adapter (P/N 92-99090-1010).
+<img src="/NEON-2000-JT2/GettingStart/images/Neon-i1000_Hardware_wiring_4.JPG" alt="Separate Power and Peripheral Connections">
+<img src="/NEON-2000-JT2/GettingStart/images/Neon-i1000_Hardware_wiring_1.JPG" alt="Separate Power and Peripheral Connections"></li>
+</ul>
+</li>
+</ul>
 <h2 id="inference-by-neon">Inference by NEON</h2>
-
-<p>The inference sample, <strong><em>Capture_and_inference_Sample</em></strong>, is built on the Desktop of NEON-2000-JT2.</p>
-
+<p>The inference sample, <em><strong>Capture_and_inference_Sample</strong></em>, is built on the Desktop of NEON-2000-JT2.</p>
 <ul>
-<li><p>inference by image</p>
-
+<li>
+<p>inference by image</p>
 <ul>
-<li><p>./imagenet-console [input_image][output_image]</p>
-
+<li>./imagenet-console [input_image][output_image]</li>
+</ul>
 <pre><code>cd ~/Desktop/Capture_and_Inference_Sample/build/aarch64/bin
 ./imagenet-console ./aarch64/bin/jellyfish.jpg ./aarch64/bin/output.jpg
 </code></pre></li>
-</ul></li>
-
-<li><p>inference by camera</p>
-
+<li>
+<p>inference by camera</p>
 <ul>
-<li><p>./imagenet-camera [input_width] [input_height]</p>
-
+<li>./imagenet-camera [input_width] [input_height]</li>
+</ul>
 <pre><code>cd ~/Desktop/Capture_and_Inference_Sample/build/aarch64/bin
 ./imagenet-camera 1920 1080
-</code></pre>
-
+</code></pre></li>
+</ul>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/gjJ14kjw5Y8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
-<h2 id="run-dio-sample">Run DIO Sample</h2></li>
-</ul></li>
-
-<li><p>Get hardware and DI/O information</p>
-
-<pre><code>cd /usr/src/Neon/Sample/Neon_Information
-sudo ./Neon_Information
+<h2 id="run-dio-sample">Run DIO Sample</h2>
+<ul>
+<li>Get hardware and DI/O information</li>
+</ul>
+<pre><code> cd /usr/src/Neon/Sample/Neon_Information
+ sudo ./Neon_Information
 </code></pre>
-
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/DLRnU1L9GqQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-</li>
 
-<li><p>Get hardware and DI/O information by python</p>
-
-<pre><code>cd /usr/src/Neon/Sample/Neon_Python
-sudo python Neon.py
-</code></pre>
-
-<h2 id="hahahugoshortcode-s2-hbhb">
+<ul>
+<li>Get hardware and DI/O information by python</li>
+</ul>
+<pre><code> cd /usr/src/Neon/Sample/Neon_Python
+ sudo python Neon.py
+</code></pre><h2 id="hahahugoshortcode-s2-hbhb">
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/eVVSRgH5AWs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-</h2></li>
-</ul>
+</h2>
 
 
 
@@ -3931,19 +3922,19 @@ sudo python Neon.py
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1652431675"></script>
-    <script src="/js/perfect-scrollbar.min.js?1652431675"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1652431675"></script>
-    <script src="/js/jquery.sticky.js?1652431675"></script>
-    <script src="/js/featherlight.min.js?1652431675"></script>
-    <script src="/js/highlight.pack.js?1652431675"></script>
+    <script src="/js/clipboard.min.js?1652672787"></script>
+    <script src="/js/perfect-scrollbar.min.js?1652672787"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1652672787"></script>
+    <script src="/js/jquery.sticky.js?1652672787"></script>
+    <script src="/js/featherlight.min.js?1652672787"></script>
+    <script src="/js/highlight.pack.js?1652672787"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1652431675"></script>
-    <script src="/js/learn.js?1652431675"></script>
-    <script src="/js/hugo-learn.js?1652431675"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1652672787"></script>
+    <script src="/js/learn.js?1652672787"></script>
+    <script src="/js/hugo-learn.js?1652672787"></script>
 
-    <link href="/mermaid/mermaid.css?1652431675" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1652431675"></script>
+    <link href="/mermaid/mermaid.css?1652672787" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1652672787"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
