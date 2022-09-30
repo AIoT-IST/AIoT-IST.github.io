@@ -12,18 +12,18 @@
     <title>FAQ :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1662450397" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1662450397" rel="stylesheet">
-    <link href="/css/hybrid.css?1662450397" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1662450397" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1662450397" rel="stylesheet">
-    <link href="/css/auto-complete.css?1662450397" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1662450397" rel="stylesheet">
-    <link href="/css/theme.css?1662450397" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1662450397" rel="stylesheet">
+    <link href="/css/nucleus.css?1664525551" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1664525551" rel="stylesheet">
+    <link href="/css/hybrid.css?1664525551" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1664525551" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1664525551" rel="stylesheet">
+    <link href="/css/auto-complete.css?1664525551" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1664525551" rel="stylesheet">
+    <link href="/css/theme.css?1664525551" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1664525551" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1662450397"></script>
+    <script src="/js/jquery-3.3.1.min.js?1664525551"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1662450397"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1662450397"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1664525551"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1664525551"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1662450397"></script>
+<script type="text/javascript" src="/js/search.js?1664525551"></script>
 
     
   </div>
@@ -2666,8 +2666,30 @@
 </tr>
 </tbody>
 </table>
-<p><img src="/NEON-2000-JNX/FAQ/images/Strobe.png" alt="Trigger in and Strobe out">
-<img src="/NEON-2000-JNX/FAQ/images/NEON_DIO.png" alt="DI/O schematic diagram"></p>
+<p><img src="/NEON-2000-JNX/FAQ/images/Strobe.png" alt="Trigger in and Strobe out"></p>
+<h4 id="how-to-set-the-neon-camera-to-trigger-mode">How to set the NEON camera to trigger mode.</h4>
+<ul>
+<li>
+<h5 id="neon-20xa">NEON-20xA</h5>
+<pre><code>v4l2-ctl --set-ctrl=trigger_mode=1
+</code></pre></li>
+<li>
+<h5 id="neon-20xb">NEON-20xB</h5>
+<ul>
+<li>
+<h5 id="open-pylon-viewer">Open Pylon viewer.</h5>
+</li>
+<li>
+<h5 id="acquisiton-controls--trigger-mode--on">&ldquo;Acquisiton Controls&rdquo; &gt; &ldquo;Trigger Mode&rdquo;-&gt; &ldquo;On&rdquo;</h5>
+</li>
+<li>
+<h5 id="acquisiton-controls--trigger-source--line1">&ldquo;Acquisiton Controls&rdquo; &gt; &ldquo;Trigger Source&rdquo;-&gt; &ldquo;Line1&rdquo;</h5>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="how-to-wire">How to wire.</h4>
+<p><img src="/NEON-2000-JNX/FAQ/images/NEON_DIO.png" alt="DI/O schematic diagram"></p>
 
 
 
@@ -4138,19 +4160,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1662450397"></script>
-    <script src="/js/perfect-scrollbar.min.js?1662450397"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1662450397"></script>
-    <script src="/js/jquery.sticky.js?1662450397"></script>
-    <script src="/js/featherlight.min.js?1662450397"></script>
-    <script src="/js/highlight.pack.js?1662450397"></script>
+    <script src="/js/clipboard.min.js?1664525551"></script>
+    <script src="/js/perfect-scrollbar.min.js?1664525551"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1664525551"></script>
+    <script src="/js/jquery.sticky.js?1664525551"></script>
+    <script src="/js/featherlight.min.js?1664525551"></script>
+    <script src="/js/highlight.pack.js?1664525551"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1662450397"></script>
-    <script src="/js/learn.js?1662450397"></script>
-    <script src="/js/hugo-learn.js?1662450397"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1664525551"></script>
+    <script src="/js/learn.js?1664525551"></script>
+    <script src="/js/hugo-learn.js?1664525551"></script>
 
-    <link href="/mermaid/mermaid.css?1662450397" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1662450397"></script>
+    <link href="/mermaid/mermaid.css?1664525551" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1664525551"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
