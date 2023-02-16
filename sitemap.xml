@@ -7,10 +7,6 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/visioncard/hdv/hdv62/</loc>
-  </url>
-  
-  <url>
     <loc>https://aiot-ist.github.io/visioncard/usb3vision/u300/</loc>
   </url>
   
@@ -36,6 +32,10 @@
   
   <url>
     <loc>https://aiot-ist.github.io/eos-iseries/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/visioncard/gigevision/gie7/powerbudget/</loc>
   </url>
   
   <url>
@@ -152,10 +152,6 @@
   
   <url>
     <loc>https://aiot-ist.github.io/euresys-grab-card/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/visioncard/hdv/</loc>
   </url>
   
   <url>

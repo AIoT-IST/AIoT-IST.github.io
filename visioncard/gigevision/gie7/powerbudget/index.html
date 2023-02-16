@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>NEON-2000-JT2 :: Connected Factory</title>
+    <title>What is PCIe-GIE74P PoE Budget Mode？ :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1676543210" rel="stylesheet">
@@ -44,7 +44,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/neon-2000-jt2/">
+  <body class="" data-url="/visioncard/gigevision/gie7/powerbudget/">
     <nav id="sidebar" class="">
 
 
@@ -619,7 +619,7 @@
   
     
     <li data-nav-id="/visioncard/" title="Vision Card" class="dd-item 
-        
+        parent
         
         
         ">
@@ -706,7 +706,7 @@
   
     
     <li data-nav-id="/visioncard/gigevision/" title="GigE Vision" class="dd-item 
-        
+        parent
         
         
         ">
@@ -733,7 +733,7 @@
   
     
     <li data-nav-id="/visioncard/gigevision/gie7/" title="PCIe-GIE7x Series" class="dd-item 
-        
+        parent
         
         
         ">
@@ -760,8 +760,8 @@
   
     
     <li data-nav-id="/visioncard/gigevision/gie7/powerbudget/" title="What is PCIe-GIE74P PoE Budget Mode？" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/visioncard/gigevision/gie7/powerbudget/">
@@ -1669,8 +1669,8 @@
   
     
     <li data-nav-id="/neon-2000-jt2/" title="NEON-2000-JT2" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/neon-2000-jt2/">
@@ -2366,7 +2366,25 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > NEON-2000-JT2
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/visioncard/'>Vision Card</a> > <a href='/visioncard/gigevision/'>GigE Vision</a> > <a href='/visioncard/gigevision/gie7/'>PCIe-GIE7x Series</a> > What is PCIe-GIE74P PoE Budget Mode？
+          
+         
+          
+         
+          
+         
           
          
           
@@ -2382,9 +2400,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              What is PCIe-GIE74P PoE Budget Mode？
+            </h1>
           
 
         
@@ -2392,9 +2413,122 @@
 
 
 
-	<h3 id="adlink-ist-connected-factory">ADLINK IST Connected Factory</h3>
-<h1 id="neon-2000-jt2">NEON-2000-JT2</h1>
-<p>Discover how to use the NEON-2000-JT2 and find the releated questions.</p>
+	<h3 id="the-poe-budget-mode-is-to-ensure-product-power-supply-security-poe-automatically-cuts-off-when-poe-power-is-exceeded">The PoE budget mode is to ensure product power supply security, PoE automatically cuts off when PoE power is exceeded.</h3>
+<ul>
+<li>
+<h3 id="pcie-gie74p-poe-power-budget">PCIe-GIE74P PoE Power budget</h3>
+<h4 id="1max-200w-w-pcie-slot-only">1、Max 20.0W w/ PCIe slot only.</h4>
+<h4 id="2max-616w-w-pcie-slot-and-4-pin-molex-connector">2、Max 61.6W w/ PCIe slot and 4-pin Molex connector.</h4>
+</li>
+</ul>
+<p><img src="/VisionCard/GigEVision/GIE7/PowerBudget/images/gie1.png" alt="power"></p>
+<ul>
+<li>
+<h3 id="how-does-pcie-gie74p-reserve-poe-power-budget">How does PCIe-GIE74P reserve PoE Power Budget？</h3>
+<h4 id="adlink-provides-two-power-budget-modes-customers-can-configure-settings-according-to-user-scenarios">ADLINK provides two power budget modes, customers can configure settings according to user scenarios.</h4>
+<ul>
+<li>
+<h4 id="poe-power-consumption-mode-for-variable-power-budget">PoE Power Consumption Mode for variable power budget</h4>
+<h4 id="pcie-gie74p-will-detect-the-cameras-real-power-consumption-to-reserve-poe-power-budget">PCIe-GIE74P will detect the camera’s real power consumption to reserve PoE power budget.</h4>
+</li>
+<li>
+<h4 id="poe-class-mode-for-fixed-power-budget">PoE Class Mode for fixed power budget</h4>
+<h4 id="pcie-gie74p-will-detect-the-cameras-poe-class-to-reserve-poe-power-budget">PCIe-GIE74P will detect the camera’s PoE class to reserve PoE power budget.</h4>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="how-does-pcie-gie74p-reserve-poe-power-budget-1">How does PCIe-GIE74P reserve PoE Power Budget？</h3>
+<h4 id="1using-api-of-avs_poesetpowconsumcalcmodel">1、Using API of AVS_PoESetPowConsumCalcModel.</h4>
+<h5 id="customer-can-configure-settings-according-to-user-scenarios">Customer can configure settings according to user scenarios.</h5>
+</li>
+</ul>
+<p><img src="/VisionCard/GigEVision/GIE7/PowerBudget/images/gie2.png" alt="AVS"></p>
+<h4 id="2execute-poe-budget-mode-setting-tool">2、Execute POE Budget Mode Setting Tool.</h4>
+<h5 id="this-tool-can-set-multi-card-to-the-power-consumption-mode-at-one-time">This tool can set multi-card to the power consumption mode at one time.</h5>
+<h5 id="step1download-sdk-from-weblinkhttpsampro1-mysharepointcompersonalhuayi_tsao_adlinktech_com_layouts15onedriveaspxga1">Step1、<a href="https://ampro1-my.sharepoint.com/personal/huayi_tsao_adlinktech_com/_layouts/15/onedrive.aspx?ga=1">Download SDK from WebLink</a></h5>
+<h5 id="step2-install-sdk">Step2、 Install SDK</h5>
+<h5 id="1-avs_sdk_1751027_win-x64">(1) AVS_SDK_1.7.5.1027_Win-x64</h5>
+<h5 id="2-gieseries_smartpoe_win64_setup_v1371002">(2) GIESeries_SmartPoE_Win64_Setup_v1.3.7.1002</h5>
+<h5 id="3-pcie-gie74p">(3) PCIe-GIE74P</h5>
+<h5 id="step3-execute-poe_budget_mode_set-and-click-qc-start">Step3、 Execute “POE_Budget_Mode_Set” and click “QC Start”</h5>
+<p>Notice : Update .NET Framework 3.5 if needed</p>
+<ul>
+<li>
+<h3 id="exampleusers-situation">Example、User’s Situation.</h3>
+</li>
+</ul>
+<h4 id="if-i-want-to-connect-3-gige-cameras-and-i-didnt-connect-pcie-gie74ps-4-pin-molex-connector">If I want to connect 3 GIgE cameras, and I didn’t connect PCIe-GIE74P’s 4-pin Molex connector&hellip;</h4>
+<ul>
+<li>
+<h4 id="by-poe-power-consumption-mode">By PoE Power Consumption Mode</h4>
+</li>
+</ul>
+<p>If this camera’s real power consumption is 5 watts, PCIe-GIE74P will reserve 6 watts per camera.
+PCIe-GIE74P has power budget of 20 watts.
+3 (cameras) x 5 (watts) = 15 (watts)</p>
+<h5 id="pcie-gie74p-can-power-3-cameras">PCIe-GIE74P can power 3 cameras.</h5>
+<ul>
+<li>
+<h4 id="by-poe-class-mode">By PoE Class Mode</h4>
+</li>
+</ul>
+<p>If this camera’s PoE class is “2”, according to the PoE class of the PoE standard, PCIe-GIE74P will reserve 7 watts per camera.
+PCIe-GIE74P has power budget of 20 watts.
+3 (cameras) x 7 (watts) = 21 (watts)</p>
+<h5 id="pcie-gie74p-can-only-power-2-cameras-cannot-power-the-third-camera">PCIe-GIE74P can only power 2 cameras, cannot power the third camera.</h5>
+
+<div class="notices note" ><p>If you want to provide more than 20 watts of power, you need to connect the
+4-pin Molex connector of PCIe-GIE74P.</p>
+</div>
+
+<ul>
+<li>
+<h5 id="table-poe-classes">Table PoE Classes</h5>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Class No.</th>
+<th align="center">Type</th>
+<th align="center">Maximum power available at the Power Sourcing Equipment (PSE)</th>
+<th align="center">Power required by PoE class at the Powered Device (PD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">802.3af</td>
+<td align="center">15.4 W</td>
+<td align="center">0.44 – 12.95 W</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">802.3af</td>
+<td align="center">4.0 W</td>
+<td align="center">0.44 – 3.84 W</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">802.3af</td>
+<td align="center">7.0 W</td>
+<td align="center">3.84 – 6.49 W</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">802.3af</td>
+<td align="center">15.4 W</td>
+<td align="center">6.49 – 12.95 W</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">802.3at(PoE+)</td>
+<td align="center">30 W</td>
+<td align="center">12.95 – 25.5 W</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -2404,8 +2538,6 @@
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -2770,20 +2902,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2800,39 +2918,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2863,6 +2950,58 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
                     
@@ -2874,52 +3013,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
                         
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2973,14 +3068,10 @@
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -2992,10 +3083,11 @@
 
                     
                     
-                        
-                    
                     
 
+                    
+            
+        
                     
                         
             
@@ -3079,6 +3171,40 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -3121,26 +3247,26 @@
 
                     
                     
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                     
 
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
                     
                         
             
@@ -3286,25 +3412,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -3369,6 +3476,41 @@
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
@@ -3414,7 +3556,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3429,9 +3570,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3834,10 +3972,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/dex_kvm/unboxing/" title="01-Unboxing the KVM"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/visioncard/gigevision/gie7/" title="PCIe-GIE7x Series"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/neon-2000-jt2/gettingstart/" title="Getting start" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dex/" title="DEX-100" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

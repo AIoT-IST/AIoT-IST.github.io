@@ -7,13 +7,6 @@
 	"content": "ADLINK IST Connected Factory MCM-204 Discover how to use the MCM-204 and find the releated questions.\n"
 },
 {
-	"uri": "https://aiot-ist.github.io/visioncard/hdv/hdv62/",
-	"title": "PCIe-HDV62/A",
-	"tags": [],
-	"description": "",
-	"content": "ADLINK\u0026rsquo;s HDV62A series high definition video and audio capture cards enable single-card acquisition of full analog/digital video and digital audio signals (PCIe-HDV62A/PXIe-HDV62A only). Featuring uncompressed full HD up to 1080p at 60 fps and 10-bit high-resolution ADC and HDCP support (PCIe-HDV62A/PXIe-HDV62A only), the HDV62A series deliver serious benefits and reduced TCO for applications requiring simultaneous capture from both video and audio sources, such as multimedia device testing and medical imaging\n"
-},
-{
 	"uri": "https://aiot-ist.github.io/visioncard/usb3vision/u300/",
 	"title": "PCIe-U300 Series",
 	"tags": [],
@@ -61,6 +54,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Frequently asked questions (FAQ) about Pylon\nHow to grab the Image from the GigE Basler.   Step1 : Set the Lan port IP address ? Assign the TCP/IP4 IP to be 192.168.11.1  Step2: How to set the Camera IP by Pylon? Set the Ip 192.168.11.4 by Pylon IP configurator.   Video   "
+},
+{
+	"uri": "https://aiot-ist.github.io/visioncard/gigevision/gie7/powerbudget/",
+	"title": "What is PCIe-GIE74P PoE Budget Mode？",
+	"tags": [],
+	"description": "",
+	"content": "The PoE budget mode is to ensure product power supply security, PoE automatically cuts off when PoE power is exceeded.   PCIe-GIE74P PoE Power budget 1、Max 20.0W w/ PCIe slot only. 2、Max 61.6W w/ PCIe slot and 4-pin Molex connector.     How does PCIe-GIE74P reserve PoE Power Budget？ ADLINK provides two power budget modes, customers can configure settings according to user scenarios.   PoE Power Consumption Mode for variable power budget PCIe-GIE74P will detect the camera’s real power consumption to reserve PoE power budget.   PoE Class Mode for fixed power budget PCIe-GIE74P will detect the camera’s PoE class to reserve PoE power budget.     How does PCIe-GIE74P reserve PoE Power Budget？ 1、Using API of AVS_PoESetPowConsumCalcModel. Customer can configure settings according to user scenarios.   2、Execute POE Budget Mode Setting Tool. This tool can set multi-card to the power consumption mode at one time. Step1、Download SDK from WebLink Step2、 Install SDK (1) AVS_SDK_1.7.5.1027_Win-x64 (2) GIESeries_SmartPoE_Win64_Setup_v1.3.7.1002 (3) PCIe-GIE74P Step3、 Execute “POE_Budget_Mode_Set” and click “QC Start” Notice : Update .NET Framework 3.5 if needed\n  Example、User’s Situation.   If I want to connect 3 GIgE cameras, and I didn’t connect PCIe-GIE74P’s 4-pin Molex connector\u0026hellip;   By PoE Power Consumption Mode   If this camera’s real power consumption is 5 watts, PCIe-GIE74P will reserve 6 watts per camera. PCIe-GIE74P has power budget of 20 watts. 3 (cameras) x 5 (watts) = 15 (watts)\nPCIe-GIE74P can power 3 cameras.   By PoE Class Mode   If this camera’s PoE class is “2”, according to the PoE class of the PoE standard, PCIe-GIE74P will reserve 7 watts per camera. PCIe-GIE74P has power budget of 20 watts. 3 (cameras) x 7 (watts) = 21 (watts)\nPCIe-GIE74P can only power 2 cameras, cannot power the third camera. If you want to provide more than 20 watts of power, you need to connect the 4-pin Molex connector of PCIe-GIE74P.\n   Table PoE Classes      Class No. Type Maximum power available at the Power Sourcing Equipment (PSE) Power required by PoE class at the Powered Device (PD)     0 802.3af 15.4 W 0.44 – 12.95 W   1 802.3af 4.0 W 0.44 – 3.84 W   2 802.3af 7.0 W 3.84 – 6.49 W   3 802.3af 15.4 W 6.49 – 12.95 W   4 802.3at(PoE+) 30 W 12.95 – 25.5 W    "
 },
 {
 	"uri": "https://aiot-ist.github.io/dex_kvm/datasheet/",
@@ -264,13 +264,6 @@
 	"tags": [],
 	"description": "",
 	"content": "ADLINK IST Connected Factory Euresys Grab Card Tutorials about the Grablink for Cameralink\nTutorials about the Coaxlink for CoaXPress\n"
-},
-{
-	"uri": "https://aiot-ist.github.io/visioncard/hdv/",
-	"title": "Frame Grabbers Cards",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "https://aiot-ist.github.io/euresys/easycolor/",
