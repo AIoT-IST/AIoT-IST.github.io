@@ -12,18 +12,18 @@
     <title>How to flash image? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1688609764" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1688609764" rel="stylesheet">
-    <link href="/css/hybrid.css?1688609764" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1688609764" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1688609764" rel="stylesheet">
-    <link href="/css/auto-complete.css?1688609764" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1688609764" rel="stylesheet">
-    <link href="/css/theme.css?1688609764" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1688609764" rel="stylesheet">
+    <link href="/css/nucleus.css?1688610508" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1688610508" rel="stylesheet">
+    <link href="/css/hybrid.css?1688610508" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1688610508" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1688610508" rel="stylesheet">
+    <link href="/css/auto-complete.css?1688610508" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1688610508" rel="stylesheet">
+    <link href="/css/theme.css?1688610508" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1688610508" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1688609764"></script>
+    <script src="/js/jquery-3.3.1.min.js?1688610508"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1688609764"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1688609764"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1688610508"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1688610508"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1688609764"></script>
+<script type="text/javascript" src="/js/search.js?1688610508"></script>
 
     
   </div>
@@ -742,39 +742,6 @@
           
       </a>
       
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/visioncard/hdv/" title="Frame Grabbers Cards" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/visioncard/hdv/">
-          Frame Grabbers Cards
-          
-      </a>
-      
       
         <ul>
           
@@ -792,16 +759,25 @@
  
   
     
-    <li data-nav-id="/visioncard/hdv/hdv62/" title="PCIe-HDV62/A" class="dd-item 
+    <li data-nav-id="/visioncard/gigevision/gie7/powerbudget/" title="What is PCIe-GIE74P PoE Budget Mode？" class="dd-item 
         
         
         
         ">
-      <a href="/visioncard/hdv/hdv62/">
-          PCIe-HDV62/A
+      <a href="/visioncard/gigevision/gie7/powerbudget/">
+          What is PCIe-GIE74P PoE Budget Mode？
           
       </a>
       
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -2116,6 +2092,30 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/neon-2000-jnx/faq/" title="FAQ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon-2000-jnx/faq/">
+          FAQ
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -2431,11 +2431,12 @@
 
 <p><strong>emmc image and microSD image are one-by-one mapping.</strong>
 <strong>That is, you have to flash emmc and microSD image with same version.</strong>
-<strong>For example, jetpack 4.6.1 emmc + jetpack 4.6.1 microSD image</strong></p>
+<strong>For example, jetpack 5.0.2 emmc + jetpack 5.0.2 microSD image</strong></p>
 
 <h4 id="download-emmc-image">Download eMMC image</h4>
 
 <ul>
+<li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP502_emmc.tar.gz">jetpack5.0.2 md5: 588e91411bb61f5b95b190bebb8373de</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP461_emmc.tar.gz">jetpack4.6.1 md5: e9978a1f7d981b11fd9f323a6ca73aa7</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX-emmc_v3.2.1.tar.gz">jetpack4.6</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX-emmc_v1.2.tar.gz">jetpack4.5</a></li>
@@ -2448,21 +2449,25 @@
 
 <ul>
 <li>A bare metal machine running Ubuntu. Must not be a virtual machine.</li>
-<li>microUSB cable
-<br /></li>
+<li>microUSB cable</li>
 </ul></li>
+
+<li><p>For Jetpack 5.0.2: Install neccessary package at first</p>
+
+<pre><code>sudo apt-get install sshpass
+</code></pre></li>
 </ul>
 
 <ol>
 <li><p>On the Host PC unzip the file downloaded.</p>
 
-<pre><code>$ tar -zxvf EOS-JNX_JP461_emmc.tar.gz
+<pre><code>tar -zxvf EOS-JNX_JP502_emmc.tar.gz
 </code></pre></li>
 
 <li><p>Set EOS-JNX as recovery mode</p>
 
 <ul>
-<li>Boot EOS-JNX<br /></li>
+<li>Boot EOS-JNX</li>
 <li>Hold <em>RECOVERY</em> button on front panel</li>
 <li>Push <em>RESET</em> button on front panel</li>
 <li>Release <em>RECOVERY</em> button</li>
@@ -2475,20 +2480,30 @@
 
 <li><p>Go to folder unzipped in step 1</p>
 
-<pre><code>cd EOS-JNX_JP461_emmc
+<pre><code>cd EOS-JNX_JP502_emmc
 </code></pre></li>
 
 <li><p>Flash the EOS-JNX</p>
 
+<ul>
+<li><p>Jetpack before 5.0.2</p>
+
 <pre><code>sudo ./nvmflash.sh
 </code></pre></li>
+
+<li><p>For Jetpack 5.0.2</p>
+
+<pre><code>sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 20
+</code></pre></li>
+</ul></li>
 
 <li><p>Once the flash script is complete and shows <code>Flash complete (SUCCESS)</code> reboot the EOS-JNX</p></li>
 </ol>
 
-<h4 id="download-microsd-imaged">Download microSD imaged</h4>
+<h4 id="download-microsd-image">Download microSD image</h4>
 
 <ul>
+<li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP502_microSD_v1.0.3.img.tar.gz">jetpack5.0.2 md5: dda62d5d21f84d25368b5080eaed80e0</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP461_microSD_v1.0.2.tar.gz">jetpack4.6.1 md5: d8006c99a4c3fc4ee7d5ba1639e8f57e</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP461_microSD_withEVA.tar.gz">jetpack4.6.1 with EVA md5: b58ea12bc4c8f5a4a5ffe173bc056f5c</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP46_microSD_v1.0.1.tar.gz">jetpack4.6</a></li>
@@ -2512,11 +2527,11 @@
 
 <h5 id="check-sum">Check sum</h5>
 
-<pre><code>$ md5sum EOS-JNX-emmc_v3.2.1.tar.gz 
-23f7aab8984f566ec4d360d71edb3916  EOS-JNX-emmc_v3.2.1.tar.gz
+<pre><code>$ md5sum EOS-JNX_JP502_emmc.tar.gz
+588e91411bb61f5b95b190bebb8373de  EOS-JNX_JP502_emmc.tar.gz
 
-$ md5sum EOS-JNX_JP46_microSD_v1.0.1.tar.gz 
-c0d3c72af213fa617f565aca137a874e  EOS-JNX_JP46_microSD_v1.0.1.tar.gz
+$ md5sum EOS-JNX_JP502_microSD_v1.0.3.img.tar.gz
+dda62d5d21f84d25368b5080eaed80e0  EOS-JNX_JP502_microSD_v1.0.3.img.tar.gz
 </code></pre>
 
 <ul>
@@ -2533,10 +2548,10 @@ c0d3c72af213fa617f565aca137a874e  EOS-JNX_JP46_microSD_v1.0.1.tar.gz
 
 <li><p>Windows 10</p></li>
 
-<li><pre><code>$ certutil -hashfile [file] MD5
+<li><pre><code>certutil -hashfile [file] MD5
 </code></pre></li>
 
-<li><pre><code>$ certutil -hashfile files.tar.gz MD5
+<li><pre><code>certutil -hashfile files.tar.gz MD5
 </code></pre></li>
 </ul></li>
 </ul>
@@ -2982,42 +2997,26 @@ c0d3c72af213fa617f565aca137a874e  EOS-JNX_JP46_microSD_v1.0.1.tar.gz
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
             
         
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -3826,6 +3825,22 @@ c0d3c72af213fa617f565aca137a874e  EOS-JNX_JP46_microSD_v1.0.1.tar.gz
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -4007,19 +4022,19 @@ c0d3c72af213fa617f565aca137a874e  EOS-JNX_JP46_microSD_v1.0.1.tar.gz
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1688609764"></script>
-    <script src="/js/perfect-scrollbar.min.js?1688609764"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1688609764"></script>
-    <script src="/js/jquery.sticky.js?1688609764"></script>
-    <script src="/js/featherlight.min.js?1688609764"></script>
-    <script src="/js/highlight.pack.js?1688609764"></script>
+    <script src="/js/clipboard.min.js?1688610508"></script>
+    <script src="/js/perfect-scrollbar.min.js?1688610508"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1688610508"></script>
+    <script src="/js/jquery.sticky.js?1688610508"></script>
+    <script src="/js/featherlight.min.js?1688610508"></script>
+    <script src="/js/highlight.pack.js?1688610508"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1688609764"></script>
-    <script src="/js/learn.js?1688609764"></script>
-    <script src="/js/hugo-learn.js?1688609764"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1688610508"></script>
+    <script src="/js/learn.js?1688610508"></script>
+    <script src="/js/hugo-learn.js?1688610508"></script>
 
-    <link href="/mermaid/mermaid.css?1688609764" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1688609764"></script>
+    <link href="/mermaid/mermaid.css?1688610508" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1688610508"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
