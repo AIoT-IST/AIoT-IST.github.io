@@ -9,21 +9,21 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>05-LOOP :: Connected Factory</title>
+    <title>01-Unboxing the KVM :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1688609760" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1688609760" rel="stylesheet">
-    <link href="/css/hybrid.css?1688609760" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1688609760" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1688609760" rel="stylesheet">
-    <link href="/css/auto-complete.css?1688609760" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1688609760" rel="stylesheet">
-    <link href="/css/theme.css?1688609760" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1688609760" rel="stylesheet">
+    <link href="/css/nucleus.css?1688609759" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1688609759" rel="stylesheet">
+    <link href="/css/hybrid.css?1688609759" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1688609759" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1688609759" rel="stylesheet">
+    <link href="/css/auto-complete.css?1688609759" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1688609759" rel="stylesheet">
+    <link href="/css/theme.css?1688609759" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1688609759" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1688609760"></script>
+    <script src="/js/jquery-3.3.1.min.js?1688609759"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -44,7 +44,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/dex/dexpro/instruction/loop/">
+  <body class="" data-url="/dex_kvm/script/">
     <nav id="sidebar" class="">
 
 
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1688609760"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1688609760"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1688609759"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1688609759"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1688609760"></script>
+<script type="text/javascript" src="/js/search.js?1688609759"></script>
 
     
   </div>
@@ -833,7 +833,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX-100" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1100,7 +1100,7 @@
   
     
     <li data-nav-id="/dex/dexpro/" title="04-Dex-pro" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1223,7 +1223,7 @@
   
     
     <li data-nav-id="/dex/dexpro/instruction/" title="04-Instruction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1346,8 +1346,8 @@
   
     
     <li data-nav-id="/dex/dexpro/instruction/loop/" title="05-LOOP" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/dex/dexpro/instruction/loop/">
@@ -1611,7 +1611,7 @@
   
     
     <li data-nav-id="/dex_kvm/" title="DEX-100 with KVM" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1662,8 +1662,8 @@
   
     
     <li data-nav-id="/dex_kvm/script/" title="01-Unboxing the KVM" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/dex_kvm/script/">
@@ -2394,19 +2394,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX-100</a> > <a href='/dex/dexpro/'>04-Dex-pro</a> > <a href='/dex/dexpro/instruction/'>04-Instruction</a> > 05-LOOP
-          
-         
-          
-         
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex_kvm/'>DEX-100 with KVM</a> > 01-Unboxing the KVM
           
          
           
@@ -2436,39 +2424,69 @@
 
 	
 
-<ul>
-<li><a href="#how-to-the-loop">How to use the loop </a></li>
-<li><a href="#how-to-use-both-loop2-with-loop">How to use both loop2 with loop</a></li>
-</ul>
+<h3 id="how-to-unbox-and-wire-for-both-kvm-local-and-kvm-remote-solutions">How to unbox and wire for both KVM local and KVM remote solutions.</h3>
 
-<h2 id="how-to-the-loop">How to the loop</h2>
-
-<p>X: Loop in execution.<br />
-&gt;0: go to previous steps;
-=0: go to the last instruction
-&lt;0: go to next steps</p>
-
-<p>Y: Loop is ended.
-&gt;0: go to next steps
-=0: go to the last instruction
-&lt;0: go to previous steps;</p>
-
-<p>W: This value denotes the iteration times of the loop</p>
+<h1 id="overview">Overview</h1>
 
 <ul>
-<li>Pleas referring the sample:
-<img src="/DEX/Dexpro/Instruction/Loop/image/1.PNG" alt="Normal machine" /></li>
+<li><a href="#full-view-of-kvm-local-accessories">Full view of KVM local accessories</a></li>
+<li><a href="#full-view-of-kvm-remote-accessories">Full view of KVM remote accessories</a></li>
 </ul>
 
-<h2 id="how-to-use-both-loop2-with-loop">How to use both loop2 with loop</h2>
-
-<p>They are a pair both loop2 and loop when you use the double loop.</p>
+<h1 id="unboxing">Unboxing</h1>
 
 <ul>
-<li>Pleas referring the sample:
-The loop2&rsquo;s start instruction must be the first loop.
-<img src="/DEX/Dexpro/Instruction/Loop/image/2.PNG" alt="Normal machine" /></li>
+<li><a href="#kvm-local-accessories">KVM Local accessories</a></li>
+<li><a href="#kvm-remote-accessories">KVM remote accessories </a></li>
 </ul>
+
+<h2 id="full-view-of-kvm-local-accessories">Full view of KVM local accessories</h2>
+
+<p><img src="/DEX_KVM/Unboxing/images/1.png" alt="Normal machine" /></p>
+
+<h2 id="full-view-of-kvm-remote-accessories">Full view of KVM remote accessories</h2>
+
+<p><img src="/DEX_KVM/Unboxing/images/2.png" alt="Normal machine" /></p>
+
+<h2 id="kvm-local-accessories">KVM Local accessories</h2>
+
+<ul>
+<li>VGA and Keyboard &amp; Mouse wiring from KVM to Dex-100</li>
+</ul>
+
+<p><img src="/DEX_KVM/Unboxing/images/5.png" alt="Normal machine" /></p>
+
+<ul>
+<li>Machine VGA wiring to KVM</li>
+</ul>
+
+<p><img src="/DEX_KVM/Unboxing/images/6.png" alt="Normal machine" /></p>
+
+<ul>
+<li>Keyboard &amp; Mouse wiring from KVM to Machine</li>
+</ul>
+
+<p><img src="/DEX_KVM/Unboxing/images/7.png" alt="Normal machine" /></p>
+
+<h2 id="kvm-remote-accessories">KVM remote accessories</h2>
+
+<ul>
+<li>VGA and Keyboard &amp; Mouse wiring from KVM to Dex-100</li>
+</ul>
+
+<p><img src="/DEX_KVM/Unboxing/images/5.png" alt="Normal machine" /></p>
+
+<ul>
+<li>Wiring both TX and RX</li>
+</ul>
+
+<p><img src="/DEX_KVM/Unboxing/images/8.png" alt="Normal machine" /></p>
+
+<ul>
+<li>Wiring the VGA from Machine to TX</li>
+</ul>
+
+<p><img src="/DEX_KVM/Unboxing/images/9.png" alt="Normal machine" /></p>
 
 
 
@@ -2964,57 +2982,6 @@ The loop2&rsquo;s start instruction must be the first loop.
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -3067,6 +3034,53 @@ The loop2&rsquo;s start instruction must be the first loop.
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -3131,7 +3145,6 @@ The loop2&rsquo;s start instruction must be the first loop.
             
                 
                     
-                    
                 
                 
 
@@ -3146,92 +3159,6 @@ The loop2&rsquo;s start instruction must be the first loop.
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -3297,6 +3224,20 @@ The loop2&rsquo;s start instruction must be the first loop.
             
                 
                     
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -3314,8 +3255,69 @@ The loop2&rsquo;s start instruction must be the first loop.
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -3470,6 +3472,7 @@ The loop2&rsquo;s start instruction must be the first loop.
             
                 
                     
+                    
                 
                 
 
@@ -3484,6 +3487,9 @@ The loop2&rsquo;s start instruction must be the first loop.
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3501,6 +3507,7 @@ The loop2&rsquo;s start instruction must be the first loop.
             
                 
                     
+                    
                 
                 
 
@@ -3516,6 +3523,9 @@ The loop2&rsquo;s start instruction must be the first loop.
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3936,10 +3946,10 @@ The loop2&rsquo;s start instruction must be the first loop.
 	 
 	 
 		
-			<a class="nav nav-prev" href="/dex/dexpro/instruction/ocrandlog/" title="04-OCR and Log"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/dex_kvm/datasheet/" title="00-Datasheet"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/dex/dexpro/instruction/pageidetify/" title="06-PageIdentify" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/dex_kvm/unboxing/" title="01-Unboxing the KVM" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3949,19 +3959,19 @@ The loop2&rsquo;s start instruction must be the first loop.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1688609760"></script>
-    <script src="/js/perfect-scrollbar.min.js?1688609760"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1688609760"></script>
-    <script src="/js/jquery.sticky.js?1688609760"></script>
-    <script src="/js/featherlight.min.js?1688609760"></script>
-    <script src="/js/highlight.pack.js?1688609760"></script>
+    <script src="/js/clipboard.min.js?1688609759"></script>
+    <script src="/js/perfect-scrollbar.min.js?1688609759"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1688609759"></script>
+    <script src="/js/jquery.sticky.js?1688609759"></script>
+    <script src="/js/featherlight.min.js?1688609759"></script>
+    <script src="/js/highlight.pack.js?1688609759"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1688609760"></script>
-    <script src="/js/learn.js?1688609760"></script>
-    <script src="/js/hugo-learn.js?1688609760"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1688609759"></script>
+    <script src="/js/learn.js?1688609759"></script>
+    <script src="/js/hugo-learn.js?1688609759"></script>
 
-    <link href="/mermaid/mermaid.css?1688609760" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1688609760"></script>
+    <link href="/mermaid/mermaid.css?1688609759" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1688609759"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

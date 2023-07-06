@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://aiot-ist.github.io/mcm-204/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/visioncard/hdv/hdv62/</loc>
   </url>
   
   <url>
@@ -35,10 +39,6 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/visioncard/gigevision/gie7/powerbudget/</loc>
-  </url>
-  
-  <url>
     <loc>https://aiot-ist.github.io/dex_kvm/datasheet/</loc>
   </url>
   
@@ -60,6 +60,10 @@
   
   <url>
     <loc>https://aiot-ist.github.io/dex/unboxing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/dex_kvm/script/</loc>
   </url>
   
   <url>
@@ -152,6 +156,10 @@
   
   <url>
     <loc>https://aiot-ist.github.io/euresys-grab-card/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/visioncard/hdv/</loc>
   </url>
   
   <url>
@@ -280,10 +288,6 @@
   
   <url>
     <loc>https://aiot-ist.github.io/neon-2000-jnx/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/neon-2000-jnx/faq/</loc>
   </url>
   
   <url>
