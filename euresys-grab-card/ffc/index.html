@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>EasyGauge :: Connected Factory</title>
+    <title>Euresys Grabber Card with FFC Support (FFC) :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1688957836" rel="stylesheet">
@@ -44,7 +44,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/euresys/easygauge/">
+  <body class="" data-url="/euresys-grab-card/ffc/">
     <nav id="sidebar" class="">
 
 
@@ -299,7 +299,7 @@
   
     
     <li data-nav-id="/euresys/" title="Euresys" class="dd-item 
-        parent
+        
         
         
         ">
@@ -494,8 +494,8 @@
   
     
     <li data-nav-id="/euresys/easygauge/" title="EasyGauge" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/euresys/easygauge/">
@@ -621,7 +621,7 @@
   
     
     <li data-nav-id="/euresys-grab-card/" title="Euresys Grab card" class="dd-item 
-        
+        parent
         
         
         ">
@@ -672,8 +672,8 @@
   
     
     <li data-nav-id="/euresys-grab-card/ffc/" title="Euresys Grabber Card with FFC Support (FFC)" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/euresys-grab-card/ffc/">
@@ -2464,6 +2464,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -2478,7 +2480,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/euresys/'>Euresys</a> > EasyGauge
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/euresys-grab-card/'>Euresys Grab card</a> > Euresys Grabber Card with FFC Support (FFC)
           
          
           
@@ -2488,6 +2490,25 @@
                  
                   </span>
                 </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introduction-to-flat-field-correction-ffc">Introduction to Flat Field Correction (FFC)</a></li>
+<li><a href="#below-link-shows-the-cards-and-variants-that-supports-ffc">Below link shows the cards and variants that supports FFC</a></li>
+<li><a href="#maximum-image-size-for-all-supported-pixel-foramts-when-ffc-enabled">Maximum image size for all supported pixel foramts when FFC enabled</a></li>
+<li><a href="#sustainable-relative-data-rate">Sustainable Relative Data Rate</a></li>
+<li><a href="#1">Calculate</a></li>
+<li><a href="#ffc-wizard-sample-program-quickly-start">FFC Wizard Sample Program (Quickly start)</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
                 
               </div>
             </div>
@@ -2500,7 +2521,7 @@
           
             <h1>
               
-              EasyGauge
+              Euresys Grabber Card with FFC Support (FFC)
             </h1>
           
 
@@ -2511,121 +2532,207 @@
 
 	
 
-<p>This tutorial will guide you how to getting start EasyFind by Euresys</p>
+<p><a href="#1">FPS Calculation with FFC Enabled</a></p>
+
+<h2 id="introduction-to-flat-field-correction-ffc">Introduction to Flat Field Correction (FFC)</h2>
+
+<p>The Flat-field correction (Wikipedia: FFC) is a method used to correct:</p>
 
 <ul>
-<li><a href="#measuring-the-rotation-angle-of-an-object">Measuring the Rotation Angle of an Object</a></li>
-<li><a href="#measuring-the-diameter-of-a-circle">Measuring the Diameter of a Circle</a></li>
-<li><a href="#measuring-a-distorted-rectangle">Measuring a Distorted Rectangle</a></li>
-<li><a href="#locating-points-regarding-to-a-coordinate-system">Locating Points Regarding to a Coordinate System</a></li>
-
-<li><p><a href="#unwarping-a-distorted-image">Unwarping a Distorted Image</a></p></li>
-
-<li><h3 id="measuring-the-rotation-angle-of-an-object">Measuring the Rotation Angle of an Object</h3>
-
-<p>Following this tutorial, you will learn how to use EasyGauge to measure the rotation angle of a CCD sensor package. As we only need to retrieve an angle value, it&rsquo;s not required to work in a calibrated field of view. All geometrical parameters and results will be express as numbers of pixels.</p>
-
-<ol>
-<li>Load the source image</li>
-<li>Attach a line gauge to the image</li>
-<li>Perform the inspection</li>
-<li><a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_6/en-us/Content/05_Resources/01_Tutorials/07_EasyGauge/Measuring_the_Rotation_Angle_of_an_Object.htm?TocPath=Resources|Tutorials%20for%20Open%20eVision%20Studio|EasyGauge|_____1">Link on line Doc</a></li>
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/lYEj45-4YO4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ol>
-
-<ul>
-<li>### Measuring the Diameter of a Circle
-Following this tutorial, you will learn how to use EasyGauge to measure the diameter of a circle in an image.</li>
-<li>Load the calibration image</li>
-<li>Calibrate the field of view</li>
-<li>Load the source image</li>
-<li>Attach a circle gauge to the image</li>
-<li>Perform the inspection</li>
-<li><a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_6/en-us/Content/05_Resources/01_Tutorials/07_EasyGauge/Measuring_the_Diameter_of_a_Circle.htm?TocPath=Resources|Tutorials%20for%20Open%20eVision%20Studio|EasyGauge|_____2">Link on line Doc</a></li>
-
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/wOJQBQ80Qfs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-
-<li><h3 id="measuring-a-distorted-rectangle">Measuring a Distorted Rectangle</h3>
-
-<p>Following this tutorial, you will learn how to use EasyGauge to perform measurements on a distorted rectangle component..</p></li>
-
-<li><p>Load the calibration image</p></li>
-
-<li><p>Calibrate the field of view</p></li>
-
-<li><p>Load the distorted image</p></li>
-
-<li><p>Attach a rectangle gauge to the image</p></li>
-
-<li><p>Perform the inspection</p></li>
-
-<li><p><a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_6/en-us/Content/05_Resources/01_Tutorials/07_EasyGauge/Measuring_a_Distorted_Rectangle.htm?TocPath=Resources|Tutorials%20for%20Open%20eVision%20Studio|EasyGauge|_____3">Link on line Doc</a></p></li>
-
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/mqFVqyAwGrc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-
-<li><h3 id="locating-points-regarding-to-a-coordinate-system">Locating Points Regarding to a Coordinate System</h3>
-
-<p>Following this tutorial, you will learn how to use EasyGauge to perform lead frames inspection. This operation determines the dimension, position, curvature, size, angle or diameter of the lead frames with an excellent accuracy. Robustness is ensured by powerful edge-point selection mechanisms that are intuitive and easy to tune, allowing measurement in cluttered images.</p></li>
-
-<li><p>Load the calibration image</p></li>
-
-<li><p>Calibrate the field of view</p></li>
-
-<li><p>Loading a lead frame image</p></li>
-
-<li><p>Setting a coordinate system</p></li>
-
-<li><p>Attaching a point gauge to the frame shape</p></li>
-
-<li><p>Attaching other point gauges to the frame shape</p></li>
-
-<li><p>Loading another lead frame image</p></li>
-
-<li><p>Tuning the coordinate system</p></li>
-
-<li><p>Performing the inspection</p></li>
-
-<li><p><a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_6/en-us/Content/05_Resources/01_Tutorials/07_EasyGauge/Measuring_a_Distorted_Rectangle.htm?TocPath=Resources|Tutorials%20for%20Open%20eVision%20Studio|EasyGauge|_____4">Link on line Doc</a></p></li>
-
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/RbxjKas6iOc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-
-<li><h3 id="unwarping-a-distorted-image">Unwarping a Distorted Image</h3>
-
-<p>Following this tutorial, you will learn how to use EasyGauge to perform grid calibration, and unwarp a distorted image.</p></li>
-
-<li><p>Load the calibration image</p></li>
-
-<li><p>Calibrate the field of view</p></li>
-
-<li><p>Load the distorted image</p></li>
-
-<li><p>Unwarp the distorted image</p></li>
-
-<li><p><a href="https://documentation.euresys.com/Products/Open_eVision/Open_eVision_2_6/en-us/Content/05_Resources/01_Tutorials/07_EasyGauge/Measuring_a_Distorted_Rectangle.htm?TocPath=Resources|Tutorials%20for%20Open%20eVision%20Studio|EasyGauge|_____5">Link on line Doc</a></p></li>
-
-<li>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/F-HsfL4xRYE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-</li>
-</ul></li>
+<li>The differences of light sensitivity between the pixel sensors of a camera</li>
+<li>some artifacts related to the optical system (e.g., non-uniform lighting and vignetting)</li>
 </ul>
+
+<p>The goal is to correct the pixels of the captured (raw) images in such a way that when a uniform background is captured by the system (camera &amp; lens), the resulting output image is uniform.</p>
+
+<h2 id="below-link-shows-the-cards-and-variants-that-supports-ffc">Below link shows the cards and variants that supports FFC</h2>
+
+<p><img src="/Euresys-Grab-card/FFC/Images/FFC-with-card.jpg" alt="Normal machine" />
+<a href="https://documentation.euresys.com/Products/COAXLINK/COAXLINK/en-us/Content/03_Interfaces/functional-guide/ffc/flat-field-correction.htm?tocpath=Frame%20Grabbers%7CFunctional%20Guide%7CPixel%20Processing%7CFlat%20Field%20Correction%7C_____0">Link</a></p>
+
+<h2 id="maximum-image-size-for-all-supported-pixel-foramts-when-ffc-enabled">Maximum image size for all supported pixel foramts when FFC enabled</h2>
+
+<p><img src="/Euresys-Grab-card/FFC/Images/Maximum-image-size-for-FFC.png" alt="Normal machine" />
+<center><h4 style="color: green;">Please verify if the camera output, which is either monochrome or RGB interface, is within the specified limits as shown in the diagram.<h4></center></p>
+
+<h2 id="sustainable-relative-data-rate">Sustainable Relative Data Rate</h2>
+
+<p><img src="/Euresys-Grab-card/FFC/Images/Sustainable-FFC.png" alt="Normal machine" />
+<center><h3 style="color: green;">A 4-lane CXP-6 maximum data rate is 2500MB/s<h3></center></p>
+
+<h2 id="1">Calculate</h2>
+
+<p>For a Quad CXP-12, the sustainable relative data rate 123.2% which is 2500MB x 1.232 = 3080 MB/s
+If your resolution is 7K x 9K,
+Then the max fps will be about 3080MB/7K x 9k = 48 fps</p>
+
+<!-- HTML部分 -->
+
+<div class="condition">
+  <label for="condition1">Frame grabber card</label>
+  <select id="condition1" onchange="calculate()">
+    <option value="">請選擇</option>
+    <option value="cxp-6">CXP-6</option>
+    <option value="cxp-12">CXP-12</option>
+  </select>
+</div>
+<div class="condition">
+  <label for="condition2">Bit depth</label>
+  <select id="condition2" onchange="calculate()">
+    <option value="">請選擇</option>
+    <option value="8-bit">8位元</option>
+    <option value="10-bit">10位元</option>
+    <option value="12-bit">12位元</option>
+    <option value="14-bit">14位元</option>
+    <option value="16-bit">16位元</option>
+  </select>
+</div>
+<div class="condition">
+  <label for="condition5">Image Type:</label>
+  <select id="condition5" onchange="calculate()">
+    <option value="">請選擇</option>
+    <option value="Bayer">Bayer</option>
+    <option value="RGB">RGB</option>
+  </select>
+</div>
+<div class="condition">
+  <label for="condition3">Image(W):</label>
+  <input type="number" id="condition3" onchange="calculate()">
+</div>
+<div class="condition">
+  <label for="condition4">Image(H):</label>
+  <input type="number" id="condition4" onchange="calculate()">
+</div>
+<br>
+<div style="display: flex; align-items: center;">
+    <div>
+    <label for="variable1">2500MB</label>
+    <input type="text" id="variable1" style="width: 100px; margin-right: 30px;" value="2500" readonly>
+  </div>
+  <span style="margin-right: 30px;">*</span>
+  <div>
+    <label for="displayDataRate">Ratio</label>
+    <input type="text" id="displayDataRate" style="width: 100px; margin-right: 30px;"readonly>
+    </div>
+    <span style="margin-right: 30px;">=</span>
+     <div>
+    <label for="variable2">sustainable data rate (MB/s)</label>
+    <input type="text" id="variable2" style="width: 100px; margin-right: 30px;" readonly>
+    </div>
+ </div>
+<div style="display: flex; align-items: center;">
+  <div>
+    <label for="variable2_clone">Sustainable data rate (MB/s):</label>
+    <input type="text" id="variable2_clone" style="width: 100px; margin-right: 30px;" readonly>
+  </div>
+  <span style="margin-right: 30px;">/</span>
+  <div>
+    <label for="condition3_clone">Image(W):</label>
+    <input type="text" id="condition3_clone" style="width: 100px; margin-right: 30px;" readonly>
+  </div>
+  <span style="margin-right: 30px;">/</span>
+  <div>
+    <label for="condition4_clone">Image(H):</label>
+    <input type="text" id="condition4_clone" style="width: 100px; margin-right: 30px;" readonly>
+  </div>
+  <span style="margin-right: 30px;">=</span>
+    <div>
+    <label for="variable3_fps">FPS</label>
+    <input type="text" id="variable3_fps" style="width: 100px; margin-right: 30px;" readonly>
+    </div>
+</div>
+
+<style>
+  /* CSS樣式部分 */
+  .condition {
+    display: inline-block;
+    margin-right: 10px;
+  }
+</style>
+
+<script>
+  // JavaScript部分
+  function calculate() {
+    var condition1 = document.getElementById("condition1").value;
+    var condition2 = document.getElementById("condition2").value;
+    var dataRate = "";
+
+    if (condition1 === "cxp-6") {
+      if (condition2 === "8-bit") {
+        dataRate = "70%";
+      } else if (condition2 === "10-bit") {
+        dataRate = "77.8%";
+      } else if (condition2 === "12-bit") {
+        dataRate = "84%";
+      } else if (condition2 === "14-bit") {
+        dataRate = "89.1%";
+      } else if (condition2 === "16-bit") {
+        dataRate = "93.3%";
+      }
+    } else if (condition1 === "cxp-12") {
+      if (condition2 === "8-bit") {
+        dataRate = "123.2%";
+      } else if (condition2 === "10-bit") {
+        dataRate = "136.9%";
+      } else if (condition2 === "12-bit") {
+        dataRate = "147.8%";
+      } else if (condition2 === "14-bit") {
+        dataRate = "156.8%";
+      } else if (condition2 === "16-bit") {
+        dataRate = "164.3%";
+      }
+    }
+
+    updateDisplayDataRate(dataRate);
+    calculateVariable2();
+    document.getElementById('variable2_clone').value = document.getElementById('variable2').value;
+    document.getElementById('condition3_clone').value = document.getElementById('condition3').value;
+    document.getElementById('condition4_clone').value = document.getElementById('condition4').value;
+    calculateFPS();
+  }
+
+  function updateDisplayDataRate(dataRate) {
+    var displayDataRate = document.getElementById("displayDataRate");
+    displayDataRate.value = dataRate;
+  }
+    function calculateVariable2() {
+    var displayDataRateStr = document.getElementById("displayDataRate").value;
+    var displayDataRate = parseFloat(displayDataRateStr) / 100; // Convert percentage to decimal
+    var variable2 = 2500 * displayDataRate;
+    document.getElementById("variable2").value = variable2;
+  }
+
+  function calculateFPS() {
+  var variable2 = parseFloat(document.getElementById('variable2_clone').value);
+  var condition3 = parseFloat(document.getElementById('condition3_clone').value);
+  var condition4 = parseFloat(document.getElementById('condition4_clone').value);
+  var condition5 = document.getElementById('condition5').value;
+
+    if(condition3 && condition4){ // To make sure both condition3 and condition4 are not zero
+      var fps = variable2 * 1000000/ (condition3 * condition4);
+
+      if (condition5 === "RGB") {
+        fps = fps / 3;
+      }
+
+      document.getElementById('variable3_fps').value = fps;
+  }
+}
+</script>
+
+<h2 id="ffc-wizard-sample-program-quickly-start">FFC Wizard Sample Program (Quickly start)</h2>
+
+<p>Euresys provides the source code of a sample application, called ffc-wizard, that computes the coefficients and packs them in a binary file targeting the frame grabber.</p>
+
+<p>The purpose of this sample code is threefold:</p>
+
+<ul>
+<li>guide the user through the calibration procedure;</li>
+<li>provide a technical and practical translation of what&rsquo;s described in this document;</li>
+<li>provide building blocks for developing custom applications.</li>
+</ul>
+
+<p><a href="https://documentation.euresys.com/Products/COAXLINK/COAXLINK/en-us/Content/03_Interfaces/functional-guide/ffc/ffc-sample-program.htm?tocpath=Frame%20Grabbers%7CCoaxlink%20series%7CFunctional%20Guide%20(Coaxlink%20series)%7CPixel%20Processing%7CFlat%20Field%20Correction%7C_____3">Link</a></p>
 
 
 
@@ -2801,7 +2908,6 @@ Following this tutorial, you will learn how to use EasyGauge to measure the diam
             
                 
                     
-                    
                 
                 
 
@@ -2816,9 +2922,6 @@ Following this tutorial, you will learn how to use EasyGauge to measure the diam
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2920,7 +3023,6 @@ Following this tutorial, you will learn how to use EasyGauge to measure the diam
             
                 
                     
-                    
                 
                 
 
@@ -2936,9 +3038,6 @@ Following this tutorial, you will learn how to use EasyGauge to measure the diam
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3007,6 +3106,7 @@ Following this tutorial, you will learn how to use EasyGauge to measure the diam
             
                 
                     
+                    
                 
                 
 
@@ -3021,6 +3121,9 @@ Following this tutorial, you will learn how to use EasyGauge to measure the diam
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3038,6 +3141,7 @@ Following this tutorial, you will learn how to use EasyGauge to measure the diam
             
                 
                     
+                    
                 
                 
 
@@ -3056,6 +3160,9 @@ Following this tutorial, you will learn how to use EasyGauge to measure the diam
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4133,10 +4240,10 @@ Following this tutorial, you will learn how to use EasyGauge to measure the diam
 	 
 	 
 		
-			<a class="nav nav-prev" href="/euresys/easyfind/qa/" title="EasyFind (Q&amp;A)"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/euresys-grab-card/coaxlink-quad/" title="Coaxlink Quad"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/euresys/easyimage/" title="EasyImage" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/visioncard/" title="Vision Card" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
