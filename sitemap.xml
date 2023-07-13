@@ -159,6 +159,10 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/neon/wd-fov/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/easydeeplearning/deep-learning-studio/</loc>
   </url>
   
@@ -259,7 +263,7 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-2000-jt2/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/</loc>
   </url>
   
   <url>
@@ -291,43 +295,43 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-2000-jt2/gettingstart/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/gettingstart/</loc>
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-2000-jnx/howtoflashimage/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/howtoflashimage/</loc>
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-2000-jnx/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/</loc>
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-2000-jnx/faq/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/faq/</loc>
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-2000-jt2/howtobackupneonibymicrosd/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/howtobackupneonibymicrosd/</loc>
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-2000-jt2/howtouseneontocontroldio/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/howtouseneontocontroldio/</loc>
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-2000-jt2/howtoflashimage/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/howtoflashimage/</loc>
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-2000-jt2/howtochooselenses/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/howtochooselenses/</loc>
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-2000-jt2/faq/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/faq/</loc>
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon-1000-mdx/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-1000-mdx/</loc>
   </url>
   
   <url>
@@ -364,6 +368,10 @@
   
   <url>
     <loc>https://aiot-ist.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/neon/</loc>
   </url>
   
   <url>
