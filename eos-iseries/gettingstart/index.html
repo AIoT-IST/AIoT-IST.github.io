@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="generator" content="Hugo 0.66.0" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>Getting start with Yolov3 :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1692610006" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1692610006" rel="stylesheet">
-    <link href="/css/hybrid.css?1692610006" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1692610006" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1692610006" rel="stylesheet">
-    <link href="/css/auto-complete.css?1692610006" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1692610006" rel="stylesheet">
-    <link href="/css/theme.css?1692610006" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1692610006" rel="stylesheet">
+    <link href="/css/nucleus.css?1692683532" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1692683532" rel="stylesheet">
+    <link href="/css/hybrid.css?1692683532" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1692683532" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1692683532" rel="stylesheet">
+    <link href="/css/auto-complete.css?1692683532" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1692683532" rel="stylesheet">
+    <link href="/css/theme.css?1692683532" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1692683532" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1692610006"></script>
+    <script src="/js/jquery-3.3.1.min.js?1692683532"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1692610006"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1692610006"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1692683532"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1692683532"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1692610006"></script>
+<script type="text/javascript" src="/js/search.js?1692683532"></script>
 
     
   </div>
@@ -2597,86 +2597,72 @@
 
 
 
-	
-
-<p>This tutorial will guide you how to getting start with EOS-iSeries from un-boxing.</p>
-
+	<p>This tutorial will guide you how to getting start with EOS-iSeries from un-boxing.</p>
 <h3 id="step-1-hardware-wiring">Step 1: Hardware wiring</h3>
-
 <ol>
 <li>Connect the peripherals, keyboard, mouse, monitor and cameras.</li>
 <li>Connect 110V AC power source to the terminal block</li>
 <li>Power on
-<img src="/EOS-iSeries/GettingStart/images/EOS-iX_Hardware_wiring.gif" alt="hardware wiring" /></li>
+<img src="/EOS-iSeries/GettingStart/images/EOS-iX_Hardware_wiring.gif" alt="hardware wiring"></li>
 </ol>
-
 <h3 id="step-2-run-inference-with-different-source">Step 2: Run inference with different source</h3>
-
 <p>The path of inference sample locates on the C:\Users\user\Desktop\ADLINK.
- You can select image, video, webcam or Basler GigE camera as inference source.</p>
-
-<p>Open <em>Terminal</em> and paste commands below:
- - <strong>Image</strong></p>
-
-<pre><code>  cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
-  yolo_console_dll.exe data/coco.names yolov3.cfg yolov3.weights C:\Users\user\Desktop\ADLINK\darknet-For_basler_camera\data\dog.jpg
+You can select image, video, webcam or Basler GigE camera as inference source.</p>
+<p>Open <em>Terminal</em> and paste commands below:</p>
+<ul>
+<li><strong>Image</strong></li>
+</ul>
+<pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
+yolo_console_dll.exe data/coco.names yolov3.cfg yolov3.weights C:\Users\user\Desktop\ADLINK\darknet-For_basler_camera\data\dog.jpg
 </code></pre>
-
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/D7IFtSARp3Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
 
-
 <div class="notices tip" ><p>Terminate program by close the <em>Terminal</em> or ctrl+c.</p>
 </div>
 
-
 <ul>
-<li><p><strong>Video</strong></p>
-
+<li>
+<p><strong>Video</strong></p>
 <pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
 yolo_console_dll.exe data/coco.names yolov3.cfg yolov3.weights test.mp4
 </code></pre>
-
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/7VWZjYYtapo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
+
 </li>
-
-<li><p><strong>Webcam</strong></p>
-
+<li>
+<p><strong>Webcam</strong></p>
 <pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
 yolo_console_dll.exe web_camera
 </code></pre>
-
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/iqVN9JQrSwE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
+
 </li>
-
-<li><p><strong>Basler GigE camera</strong></p></li>
-
-<li><p>Open <strong>pylon Viewer</strong> and make sure GigE camera works.</p></li>
-
-<li><p>Key in commands</p>
-
+<li>
+<p><strong>Basler GigE camera</strong></p>
+</li>
+</ul>
+<ol>
+<li>Open <strong>pylon Viewer</strong> and make sure GigE camera works.</li>
+<li>Key in commands
 <pre><code>cd C:\Users\user\Desktop\adlink\darknet-For_basler_camera\build\darknet\x64
 yolo_console_dll.exe basler_camera
-</code></pre>
+</code></pre><p>or
+Click <strong>Run_basler_camera_with_Object_Detection.bat</strong> in folder
 
-<p>or
-Click <strong>Run_basler_camera_with_Object_Detection.bat</strong> in folder</p>
-
-<h2 id="hahahugoshortcode-s4-hbhb">
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/BEExfRdXLe8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-</h2></li>
-</ul>
+</p>
+</li>
+</ol>
+<hr>
 
 
 
@@ -4244,19 +4230,19 @@ Click <strong>Run_basler_camera_with_Object_Detection.bat</strong> in folder</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1692610006"></script>
-    <script src="/js/perfect-scrollbar.min.js?1692610006"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1692610006"></script>
-    <script src="/js/jquery.sticky.js?1692610006"></script>
-    <script src="/js/featherlight.min.js?1692610006"></script>
-    <script src="/js/highlight.pack.js?1692610006"></script>
+    <script src="/js/clipboard.min.js?1692683532"></script>
+    <script src="/js/perfect-scrollbar.min.js?1692683532"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1692683532"></script>
+    <script src="/js/jquery.sticky.js?1692683532"></script>
+    <script src="/js/featherlight.min.js?1692683532"></script>
+    <script src="/js/highlight.pack.js?1692683532"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1692610006"></script>
-    <script src="/js/learn.js?1692610006"></script>
-    <script src="/js/hugo-learn.js?1692610006"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1692683532"></script>
+    <script src="/js/learn.js?1692683532"></script>
+    <script src="/js/hugo-learn.js?1692683532"></script>
 
-    <link href="/mermaid/mermaid.css?1692610006" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1692610006"></script>
+    <link href="/mermaid/mermaid.css?1692683532" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1692683532"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
