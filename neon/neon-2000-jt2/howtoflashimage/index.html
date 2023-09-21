@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="generator" content="Hugo 0.58.2" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>How to flash image? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1695091343" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1695091343" rel="stylesheet">
-    <link href="/css/hybrid.css?1695091343" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1695091343" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1695091343" rel="stylesheet">
-    <link href="/css/auto-complete.css?1695091343" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1695091343" rel="stylesheet">
-    <link href="/css/theme.css?1695091343" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1695091343" rel="stylesheet">
+    <link href="/css/nucleus.css?1695265851" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1695265851" rel="stylesheet">
+    <link href="/css/hybrid.css?1695265851" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1695265851" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1695265851" rel="stylesheet">
+    <link href="/css/auto-complete.css?1695265851" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1695265851" rel="stylesheet">
+    <link href="/css/theme.css?1695265851" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1695265851" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1695091343"></script>
+    <script src="/js/jquery-3.3.1.min.js?1695265851"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1695091343"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1695091343"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1695265851"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1695265851"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1695091343"></script>
+<script type="text/javascript" src="/js/search.js?1695265851"></script>
 
     
   </div>
@@ -2509,23 +2509,35 @@
 
 
 
-	<p>This page cover the process to flash a new operating system onto a NEON device.</p>
+	
+
+<p>This page cover the process to flash a new operating system onto a NEON device.</p>
+
 <p>There are 2 methods to flash the NEON-2000-JT2 and NEON-2000-JT2-X:</p>
+
 <ul>
 <li>Flash over USB</li>
 <li>Clone image to microSD card</li>
 </ul>
+
 <p>Other useful information about flashing a Jetson based device can be found <a href="https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/SD/FlashingSupport.html">here</a>.</p>
+
 <h2 id="usb-method">USB Method</h2>
+
 <p>This method uses a host machine to flash the internal eMMC storage over USB.</p>
+
 <p>To perform this method the following equipment is required:</p>
+
 <ul>
 <li>A bare metal machine running Ubuntu. <strong>Must not be a virtual machine</strong></li>
 <li>microUSB cable</li>
 <li>2 x pin jumpers</li>
 </ul>
-<h3 id="step-1--download-image-to-your-host-pc-with-ubuntu">Step 1:  Download image to your host pc with Ubuntu</h3>
+
+<h3 id="step-1-download-image-to-your-host-pc-with-ubuntu">Step 1:  Download image to your host pc with Ubuntu</h3>
+
 <h4 id="neon-2000-jt2">Neon-2000-JT2</h4>
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/A2_L4T_32.2_20200116.tar.gz">Jetpack 4.2.1 emmc image</a></li>
 <li><a href="https://sftp.adlinktech.com/image/Linux_for_Tegra_JetPack43.tar.gz">Jetpack 4.3 v1.0.0 emmc image</a></li>
@@ -2534,190 +2546,224 @@
 <li><a href="https://sftp.adlinktech.com/image/Neon-JT2/JT2_JP461_emmc_v1.0.6.tar.gz">Jetpack 4.6.1 v1.0.6 emmc image</a> MD5:31a7ddc595ac588633f1ea64275c33b9</li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JT2/JT2_JP461_emmc_v1.0.7.tar.gz">Jetpack 4.6.1 v1.0.7 emmc image(with EVA3.8.5 + EVA IDE)</a> MD5:b3485b4cdcb1aa1de57b27be8efc6146</li>
 </ul>
+
 <h4 id="neon-2000-jt2-x">Neon-2000-JT2-X</h4>
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JT2X/JT2X_JP43_v1.0.2.tar.gz">Jetpack 4.3 v1.0.2</a> MD5:ddf504b2c600175eacd61777f528b435</li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JT2X/JT2X_JP44_v1.0.2.tar.gz">Jetpack 4.4 v1.0.2</a> MD5:00126a7170cbb82a38707da5ca3e25e3</li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JT2X/JT2X_JP44_v1.0.2_with_EVA.tar.gz">Jetpack 4.4 v1.0.2 with EVA</a> MD5:18e818021339e3204065d50b54e91dbd</li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JT2X/JT2X_JP461_emmc_v1.0.6.tar.gz">Jetpack 4.6.1 v1.0.6(with EVA3.8.5 + EVA IDE)</a> MD5:1b3f971e278371ee3d8daa9b6fccd339</li>
 </ul>
+
 <h3 id="step-2-checksum">Step 2: Checksum</h3>
+
 <p>Check md5 checksum to make sure image file is correct</p>
+
 <ul>
-<li>
-<p>Linux</p>
+<li><p>Linux</p>
+
 <ul>
-<li>
-<pre><code>$ md5sum [file]
+<li><pre><code>$ md5sum [file]
 </code></pre></li>
-<li>
-<pre><code>$ md5sum JT2X_JP461_emmc_v1.0.6.tar.gz
+
+<li><pre><code>$ md5sum JT2X_JP461_emmc_v1.0.6.tar.gz
 </code></pre></li>
-</ul>
-</li>
-<li>
-<p>Windows 10</p>
+</ul></li>
+
+<li><p>Windows 10</p>
+
 <ul>
-<li>
-<pre><code>$ certutil -hashfile [file] MD5
+<li><pre><code>$ certutil -hashfile [file] MD5
 </code></pre></li>
-<li>
-<pre><code>$ certutil -hashfile JT2X_JP461_emmc_v1.0.6.tar.gz MD5
+
+<li><pre><code>$ certutil -hashfile JT2X_JP461_emmc_v1.0.6.tar.gz MD5
 </code></pre></li>
+</ul></li>
 </ul>
-</li>
-</ul>
+
 <h3 id="step-3-flash-the-image-to-neon">Step 3: Flash the image to NEON</h3>
+
 <p>This step involves connecting the NEON camera to the Host machine and flashing the image.</p>
+
 <p>There is also a <a href="https://drive.google.com/open?id=1Mu40rDiNP1Jggak3bWoyDDgGCxQXEVyX">video</a> and <a href="https://sftp.adlinktech.com/image/Neon-JNX/Flash_Neon_eMMC.pdf">PDF</a> showing the process</p>
+
 <ol>
-<li>
-<p>On the Host PC unzip the file downloaded in Step 1</p>
+<li><p>On the Host PC unzip the file downloaded in Step 1</p>
+
 <pre><code>$ tar -zxvf JT2X_JP461_emmc_v1.0.6.tar.gz
-</code></pre><p>or</p>
+</code></pre>
+
+<p>or</p>
+
 <pre><code>$ tar -jxvf A4_Linux_for_Tegra.20200528_JT2_JP43_v1.0.2.tbz2
 </code></pre></li>
-<li>
-<p>Put the NEON into recovery mode
+
+<li><p>Put the NEON into recovery mode
 You can refer to pin definition below, and try to enter recover mode.
-<img src="/NEON-2000-JT2/howtoflashimage/images/1.png" alt="pin define 1">
-<img src="/NEON-2000-JT2/howtoflashimage/images/2.png" alt="pin define 2"></p>
+<img src="/NEON-2000-JT2/howtoflashimage/images/1.png" alt="pin define 1" />
+<img src="/NEON-2000-JT2/howtoflashimage/images/2.png" alt="pin define 2" /></p>
+
 <ol>
 <li>Power on the NEON</li>
 <li>Short <strong>pins 5 and 6</strong> (recovery), using the provided jumpers</li>
 <li>Short <strong>pins 3 and 4</strong> (reset), for 2 seconds until the power LED goes out using the provided jumpers</li>
 <li>When the jumper for pins 3 and 4 is removed the power LED will light up again</li>
-</ol>
-</li>
-<li>
-<p>Connect the microUSB cable to the NEON and the Host PC</p>
-</li>
-<li>
-<p>Open a terminal and execute the <code>lsusb</code> command, to see if the NEON is connected. If a device called <code>Nvidia Corp.</code> is detected, the device has successfully entered recovery mode.
-<img src="/NEON-2000-JT2/howtoflashimage/images/lsusb.png" alt="lsusb"></p>
-</li>
-<li>
-<p>Go to folder unzipped in step 1</p>
-</li>
-</ol>
+</ol></li>
+
+<li><p>Connect the microUSB cable to the NEON and the Host PC</p></li>
+
+<li><p>Open a terminal and execute the <code>lsusb</code> command, to see if the NEON is connected. If a device called <code>Nvidia Corp.</code> is detected, the device has successfully entered recovery mode.
+<img src="/NEON-2000-JT2/howtoflashimage/images/lsusb.png" alt="lsusb" /></p></li>
+
+<li><p>Go to folder unzipped in step 1</p>
+
 <pre><code>cd JT2X_JP461_emmc_v1.0.6
-</code></pre><ol start="6">
-<li>Flash the Neon-2000-JT2/Neon-JT2X
+</code></pre></li>
+
+<li><p>Flash the Neon-2000-JT2/Neon-JT2X</p>
+
 <pre><code>sudo ./flash.sh -r jetson-tx2 mmcblk0p1
-</code></pre><ul>
-<li>To flash the Neon-JT2(jetpack 4.6.1), Neon-JT2X(jetpack 4.6.1), Neon-2000-JNX
+</code></pre>
+
+<ul>
+<li><p>To flash the Neon-JT2(jetpack 4.6.1), Neon-JT2X(jetpack 4.6.1), Neon-2000-JNX</p>
+
 <pre><code>sudo ./flash.sh
 </code></pre></li>
-</ul>
-</li>
+</ul></li>
 </ol>
+
 <p>Below is a video of the process to flash a NEON-2000-JT2
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/MCpVP3L4aSI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 </p>
-<hr>
+
+<hr />
+
 <h2 id="microsd-card-method">microSD Card Method</h2>
+
 <p>This method involves cloning the operating system image for the NEON camera to a microSD, booting the NEON camera from this image and then optionally copying the image from the microSD card to the internal emmc storage on the NEON camera.</p>
+
 <p>Required tools:</p>
+
 <ul>
 <li>microSD of at least 32GB</li>
 <li>microSD card reader</li>
 </ul>
+
 <p><strong>If you plan on running the operating system from the microSD permanently, make sure to use a high quality microSD card to prevent corruption</strong></p>
+
 <ol>
 <li>Download image file:
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JT2/JT2_JP44_microSD_v1.0.3.tar.gz">Jetpack 4.4 v1.0.3 microSD image</a> MD5:9ccc55b9dec65b15eefee866e6a1fc85</li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JT2/JT2_JP44_microSD_v1.0.3_with_EVA_3.5.3.tar.gz">Jetpack 4.4 v1.0.3 microSD image with EVA_IDE sample</a></li>
-</ul>
-</li>
-<li>Check the md5 checksum to make sure image file is correct
+</ul></li>
+
+<li><p>Check the md5 checksum to make sure image file is correct</p>
+
 <ul>
-<li>Linux
+<li><p>Linux</p>
+
 <ul>
-<li>
-<pre><code>  $ md5sum [file]
+<li><pre><code>$ md5sum [file]
 </code></pre></li>
-<li>
-<pre><code>$ md5sum JT2_JP44_microSD_v1.0.3.tar.gz
+
+<li><pre><code>$ md5sum JT2_JP44_microSD_v1.0.3.tar.gz
 </code></pre></li>
-</ul>
-</li>
-<li>Windows 10
+</ul></li>
+
+<li><p>Windows 10</p>
+
 <ul>
-<li>
-<pre><code>$ certutil -hashfile [file] MD5
+<li><pre><code>$ certutil -hashfile [file] MD5
 </code></pre></li>
-<li>
-<pre><code>$ certutil -hashfile JT2_JP44_microSD_v1.0.3.tar.gz
+
+<li><pre><code>$ certutil -hashfile JT2_JP44_microSD_v1.0.3.tar.gz
 </code></pre></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Unzip the file downloaded in Step 1 to get a <code>.img</code> file</li>
-</ol>
+</ul></li>
+</ul></li>
+
+<li><p>Unzip the file downloaded in Step 1 to get a <code>.img</code> file</p>
+
 <pre><code>$ tar -zxvf JT2_JP44_microSD_v1.0.3.tar.gz
-</code></pre><ol start="4">
-<li>Clone image file to microSD card using one of the following methods
+</code></pre></li>
+
+<li><p>Clone image file to microSD card using one of the following methods</p>
+
 <ul>
 <li>Ubuntu Disk Manager
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/Flash_Neon_microSD.mp4">Video of process to clone image to microSD card</a></li>
 <li>Steps:
+
 <ol>
 <li>Format disk with <code>GPT</code> partitioning</li>
 <li>Create a volume on the disk of type <code>Ext4</code></li>
 <li>Restore image to SD card</li>
-</ol>
-</li>
-</ul>
-</li>
+</ol></li>
+</ul></li>
 <li>Linux or Mac using <code>sudo dd if=&lt;image file&gt;.img of=/dev/sdX bs=4M conv=fsync</code></li>
 <li>Windows using <a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a></li>
 <li>Linux, MacOS or Windows using <a href="https://www.balena.io/etcher/">Balena Etcher</a></li>
-</ul>
-</li>
-<li>Once cloned, check the boot config file is set to boot from the SD card
+</ul></li>
+
+<li><p>Once cloned, check the boot config file is set to boot from the SD card</p>
+
 <ol>
 <li>Insert SD card into a machine</li>
 <li>Open file <code>/&lt;path to sd card&gt;/boot/extlinux/extlinux.conf</code></li>
-<li>Make sure the boot line is set to <code>/dev/mmcblk2p1</code></li>
-</ol>
-<pre><code>  APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait
+
+<li><p>Make sure the boot line is set to <code>/dev/mmcblk2p1</code></p>
+
+<pre><code>APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait
 </code></pre></li>
-<li>Insert SD card into the NEON camera</li>
-<li>Boot NEON</li>
+</ol></li>
+
+<li><p>Insert SD card into the NEON camera</p></li>
+
+<li><p>Boot NEON</p></li>
 </ol>
-<h3 id="optional---clone-image-from-microsd-card-to-internal-emmc-in-the-neon">Optional - Clone image from microSD card to internal eMMC in the NEON:</h3>
+
+<h3 id="optional-clone-image-from-microsd-card-to-internal-emmc-in-the-neon">Optional - Clone image from microSD card to internal eMMC in the NEON:</h3>
+
 <ol>
 <li>Mount the internal eMMC
+
 <ol>
 <li>lsblk</li>
 <li>sudo mkfs -t ext4 /dev/mmcblk0p1</li>
 <li>lsblk -f</li>
 <li>sudo mkdir /media/adlink/ssd</li>
 <li>sudo mount /dev/mmcblk0p1 /media/adlink/ssd</li>
-</ol>
-</li>
-<li>Clone image from microSD card to internal eMMC using rsync</li>
-</ol>
+</ol></li>
+
+<li><p>Clone image from microSD card to internal eMMC using rsync</p>
+
 <pre><code>sudo rsync -axHAWX --numeric-ids --info=progress2 / /media/adlink/ssd
-</code></pre><ol start="3">
-<li>Change boot config on the internal eMMC to boot from the internal eMMC <code>mmcblk0p1</code>
+</code></pre></li>
+
+<li><p>Change boot config on the internal eMMC to boot from the internal eMMC <code>mmcblk0p1</code></p>
+
 <ol>
 <li>Open file <code>/media/adlink/ssd/boot/extlinux/extlinux.conf</code></li>
-<li>Replace the following</li>
-</ol>
-<pre><code>  # Replace this line
-  # APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait
 
-  # With this line
-  APPEND ${cbootargs} quiet
+<li><p>Replace the following</p>
+
+<pre><code># Replace this line
+# APPEND ${cbootargs} rootfstype=ext4 root=/dev/mmcblk2p1 rw rootwait
+
+# With this line
+APPEND ${cbootargs} quiet
 </code></pre></li>
-<li>Remove the SD card and reboot the NEON</li>
+</ol></li>
+
+<li><p>Remove the SD card and reboot the NEON</p></li>
 </ol>
 
 
@@ -4229,19 +4275,19 @@ You can refer to pin definition below, and try to enter recover mode.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1695091343"></script>
-    <script src="/js/perfect-scrollbar.min.js?1695091343"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1695091343"></script>
-    <script src="/js/jquery.sticky.js?1695091343"></script>
-    <script src="/js/featherlight.min.js?1695091343"></script>
-    <script src="/js/highlight.pack.js?1695091343"></script>
+    <script src="/js/clipboard.min.js?1695265851"></script>
+    <script src="/js/perfect-scrollbar.min.js?1695265851"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1695265851"></script>
+    <script src="/js/jquery.sticky.js?1695265851"></script>
+    <script src="/js/featherlight.min.js?1695265851"></script>
+    <script src="/js/highlight.pack.js?1695265851"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1695091343"></script>
-    <script src="/js/learn.js?1695091343"></script>
-    <script src="/js/hugo-learn.js?1695091343"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1695265851"></script>
+    <script src="/js/learn.js?1695265851"></script>
+    <script src="/js/hugo-learn.js?1695265851"></script>
 
-    <link href="/mermaid/mermaid.css?1695091343" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1695091343"></script>
+    <link href="/mermaid/mermaid.css?1695265851" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1695265851"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
