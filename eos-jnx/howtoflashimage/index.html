@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="generator" content="Hugo 0.66.0" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>How to flash image? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1695265851" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1695265851" rel="stylesheet">
-    <link href="/css/hybrid.css?1695265851" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1695265851" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1695265851" rel="stylesheet">
-    <link href="/css/auto-complete.css?1695265851" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1695265851" rel="stylesheet">
-    <link href="/css/theme.css?1695265851" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1695265851" rel="stylesheet">
+    <link href="/css/nucleus.css?1695786937" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1695786937" rel="stylesheet">
+    <link href="/css/hybrid.css?1695786937" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1695786937" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1695786937" rel="stylesheet">
+    <link href="/css/auto-complete.css?1695786937" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1695786937" rel="stylesheet">
+    <link href="/css/theme.css?1695786937" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1695786937" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1695265851"></script>
+    <script src="/js/jquery-3.3.1.min.js?1695786937"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1695265851"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1695265851"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1695786937"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1695786937"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1695265851"></script>
+<script type="text/javascript" src="/js/search.js?1695786937"></script>
 
     
   </div>
@@ -2215,6 +2215,30 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/neon/faq/howtosetupneon/" title="How to set up Neon camera?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon/faq/howtosetupneon/">
+          How to set up Neon camera?
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -2503,83 +2527,71 @@
 
 
 
-	
-
-<h2 id="eos-jnx">EOS-JNX</h2>
-
+	<h2 id="eos-jnx">EOS-JNX</h2>
 <p><strong>emmc image and microSD image are one-by-one mapping.</strong>
 <strong>That is, you have to flash emmc and microSD image with same version.</strong>
 <strong>For example, jetpack 5.0.2 emmc + jetpack 5.0.2 microSD image</strong></p>
-
 <h4 id="download-emmc-image">Download eMMC image</h4>
-
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP502_emmc.tar.gz">jetpack5.0.2 md5: 588e91411bb61f5b95b190bebb8373de</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP461_emmc.tar.gz">jetpack4.6.1 md5: e9978a1f7d981b11fd9f323a6ca73aa7</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX-emmc_v3.2.1.tar.gz">jetpack4.6</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX-emmc_v1.2.tar.gz">jetpack4.5</a></li>
 </ul>
-
 <h5 id="how-to-reflash-emmc-image">How to reflash eMMC image</h5>
-
 <ul>
-<li><p>To perform this step the following equipment is required:</p>
-
+<li>
+<p>To perform this step the following equipment is required:</p>
 <ul>
 <li>A bare metal machine running Ubuntu. Must not be a virtual machine.</li>
 <li>microUSB cable</li>
-</ul></li>
-
-<li><p>For Jetpack 5.0.2: Install neccessary package at first</p>
-
+</ul>
+</li>
+<li>
+<p>For Jetpack 5.0.2: Install neccessary package at first</p>
 <pre><code>sudo apt-get install sshpass
 </code></pre></li>
 </ul>
-
 <ol>
-<li><p>On the Host PC unzip the file downloaded.</p>
-
+<li>
+<p>On the Host PC unzip the file downloaded.</p>
 <pre><code>tar -zxvf EOS-JNX_JP502_emmc.tar.gz
 </code></pre></li>
-
-<li><p>Set EOS-JNX as recovery mode</p>
-
+<li>
+<p>Set EOS-JNX as recovery mode</p>
 <ul>
 <li>Boot EOS-JNX</li>
 <li>Hold <em>RECOVERY</em> button on front panel</li>
 <li>Push <em>RESET</em> button on front panel</li>
 <li>Release <em>RECOVERY</em> button</li>
-</ul></li>
-
-<li><p>Connect the microUSB cable to the EOS-JNX and the Host PC</p></li>
-
-<li><p>Open a terminal and execute the <code>lsusb</code> command, to see if the NEON is connected. If a device called <code>Nvidia Corp.</code> is detected, the device has successfully entered recovery mode.
-<img src="/NEON-2000-JT2/howtoflashimage/images/lsusb.png" alt="lsusb" /></p></li>
-
-<li><p>Go to folder unzipped in step 1</p>
-
+</ul>
+</li>
+<li>
+<p>Connect the microUSB cable to the EOS-JNX and the Host PC</p>
+</li>
+<li>
+<p>Open a terminal and execute the <code>lsusb</code> command, to see if the NEON is connected. If a device called <code>Nvidia Corp.</code> is detected, the device has successfully entered recovery mode.
+<img src="/NEON-2000-JT2/howtoflashimage/images/lsusb.png" alt="lsusb"></p>
+</li>
+<li>
+<p>Go to folder unzipped in step 1</p>
+</li>
+</ol>
 <pre><code>cd EOS-JNX_JP502_emmc
-</code></pre></li>
-
-<li><p>Flash the EOS-JNX</p>
-
+</code></pre><ol start="6">
+<li>Flash the EOS-JNX
 <ul>
-<li><p>Jetpack before 5.0.2</p>
-
+<li>Jetpack before 5.0.2</li>
+</ul>
 <pre><code>sudo ./nvmflash.sh
-</code></pre></li>
-
-<li><p>For Jetpack 5.0.2</p>
-
+</code></pre><ul>
+<li>For Jetpack 5.0.2</li>
+</ul>
 <pre><code>sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 20
 </code></pre></li>
-</ul></li>
-
-<li><p>Once the flash script is complete and shows <code>Flash complete (SUCCESS)</code> reboot the EOS-JNX</p></li>
+<li>Once the flash script is complete and shows <code>Flash complete (SUCCESS)</code> reboot the EOS-JNX</li>
 </ol>
-
 <h4 id="download-microsd-image">Download microSD image</h4>
-
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP502_microSD_v1.0.3.img.tar.gz">jetpack5.0.2 md5: dda62d5d21f84d25368b5080eaed80e0</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP461_microSD_v1.0.2.tar.gz">jetpack4.6.1 md5: d8006c99a4c3fc4ee7d5ba1639e8f57e</a></li>
@@ -2587,51 +2599,52 @@
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP46_microSD_v1.0.1.tar.gz">jetpack4.6</a></li>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/EOS-JNX_JP45_microSD_v1.0.0.zip">jetpack4.5</a></li>
 <li>SOP
-
 <ul>
 <li>Windows
-
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/Flash_microSD_image_on_Windows.mp4">video</a></li>
 <li><a href="https://sourceforge.net/projects/win32diskimager/">tool</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Linux
-
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/EOS-JNX/Flash_microSD_image_on_Linux.mp4">video</a></li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h5 id="check-sum">Check sum</h5>
-
 <pre><code>$ md5sum EOS-JNX_JP502_emmc.tar.gz
 588e91411bb61f5b95b190bebb8373de  EOS-JNX_JP502_emmc.tar.gz
 
 $ md5sum EOS-JNX_JP502_microSD_v1.0.3.img.tar.gz
 dda62d5d21f84d25368b5080eaed80e0  EOS-JNX_JP502_microSD_v1.0.3.img.tar.gz
-</code></pre>
-
+</code></pre><ul>
+<li>check md5 check sum to make sure image file is correct
 <ul>
-<li><p>check md5 check sum to make sure image file is correct</p>
-
+<li>Linux
 <ul>
-<li>Linux</li>
-
-<li><pre><code>$ md5sum [file]
+<li>
+<pre><code></code></pre></li>
+</ul>
+<p>$ md5sum [file]</p>
+<pre><code>
+- ```
+$ md5sum files.tar.gz
 </code></pre></li>
-
-<li><pre><code>$ md5sum files.tar.gz
+<li>Windows 10
+<ul>
+<li>
+<pre><code>certutil -hashfile [file] MD5
 </code></pre></li>
-
-<li><p>Windows 10</p></li>
-
-<li><pre><code>certutil -hashfile [file] MD5
+<li>
+<pre><code>certutil -hashfile files.tar.gz MD5
 </code></pre></li>
-
-<li><pre><code>certutil -hashfile files.tar.gz MD5
-</code></pre></li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 
@@ -3992,6 +4005,22 @@ dda62d5d21f84d25368b5080eaed80e0  EOS-JNX_JP502_microSD_v1.0.3.img.tar.gz
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -4136,19 +4165,19 @@ dda62d5d21f84d25368b5080eaed80e0  EOS-JNX_JP502_microSD_v1.0.3.img.tar.gz
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1695265851"></script>
-    <script src="/js/perfect-scrollbar.min.js?1695265851"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1695265851"></script>
-    <script src="/js/jquery.sticky.js?1695265851"></script>
-    <script src="/js/featherlight.min.js?1695265851"></script>
-    <script src="/js/highlight.pack.js?1695265851"></script>
+    <script src="/js/clipboard.min.js?1695786937"></script>
+    <script src="/js/perfect-scrollbar.min.js?1695786937"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1695786937"></script>
+    <script src="/js/jquery.sticky.js?1695786937"></script>
+    <script src="/js/featherlight.min.js?1695786937"></script>
+    <script src="/js/highlight.pack.js?1695786937"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1695265851"></script>
-    <script src="/js/learn.js?1695265851"></script>
-    <script src="/js/hugo-learn.js?1695265851"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1695786937"></script>
+    <script src="/js/learn.js?1695786937"></script>
+    <script src="/js/hugo-learn.js?1695786937"></script>
 
-    <link href="/mermaid/mermaid.css?1695265851" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1695265851"></script>
+    <link href="/mermaid/mermaid.css?1695786937" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1695786937"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
