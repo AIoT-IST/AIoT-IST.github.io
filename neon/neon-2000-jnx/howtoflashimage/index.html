@@ -12,18 +12,18 @@
     <title>How to flash image? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1696316110" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696316110" rel="stylesheet">
-    <link href="/css/hybrid.css?1696316110" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696316110" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696316110" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696316110" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696316110" rel="stylesheet">
-    <link href="/css/theme.css?1696316110" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696316110" rel="stylesheet">
+    <link href="/css/nucleus.css?1696323228" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696323228" rel="stylesheet">
+    <link href="/css/hybrid.css?1696323228" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696323228" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696323228" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696323228" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696323228" rel="stylesheet">
+    <link href="/css/theme.css?1696323228" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696323228" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696316110"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696323228"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696316110"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696316110"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696323228"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696323228"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696316110"></script>
+<script type="text/javascript" src="/js/search.js?1696323228"></script>
 
     
   </div>
@@ -2714,6 +2714,77 @@ You can refer to pin definition below, and try to enter recover mode.
   <iframe src="https://www.youtube.com/embed/MCpVP3L4aSI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 </p>
+<h3 id="appendix-how-to-restore-emmc-image">Appendix: How to restore eMMC image</h3>
+<ul>
+<li>
+<p>method 1</p>
+<ul>
+<li>step1: download environment on Linux x86 ubuntu PC
+<ul>
+<li><a href="https://sftp.adlinktech.com/image/Neon-JNX/deploy.neonjnx.tar.gz">https://sftp.adlinktech.com/image/Neon-JNX/deploy.neonjnx.tar.gz</a></li>
+<li>md5: d9e7e4ff4030f7d81f72c353aad6d272</li>
+</ul>
+</li>
+<li>step2: untar the file
+<ul>
+<li><code>tar -zxvf deploy.neonjnx.tar.gz </code></li>
+</ul>
+</li>
+<li>step3: execute command
+<ul>
+<li><code>sudo ./flash.sh -r -k APP -G backup.img jetson-xavier-nx-neonjnx-emmc mmcblk0p1</code></li>
+<li>Note: Booard name of different hardware version
+<ul>
+<li>HW A3: jetson-neonjnx-a3-emmc</li>
+<li>HW A2: jetson-xavier-nx-neonjnx-emmc</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>method 2</p>
+<ul>
+<li>
+<p>Backup emmc</p>
+ <div>
+   <iframe
+       src="https://sftp.adlinktech.com/image/EOS-JNX/sop/Backup_emmc.mp4" 
+       width="640" height="385"
+       scrolling="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+   </iframe>
+ </div>	
+<pre><code>cd ~/
+mkdir mntTemp
+sudo mount /dev/mmcblk0p1 mntTemp
+cd mntTemp
+sudo tar -jcf ../customerEMMC.tbz2 *
+sync
+cd ../
+sudo umount mntTemp
+rmdir mntTemp
+</code></pre></li>
+<li>
+<p>Restore emmc</p>
+ <div>
+   <iframe
+       src="https://sftp.adlinktech.com/image/EOS-JNX/sop/Restore_emmc.mp4" 
+       width="640" height="385"
+       scrolling="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+   </iframe>
+ </div>	
+<pre><code>cd ~/
+mkdir mntTemp
+sudo mount /dev/mmcblk0p1 mntTemp
+sudo tar jxf customerEMMC.tbz2 -C mntTemp
+sync
+sudo umount mntTemp
+rmdir mntTemp  
+</code></pre></li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -4253,19 +4324,19 @@ You can refer to pin definition below, and try to enter recover mode.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696316110"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696316110"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696316110"></script>
-    <script src="/js/jquery.sticky.js?1696316110"></script>
-    <script src="/js/featherlight.min.js?1696316110"></script>
-    <script src="/js/highlight.pack.js?1696316110"></script>
+    <script src="/js/clipboard.min.js?1696323228"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696323228"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696323228"></script>
+    <script src="/js/jquery.sticky.js?1696323228"></script>
+    <script src="/js/featherlight.min.js?1696323228"></script>
+    <script src="/js/highlight.pack.js?1696323228"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696316110"></script>
-    <script src="/js/learn.js?1696316110"></script>
-    <script src="/js/hugo-learn.js?1696316110"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696323228"></script>
+    <script src="/js/learn.js?1696323228"></script>
+    <script src="/js/hugo-learn.js?1696323228"></script>
 
-    <link href="/mermaid/mermaid.css?1696316110" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696316110"></script>
+    <link href="/mermaid/mermaid.css?1696323228" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696323228"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
