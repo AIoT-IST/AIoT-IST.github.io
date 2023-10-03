@@ -56,6 +56,13 @@
 	"content": "This section describes the mounting accessories provided with the Neon camera and includes actual installation images for user reference during on-site setup.\n Accessories Mount in the factory  Accessories VESA mount The Neon camera provides standard VESA mount installation(10x10cm) and can be referenced with accessory 91-95321-0010. Tripod You can also refer to our designed tripod adapter plate to mount the Neon camera on a photography tripod, for example Velbon EX-Macro. Mount in the factory "
 },
 {
+	"uri": "https://aiot-ist.github.io/neon/faq/howtobackupandextendsdcard/",
+	"title": "How to backup and extend microSD card?",
+	"tags": [],
+	"description": "",
+	"content": "According to application requirements, when the micro SD card installed in the Neon camera or EOS-JNX doesn\u0026rsquo;t meet the capacity needs, you can follow the steps below to back up and restore the card\u0026rsquo;s contents to a larger storage device.\n Step 1: Back up micro SD card Step 2: Restore image Step 3: Extend the partition of SD card  Neon camera and EOS-JNX supports addressing larger capacity SD 3.0 or SD-XC cards up to 2 TB. We have tested the following cards:\n SanDisk ExtremePRO microSDXC 512GB SanDisk ExtremePRO microSDXC 128GB SanDisk ExtremePRO microSDXC 64GB Transcend TS128GUSD430T 128GB Transcend TS64GUSD430T 64GB  Step 1: Back up micro SD card Please prepare the Linux x86 machine and use the \u0026ldquo;disks\u0026rdquo; tool preinstalled in ubuntu.\n   Step 2: Restore image from step1 Restore the backup image made from step2 into your another SD card.\n Clone image file to microSD card using one of the following methods  Ubuntu Disk Manager  Video of process to clone image to microSD card Steps:  Format disk with GPT partitioning Create a volume on the disk of type Ext4 Restore image to SD card        Linux or Mac using sudo dd if=\u0026lt;image file\u0026gt;.img of=/dev/sdX bs=4M conv=fsync Windows using Win32 Disk Imager Linux, MacOS or Windows using Balena Etcher    Step 3: Extend the partition of SD card If your memory card space is larger than the backup image, you need to extend your memory card partition.\n   "
+},
+{
 	"uri": "https://aiot-ist.github.io/eos-iseries/",
 	"title": "EOS-iSeries",
 	"tags": [],
