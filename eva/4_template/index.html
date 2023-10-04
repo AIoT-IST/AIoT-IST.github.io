@@ -12,18 +12,18 @@
     <title>4 Template :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1696387726" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696387726" rel="stylesheet">
-    <link href="/css/hybrid.css?1696387726" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696387726" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696387726" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696387726" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696387726" rel="stylesheet">
-    <link href="/css/theme.css?1696387726" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696387726" rel="stylesheet">
+    <link href="/css/nucleus.css?1696406320" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696406320" rel="stylesheet">
+    <link href="/css/hybrid.css?1696406320" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696406320" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696406320" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696406320" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696406320" rel="stylesheet">
+    <link href="/css/theme.css?1696406320" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696406320" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696387726"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696406320"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696387726"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696387726"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696406320"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696406320"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696387726"></script>
+<script type="text/javascript" src="/js/search.js?1696406320"></script>
 
     
   </div>
@@ -2611,6 +2611,8 @@
 <code>gst-launch-1.0 v4l2src io-mode=0 device=/dev/video0 do-timestamp=true ! 'video/x-raw, width=1920, height=1080, framerate=30/1, format=UYVY' ! xvimagesink sync=false</code></li>
 <li>Preview &amp; save <br>
 <code>gst-launch-1.0 v4l2src io-mode=0 device=/dev/video0 do-timestamp=true ! 'video/x-raw, width=1920, height=1080, framerate=30/1, format=UYVY' ! videoconvert ! tee name=t ! queue ! 'video/x-raw, format=(string)UYVY' ! nvvideoconvert ! 'video/x-raw(memory:NVMM)' ! nvv4l2h264enc bitrate=4000000 ! h264parse ! matroskamux ! filesink location=test.mkv sync=false t. ! queue ! xvimagesink sync=false</code></li>
+<li>Inference and save video
+<code>gst-launch-1.0 filesrc location=pallet.mp4 ! decodebin ! nvvidconv ! videoconvert ! adrt model=pallet_yolov4_416.engine scale=0.004 mean=&quot;0 0 0&quot; rgbconv=True ! adtrans_yolo class-num=1 anchor=anchor=&quot;(12,16),(19,36),(40,28),(36,75),(76,55),(72,146),(142,110),(192,243),(459,401)&quot; threshold=0.3 label=pallet_yolov4_v1.names use-sigmoid=True ! admetadrawer ! videoconvert ! omxh264enc bitrate=4000000 ! h264parse ! qtmux ! filesink location=filename.h264</code></li>
 </ul>
 
 
@@ -4150,19 +4152,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696387726"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696387726"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696387726"></script>
-    <script src="/js/jquery.sticky.js?1696387726"></script>
-    <script src="/js/featherlight.min.js?1696387726"></script>
-    <script src="/js/highlight.pack.js?1696387726"></script>
+    <script src="/js/clipboard.min.js?1696406320"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696406320"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696406320"></script>
+    <script src="/js/jquery.sticky.js?1696406320"></script>
+    <script src="/js/featherlight.min.js?1696406320"></script>
+    <script src="/js/highlight.pack.js?1696406320"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696387726"></script>
-    <script src="/js/learn.js?1696387726"></script>
-    <script src="/js/hugo-learn.js?1696387726"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696406320"></script>
+    <script src="/js/learn.js?1696406320"></script>
+    <script src="/js/hugo-learn.js?1696406320"></script>
 
-    <link href="/mermaid/mermaid.css?1696387726" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696387726"></script>
+    <link href="/mermaid/mermaid.css?1696406320" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696406320"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
