@@ -12,18 +12,18 @@
     <title>How to use NEON to control DI/O? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1696323228" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1696323228" rel="stylesheet">
-    <link href="/css/hybrid.css?1696323228" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1696323228" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1696323228" rel="stylesheet">
-    <link href="/css/auto-complete.css?1696323228" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1696323228" rel="stylesheet">
-    <link href="/css/theme.css?1696323228" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1696323228" rel="stylesheet">
+    <link href="/css/nucleus.css?1696385774" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696385774" rel="stylesheet">
+    <link href="/css/hybrid.css?1696385774" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696385774" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696385774" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696385774" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696385774" rel="stylesheet">
+    <link href="/css/theme.css?1696385774" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696385774" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1696323228"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696385774"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1696323228"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1696323228"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696385774"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696385774"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1696323228"></script>
+<script type="text/javascript" src="/js/search.js?1696385774"></script>
 
     
   </div>
@@ -2590,6 +2590,16 @@ It shorts the two wires at pin20 which is reserved as terminal.
 <li>Use the command <code>cd /usr/src/Neon/Sample/Neon_Setting</code> to adjust Neon setting.</li>
 <li>Use <code>sudo ./NeonSet DO 1 1</code> to turn on the LED, use <code>sudo ./NeonSet DO 1 0 </code> to turn off the LED conversely.</li>
 </ul>
+<h3 id="note">Note</h3>
+<p>Due to dual function of DO0 and DI0, the default function of DO0 is strobe out and DI0 is trigger in.
+If you want to set them as general DO and DI. Please configure it as following:</p>
+<h4 id="dio0config-1-set-dio0-as-gpdi-and-gpdo0">DIO0Config 1: Set DIO0 as GPDI and GPDO0</h4>
+<h4 id="dio0config-0-set-dio0-as-trigger-in-and-strobe-out-default">DIO0Config 0: Set DIO0 as Trigger in and Strobe out (default)</h4>
+<p><code>sudo /usr/src/Neon/Sample/Neon_Setting/NeonSet DIO0Config 1</code>
+<img src="/FAQ/howtouseNeontocontrolDIO/images/DIO1.JPG" alt="Note1">
+Check the information of DIO.
+<code>sudo /usr/src/Neon/Sample/Neon_Information/NeonInformation</code>
+<img src="/FAQ/howtouseNeontocontrolDIO/images/DIO2.JPG" alt="Note2"></p>
 <h2 id="intermediate">Intermediate</h2>
 <h3 id="devices-list-1">Devices List:</h3>
 <ul>
@@ -4179,19 +4189,19 @@ It shorts the two wires at pin20 which is reserved as terminal.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1696323228"></script>
-    <script src="/js/perfect-scrollbar.min.js?1696323228"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1696323228"></script>
-    <script src="/js/jquery.sticky.js?1696323228"></script>
-    <script src="/js/featherlight.min.js?1696323228"></script>
-    <script src="/js/highlight.pack.js?1696323228"></script>
+    <script src="/js/clipboard.min.js?1696385774"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696385774"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696385774"></script>
+    <script src="/js/jquery.sticky.js?1696385774"></script>
+    <script src="/js/featherlight.min.js?1696385774"></script>
+    <script src="/js/highlight.pack.js?1696385774"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1696323228"></script>
-    <script src="/js/learn.js?1696323228"></script>
-    <script src="/js/hugo-learn.js?1696323228"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696385774"></script>
+    <script src="/js/learn.js?1696385774"></script>
+    <script src="/js/hugo-learn.js?1696385774"></script>
 
-    <link href="/mermaid/mermaid.css?1696323228" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1696323228"></script>
+    <link href="/mermaid/mermaid.css?1696385774" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696385774"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
