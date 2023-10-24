@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="generator" content="Hugo 0.58.2" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>Euresys Bayer to RGB by FPGA :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1697100852" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1697100852" rel="stylesheet">
-    <link href="/css/hybrid.css?1697100852" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1697100852" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1697100852" rel="stylesheet">
-    <link href="/css/auto-complete.css?1697100852" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1697100852" rel="stylesheet">
-    <link href="/css/theme.css?1697100852" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1697100852" rel="stylesheet">
+    <link href="/css/nucleus.css?1698117811" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1698117811" rel="stylesheet">
+    <link href="/css/hybrid.css?1698117811" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1698117811" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1698117811" rel="stylesheet">
+    <link href="/css/auto-complete.css?1698117811" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1698117811" rel="stylesheet">
+    <link href="/css/theme.css?1698117811" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1698117811" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1697100852"></script>
+    <script src="/js/jquery-3.3.1.min.js?1698117811"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1697100852"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1697100852"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1698117811"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1698117811"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1697100852"></script>
+<script type="text/javascript" src="/js/search.js?1698117811"></script>
 
     
   </div>
@@ -299,7 +299,7 @@
   
     
     <li data-nav-id="/euresys/" title="Euresys" class="dd-item 
-        parent
+        
         
         
         ">
@@ -2536,10 +2536,13 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-  <ul>
-    <li><a href="#peak-pixel-processing-rate">Peak Pixel Processing Rate</a></li>
-    <li><a href="#calculate-maximum-frame-rate">Calculate Maximum Frame Rate</a></li>
-  </ul>
+<ul>
+<li><a href="#euresys-bayer-to-rgb-conversion-by-fpga">Euresys Bayer to RGB Conversion by FPGA</a>
+<ul>
+<li><a href="#peak-pixel-processing-rate">Peak Pixel Processing Rate</a></li>
+<li><a href="#calculate-maximum-frame-rate">Calculate Maximum Frame Rate</a></li>
+</ul></li>
+</ul>
 </nav>
     </div>
 </div>
@@ -2565,8 +2568,12 @@
 
 
 
-	<h1 id="euresys-bayer-to-rgb-conversion-by-fpga">Euresys Bayer to RGB Conversion by FPGA</h1>
+	
+
+<h1 id="euresys-bayer-to-rgb-conversion-by-fpga">Euresys Bayer to RGB Conversion by FPGA</h1>
+
 <h2 id="peak-pixel-processing-rate">Peak Pixel Processing Rate</h2>
+
 <table>
 <thead>
 <tr>
@@ -2575,22 +2582,26 @@
 <th>Peak Pixel Processing Rate</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td align="center">1</td>
 <td>i. 3620 Coaxlink Quad CXP-12 JPEG (4-camera) <br> ii. 3620-4 Coaxlink Quad CXP-12 JPEG (4-camera)</td>
 <td>500,000,000 pixels/sec</td>
 </tr>
+
 <tr>
 <td align="center">2</td>
 <td>i. 1633 Coaxlink Quad G3(2-camera), (2-camera, bayer)<br> ii. 1633-LH Coaxlink Quad G3 LH(2-camera), (2-camera, bayer)</td>
 <td>1,000,000,000 pixels/sec</td>
 </tr>
+
 <tr>
 <td align="center">3</td>
 <td>i. 1633 Coaxlink Quad G3(1-camera) <br> ii. 1633-LH Coaxlink Quad G3 LH (1-camera) <br> iii. 1635 Coaxlink Quad G3 DF(1-camera), (1-df-camera) <br> iv. 3602 Coaxlink Octo (2-camera) <br> v. 3622 Coaxlink Duo CXP-12(1-camera) <br> vi. 3622-LH Coaxlink Duo CXP-12 LH (1-camera)</td>
 <td>1,108,000,000 pixels/sec</td>
 </tr>
+
 <tr>
 <td align="center">4</td>
 <td>i. 3602 Coaxlink Octo (1-camera) <br> ii. 3603 Coaxlink Quad CXP-12 (1-camera) <br>. 3603-4 Coaxlink Quad CXP-12 (1-camera) <br>  iii. 3625 Coaxlink QSFP+ (1-camera)</td>
@@ -2598,27 +2609,30 @@
 </tr>
 </tbody>
 </table>
+
 <h2 id="calculate-maximum-frame-rate">Calculate Maximum Frame Rate</h2>
-<p>Please select the Firmware Version:</p>
+
+<p>Please select the Firmware Version:
 <style>
 .condition {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-}
+}</p>
 
-.condition label {
+<p>.condition label {
   margin-right: 10px;
-}
+}</p>
 
-#maximumFrameRateValue {
+<p>#maximumFrameRateValue {
   font-weight: bold;
-}
+}</p>
 
-  .highlight-row {
+<p>.highlight-row {
     background-color: yellow;
   }
-</style>
+</style></p>
+
 <div class="condition">
   <label for="firmwareVersion">Firmware Version:    </label>
    <span style="margin-right: 30px;"> </span>
@@ -2629,13 +2643,16 @@
     <option value="3">3</option>
     <option value="4">4</option>
   </select>
-<p><label for="cameraResolution">Camera Resolution (MPixel):</label>
-<input type="number" style="width: 100px;" id="cameraResolution" min="1" step="1" onchange="calculateFrameRate()"> MB</p>
+
+  <label for="cameraResolution">Camera Resolution (MPixel):</label>
+  <input type="number" style="width: 100px;" id="cameraResolution" min="1" step="1" onchange="calculateFrameRate()"> MB
 </div>
+
 <div class="condition">
   <label for="maximumFrameRateValue">Maximum Frame Rate:</label>
   <input type="text" id="maximumFrameRateValue" style="width: 100px" readonly> <span>FPS</span>
 </div>
+
 <script>
 function calculateFrameRate() {
   const firmwareVersion = document.getElementById("firmwareVersion").value;
@@ -4204,19 +4221,19 @@ function getPixelProcessingRate(firmwareVersion) {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1697100852"></script>
-    <script src="/js/perfect-scrollbar.min.js?1697100852"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1697100852"></script>
-    <script src="/js/jquery.sticky.js?1697100852"></script>
-    <script src="/js/featherlight.min.js?1697100852"></script>
-    <script src="/js/highlight.pack.js?1697100852"></script>
+    <script src="/js/clipboard.min.js?1698117811"></script>
+    <script src="/js/perfect-scrollbar.min.js?1698117811"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1698117811"></script>
+    <script src="/js/jquery.sticky.js?1698117811"></script>
+    <script src="/js/featherlight.min.js?1698117811"></script>
+    <script src="/js/highlight.pack.js?1698117811"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1697100852"></script>
-    <script src="/js/learn.js?1697100852"></script>
-    <script src="/js/hugo-learn.js?1697100852"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1698117811"></script>
+    <script src="/js/learn.js?1698117811"></script>
+    <script src="/js/hugo-learn.js?1698117811"></script>
 
-    <link href="/mermaid/mermaid.css?1697100852" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1697100852"></script>
+    <link href="/mermaid/mermaid.css?1698117811" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1698117811"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

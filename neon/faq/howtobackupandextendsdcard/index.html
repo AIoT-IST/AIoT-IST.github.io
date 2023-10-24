@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="generator" content="Hugo 0.58.2" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>How to backup and extend microSD card? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1697100852" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1697100852" rel="stylesheet">
-    <link href="/css/hybrid.css?1697100852" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1697100852" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1697100852" rel="stylesheet">
-    <link href="/css/auto-complete.css?1697100852" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1697100852" rel="stylesheet">
-    <link href="/css/theme.css?1697100852" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1697100852" rel="stylesheet">
+    <link href="/css/nucleus.css?1698117811" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1698117811" rel="stylesheet">
+    <link href="/css/hybrid.css?1698117811" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1698117811" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1698117811" rel="stylesheet">
+    <link href="/css/auto-complete.css?1698117811" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1698117811" rel="stylesheet">
+    <link href="/css/theme.css?1698117811" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1698117811" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1697100852"></script>
+    <script src="/js/jquery-3.3.1.min.js?1698117811"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1697100852"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1697100852"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1698117811"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1698117811"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1697100852"></script>
+<script type="text/javascript" src="/js/search.js?1698117811"></script>
 
     
   </div>
@@ -2557,14 +2557,19 @@
 
 
 
-	<p>According to application requirements, when the micro SD card installed in the Neon camera or EOS-JNX doesn&rsquo;t meet the capacity needs, you can follow the steps below to back up and restore the card&rsquo;s contents to a larger storage device.</p>
+	
+
+<p>According to application requirements, when the micro SD card installed in the Neon camera or EOS-JNX doesn&rsquo;t meet the capacity needs, you can follow the steps below to back up and restore the card&rsquo;s contents to a larger storage device.</p>
+
 <ul>
 <li><a href="#back-up-micro-sd-card">Back up micro SD card</a></li>
 <li><a href="#restore-image">Restore image</a></li>
 <li><a href="#clone-micro-sd-card-by-rsync-command">Clone micro SD card by rsync command</a></li>
 <li><a href="#extend-the-partition-of-sd-card">Extend the partition of SD card</a></li>
 </ul>
+
 <p>Neon camera and EOS-JNX supports addressing larger capacity SD 3.0 or SD-XC cards up to 2 TB. We have tested the following cards:</p>
+
 <ol>
 <li>SanDisk ExtremePRO microSDXC 512GB</li>
 <li>SanDisk ExtremePRO microSDXC 128GB</li>
@@ -2572,8 +2577,11 @@
 <li>Transcend TS128GUSD430T 128GB</li>
 <li>Transcend TS64GUSD430T 64GB</li>
 </ol>
+
 <h3 id="back-up-micro-sd-card">Back up micro SD card</h3>
+
 <p>Please prepare the Linux x86 machine and use the &ldquo;disks&rdquo; tool preinstalled in ubuntu.</p>
+
 <div>
   <iframe
       src="https://sftp.adlinktech.com/image/Neon/video/Step1_Backup_SDcard.mp4" 
@@ -2581,58 +2589,65 @@
       scrolling="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
   </iframe>
 </div>
+
 <h3 id="restore-image">Restore image</h3>
+
 <p>Restore the backup image made from <a href="#back-up-micro-sd-card">previous section</a> into your another SD card.</p>
+
 <ul>
 <li>Clone image file to microSD card using one of the following methods
+
 <ul>
 <li>Ubuntu Disk Manager
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/Flash_Neon_microSD.mp4">Video of process to clone image to microSD card</a></li>
 <li>Steps:
+
 <ol>
 <li>Format disk with <code>GPT</code> partitioning</li>
 <li>Create a volume on the disk of type <code>Ext4</code></li>
-<li>Restore image to SD card</li>
-</ol>
+<li>Restore image to SD card
 <div>
-  <iframe
-      src="https://sftp.adlinktech.com/image/Neon/video/Step3_Extend_SDcard.mp4" 
-      width="640" height="385"
-      scrolling="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-  </iframe>
-</div>
-</li>
-</ul>
-</li>
+<iframe
+src="https://sftp.adlinktech.com/image/Neon/video/Step3_Extend_SDcard.mp4" 
+width="640" height="385"
+scrolling="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+</iframe>
+</div></li>
+</ol></li>
+</ul></li>
 <li>Linux or Mac using <code>sudo dd if=&lt;image file&gt;.img of=/dev/sdX bs=4M conv=fsync</code></li>
 <li>Windows using <a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a></li>
 <li>Linux, MacOS or Windows using <a href="https://www.balena.io/etcher/">Balena Etcher</a></li>
+</ul></li>
 </ul>
-</li>
-</ul>
+
 <h3 id="clone-micro-sd-card-by-rsync-command">Clone micro SD card by rsync command</h3>
+
 <ul>
-<li>format your target micro SD card as ext4 format</li>
-</ul>
+<li><p>format your target micro SD card as ext4 format
 <div>
-  <iframe
-      src="https://sftp.adlinktech.com/image/Neon/video/Backup_SD_card.mp4" 
-      width="640" height="385"
-      scrolling="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-  </iframe>
-</div>
-<ul>
-<li><code>rsync [OPTION] SOURCE [SOURCE]... DEST</code>
+<iframe
+  src="https://sftp.adlinktech.com/image/Neon/video/Backup_SD_card.mp4" 
+  width="640" height="385"
+  scrolling="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+</iframe>
+</div></p></li>
+
+<li><p><code>rsync [OPTION] SOURCE [SOURCE]... DEST</code></p>
+
 <ul>
 <li>For example</li>
 <li><code>sudo rsync -axHAWX --numeric-ids --info=progress2 / /media/adlink/test &amp;&amp; sync</code>
-<img src="/NEON/FAQ/howtobackupandextendSDcard/images/backup_by_rsync.JPG" alt="clone"></li>
+<img src="/NEON/FAQ/howtobackupandextendSDcard/images/backup_by_rsync.JPG" alt="clone" /></li>
+</ul></li>
 </ul>
-</li>
-</ul>
+
 <h3 id="extend-the-partition-of-sd-card">Extend the partition of SD card</h3>
+
 <p>If your memory card space is larger than the backup image, you need to extend your memory card partition.</p>
+
 <div>
   <iframe
       src="https://sftp.adlinktech.com/image/Neon/video/Step3_Extend_SDcard.mp4" 
@@ -4179,19 +4194,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1697100853"></script>
-    <script src="/js/perfect-scrollbar.min.js?1697100853"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1697100853"></script>
-    <script src="/js/jquery.sticky.js?1697100853"></script>
-    <script src="/js/featherlight.min.js?1697100853"></script>
-    <script src="/js/highlight.pack.js?1697100853"></script>
+    <script src="/js/clipboard.min.js?1698117811"></script>
+    <script src="/js/perfect-scrollbar.min.js?1698117811"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1698117811"></script>
+    <script src="/js/jquery.sticky.js?1698117811"></script>
+    <script src="/js/featherlight.min.js?1698117811"></script>
+    <script src="/js/highlight.pack.js?1698117811"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1697100853"></script>
-    <script src="/js/learn.js?1697100853"></script>
-    <script src="/js/hugo-learn.js?1697100853"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1698117811"></script>
+    <script src="/js/learn.js?1698117811"></script>
+    <script src="/js/hugo-learn.js?1698117811"></script>
 
-    <link href="/mermaid/mermaid.css?1697100853" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1697100853"></script>
+    <link href="/mermaid/mermaid.css?1698117811" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1698117811"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
