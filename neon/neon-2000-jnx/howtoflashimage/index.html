@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="generator" content="Hugo 0.58.2" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>How to flash image? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1703573315" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1703573315" rel="stylesheet">
-    <link href="/css/hybrid.css?1703573315" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1703573315" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1703573315" rel="stylesheet">
-    <link href="/css/auto-complete.css?1703573315" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1703573315" rel="stylesheet">
-    <link href="/css/theme.css?1703573315" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1703573315" rel="stylesheet">
+    <link href="/css/nucleus.css?1703812383" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1703812383" rel="stylesheet">
+    <link href="/css/hybrid.css?1703812383" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1703812383" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1703812383" rel="stylesheet">
+    <link href="/css/auto-complete.css?1703812383" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1703812383" rel="stylesheet">
+    <link href="/css/theme.css?1703812383" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1703812383" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1703573315"></script>
+    <script src="/js/jquery-3.3.1.min.js?1703812383"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1703573315"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1703573315"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1703812383"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1703812383"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1703573315"></script>
+<script type="text/javascript" src="/js/search.js?1703812383"></script>
 
     
   </div>
@@ -690,6 +690,30 @@
         ">
       <a href="/euresys-grab-card/coaxlink-quad/">
           Coaxlink Quad
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys-grab-card/cxp-for-camera-triggering-with-encoder/" title="Using Euresys Coaxlink with External Encoder for Camera Triggering" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys-grab-card/cxp-for-camera-triggering-with-encoder/">
+          Using Euresys Coaxlink with External Encoder for Camera Triggering
           
       </a>
       
@@ -2641,17 +2665,25 @@
 
 
 
-	<p>This page cover the process to flash a new operating system onto a <a href="https://www.adlinktech.com/Products/Machine_Vision/SmartCamera/NEON-2000-JNX_Series">NEON-2000-JNX</a> and <a href="https://www.adlinktech.com/Products/Machine_Vision/VisionSystems/EOS-JNX_Series">EOS-JNX</a> device.</p>
+	
+
+<p>This page cover the process to flash a new operating system onto a <a href="https://www.adlinktech.com/Products/Machine_Vision/SmartCamera/NEON-2000-JNX_Series">NEON-2000-JNX</a> and <a href="https://www.adlinktech.com/Products/Machine_Vision/VisionSystems/EOS-JNX_Series">EOS-JNX</a> device.</p>
+
 <p>The process to flash one of these device is slightly different to the process to flash a NEON-2000-JT2 device. To flash a JNX device you need to flash both the internal eMMC and external storage device. The internal eMMC device hosts the bootloader and kernel, the external storage device hosts the operating system and Jetpack.</p>
+
 <p>Other useful information about flashing a Jetson based device can be found <a href="https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/SD/FlashingSupport.html">here</a>.</p>
+
 <h3 id="step-1-download-image-to-your-host-pc-with-ubuntu">Step 1: Download image to your host pc with Ubuntu</h3>
+
 <p><strong>If upgrading the Jetpack version make sure to also download the eMMC image.</strong>
 <strong>This is because the internal eMMC and microSD card must be flashed with same version of Jetpack.</strong>
 <strong>For example, jetpack 5.0.2 emmc + jetpack 5.0.2 microSD image</strong></p>
+
 <h4 id="neon-2000-jnx">Neon-2000-JNX</h4>
+
 <ul>
-<li>
-<p>microSD image</p>
+<li><p>microSD image</p>
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/NeonJNX_A3_JP502_microSD_v1.0.8_EVA402.img.tar.gz">Jetpack 5.0.2 v1.0.8 microSD image (with pylon6.2.1 + EVA4.0.2)</a>
 MD5:79d87d4dc0ef2440845dccb1d0a33d4b</li>
@@ -2660,185 +2692,200 @@ MD5:c60395f01cd76131c25f3bf96ed53543</li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP461_microSD_v1.0.5.tar.gz">Jetpack 4.6.1 v1.0.5 microSD image</a></li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP461_microSD_v1.0.6_EVAv3.8.3.tar.gz">Jetpack 4.6.1 v1.0.6 microSD image (with EVA 3.8.3)</a>  MD5:8b4e3d4ce7bf7e69bc90b04e98e14851</li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP45_microSD_v1.0.3.tar.gz">Jetpack 4.5 v1.0.3 microSD image</a>  MD5:243b98f10a873f2830e4f635eab7c80d</li>
-<li><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP45_microSD_v1.0.4.tar.gz">Jetpack 4.5 v1.0.4 microSD image (with EVA 3.5)</a>  MD5:43b5931b625e3b598423e0bb4a131d6e</li>
-</ul>
-</li>
-<li>
-<p>eMMC image - required if changing Jetpack version</p>
+<li><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP45_microSD_v1.0.4.tar.gz">Jetpack 4.5 v1.0.4 microSD image (with EVA 3.5)</a>  MD5:43b5931b625e3b598423e0bb4a131d6e
+
+<br /></li>
+</ul></li>
+
+<li><p>eMMC image - required if changing Jetpack version</p>
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/NeonJNX_A3_JP502_emmc_v1.0.7.tar.gz">Jetpack 5.0.2 emmc image</a>
 MD5:73758afcdf0119a98b27c9d1630add6a</li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP461_emmc_v1.0.5.tar.gz">Jetpack 4.6.1 emmc image</a>   MD5:1442d6597b6c93e8fff2543a808652ce</li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP45_emmc_v1.0.3.tar.gz">Jetpack 4.5 emmc image</a>      MD5:e603db76e8ab1bbe5596760d40adb90c</li>
+</ul></li>
 </ul>
-</li>
-</ul>
+
 <h4 id="checksum">Checksum</h4>
+
 <ul>
-<li>Check the md5 checksum to make sure image file is correct
+<li><p>Check the md5 checksum to make sure image file is correct</p>
+
 <ul>
-<li>Linux
-<ul>
-<li>
-<pre><code>$ md5sum [file]
+<li>Linux</li>
+
+<li><pre><code>$ md5sum [file]
 </code></pre></li>
-<li>
-<pre><code>$ md5sum NeonJNX_A3_JP502_emmc_v1.0.7.tar.gz
+
+<li><pre><code>$ md5sum NeonJNX_A3_JP502_emmc_v1.0.7.tar.gz
 </code></pre></li>
-</ul>
-</li>
-<li>Windows 10
-<ul>
-<li>
-<pre><code>$ certutil -hashfile [file] MD5
+
+<li><p>Windows 10</p></li>
+
+<li><pre><code>$ certutil -hashfile [file] MD5
 </code></pre></li>
-<li>
-<pre><code>$ certutil -hashfile NeonJNX_A3_JP502_emmc_v1.0.7.tar.gz MD5
+
+<li><pre><code>$ certutil -hashfile NeonJNX_A3_JP502_emmc_v1.0.7.tar.gz MD5
 </code></pre></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
+
 <h3 id="step-2-flash-microsd-card-image">Step 2: Flash microSD card image</h3>
+
 <p>To flash the microSD card you are going to need the following:</p>
+
 <ul>
 <li>microSD of at least 32GB</li>
 <li>microSD card reader</li>
 </ul>
+
 <p><strong>Make sure to use a high quality microSD card to prevent corruption</strong></p>
+
 <ol>
-<li>Unzip the microSD zip file downloaded in Step 1 to get a <code>.img</code> file</li>
-</ol>
+<li><p>Unzip the microSD zip file downloaded in Step 1 to get a <code>.img</code> file</p>
+
 <pre><code>tar -zxvf NeonJNX_A3_JP502_microSD_v1.0.7_woEVA.img.tar.gz
-</code></pre><ol start="2">
-<li>Clone image file to microSD card using one of the following methods
+</code></pre></li>
+
+<li><p>Clone image file to microSD card using one of the following methods</p>
+
 <ul>
 <li>Ubuntu Disk Manager
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/Flash_Neon_microSD.mp4">Video of process to clone image to microSD card</a></li>
 <li>Steps:
+
 <ol>
 <li>Format disk with <code>GPT</code> partitioning</li>
 <li>Create a volume on the disk of type <code>Ext4</code></li>
 <li>Restore image to SD card</li>
-</ol>
-</li>
-</ul>
-</li>
+</ol></li>
+</ul></li>
 <li>Linux or Mac using <code>sudo dd if=&lt;image file&gt;.img of=/dev/sdX bs=4M conv=fsync</code></li>
 <li>Windows using <a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a></li>
 <li>Linux, MacOS or Windows using <a href="https://www.balena.io/etcher/">Balena Etcher</a></li>
-</ul>
-</li>
-<li>Insert SD card into the NEON camera</li>
+</ul></li>
+
+<li><p>Insert SD card into the NEON camera</p></li>
 </ol>
+
 <h3 id="step-3-flash-emmc-image">Step 3: Flash eMMC image</h3>
+
 <p>The internal eMMC must be flashed if the Jetpack version on the microSD card has changed, so the Jetpack version on the eMMC and microSD card match.</p>
+
 <p>This step involves connecting the NEON camera to the Host machine and flashing the image.</p>
+
 <p>To perform this step the following equipment is required:</p>
+
 <ul>
 <li>A bare metal machine running Ubuntu. <strong>Must not be a virtual machine</strong></li>
 <li>microUSB cable</li>
 <li>2 x pin jumpers</li>
 </ul>
+
 <p>There is also a <a href="https://drive.google.com/open?id=1Mu40rDiNP1Jggak3bWoyDDgGCxQXEVyX">video</a> and <a href="https://sftp.adlinktech.com/image/Neon-JNX/Flash_Neon_eMMC.pdf">PDF</a> showing the process</p>
+
 <ol>
-<li>
-<p>On the Host PC unzip the file downloaded in Step 1</p>
+<li><p>On the Host PC unzip the file downloaded in Step 1</p>
+
 <pre><code>tar -zxvf NeonJNX_A3_JP502_emmc_v1.0.7.tar.gz
 </code></pre></li>
-<li>
-<p>Put the NEON into recovery mode
+
+<li><p>Put the NEON into recovery mode
 You can refer to pin definition below, and try to enter recover mode.
-<img src="/NEON-2000-JT2/howtoflashimage/images/1.png" alt="pin define 1">
-<img src="/NEON-2000-JT2/howtoflashimage/images/2.png" alt="pin define 2"></p>
+<img src="/NEON-2000-JT2/howtoflashimage/images/1.png" alt="pin define 1" />
+<img src="/NEON-2000-JT2/howtoflashimage/images/2.png" alt="pin define 2" /></p>
+
 <ol>
 <li>Power on the NEON</li>
 <li>Short <strong>pins 5 and 6</strong> (recovery), using the provided jumpers</li>
 <li>Short <strong>pins 3 and 4</strong> (reset), for 2 seconds until the power LED goes out using the provided jumpers</li>
 <li>When the jumper for pins 3 and 4 is removed the power LED will light up again</li>
-</ol>
-</li>
-<li>
-<p>Connect the microUSB cable to the NEON and the Host PC</p>
-</li>
-<li>
-<p>Open a terminal and execute the <code>lsusb</code> command, to see if the NEON is connected. If a device called <code>Nvidia Corp.</code> is detected, the device has successfully entered recovery mode.
-<img src="/NEON-2000-JT2/howtoflashimage/images/lsusb.png" alt="lsusb"></p>
-</li>
-<li>
-<p>Go to folder unzipped in step 1</p>
-</li>
-</ol>
+</ol></li>
+
+<li><p>Connect the microUSB cable to the NEON and the Host PC</p></li>
+
+<li><p>Open a terminal and execute the <code>lsusb</code> command, to see if the NEON is connected. If a device called <code>Nvidia Corp.</code> is detected, the device has successfully entered recovery mode.
+<img src="/NEON-2000-JT2/howtoflashimage/images/lsusb.png" alt="lsusb" /></p></li>
+
+<li><p>Go to folder unzipped in step 1</p>
+
 <pre><code>cd NeonJNX_A3_JP502_emmc_v1.0.7
-</code></pre><ol start="6">
-<li>Flash the Neon-2000-JNX</li>
-</ol>
+</code></pre></li>
+
+<li><p>Flash the Neon-2000-JNX</p>
+
 <ul>
-<li>
-<p>For Jetpack 5.0.2: Install neccessary package at first</p>
+<li><p>For Jetpack 5.0.2: Install neccessary package at first</p>
+
 <pre><code>sudo apt-get install sshpass
 </code></pre></li>
-<li>
-<p>Jetpack before 5.0.2</p>
+
+<li><p>Jetpack before 5.0.2</p>
+
 <pre><code>sudo ./flash.sh
 </code></pre></li>
-<li>
-<p>For Jetpack 5.0.2</p>
+
+<li><p>For Jetpack 5.0.2</p>
+
 <pre><code>sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1
 </code></pre></li>
-</ul>
-<ol start="7">
-<li>Once the flash script is complete and shows <code>Flash complete (SUCCESS)</code> reboot the NEON</li>
+</ul></li>
+
+<li><p>Once the flash script is complete and shows <code>Flash complete (SUCCESS)</code> reboot the NEON</p></li>
 </ol>
+
 <p>Below is a video of the process to flash a NEON-2000-JNX
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/MCpVP3L4aSI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 </p>
+
 <h3 id="appendix-how-to-restore-emmc-image">Appendix: How to restore eMMC image</h3>
+
 <ul>
-<li>
-<p>method 1</p>
+<li><p>method 1</p>
+
 <ul>
 <li>step1: download environment on Linux x86 ubuntu PC
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/deploy.neonjnx.tar.gz">https://sftp.adlinktech.com/image/Neon-JNX/deploy.neonjnx.tar.gz</a></li>
 <li>md5: d9e7e4ff4030f7d81f72c353aad6d272</li>
-</ul>
-</li>
+</ul></li>
 <li>step2: untar the file
+
 <ul>
-<li><code>tar -zxvf deploy.neonjnx.tar.gz </code></li>
-</ul>
-</li>
+<li><code>tar -zxvf deploy.neonjnx.tar.gz</code></li>
+</ul></li>
 <li>step3: execute command
+
 <ul>
 <li><code>sudo ./flash.sh -r -k APP -G backup.img jetson-xavier-nx-neonjnx-emmc mmcblk0p1</code></li>
 <li>Note: Booard name of different hardware version
+
 <ul>
 <li>HW A3: jetson-neonjnx-a3-emmc</li>
 <li>HW A2: jetson-xavier-nx-neonjnx-emmc</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>method 2</p>
+</ul></li>
+</ul></li>
+</ul></li>
+
+<li><p>method 2</p>
+
 <ul>
-<li>
-<p>Backup emmc</p>
- <div>
-   <iframe
-       src="https://sftp.adlinktech.com/image/EOS-JNX/sop/Backup_emmc.mp4" 
-       width="640" height="385"
-       scrolling="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-   </iframe>
- </div>	
+<li><p>Backup emmc
+<div>
+  <iframe
+      src="https://sftp.adlinktech.com/image/EOS-JNX/sop/Backup_emmc.mp4" 
+      width="640" height="385"
+      scrolling="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+  </iframe>
+</div></p>
+
 <pre><code>cd ~/
 mkdir mntTemp
 sudo mount /dev/mmcblk0p1 mntTemp
@@ -2848,26 +2895,25 @@ sync
 cd ../
 sudo umount mntTemp
 rmdir mntTemp
-</code></pre></li>
-<li>
-<p>Restore emmc</p>
- <div>
-   <iframe
-       src="https://sftp.adlinktech.com/image/EOS-JNX/sop/Restore_emmc.mp4" 
-       width="640" height="385"
-       scrolling="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-   </iframe>
- </div>	
-<pre><code>cd ~/
+- Restore emmc
+&lt;div&gt;
+  &lt;iframe
+      src=&quot;https://sftp.adlinktech.com/image/EOS-JNX/sop/Restore_emmc.mp4&quot; 
+      width=&quot;640&quot; height=&quot;385&quot;
+      scrolling=&quot;no&quot; framespacing=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;  
+
+</code></pre>
+
+<p>cd ~/
 mkdir mntTemp
 sudo mount /dev/mmcblk0p1 mntTemp
 sudo tar jxf customerEMMC.tbz2 -C mntTemp
 sync
 sudo umount mntTemp
-rmdir mntTemp  
-</code></pre></li>
-</ul>
-</li>
+rmdir mntTemp</p></li>
+</ul></li>
 </ul>
 
 
@@ -3269,6 +3315,22 @@ rmdir mntTemp
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -4458,19 +4520,19 @@ rmdir mntTemp
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1703573315"></script>
-    <script src="/js/perfect-scrollbar.min.js?1703573315"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1703573315"></script>
-    <script src="/js/jquery.sticky.js?1703573315"></script>
-    <script src="/js/featherlight.min.js?1703573315"></script>
-    <script src="/js/highlight.pack.js?1703573315"></script>
+    <script src="/js/clipboard.min.js?1703812383"></script>
+    <script src="/js/perfect-scrollbar.min.js?1703812383"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1703812383"></script>
+    <script src="/js/jquery.sticky.js?1703812383"></script>
+    <script src="/js/featherlight.min.js?1703812383"></script>
+    <script src="/js/highlight.pack.js?1703812383"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1703573315"></script>
-    <script src="/js/learn.js?1703573315"></script>
-    <script src="/js/hugo-learn.js?1703573315"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1703812383"></script>
+    <script src="/js/learn.js?1703812383"></script>
+    <script src="/js/hugo-learn.js?1703812383"></script>
 
-    <link href="/mermaid/mermaid.css?1703573315" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1703573315"></script>
+    <link href="/mermaid/mermaid.css?1703812383" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1703812383"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
