@@ -12,18 +12,18 @@
     <title>Using Euresys Coaxlink with External Encoder for Camera Triggering :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1703812383" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1703812383" rel="stylesheet">
-    <link href="/css/hybrid.css?1703812383" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1703812383" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1703812383" rel="stylesheet">
-    <link href="/css/auto-complete.css?1703812383" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1703812383" rel="stylesheet">
-    <link href="/css/theme.css?1703812383" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1703812383" rel="stylesheet">
+    <link href="/css/nucleus.css?1704334369" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1704334369" rel="stylesheet">
+    <link href="/css/hybrid.css?1704334369" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1704334369" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1704334369" rel="stylesheet">
+    <link href="/css/auto-complete.css?1704334369" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1704334369" rel="stylesheet">
+    <link href="/css/theme.css?1704334369" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1704334369" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1703812383"></script>
+    <script src="/js/jquery-3.3.1.min.js?1704334369"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1703812383"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1703812383"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1704334369"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1704334369"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1703812383"></script>
+<script type="text/javascript" src="/js/search.js?1704334369"></script>
 
     
   </div>
@@ -2662,8 +2662,17 @@
 
 <ul>
 <li><a href="#connecting-and-signal-detection-for-external-encoder">Connecting and Signal Detection for External Encoder</a></li>
-<li><a href="#coaxlink-card-device-configuration">Coaxlink Card (Device) Configuration</a></li>
-<li><a href="#camera-remote-device-configuration">Camera (Remote Device) Configuration</a></li>
+<li><a href="#wiring-external-input-signals-to-the-remote-board">Wiring External Input Signals to the Remote Board</a></li>
+<li><a href="#wiring-strob-output-from-the-remote-board">Wiring  Strob Output from the Remote Board</a></li>
+<li><a href="#trigger-camera-control-method">Trigger Camera Control Method</a>
+
+<ul>
+<li><a href="#configuration-in-the-device-tab-step-1">Configuration in the Device Tab (Step 1)</a></li>
+<li><a href="#setting-the-triggersource-step-2">Setting the TriggerSource (Step 2)</a></li>
+<li><a href="#setting-the-inputtool-step-3">Setting the InputTool (Step 3)</a></li>
+<li><a href="#verifying-operation-with-eventcount-step-4">Verifying Operation with EventCount (Step 4)</a></li>
+<li><a href="#setting-the-strobe-output-step-5">Setting the Strobe Output (Step 5)</a></li>
+</ul></li>
 </ul>
 
 <h2 id="connecting-and-signal-detection-for-external-encoder">Connecting and Signal Detection for External Encoder</h2>
@@ -2982,6 +2991,150 @@
 </table>
 
 <p><a href="#connecting-and-signal-detection-for-external-encoder">Back to Wiring Map</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#top">Back to Top</a></p>
+
+<h2 id="wiring-external-input-signals-to-the-remote-board">Wiring External Input Signals to the Remote Board</h2>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_DIN11_1.png" alt="Wiring on Remote board" /></p>
+
+<p>In this case, as encoder signals are being used, the <span style="background-color: yellow;">High-speed differential input #11</span> has been selected as the connection point for its capability to handle high-speed signals. For signals that are not high-speed, standard input ports can be utilized. It&rsquo;s important to select an appropriate input port based on the signal speed to ensure optimal performance and accuracy of the system.</p>
+
+<p><a href="#top">Back to Top</a></p>
+
+<h2 id="wiring-strob-output-from-the-remote-board">Wiring  Strob Output from the Remote Board</h2>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_TTLIO11.png" alt="wiring_TTLIO11" /></p>
+
+<h2 id="trigger-camera-control-method">Trigger Camera Control Method</h2>
+
+<div style="font-size: 20px;">
+The Coaxlink card supports two modes for camera triggering:
+<ul>
+    <li>NC Mode (Freerun):</li>
+The camera captures images continuously at its own pace, independent of external signals.
+    <li>RG Mode (Asynchronous):</li>  
+The frame grabber dictates the camera's cycle rate and exposure, synchronizing it with external triggers like an encoder.
+</ul>
+</div>
+
+<p><strong>RG Mode</strong> is ideal for situations requiring precise timing control, such as high-speed imaging or synchronized event capture. Select the mode that best fits your application&rsquo;s requirements.</p>
+
+<h3 id="configuration-in-the-device-tab-step-1"><strong>Configuration in the Device Tab (Step 1)</strong></h3>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/RG-setting_1.png" alt="RG Settings" /></p>
+
+<div style="font-size: 20px;">
+Adjust the following parameters in the Device Tab to configure the RG mode:
+</div>
+
+<div style="font-size: 20px;">
+<ul>
+    <li>Set the Camera Control Method to <span style="background-color: yellow;">RG.</span></li>
+    <li><span style="background-color: yellow;">Enable Exposure Readout Overlap </span>to allow the exposure and readout processes to overlap, optimizing the camera cycle time.</li>
+    <li>Set the Cycle Trigger Source to <span style="background-color: yellow;">Immediate</span>, which triggers the camera cycle without waiting for an external trigger.</li>
+</ul>
+</div>
+
+<h3 id="calculating-the-cycle-minimum-period">Calculating the Cycle Minimum Period</h3>
+
+<div align="left" style="font-size: 20px;">
+To ensure the proper camera cycle rate, calculate the Cycle Minimum Period with this formula:
+</div>
+<br>
+<div align="left" style="font-size: 20px;">
+For example, if your camera's frame rate (FPS) is 40, the calculation would be:
+</div>
+<div style="font-size: 20px;">
+<ul>
+    <li> <span style="background-color: yellow;">Cycle Minimum Period </span>= 1 / 40 FPS = 0.025 seconds = 25 milliseconds (ms)</li>
+</ul>
+</div>
+<div align="left" style="font-size: 20px;">
+Given the 25 ms Cycle Minimum Period, set both the Exposure Time and the Strobe Duration to 20 milliseconds (20000 microseconds) to ensure they remain within this operational limit. This keeps the camera's exposure and illumination well-coordinated and prevents exceeding the maximum allowed cycle time.
+</div>
+
+<div style="font-size: 20px;">
+<ul>
+    <li> <span style="background-color: yellow;"> Exposure Time</span> = 20000 microseconds (20 ms), which is less than the 25 ms limit.</li>
+    <li>  <span style="background-color: yellow;">Strobe Duration</span> = 20000 microseconds (20 ms), which also does not exceed the 25 ms limit.</li>
+</ul>
+</div>
+
+<p><a href="#top">Back to Top</a></p>
+
+<h3 id="setting-the-triggersource-step-2"><strong>Setting the TriggerSource(Step 2)</strong></h3>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/TriggerSource_1.png" alt="TriggerSource" /></p>
+
+<p>
+<div class="notices note" ><p>Different camera manufactures might use different names for their parameters.Always check with the camera manufacturer on parameters to set.</p>
+</div>
+
+<a href="#top">Back to Top</a></p>
+
+<h3 id="setting-the-inputtool-step-3"><strong>Setting the InputTool (Step 3)</strong></h3>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/Interface_inputtool.png" alt="InputTool" /></p>
+
+<p>When configuring the InputTool in your system, it&rsquo;s important to understand the function of each parameter:</p>
+
+<div style="font-size: 20px;">
+<ul>
+    <li> <span style="background-color: yellow;"> LineInputToolSelector:</span> </li>
+This parameter serves as a central reference for the InputTool configuration, encompassing the selected source and activation mode for the input. Once set, LineInputToolSelector ensures consistency across the system; any changes made to this parameter will automatically update all related settings that reference it. This feature streamlines the process of modifying the input source or trigger method, as adjustments need only be made once at this central point.
+    <li> <span style="background-color: yellow;">LineInputToolSource: </span> </li>
+This parameter defines the source of the input signal. It can be used to specify where the signal is coming from, such as a specific hardware port or an internal source.
+    <li><span style="background-color: yellow;"> LineInputToolActivation:</span> </li>
+This parameter sets the activation mode of the input tool. It determines how the tool reacts to the input signal, such as triggering on a rising edge, falling edge, or other condition.
+<ul>
+</div>
+
+<p>Properly configuring these parameters ensures that your system accurately responds to external signals and triggers.
+<a href="#top">Back to Top</a></p>
+
+<h3 id="verifying-operation-with-eventcount-step-4"><strong>Verifying Operation with EventCount (Step 4)</strong></h3>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/EventSelector.png" alt="EventSelector" /></p>
+
+<div style="font-size: 20px;">
+<ul>
+    <li><span style="background-color: yellow;">EventSelector:</span></li>
+    This parameter is used to select the name of the LineInputToolSelector defined in Step 3. By choosing the correct EventSelector, you can monitor the specific event associated with your input configuration.
+
+    <li><span style="background-color: yellow;">EventCount:</span></li>
+    This parameter displays the count of the events detected. A value in EventCount indicates successful operation. For consistent movements over fixed distances, you will observe an equivalent accumulation in the EventCount value.
+
+    <li><span style="background-color: yellow;">EventCountReset:</span></li>
+    This parameter can be used to reset the EventCount value. It is useful for clearing the count to facilitate easier tracking and calculations of new events.
+</ul>
+</div>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/updatethecounter.png" alt="update_the_counter" /></p>
+
+
+<div class="notices note" ><p>Click the button shown in the figure below to retrieve the current counter value.</p>
+</div>
+
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/animated_eventcount.gif" alt="animated_eventcount" /></p>
+
+<p><a href="#top">Back to Top</a></p>
+
+<h3 id="setting-the-strobe-output-step-5"><strong>Setting the Strobe Output (Step 5)</strong></h3>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/DigitalIOControl.png" alt="Strobe-Output" /></p>
+
+<div style="font-size: 20px;">
+<ul>
+    <li><span style="background-color: yellow;">LineSelector [Selector]:</span></li>
+    This parameter is set to TTLIO11 to select the corresponding line for strobe output configuration.
+
+    <li><span style="background-color: yellow;">LineMode:</span></li>
+    The line mode is set to Output, which configures the selected line to act as an output, driving the strobe signal.
+
+    <li><span style="background-color: yellow;">LineSource:</span></li>
+    The source for the line is set to Device0Strobe
+</ul>
+</div>
 
 
 
@@ -4588,19 +4741,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1703812383"></script>
-    <script src="/js/perfect-scrollbar.min.js?1703812383"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1703812383"></script>
-    <script src="/js/jquery.sticky.js?1703812383"></script>
-    <script src="/js/featherlight.min.js?1703812383"></script>
-    <script src="/js/highlight.pack.js?1703812383"></script>
+    <script src="/js/clipboard.min.js?1704334369"></script>
+    <script src="/js/perfect-scrollbar.min.js?1704334369"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1704334369"></script>
+    <script src="/js/jquery.sticky.js?1704334369"></script>
+    <script src="/js/featherlight.min.js?1704334369"></script>
+    <script src="/js/highlight.pack.js?1704334369"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1703812383"></script>
-    <script src="/js/learn.js?1703812383"></script>
-    <script src="/js/hugo-learn.js?1703812383"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1704334369"></script>
+    <script src="/js/learn.js?1704334369"></script>
+    <script src="/js/hugo-learn.js?1704334369"></script>
 
-    <link href="/mermaid/mermaid.css?1703812383" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1703812383"></script>
+    <link href="/mermaid/mermaid.css?1704334369" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1704334369"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
