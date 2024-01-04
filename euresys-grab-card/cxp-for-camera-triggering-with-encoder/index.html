@@ -12,18 +12,18 @@
     <title>Using Euresys Coaxlink with External Encoder for Camera Triggering :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1704334369" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704334369" rel="stylesheet">
-    <link href="/css/hybrid.css?1704334369" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704334369" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704334369" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704334369" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704334369" rel="stylesheet">
-    <link href="/css/theme.css?1704334369" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704334369" rel="stylesheet">
+    <link href="/css/nucleus.css?1704354210" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1704354210" rel="stylesheet">
+    <link href="/css/hybrid.css?1704354210" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1704354210" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1704354210" rel="stylesheet">
+    <link href="/css/auto-complete.css?1704354210" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1704354210" rel="stylesheet">
+    <link href="/css/theme.css?1704354210" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1704354210" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704334369"></script>
+    <script src="/js/jquery-3.3.1.min.js?1704354210"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704334369"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704334369"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1704354210"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1704354210"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704334369"></script>
+<script type="text/javascript" src="/js/search.js?1704354210"></script>
 
     
   </div>
@@ -2671,8 +2671,10 @@
 <li><a href="#setting-the-triggersource-step-2">Setting the TriggerSource (Step 2)</a></li>
 <li><a href="#setting-the-inputtool-step-3">Setting the InputTool (Step 3)</a></li>
 <li><a href="#verifying-operation-with-eventcount-step-4">Verifying Operation with EventCount (Step 4)</a></li>
-<li><a href="#setting-the-strobe-output-step-5">Setting the Strobe Output (Step 5)</a></li>
+<li><a href="#setting-the-strobe-output-step-5-1">Setting the Strobe Output (Step 5)</a></li>
+<li><a href="#setting-the-cycle-trigger-source-step-6">Setting the Cycle Trigger  Source(Step 6)</a></li>
 </ul></li>
+<li><a href="#setting-divider-with-external-signals">Setting Divider with External Signals</a></li>
 </ul>
 
 <h2 id="connecting-and-signal-detection-for-external-encoder">Connecting and Signal Detection for External Encoder</h2>
@@ -3020,7 +3022,7 @@ The frame grabber dictates the camera's cycle rate and exposure, synchronizing i
 
 <h3 id="configuration-in-the-device-tab-step-1"><strong>Configuration in the Device Tab (Step 1)</strong></h3>
 
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/RG-setting_1.png" alt="RG Settings" /></p>
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/RG-setting-1.png" alt="RG Settings" /></p>
 
 <div style="font-size: 20px;">
 Adjust the following parameters in the Device Tab to configure the RG mode:
@@ -3031,6 +3033,7 @@ Adjust the following parameters in the Device Tab to configure the RG mode:
     <li>Set the Camera Control Method to <span style="background-color: yellow;">RG.</span></li>
     <li><span style="background-color: yellow;">Enable Exposure Readout Overlap </span>to allow the exposure and readout processes to overlap, optimizing the camera cycle time.</li>
     <li>Set the Cycle Trigger Source to <span style="background-color: yellow;">Immediate</span>, which triggers the camera cycle without waiting for an external trigger.</li>
+    <li>The <span style="background-color: yellow;">Cycle Trigger Source</span> is a critical setting. Choose <a href="#setting-the-inputtool-step-3"><span style="background-color: yellow;">LIN1</span></a> (see <a href="#setting-the-inputtool-step-3">Step 3</a> for detailed settings) or <a href="#setting-divider-with-external-signals"><span style="background-color: yellow;">Divider</span></a> as the source. It's essential to set this parameter correctly for proper system operation.</li>
 </ul>
 </div>
 
@@ -3098,7 +3101,7 @@ This parameter sets the activation mode of the input tool. It determines how the
 <div style="font-size: 20px;">
 <ul>
     <li><span style="background-color: yellow;">EventSelector:</span></li>
-    This parameter is used to select the name of the LineInputToolSelector defined in Step 3. By choosing the correct EventSelector, you can monitor the specific event associated with your input configuration.
+    This parameter allows you to select the source for event monitoring. You can set it to <a href="#setting-the-inputtool-step-3"><span style="background-color: yellow;">LIN1</span></a> (as described in Step 3) or choose <a href="#setting-divider-with-external-signals"><span style="background-color: yellow;">Divider</span></a> as the source. Selecting the correct EventSelector enables you to track specific events relevant to your input configuration.
 
     <li><span style="background-color: yellow;">EventCount:</span></li>
     This parameter displays the count of the events detected. A value in EventCount indicates successful operation. For consistent movements over fixed distances, you will observe an equivalent accumulation in the EventCount value.
@@ -3108,12 +3111,12 @@ This parameter sets the activation mode of the input tool. It determines how the
 </ul>
 </div>
 
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/updatethecounter.png" alt="update_the_counter" /></p>
-
 
 <div class="notices note" ><p>Click the button shown in the figure below to retrieve the current counter value.</p>
 </div>
 
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/updatethecounter.png" alt="update_the_counter" /></p>
 
 <p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/animated_eventcount.gif" alt="animated_eventcount" /></p>
 
@@ -3135,6 +3138,33 @@ This parameter sets the activation mode of the input tool. It determines how the
     The source for the line is set to Device0Strobe
 </ul>
 </div>
+
+<h3 id="setting-divider-with-external-signals"><strong>Setting Divider with External Signals</strong></h3>
+
+<p>Most encoders emit high-frequency signals, which are often too rapid for direct camera triggering. Using a divider, these signals can be adjusted to lower frequencies, suitable for stable camera activation, ensuring accurate and consistent image capturing.</p>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/DividerTool.png" alt="DividerTool" /></p>
+
+<div style="font-size: 20px;">
+<ul>
+    <li><span style="background-color: yellow;">DividerToolSelector:</span></li>
+    This parameter acts as the central identifier for the Divider Tool configuration, integrating the selected source (specified by DividerToolSource), the activation control (determined by DividerToolEnableControl), and the division factor (set by DividerToolDivisionfactor) for the input. Once DividerToolSelector is configured, it guarantees consistency across the system; any subsequent modifications to the source, activation, or division factor are centralized through this single parameter. This consolidation simplifies the adjustment process, enabling changes to be made in one place that then propagate to all related configurations.
+
+    <li><span style="background-color: yellow;">DividerToolSource:</span></li>
+    Select LIN1 for the source, as previously described in Step 3.
+
+    <li><span style="background-color: yellow;">DividerToolEnableControl:</span></li>
+    Set this to 'Enable' to activate the divider tool.
+
+    <li><span style="background-color: yellow;">DividerToolDivisionfactor:</span></li>
+    Enter the division factor value you wish to use for frequency division.
+</ul>
+</div>
+
+
+<div class="notices note" ><p>Once you have configured the Divider Tool, remember to revisit <strong>Step 1</strong> to adjust the &lsquo;Cycle Trigger Source&rsquo; accordingly. Additionally, you can verify the functionality by modifying the &lsquo;EventSelector&rsquo; in <strong>Step 4</strong>. These steps ensure that your settings are consistent and functional across the system.</p>
+</div>
+
 
 
 
@@ -4741,19 +4771,19 @@ This parameter sets the activation mode of the input tool. It determines how the
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704334369"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704334369"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704334369"></script>
-    <script src="/js/jquery.sticky.js?1704334369"></script>
-    <script src="/js/featherlight.min.js?1704334369"></script>
-    <script src="/js/highlight.pack.js?1704334369"></script>
+    <script src="/js/clipboard.min.js?1704354210"></script>
+    <script src="/js/perfect-scrollbar.min.js?1704354210"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1704354210"></script>
+    <script src="/js/jquery.sticky.js?1704354210"></script>
+    <script src="/js/featherlight.min.js?1704354210"></script>
+    <script src="/js/highlight.pack.js?1704354210"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704334369"></script>
-    <script src="/js/learn.js?1704334369"></script>
-    <script src="/js/hugo-learn.js?1704334369"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1704354210"></script>
+    <script src="/js/learn.js?1704354210"></script>
+    <script src="/js/hugo-learn.js?1704354210"></script>
 
-    <link href="/mermaid/mermaid.css?1704334369" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704334369"></script>
+    <link href="/mermaid/mermaid.css?1704354210" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1704354210"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
