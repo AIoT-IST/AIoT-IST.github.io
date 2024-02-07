@@ -12,18 +12,18 @@
     <title>Dongle &amp; License ID :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1705457051" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1705457051" rel="stylesheet">
-    <link href="/css/hybrid.css?1705457051" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1705457051" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1705457051" rel="stylesheet">
-    <link href="/css/auto-complete.css?1705457051" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1705457051" rel="stylesheet">
-    <link href="/css/theme.css?1705457051" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1705457051" rel="stylesheet">
+    <link href="/css/nucleus.css?1707271428" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1707271428" rel="stylesheet">
+    <link href="/css/hybrid.css?1707271428" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1707271428" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1707271428" rel="stylesheet">
+    <link href="/css/auto-complete.css?1707271428" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1707271428" rel="stylesheet">
+    <link href="/css/theme.css?1707271428" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1707271428" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1705457051"></script>
+    <script src="/js/jquery-3.3.1.min.js?1707271428"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1705457051"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1705457051"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1707271428"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1707271428"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1705457051"></script>
+<script type="text/javascript" src="/js/search.js?1707271428"></script>
 
     
   </div>
@@ -2663,6 +2663,7 @@
 
 <ul>
 <li><a href="#dongle-rule">Dongle rule</a></li>
+<li><a href="#2">Alternative solutions for PAR EOL</a></li>
 <li><a href="#1">License ID</a></li>
 </ul>
 
@@ -2682,40 +2683,73 @@
 
 <h3 id="1">License ID (NEO、Open eVision 、eVision)</h3>
 
+<p><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dongle &amp; License ID</title></p>
+
 <style>
-      .context-menu {
-    position: absolute;
-    background-color: white;
-    border: 1px solid gray;
-    padding: 5px;
-    display: none;
-    }
-
+  thead th {
+    position: sticky;
+    top: 0;
+    background-color: #eee;
+    z-index: 1;
+  }
+  .scrollable-table {
+    display: block;
+    overflow-y: auto;
+    height: 800px; /* Adjust based on your needs */
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
   .licenses {
-    background-color: #FFC0CB; /* 设置背景色为粉色 *ㄒ
-    text-align: center;
+    background-color: #FFC0CB; /* Pink */
   }
-  
   .evision {
-    background-color: #FFFFB3; /* 设置背景色为黄色 */
+    background-color: #FFFFB3; /* Yellow */
   }
-  table tbody td {
-    font-size: 18px;
-    text-align: center;
+  .eol, .eol-only-background {
+    /*background-color: #FFD1D1;  Light red */
+    background-color: #e0f2f1;
   }
-  table tbody td:hover {
-    border: 2px solid red;
+  .eol {
+    text-decoration: line-through; /* Strikethrough */
   }
-    .eol {
-    background-color: #FFD1D1; /* 淡紅色背景表示 EOL */
-    text-decoration: line-through; /* 文字加刪除線 */
-  }
-     .eol-only-background {
-    background-color: #FFD1D1; /* 淡紅色背景表示 EOL */
-  }
+  th.licenses, th.evision,th.library {
+  font-size: 24px; /* 或你希望的任何更大的字体大小 */
+}
+tbody td {
+  font-size: 20px; /* 或根据需要设置其他大小 */
+}
+tbody td:hover {
+  background-color: #e0f7fa;  /*鼠标悬停时的背景颜色 */
+  border-color: #ff0000; /* 鼠标悬停时的边框颜色 */
+  border: 2px solid #ff0000; /* 增加边框宽度并设置为红色 */
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0; /* 调整为所需的间距 */
+}
+.bg-licenses {
+  background-color: #FFC0CB; /* 粉色，与 .licenses 相同 */
+}
+.bg-evision {
+  background-color: #FFFFB3; /* 浅黄色，与 .evision 相同 */
+}
 </style>
+</head>
+<body>
 
-<table id="target-table">
+<div class="scrollable-table">
+  <table>
   <colgroup>
     <col style="background-color: lightgray;">
     <col>
@@ -2726,364 +2760,317 @@
     <col>
     <col>
   </colgroup>
-  <thead>
-    <tr>
-      <th style="font-size: 32px; text-align: center;">Library</th>
-      <td class="licenses" colspan="4" style="font-size: 32px; text-align: center;">Open eVision Licenses</td>
-      <td class="evision"colspan="3"style="background-color: #F0E68C;text-align: center;font-size: 32px;">eVision</td>
-    </tr>
-    <tr>
-      <th></th>
-      <th style="text-align: center;">Neo Dongle</th>
-      <th style="text-align: center; ">USB Dongle</th>
-      <th style="text-align: center; ">PAR Dongle</th>
-      <th style="text-align: center;"class="eol-only-background">Host(Software)<br>(EOL)</th>
-      <th style="text-align: center;">USB Dongle</th>
-      <th style="text-align: center;">PAR Dongle</th>
-      <th style="text-align: center;">Board</th>
-    </tr>
-  </thead>
-  <tbody>
+    <thead>
       <tr>
-      <td>Inspection Bundle (EasyImage,EasyGauge,EasyMatch,EasyObject,EasyColor)</td>
-      <td>4314</td>
-      <td>4164</td>
-      <td>4214</td>
-      <td class="eol">4264</td>
-      <td>4014</td>
-      <td>4064</td>
-      <td>4114</td>
-    </tr>
-    <tr>
-      <td>EasyMatrixCode</td>
-      <td>4307</td>
-      <td>4157</td>
-      <td>4207</td>
-      <td class="eol">4257</td>
-      <td>4007</td>
-      <td>4057</td>
-      <td>4107</td>
-    </tr>
-    <tr>
-      <td>Legacy Mark Inspection Bundle</td>
-      <td></td>
-      <td>4165</td>
-      <td>4215</td>
-      <td class="eol">4265</td>
-      <td>4015</td>
-      <td>4065</td>
-      <td>4115</td>
-    </tr>
-        <tr>
-      <td>EasyFind</td>
-      <td>4308</td>
-      <td>4158</td>
-      <td>4208</td>
-      <td class="eol">4258</td>
-      <td>4008</td>
-      <td>4058</td>
-      <td>4108</td>
-    </tr>
-        <tr>
-      <td>EasyMatch</td>
-      <td>4303</td>
-      <td>4153</td>
-      <td>4203</td>
-      <td class="eol" >4253</td>
-      <td>4003</td>
-      <td>4053</td>
-      <td>4103</td>
-    </tr>
-     <tr>
-      <td>EasyGauge</td>
-      <td>4309</td>
-      <td>4159</td>
-      <td>4209</td>
-      <td class="eol">4259</td>
-      <td>4009</td>
-      <td>4059</td>
-      <td>4109</td>
-    </tr>
-        <tr>
-      <td>EasyImage</td>
-      <td>4301</td>
-      <td>4151</td>
-      <td>4201</td>
-      <td class="eol">4251</td>
-      <td>4001</td>
-      <td>4051</td>
-      <td>4101</td>
-    </tr>
-        <tr>
-      <td>EasyOCR</td>
-      <td>4305</td>
-      <td>4155</td>
-      <td>4205</td>
-      <td class="eol">4255</td>
-      <td>4005</td>
-      <td>4055</td>
-      <td>4105</td>
-    </tr>
-        <tr>
-      <td>Legacy ID Bundle 1.2</td>
-      <td></td>
-      <td>4176</td>
-      <td>4226</td>
-      <td class="eol">4276</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-        <tr>
-      <td>EasyQRCode</td>
-      <td>4325</td>
-      <td>4175</td>
-      <td>4225</td>
-      <td class="eol">4275</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-        <tr>
-      <td>Full Bundle</td>
-      <td>4327</td>
-      <td>4177</td>
-      <td>4227</td>
-      <td class="eol">4277</td>
-      <td>4017</td>
-      <td>4067</td>
-      <td>4117</td>
-    </tr>
-    <tr>
-      <td>Easy3D</td>
-      <td>4331</td>
-      <td>4181</td>
-      <td>4231</td>
-      <td class="eol">4281</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Easy3DObject</td>
-      <td>4333</td>
-      <td>4183</td>
-      <td>4233</td>
-      <td class="eol">4283</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Easy3DMatch</td>
-      <td>4334</td>
-      <td>4184</td>
-      <td>4234</td>
-      <td class="eol">4284</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Easy3DLaserLine</td>
-      <td>4336</td>
-      <td>4186</td>
-      <td>4236</td>
-      <td class="eol">4286</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>EasyObject</td>
-      <td>4302</td>
-      <td>4152</td>
-      <td>4202</td>
-      <td class="eol">4252</td>
-      <td>4002</td>
-      <td>4052</td>
-      <td>4102</td>
-    </tr>
-    <tr>
-      <td>EasyColor</td>
-      <td>4304</td>
-      <td>4154</td>
-      <td>4204</td>
-      <td class="eol">4254</td>
-      <td>4004</td>
-      <td>4054</td>
-      <td>4104</td>
-    </tr>
-    <tr>
-      <td>EasyOCR2</td>
-      <td>4329</td>
-      <td>4179</td>
-      <td>4229</td>
-      <td class="eol">4279</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>EasyBarCode</td>
-      <td>4310</td>
-      <td>4160</td>
-      <td>4210</td>
-      <td class="eol">4260</td>
-      <td>4010</td>
-      <td>4060</td>
-      <td>4110</td>
-    </tr>
-    <tr>
-      <td>EasyOCV</td>
-      <td>4306</td>
-      <td>4156</td>
-      <td>4206</td>
-      <td class="eol">4256</td>
-      <td>4006</td>
-      <td>4056</td>
-      <td>4106</td>
-    </tr>
-    <tr>
-      <td>Deep Learning Bundle</td>
-      <td>4332</td>
-      <td>4182</td>
-      <td>4232</td>
-      <td class="eol">4282</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>3D Bundle</td>
-      <td>4335</td>
-      <td>4185</td>
-      <td>4235</td>
-      <td  class="eol">4285</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>ID Bundle</td>
-      <td>4330</td>
-      <td>4180</td>
-      <td>4230</td>
-      <td class="eol">4280</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Legacy Inspection Bundle</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>4016</td>
-      <td>4066</td>
-      <td>4116</td>
-    </tr>
-    <tr>
-      <td>Legacy EasyMeasure</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>4011</td>
-      <td>4061</td>
-      <td>4111</td>
-    </tr>
-    <tr>
-      <td>Legacy SDK</td>
-      <td></td>
-      <td>4178</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Open eVision 30-day evaluation</td>
-      <td>4300</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Dongle</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Neo USB Dongle (empty)</td>
-      <td>6514</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>USB Dongle (empty)</td>
-      <td></td>
-      <td>6512</td>
-      <td></td>
-      <td></td>
-      <td>6512</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td class="eol-only-background">PAR Dongle (empty) <br>(EOL)</td>
-      <td></td>
-      <td></td>
-      <td class="eol">6513</td>
-      <td></td>
-      <td></td>
-      <td class="eol">6513</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+        <th class="library">Library</th>
+        <th class="licenses" colspan="4">Open eVision Licenses</th>
+        <th class="evision" colspan="3">eVision</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th class="bg-licenses">Neo Dongle<br>6514</th>
+        <th class="bg-licenses">USB Dongle<br>6512</th>
+        <th class="bg-licenses">PAR Dongle<br><span class="eol">6513</span></th>
+        <th class="bg-licenses">Host(Software)<br>(EOL)</th>
+        <th class="bg-evision">USB Dongle<br>6512</th>
+        <th class="bg-evision">PAR Dongle<br><span class="eol">6513</span></th>
+        <th class="bg-evision">Board</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Inserting your provided data here -->
+      <tr>
+        <td>Inspection Bundle (EasyImage,EasyGauge,EasyMatch,EasyObject,EasyColor)</td>
+        <td>4314</td>
+        <td>4164</td>
+        <td>4214</td>
+        <td class="eol">4264</td>
+        <td>4014</td>
+        <td>4064</td>
+        <td>4114</td>
+      </tr>
+      <tr>
+        <td>EasyMatrixCode</td>
+        <td>4307</td>
+        <td>4157</td>
+        <td>4207</td>
+        <td class="eol">4257</td>
+        <td>4007</td>
+        <td>4057</td>
+        <td>4107</td>
+      </tr>
+      <tr>
+        <td>Legacy Mark Inspection Bundle</td>
+        <td></td>
+        <td>4165</td>
+        <td>4215</td>
+        <td class="eol">4265</td>
+        <td>4015</td>
+        <td>4065</td>
+        <td>4115</td>
+      </tr>
+      <tr>
+        <td>EasyFind</td>
+        <td>4308</td>
+        <td>4158</td>
+        <td>4208</td>
+        <td class="eol">4258</td>
+        <td>4008</td>
+        <td>4058</td>
+        <td>4108</td>
+      </tr>
+      <tr>
+        <td>EasyMatch</td>
+        <td>4303</td>
+        <td>4153</td>
+        <td>4203</td>
+        <td class="eol">4253</td>
+        <td>4003</td>
+        <td>4053</td>
+        <td>4103</td>
+      </tr>
+      <tr>
+        <td>EasyGauge</td>
+        <td>4309</td>
+        <td>4159</td>
+        <td>4209</td>
+        <td class="eol">4259</td>
+        <td>4009</td>
+        <td>4059</td>
+        <td>4109</td>
+      </tr>
+      <tr>
+        <td>EasyImage</td>
+        <td>4301</td>
+        <td>4151</td>
+        <td>4201</td>
+        <td class="eol">4251</td>
+        <td>4001</td>
+        <td>4051</td>
+        <td>4101</td>
+      </tr>
+      <tr>
+        <td>EasyOCR</td>
+        <td>4305</td>
+        <td>4155</td>
+        <td>4205</td>
+        <td class="eol">4255</td>
+        <td>4005</td>
+        <td>4055</td>
+        <td>4105</td>
+      </tr>
+      <tr>
+        <td>Legacy ID Bundle 1.2</td>
+        <td></td>
+        <td>4176</td>
+        <td>4226</td>
+        <td class="eol">4276</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>EasyQRCode</td>
+        <td>4325</td>
+        <td>4175</td>
+        <td>4225</td>
+        <td class="eol">4275</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Full Bundle</td>
+        <td>4327</td>
+        <td>4177</td>
+        <td>4227</td>
+        <td class="eol">4277</td>
+        <td>4017</td>
+        <td>4067</td>
+        <td>4117</td>
+      </tr>
+      <tr>
+        <td>Easy3D</td>
+        <td>4331</td>
+        <td>4181</td>
+        <td>4231</td>
+        <td class="eol">4281</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Easy3DObject</td>
+        <td>4333</td>
+        <td>4183</td>
+        <td>4233</td>
+        <td class="eol">4283</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Easy3DMatch</td>
+        <td>4334</td>
+        <td>4184</td>
+        <td>4234</td>
+        <td class="eol">4284</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Easy3DLaserLine</td>
+        <td>4336</td>
+        <td>4186</td>
+        <td>4236</td>
+        <td class="eol">4286</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>EasyObject</td>
+        <td>4302</td>
+        <td>4152</td>
+        <td>4202</td>
+        <td class="eol">4252</td>
+        <td>4002</td>
+        <td>4052</td>
+        <td>4102</td>
+      </tr>
+      <tr>
+        <td>EasyColor</td>
+        <td>4304</td>
+        <td>4154</td>
+        <td>4204</td>
+        <td class="eol">4254</td>
+        <td>4004</td>
+        <td>4054</td>
+        <td>4104</td>
+      </tr>
+      <tr>
+        <td>EasyOCR2</td>
+        <td>4329</td>
+        <td>4179</td>
+        <td>4229</td>
+        <td class="eol">4279</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>EasyBarCode</td>
+        <td>4310</td>
+        <td>4160</td>
+        <td>4210</td>
+        <td class="eol">4260</td>
+        <td>4010</td>
+        <td>4060</td>
+        <td>4110</td>
+      </tr>
+      <tr>
+        <td>EasyOCV</td>
+        <td>4306</td>
+        <td>4156</td>
+        <td>4206</td>
+        <td class="eol">4256</td>
+        <td>4006</td>
+        <td>4056</td>
+        <td>4106</td>
+      </tr>
+      <tr>
+        <td>Deep Learning Bundle</td>
+        <td>4332</td>
+        <td>4182</td>
+        <td>4232</td>
+        <td class="eol">4282</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>3D Bundle</td>
+        <td>4335</td>
+        <td>4185</td>
+        <td>4235</td>
+        <td class="eol">4285</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>ID Bundle</td>
+        <td>4330</td>
+        <td>4180</td>
+        <td>4230</td>
+        <td class="eol">4280</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Legacy Inspection Bundle</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>4016</td>
+        <td>4066</td>
+        <td>4116</td>
+      </tr>
+      <tr>
+        <td>Legacy EasyMeasure</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>4011</td>
+        <td>4061</td>
+        <td>4111</td>
+      </tr>
+      <tr>
+        <td>Legacy SDK</td>
+        <td></td>
+        <td>4178</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Open eVision 30-day evaluation</td>
+        <td>4300</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
 
-<script>
-// Get all data rows within tbody
-var rows = document.querySelectorAll("#target-table tbody tr");
+<style>
+</style>
 
-// Add mouseover event handlers
-rows.forEach(function(row) {
-  row.addEventListener("mouseover", function() {
-    // Get all cells within the row
-    var cells = this.querySelectorAll("table td");
-    
-    // Iterate over the cells and add highlight style
-    cells.forEach(function(cell) {
-      cell.style.border = "2px solid red";
-    });
-  });
+<h3 id="2">Alternative solutions for PAR EOL</h3>
 
-  row.addEventListener("mouseout", function() {
-    // Get all cells within the row
-    var cells = this.querySelectorAll("td");
+<p>Due to the official announcement from Euresys that PAR Dongle is being phased out, USB Dongle will be recommended as a replacement in the future. Below are two suggested solutions:</p>
 
-    // Iterate over the cells and remove highlight style
-    cells.forEach(function(cell) {
-      cell.style.border = "";
-    });
-  });
-});
-</script>
+<p><span style="font-size: 20px;">1. Please use USB Dongle with the dedicated part number for Open eVision Licenses.</span>
+<br style="font-size: 20px;"><strong>For example:</strong></br>
+<span style="color: #0000FF; font-size: 18px;">Original solution: Inspection Bundle + PAR Dongle, 4214 + 6513</span><br>
+<span style="color: #FF0000; font-size: 18px;">Alternative solution: Inspection Bundle + USB Dongle, 4164 + 6512</span><br></p>
+
+<p><span style="font-size: 20px;">2. Please use USB Dongle with the dedicated part number for Open eVision Licenses.</span>
+<br style="font-size: 20px;"><strong>For example:</strong></br>
+<span style="color: #0000FF; font-size: 18px;">Original solution: Inspection Bundle + PAR Dongle, 4064 + 6513</span><br>
+<span style="color: #FF0000; font-size: 18px;">Alternative solution: Inspection Bundle + USB Dongle, 4014 + 6512</span><br></p>
 
 <h3 id="boundle-detail-list">Boundle detail list</h3>
 
@@ -4729,19 +4716,19 @@ rows.forEach(function(row) {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1705457051"></script>
-    <script src="/js/perfect-scrollbar.min.js?1705457051"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1705457051"></script>
-    <script src="/js/jquery.sticky.js?1705457051"></script>
-    <script src="/js/featherlight.min.js?1705457051"></script>
-    <script src="/js/highlight.pack.js?1705457051"></script>
+    <script src="/js/clipboard.min.js?1707271428"></script>
+    <script src="/js/perfect-scrollbar.min.js?1707271428"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1707271428"></script>
+    <script src="/js/jquery.sticky.js?1707271428"></script>
+    <script src="/js/featherlight.min.js?1707271428"></script>
+    <script src="/js/highlight.pack.js?1707271428"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1705457051"></script>
-    <script src="/js/learn.js?1705457051"></script>
-    <script src="/js/hugo-learn.js?1705457051"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1707271428"></script>
+    <script src="/js/learn.js?1707271428"></script>
+    <script src="/js/hugo-learn.js?1707271428"></script>
 
-    <link href="/mermaid/mermaid.css?1705457051" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1705457051"></script>
+    <link href="/mermaid/mermaid.css?1707271428" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1707271428"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
