@@ -55,6 +55,10 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/neon/neon-1000-mdx/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eos-iseries/faq/</loc>
   </url>
   
@@ -239,7 +243,23 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/parameters/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/gettingstart/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/howtoflashimage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/howtobackupneonibymicrosd/</loc>
   </url>
   
   <url>
@@ -271,6 +291,10 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/mcm-204/customalgorithm/</loc>
   </url>
   
@@ -283,15 +307,15 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/howtoflashimage/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/</loc>
   </url>
   
   <url>
     <loc>https://aiot-ist.github.io/dex_kvm/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/</loc>
   </url>
   
   <url>
@@ -323,27 +347,7 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/gettingstart/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/howtoflashimage/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/howtobackupneonibymicrosd/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/howtoflashimage/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/neon/devkit/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-rb5/</loc>
   </url>
   
   <url>
@@ -351,11 +355,15 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/neon/neon-rb5/samples/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/devkit/flashimg/</loc>
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon/neon-1000-mdx/</loc>
+    <loc>https://aiot-ist.github.io/neon/devkit/</loc>
   </url>
   
   <url>
