@@ -355,11 +355,15 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon/neon-rb5/samples/</loc>
+    <loc>https://aiot-ist.github.io/neon/neon-rb5/howtoflashimage/</loc>
   </url>
   
   <url>
     <loc>https://aiot-ist.github.io/neon/devkit/flashimg/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/neon/neon-rb5/samples/</loc>
   </url>
   
   <url>
