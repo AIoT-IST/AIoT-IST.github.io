@@ -354,7 +354,7 @@
 	"title": "EasyDeepLearning",
 	"tags": [],
 	"description": "",
-	"content": "This tutorial will guide you how to getting start DeepLearning by Euresys\n  EasyClassify\n  EasySegment\n  EasyLocate\n  There are 3 functions for deep learning studio    EasyClassifier EasySegmentation  2.1 Unsupervised 2.2 Supervised   EasyLocate  3.1 Bounding Box 3.2 Interest Point ![Normal machine](/Euresys/EasyDeepLearning/images/DeepLearning overall.png)    EasyClassify Link on line Doc\n  Easysegment Link on line Doc\n  EasyLocate   "
+	"content": "This tutorial will guide you how to getting start DeepLearning by Euresys\n  EasyClassify\n  EasySegment\n  EasyLocate\n  There are 3 functions for deep learning studio    EasyClassifier EasySegmentation  2.1 Unsupervised 2.2 Supervised   EasyLocate  3.1 Bounding Box 3.2 Interest Point ![Normal machine](/Euresys/EasyDeepLearning/images/DeepLearning overall.png)    EasyClassify Link on line Doc\n  Easysegment Link on line Doc\nSupervised   Unsupervised   EasyLocate   "
 },
 {
 	"uri": "https://aiot-ist.github.io/euresys/easyfind/",
