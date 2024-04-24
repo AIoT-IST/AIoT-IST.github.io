@@ -12,18 +12,18 @@
     <title>Sample program :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1713345253" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1713345253" rel="stylesheet">
-    <link href="/css/hybrid.css?1713345253" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1713345253" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1713345253" rel="stylesheet">
-    <link href="/css/auto-complete.css?1713345253" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1713345253" rel="stylesheet">
-    <link href="/css/theme.css?1713345253" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1713345253" rel="stylesheet">
+    <link href="/css/nucleus.css?1713941220" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1713941220" rel="stylesheet">
+    <link href="/css/hybrid.css?1713941220" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1713941220" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1713941220" rel="stylesheet">
+    <link href="/css/auto-complete.css?1713941220" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1713941220" rel="stylesheet">
+    <link href="/css/theme.css?1713941220" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1713941220" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1713345253"></script>
+    <script src="/js/jquery-3.3.1.min.js?1713941220"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1713345253"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1713345253"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1713941220"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1713941220"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1713345253"></script>
+<script type="text/javascript" src="/js/search.js?1713941220"></script>
 
     
   </div>
@@ -2752,6 +2752,7 @@
 	<p>Sample program of Neon-RB5</p>
 <ul>
 <li><a href="#capture-and-inference">Capture and Inference</a></li>
+<li><a href="#procedure-of-model-conversion">Model converter</a></li>
 </ul>
 <h2 id="capture-and-inference">Capture and Inference</h2>
 <ul>
@@ -2798,10 +2799,54 @@ cmake .. &amp;&amp; make
 </code></pre></li>
 <li>
 <h4 id="execute-the-inference-sample">Execute the inference sample</h4>
-<pre><code>./yolov6_snpe
+<pre><code>cd /home/adlink/Desktop/Neon-RB5_sample/samples/build
+./yolov6_snpe
+
 </code></pre></li>
 </ul>
-
+<h2 id="procedure-of-model-conversion">Procedure of Model Conversion</h2>
+<h3 id="required-hardware">Required hardware</h3>
+<pre><code>- x86 Host PC with [ubuntu18.04](https://releases.ubuntu.com/18.04/)
+- Neon-RB5
+</code></pre>
+<p>The AI model used in the example is <a href="https://github.com/meituan/YOLOv6">Meituan YOLOv6-N</a> Below, we will describe how to convert the downloaded <a href="https://github.com/meituan/YOLOv6/releases/download/0.4.0/yolov6n.pt">yolov6n.pt</a> file into a dlc file for use with Neon-RB5.</p>
+<p>The model conversion process primarily consists of four steps and requires a host PC with Ubuntu 18.04. Steps 1~5 are executed on the host.</p>
+<h4 id="step-1-environment-setup">Step 1: Environment Setup</h4>
+<pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade 
+sudo apt install python3-pip -y
+pip3 install --upgrade pip
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
+update-alternatives --list python
+</code></pre><h4 id="step-2-download-conversion-tools">Step 2: Download conversion tools</h4>
+<pre><code>wget https://sftp.adlinktech.com/image/Neon-RB5/snpe-1.68.0.zip -O ~/snpe-1.68.0.zip
+wget https://sftp.adlinktech.com/image/Neon-RB5/YOLOv6.tar.gz ~/YOLOv6.tar.gz
+</code></pre><h4 id="step-3-setup-conversion-environment">Step 3: Setup conversion environment</h4>
+<pre><code>cd ~
+unzip -X snpe-1.68.0.zip -d ~
+export SNPE_ROOT=/home/adlink/snpe-1.68.0.3932
+export PYTHONPATH=$PYTHONPATH:$SNPE_ROOT/lib/python
+source $SNPE_ROOT/bin/dependencies.sh
+source $SNPE_ROOT/bin/check_python_depends.sh 
+pip3 install numpy==1.16.5 sphinx==2.2.1 scipy==1.3.1 matplotlib==3.0.3 scikit-image==0.15.0 protobuf==3.6.0 pyyaml==5.1 
+source snpe-1.68.0.3932/bin/check_python_depends.sh 
+pip3 install onnx
+pip3 install torch 
+pip3 install onnxsim
+</code></pre><h4 id="step-4-convert-pt-to-onnx">Step 4: Convert *.pt to ONNX</h4>
+<pre><code>cd ~
+tar -zxvf YOLOv6.tar.gzcd ~/YOLOv6/
+python3 ./deploy/ONNX/export_onnx.py \
+    --weights ./deploy/ONNX/yolov6n.pt \
+    --img 288 \
+    --batch 1 
+</code></pre><h4 id="step-5-convert-onnx-to-dlc">Step 5: Convert *.ONNX to *.dlc</h4>
+<pre><code>cd ~/snpe-1.68.0.3932/bin/x86_64-linux-clang
+./snpe-onnx-to-dlc --input_network ~/YOLOv6/deploy/ONNX/yolov6n.onnx  --output_path yolov6n_base_quantized.dlc
+</code></pre><h4 id="step-6-replace-model-in-neon-rb5">Step 6: Replace model in Neon-RB5</h4>
+<p>Replace *.dlc in /home/adlink/Desktop/Neon-RB5_sample/samples/build</p>
+<pre><code>	cd /home/adlink/Desktop/Neon-RB5_sample/samples/build
+	./yolov6_snpe
+</code></pre>
 
 
 
@@ -4459,19 +4504,19 @@ cmake .. &amp;&amp; make
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1713345253"></script>
-    <script src="/js/perfect-scrollbar.min.js?1713345253"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1713345253"></script>
-    <script src="/js/jquery.sticky.js?1713345253"></script>
-    <script src="/js/featherlight.min.js?1713345253"></script>
-    <script src="/js/highlight.pack.js?1713345253"></script>
+    <script src="/js/clipboard.min.js?1713941220"></script>
+    <script src="/js/perfect-scrollbar.min.js?1713941220"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1713941220"></script>
+    <script src="/js/jquery.sticky.js?1713941220"></script>
+    <script src="/js/featherlight.min.js?1713941220"></script>
+    <script src="/js/highlight.pack.js?1713941220"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1713345253"></script>
-    <script src="/js/learn.js?1713345253"></script>
-    <script src="/js/hugo-learn.js?1713345253"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1713941220"></script>
+    <script src="/js/learn.js?1713941220"></script>
+    <script src="/js/hugo-learn.js?1713941220"></script>
 
-    <link href="/mermaid/mermaid.css?1713345253" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1713345253"></script>
+    <link href="/mermaid/mermaid.css?1713941220" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1713941220"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
