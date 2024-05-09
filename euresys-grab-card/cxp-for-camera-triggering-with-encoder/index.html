@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="generator" content="Hugo 0.58.2" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>Using Euresys Coaxlink with External Encoder for Camera Triggering :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1713941220" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1713941220" rel="stylesheet">
-    <link href="/css/hybrid.css?1713941220" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1713941220" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1713941220" rel="stylesheet">
-    <link href="/css/auto-complete.css?1713941220" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1713941220" rel="stylesheet">
-    <link href="/css/theme.css?1713941220" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1713941220" rel="stylesheet">
+    <link href="/css/nucleus.css?1715236964" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1715236964" rel="stylesheet">
+    <link href="/css/hybrid.css?1715236964" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1715236964" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1715236964" rel="stylesheet">
+    <link href="/css/auto-complete.css?1715236964" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1715236964" rel="stylesheet">
+    <link href="/css/theme.css?1715236964" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1715236964" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1713941220"></script>
+    <script src="/js/jquery-3.3.1.min.js?1715236964"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1713941220"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1713941220"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1715236964"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1715236964"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1713941220"></script>
+<script type="text/javascript" src="/js/search.js?1715236964"></script>
 
     
   </div>
@@ -299,7 +299,7 @@
   
     
     <li data-nav-id="/euresys/" title="Euresys" class="dd-item 
-        parent
+        
         
         
         ">
@@ -2740,12 +2740,16 @@
 
 
 
-	<p><a id="top"></a></p>
+	
+
+<p><a id="top"></a></p>
+
 <ul>
 <li><a href="#connecting-and-signal-detection-for-external-encoder">Connecting and Signal Detection for External Encoder</a></li>
 <li><a href="#wiring-external-input-signals-to-the-remote-board">Wiring External Input Signals to the Remote Board</a></li>
 <li><a href="#wiring-strob-output-from-the-remote-board">Wiring  Strob Output from the Remote Board</a></li>
 <li><a href="#trigger-camera-control-method">Trigger Camera Control Method</a>
+
 <ul>
 <li><a href="#configuration-in-the-device-tab-step-1">Configuration in the Device Tab (Step 1)</a></li>
 <li><a href="#setting-the-triggersource-step-2">Setting the TriggerSource (Step 2)</a></li>
@@ -2753,16 +2757,21 @@
 <li><a href="#verifying-operation-with-eventcount-step-4">Verifying Operation with EventCount (Step 4)</a></li>
 <li><a href="#setting-the-strobe-output-step-5-1">Setting the Strobe Output (Step 5)</a></li>
 <li><a href="#setting-the-cycle-trigger-source-step-6">Setting the Cycle Trigger  Source(Step 6)</a></li>
-</ul>
-</li>
+</ul></li>
 <li><a href="#setting-divider-with-external-signals">Setting Divider with External Signals</a></li>
 </ul>
+
 <h2 id="connecting-and-signal-detection-for-external-encoder">Connecting and Signal Detection for External Encoder</h2>
+
 <p>This section will explain how to connect the external encoder to the Coaxlink&rsquo;s I/O board and verify signal reception.
-<img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_map.png" alt="Wiring Map"></p>
+<img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_map.png" alt="Wiring Map" /></p>
+
 <p><a href="#1">External I/O Connector (Pin Define)</a> | <a href="#2">Remote Board (Pin Define)</a></p>
+
 <p>You can find more information in the <a href="https://documentation.euresys.com/Products/COAXLINK/COAXLINK/10/en-us/Content/03_Interfaces/hardware-manual/meca/connectors/inst200.htm">official Euresys documentation</a>.</p>
+
 <h2 id="1">External I/O Connector</h2>
+
 <table>
 <thead>
 <tr>
@@ -2771,132 +2780,158 @@
 <th>Usage</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>1</td>
 <td>GND</td>
 <td>Ground</td>
 </tr>
+
 <tr>
 <td>2</td>
 <td>DIN12+</td>
 <td>High-speed differential input #12 – Positive pole</td>
 </tr>
+
 <tr>
 <td>3</td>
 <td>IIN11+</td>
 <td>Isolated input #11 – Positive pole</td>
 </tr>
+
 <tr>
 <td>4</td>
 <td>IIN13-</td>
 <td>Isolated input #13 – Negative pole</td>
 </tr>
+
 <tr>
 <td>5</td>
 <td>IIN14-</td>
 <td>Isolated input #14 – Negative pole</td>
 </tr>
+
 <tr>
 <td>6</td>
 <td>IOUT12-</td>
 <td>Isolated contact output #12 – Negative pole</td>
 </tr>
+
 <tr>
 <td>7</td>
 <td>GND</td>
 <td>Ground</td>
 </tr>
+
 <tr>
 <td>8</td>
 <td></td>
 <td>Not connected</td>
 </tr>
+
 <tr>
 <td>9</td>
 <td>GND</td>
 <td>Ground</td>
 </tr>
+
 <tr>
 <td>10</td>
 <td>GND</td>
 <td>Ground</td>
 </tr>
+
 <tr>
 <td>11</td>
 <td>DIN12-</td>
 <td>High-speed differential input #12 – Negative pole</td>
 </tr>
+
 <tr>
 <td>12</td>
 <td>IIN11-</td>
 <td>Isolated input #11 – Negative pole</td>
 </tr>
+
 <tr>
 <td>13</td>
 <td>IIN12+</td>
 <td>Isolated input #12 – Positive pole</td>
 </tr>
+
 <tr>
 <td>14</td>
 <td>IIN13+</td>
 <td>Isolated input #13 – Positive pole</td>
 </tr>
+
 <tr>
 <td>15</td>
 <td>IIN14+</td>
 <td>Isolated input #14 – Positive pole</td>
 </tr>
+
 <tr>
 <td>16</td>
 <td>IOUT12+</td>
 <td>Isolated contact output #12 – Positive pole</td>
 </tr>
+
 <tr>
 <td>17</td>
 <td>TTLIO12</td>
 <td>TTL input/output #12</td>
 </tr>
+
 <tr>
 <td>18</td>
 <td>GND</td>
 <td>Ground</td>
 </tr>
+
 <tr>
 <td>19</td>
 <td>DIN11-</td>
 <td>High-speed differential input #11 – Negative pole</td>
 </tr>
+
 <tr>
 <td>20</td>
 <td>DIN11+</td>
 <td>High-speed differential input #11 – Positive pole</td>
 </tr>
+
 <tr>
 <td>21</td>
 <td>IIN12-</td>
 <td>Isolated input #12 – Negative pole</td>
 </tr>
+
 <tr>
 <td>22</td>
 <td>IOUT11-</td>
 <td>Isolated contact output #11 – Negative pole</td>
 </tr>
+
 <tr>
 <td>23</td>
 <td>IOUT11+</td>
 <td>Isolated contact output #11 – Positive pole</td>
 </tr>
+
 <tr>
 <td>24</td>
 <td>GND</td>
 <td>Ground</td>
 </tr>
+
 <tr>
 <td>25</td>
 <td>TTLIO11</td>
 <td>TTL input/output #11</td>
 </tr>
+
 <tr>
 <td>26</td>
 <td>+12V</td>
@@ -2904,8 +2939,11 @@
 </tr>
 </tbody>
 </table>
-<p><a href="#connecting-and-signal-detection-for-external-encoder">Back to Wiring Map</a>         <a href="#top">Back to Top</a></p>
+
+<p><a href="#connecting-and-signal-detection-for-external-encoder">Back to Wiring Map</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#top">Back to Top</a></p>
+
 <h2 id="2">Remote Board</h2>
+
 <table>
 <thead>
 <tr>
@@ -2917,31 +2955,35 @@
 <th>Usage</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>1</td>
-<td>GND</td>
-<td>Ground</td>
-<td>14</td>
 <td>+12V</td>
 <td>+12 V Power output</td>
+<td>14</td>
+<td>GND</td>
+<td>Ground</td>
 </tr>
+
 <tr>
 <td>2</td>
-<td>DIN11-</td>
-<td>High-speed differential input #11 – Negative pole</td>
-<td>15</td>
 <td>DIN11+</td>
 <td>High-speed differential input #11 – Positive pole</td>
+<td>15</td>
+<td>DIN11-</td>
+<td>High-speed differential input #11 – Negative pole</td>
 </tr>
+
 <tr>
 <td>3</td>
-<td>DIN12-</td>
-<td>High-speed differential input #12 – Negative pole</td>
-<td>16</td>
 <td>DIN12+</td>
 <td>High-speed differential input #12 – Positive pole</td>
+<td>16</td>
+<td>DIN12-</td>
+<td>High-speed differential input #12 – Negative pole</td>
 </tr>
+
 <tr>
 <td>4</td>
 <td>GND</td>
@@ -2950,88 +2992,106 @@
 <td>GND</td>
 <td>Ground</td>
 </tr>
+
 <tr>
 <td>5</td>
-<td>IIN11-</td>
-<td>Isolated input #11 – Negative pole</td>
-<td>18</td>
 <td>IIN11+</td>
 <td>Isolated input #11 – Positive pole</td>
+<td>18</td>
+<td>IIN11-</td>
+<td>Isolated input #11 – Negative pole</td>
 </tr>
+
 <tr>
 <td>6</td>
-<td>IIN12-</td>
-<td>Isolated input #12 – Negative pole</td>
-<td>19</td>
 <td>IIN12+</td>
 <td>Isolated input #12 – Positive pole</td>
+<td>19</td>
+<td>IIN12-</td>
+<td>Isolated input #12 – Negative pole</td>
 </tr>
+
 <tr>
 <td>7</td>
-<td>IIN13-</td>
-<td>Isolated input #13 – Negative pole</td>
-<td>20</td>
 <td>IIN13+</td>
 <td>Isolated input #13 – Positive pole</td>
+<td>20</td>
+<td>IIN13-</td>
+<td>Isolated input #13 – Negative pole</td>
 </tr>
+
 <tr>
 <td>8</td>
-<td>IIN14-</td>
-<td>Isolated input #14– Negative pole</td>
-<td>21</td>
 <td>IIN14+</td>
 <td>Isolated input #14 – Positive pole</td>
+<td>21</td>
+<td>IIN14-</td>
+<td>Isolated input #14– Negative pole</td>
 </tr>
+
 <tr>
 <td>9</td>
-<td>GND</td>
-<td>Ground</td>
-<td>22</td>
 <td>NC</td>
 <td>Not connected</td>
+<td>22</td>
+<td>GND</td>
+<td>Ground</td>
 </tr>
+
 <tr>
 <td>10</td>
-<td>IOUT11-</td>
-<td>Isolated contact output #11 – Negative pole</td>
-<td>23</td>
 <td>IOUT11+</td>
 <td>Isolated contact output #11 – Positive pole</td>
+<td>23</td>
+<td>IOUT11-</td>
+<td>Isolated contact output #11 – Negative pole</td>
 </tr>
+
 <tr>
 <td>11</td>
-<td>IOUT12-</td>
-<td>Isolated contact output #12 – Negative pole</td>
-<td>24</td>
 <td>IOUT12+</td>
 <td>Isolated contact output #12 – Positive pole</td>
+<td>24</td>
+<td>IOUT12-</td>
+<td>Isolated contact output #12 – Negative pole</td>
 </tr>
+
 <tr>
 <td>12</td>
-<td>GND</td>
-<td>Ground</td>
-<td>25</td>
 <td>TTLIO11</td>
 <td>TTL input/output #11</td>
-</tr>
-<tr>
-<td>13</td>
+<td>25</td>
 <td>GND</td>
 <td>Ground</td>
-<td>26</td>
+</tr>
+
+<tr>
+<td>13</td>
 <td>TTLIO12</td>
 <td>TTL input/output #12</td>
+<td>26</td>
+<td>GND</td>
+<td>Ground</td>
 </tr>
 </tbody>
 </table>
-<p><a href="#connecting-and-signal-detection-for-external-encoder">Back to Wiring Map</a>      <a href="#top">Back to Top</a></p>
+
+<p><a href="#connecting-and-signal-detection-for-external-encoder">Back to Wiring Map</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#top">Back to Top</a></p>
+
 <h2 id="wiring-external-input-signals-to-the-remote-board">Wiring External Input Signals to the Remote Board</h2>
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_DIN11_1.png" alt="Wiring on Remote board"></p>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_DIN11_1.png" alt="Wiring on Remote board" /></p>
+
 <p>In this case, as encoder signals are being used, the <span style="background-color: yellow;">High-speed differential input #11</span> has been selected as the connection point for its capability to handle high-speed signals. For signals that are not high-speed, standard input ports can be utilized. It&rsquo;s important to select an appropriate input port based on the signal speed to ensure optimal performance and accuracy of the system.</p>
+
 <p><a href="#top">Back to Top</a></p>
-<h2 id="wiring--strob-output-from-the-remote-board">Wiring  Strob Output from the Remote Board</h2>
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_TTLIO11.png" alt="wiring_TTLIO11"></p>
+
+<h2 id="wiring-strob-output-from-the-remote-board">Wiring  Strob Output from the Remote Board</h2>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_TTLIO11.png" alt="wiring_TTLIO11" /></p>
+
 <h2 id="trigger-camera-control-method">Trigger Camera Control Method</h2>
+
 <div style="font-size: 20px;">
 The Coaxlink card supports two modes for camera triggering:
 <ul>
@@ -3041,12 +3101,17 @@ The camera captures images continuously at its own pace, independent of external
 The frame grabber dictates the camera's cycle rate and exposure, synchronizing it with external triggers like an encoder.
 </ul>
 </div>
+
 <p><strong>RG Mode</strong> is ideal for situations requiring precise timing control, such as high-speed imaging or synchronized event capture. Select the mode that best fits your application&rsquo;s requirements.</p>
+
 <h3 id="configuration-in-the-device-tab-step-1"><strong>Configuration in the Device Tab (Step 1)</strong></h3>
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/RG-setting-1.png" alt="RG Settings"></p>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/RG-setting-1.png" alt="RG Settings" /></p>
+
 <div style="font-size: 20px;">
 Adjust the following parameters in the Device Tab to configure the RG mode:
 </div>
+
 <div style="font-size: 20px;">
 <ul>
     <li>Set the Camera Control Method to <span style="background-color: yellow;">RG.</span></li>
@@ -3055,7 +3120,9 @@ Adjust the following parameters in the Device Tab to configure the RG mode:
     <li>The <span style="background-color: yellow;">Cycle Trigger Source</span> is a critical setting. Choose <a href="#setting-the-inputtool-step-3"><span style="background-color: yellow;">LIN1</span></a> (see <a href="#setting-the-inputtool-step-3">Step 3</a> for detailed settings) or <a href="#setting-divider-with-external-signals"><span style="background-color: yellow;">Divider</span></a> as the source. It's essential to set this parameter correctly for proper system operation.</li>
 </ul>
 </div>
+
 <h3 id="calculating-the-cycle-minimum-period">Calculating the Cycle Minimum Period</h3>
+
 <div align="left" style="font-size: 20px;">
 To ensure the proper camera cycle rate, calculate the Cycle Minimum Period with this formula:
 </div>
@@ -3071,23 +3138,32 @@ For example, if your camera's frame rate (FPS) is 40, the calculation would be:
 <div align="left" style="font-size: 20px;">
 Given the 25 ms Cycle Minimum Period, set both the Exposure Time and the Strobe Duration to 20 milliseconds (20000 microseconds) to ensure they remain within this operational limit. This keeps the camera's exposure and illumination well-coordinated and prevents exceeding the maximum allowed cycle time.
 </div>
+
 <div style="font-size: 20px;">
 <ul>
     <li> <span style="background-color: yellow;"> Exposure Time</span> = 20000 microseconds (20 ms), which is less than the 25 ms limit.</li>
     <li>  <span style="background-color: yellow;">Strobe Duration</span> = 20000 microseconds (20 ms), which also does not exceed the 25 ms limit.</li>
 </ul>
 </div>
+
 <p><a href="#top">Back to Top</a></p>
-<h3 id="setting-the-triggersourcestep-2"><strong>Setting the TriggerSource(Step 2)</strong></h3>
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/TriggerSource_1.png" alt="TriggerSource"></p>
+
+<h3 id="setting-the-triggersource-step-2"><strong>Setting the TriggerSource(Step 2)</strong></h3>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/TriggerSource_1.png" alt="TriggerSource" /></p>
+
 <p>
 <div class="notices note" ><p>Different camera manufactures might use different names for their parameters.Always check with the camera manufacturer on parameters to set.</p>
 </div>
 
 <a href="#top">Back to Top</a></p>
+
 <h3 id="setting-the-inputtool-step-3"><strong>Setting the InputTool (Step 3)</strong></h3>
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/Interface_inputtool.png" alt="InputTool"></p>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/Interface_inputtool.png" alt="InputTool" /></p>
+
 <p>When configuring the InputTool in your system, it&rsquo;s important to understand the function of each parameter:</p>
+
 <div style="font-size: 20px;">
 <ul>
     <li> <span style="background-color: yellow;"> LineInputToolSelector:</span> </li>
@@ -3098,61 +3174,73 @@ This parameter defines the source of the input signal. It can be used to specify
 This parameter sets the activation mode of the input tool. It determines how the tool reacts to the input signal, such as triggering on a rising edge, falling edge, or other condition.
 <ul>
 </div>
+
 <p>Properly configuring these parameters ensures that your system accurately responds to external signals and triggers.
 <a href="#top">Back to Top</a></p>
+
 <h3 id="verifying-operation-with-eventcount-step-4"><strong>Verifying Operation with EventCount (Step 4)</strong></h3>
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/EventSelector.png" alt="EventSelector"></p>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/EventSelector.png" alt="EventSelector" /></p>
+
 <div style="font-size: 20px;">
 <ul>
     <li><span style="background-color: yellow;">EventSelector:</span></li>
     This parameter allows you to select the source for event monitoring. You can set it to <a href="#setting-the-inputtool-step-3"><span style="background-color: yellow;">LIN1</span></a> (as described in Step 3) or choose <a href="#setting-divider-with-external-signals"><span style="background-color: yellow;">Divider</span></a> as the source. Selecting the correct EventSelector enables you to track specific events relevant to your input configuration.
-<pre><code>&lt;li&gt;&lt;span style=&quot;background-color: yellow;&quot;&gt;EventCount:&lt;/span&gt;&lt;/li&gt;
-This parameter displays the count of the events detected. A value in EventCount indicates successful operation. For consistent movements over fixed distances, you will observe an equivalent accumulation in the EventCount value.
 
-&lt;li&gt;&lt;span style=&quot;background-color: yellow;&quot;&gt;EventCountReset:&lt;/span&gt;&lt;/li&gt;
-This parameter can be used to reset the EventCount value. It is useful for clearing the count to facilitate easier tracking and calculations of new events.
-</code></pre>
+    <li><span style="background-color: yellow;">EventCount:</span></li>
+    This parameter displays the count of the events detected. A value in EventCount indicates successful operation. For consistent movements over fixed distances, you will observe an equivalent accumulation in the EventCount value.
+
+    <li><span style="background-color: yellow;">EventCountReset:</span></li>
+    This parameter can be used to reset the EventCount value. It is useful for clearing the count to facilitate easier tracking and calculations of new events.
 </ul>
 </div>
+
 
 <div class="notices note" ><p>Click the button shown in the figure below to retrieve the current counter value.</p>
 </div>
 
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/updatethecounter.png" alt="update_the_counter"></p>
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/animated_eventcount.gif" alt="animated_eventcount"></p>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/updatethecounter.png" alt="update_the_counter" /></p>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/animated_eventcount.gif" alt="animated_eventcount" /></p>
+
 <p><a href="#top">Back to Top</a></p>
+
 <h3 id="setting-the-strobe-output-step-5"><strong>Setting the Strobe Output (Step 5)</strong></h3>
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/DigitalIOControl.png" alt="Strobe-Output"></p>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/DigitalIOControl.png" alt="Strobe-Output" /></p>
+
 <div style="font-size: 20px;">
 <ul>
     <li><span style="background-color: yellow;">LineSelector [Selector]:</span></li>
     This parameter is set to TTLIO11 to select the corresponding line for strobe output configuration.
-<pre><code>&lt;li&gt;&lt;span style=&quot;background-color: yellow;&quot;&gt;LineMode:&lt;/span&gt;&lt;/li&gt;
-The line mode is set to Output, which configures the selected line to act as an output, driving the strobe signal.
 
-&lt;li&gt;&lt;span style=&quot;background-color: yellow;&quot;&gt;LineSource:&lt;/span&gt;&lt;/li&gt;
-The source for the line is set to Device0Strobe
-</code></pre>
+    <li><span style="background-color: yellow;">LineMode:</span></li>
+    The line mode is set to Output, which configures the selected line to act as an output, driving the strobe signal.
+
+    <li><span style="background-color: yellow;">LineSource:</span></li>
+    The source for the line is set to Device0Strobe
 </ul>
 </div>
+
 <h3 id="setting-divider-with-external-signals"><strong>Setting Divider with External Signals</strong></h3>
+
 <p>Most encoders emit high-frequency signals, which are often too rapid for direct camera triggering. Using a divider, these signals can be adjusted to lower frequencies, suitable for stable camera activation, ensuring accurate and consistent image capturing.</p>
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/DividerTool.png" alt="DividerTool"></p>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/DividerTool.png" alt="DividerTool" /></p>
+
 <div style="font-size: 20px;">
 <ul>
     <li><span style="background-color: yellow;">DividerToolSelector:</span></li>
     This parameter acts as the central identifier for the Divider Tool configuration, integrating the selected source (specified by DividerToolSource), the activation control (determined by DividerToolEnableControl), and the division factor (set by DividerToolDivisionfactor) for the input. Once DividerToolSelector is configured, it guarantees consistency across the system; any subsequent modifications to the source, activation, or division factor are centralized through this single parameter. This consolidation simplifies the adjustment process, enabling changes to be made in one place that then propagate to all related configurations.
-<pre><code>&lt;li&gt;&lt;span style=&quot;background-color: yellow;&quot;&gt;DividerToolSource:&lt;/span&gt;&lt;/li&gt;
-Select LIN1 for the source, as previously described in Step 3.
 
-&lt;li&gt;&lt;span style=&quot;background-color: yellow;&quot;&gt;DividerToolEnableControl:&lt;/span&gt;&lt;/li&gt;
-Set this to 'Enable' to activate the divider tool.
+<li><span style="background-color: yellow;">DividerToolSource:</span> Select LIN1 for the source, as previously described in Step 3.</li>
+<li><span style="background-color: yellow;">DividerToolEnableControl:</span> Set this to 'Enable' to activate the divider tool.</li>
+<li><span style="background-color: yellow;">DividerToolDivisionfactor:</span> Enter the division factor value you wish to use for frequency division.</li>
 
-&lt;li&gt;&lt;span style=&quot;background-color: yellow;&quot;&gt;DividerToolDivisionfactor:&lt;/span&gt;&lt;/li&gt;
-Enter the division factor value you wish to use for frequency division.
-</code></pre>
 </ul>
 </div>
+
 
 <div class="notices note" ><p>Once you have configured the Divider Tool, remember to revisit <strong>Step 1</strong> to adjust the &lsquo;Cycle Trigger Source&rsquo; accordingly. Additionally, you can verify the functionality by modifying the &lsquo;EventSelector&rsquo; in <strong>Step 4</strong>. These steps ensure that your settings are consistent and functional across the system.</p>
 </div>
@@ -4813,19 +4901,19 @@ Enter the division factor value you wish to use for frequency division.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1713941220"></script>
-    <script src="/js/perfect-scrollbar.min.js?1713941220"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1713941220"></script>
-    <script src="/js/jquery.sticky.js?1713941220"></script>
-    <script src="/js/featherlight.min.js?1713941220"></script>
-    <script src="/js/highlight.pack.js?1713941220"></script>
+    <script src="/js/clipboard.min.js?1715236964"></script>
+    <script src="/js/perfect-scrollbar.min.js?1715236964"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1715236964"></script>
+    <script src="/js/jquery.sticky.js?1715236964"></script>
+    <script src="/js/featherlight.min.js?1715236964"></script>
+    <script src="/js/highlight.pack.js?1715236964"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1713941220"></script>
-    <script src="/js/learn.js?1713941220"></script>
-    <script src="/js/hugo-learn.js?1713941220"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1715236964"></script>
+    <script src="/js/learn.js?1715236964"></script>
+    <script src="/js/hugo-learn.js?1715236964"></script>
 
-    <link href="/mermaid/mermaid.css?1713941220" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1713941220"></script>
+    <link href="/mermaid/mermaid.css?1715236964" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1715236964"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
