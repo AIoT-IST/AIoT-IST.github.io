@@ -9,21 +9,21 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Using Euresys Coaxlink with External Encoder for Camera Triggering :: Connected Factory</title>
+    <title>Using Euresys Coaxlink with Terminal Board  for Camera Triggering :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1723712857" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1723712857" rel="stylesheet">
-    <link href="/css/hybrid.css?1723712857" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1723712857" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1723712857" rel="stylesheet">
-    <link href="/css/auto-complete.css?1723712857" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1723712857" rel="stylesheet">
-    <link href="/css/theme.css?1723712857" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1723712857" rel="stylesheet">
+    <link href="/css/nucleus.css?1723713624" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1723713624" rel="stylesheet">
+    <link href="/css/hybrid.css?1723713624" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1723713624" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1723713624" rel="stylesheet">
+    <link href="/css/auto-complete.css?1723713624" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1723713624" rel="stylesheet">
+    <link href="/css/theme.css?1723713624" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1723713624" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1723712857"></script>
+    <script src="/js/jquery-3.3.1.min.js?1723713624"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1723712857"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1723712857"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1723713624"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1723713624"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1723712857"></script>
+<script type="text/javascript" src="/js/search.js?1723713624"></script>
 
     
   </div>
@@ -707,13 +707,13 @@
  
   
     
-    <li data-nav-id="/euresys-grab-card/cxp-for-camera-triggering-with-encoder/" title="Using Euresys Coaxlink with External Encoder for Camera Triggering" class="dd-item 
+    <li data-nav-id="/euresys-grab-card/cxp-for-camera-triggering-with-encoder/" title="Using Euresys Coaxlink with Terminal Board  for Camera Triggering" class="dd-item 
         parent
         active
         
         ">
       <a href="/euresys-grab-card/cxp-for-camera-triggering-with-encoder/">
-          Using Euresys Coaxlink with External Encoder for Camera Triggering
+          Using Euresys Coaxlink with Terminal Board  for Camera Triggering
           
       </a>
       
@@ -2856,7 +2856,7 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/euresys-grab-card/'>Euresys Grab card</a> > Using Euresys Coaxlink with External Encoder for Camera Triggering
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/euresys-grab-card/'>Euresys Grab card</a> > Using Euresys Coaxlink with Terminal Board  for Camera Triggering
           
          
           
@@ -2889,9 +2889,9 @@
 <p><a id="top"></a></p>
 
 <ul>
-<li><a href="#connecting-and-signal-detection-for-external-encoder">Connecting and Signal Detection for External Encoder</a></li>
-<li><a href="#wiring-external-input-signals-to-the-remote-board">Wiring External Input Signals to the Remote Board</a></li>
-<li><a href="#wiring-strob-output-from-the-remote-board">Wiring  Strob Output from the Remote Board</a></li>
+<li><a href="#terminal-board-signal-wiring-and-frame-grabber-system-architecture-overview">Terminal Board Signal Wiring and Frame Grabber System Architecture Overview</a></li>
+<li><a href="#wiring-external-input-signals-to-the-terminal-board">Wiring External Input Signals to the Terminal Board</a></li>
+<li><a href="#wiring-strob-output-from-the-terminal-board">Wiring  Strob Output from the Terminal Board </a></li>
 <li><a href="#trigger-camera-control-method">Trigger Camera Control Method</a>
 
 <ul>
@@ -2905,16 +2905,16 @@
 <li><a href="#setting-divider-with-external-signals">Setting Divider with External Signals</a></li>
 </ul>
 
-<h2 id="connecting-and-signal-detection-for-external-encoder">Connecting and Signal Detection for External Encoder</h2>
+<h2 id="terminal-board-signal-wiring-and-frame-grabber-system-architecture-overview">Terminal Board Signal Wiring and Frame Grabber System Architecture Overview</h2>
 
-<p>This section will explain how to connect the external encoder to the Coaxlink&rsquo;s I/O board and verify signal reception.
+<p>This section will explain how to connect the Terminal Board  to the Coaxlink&rsquo;s I/O board and verify signal reception.
 <img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_map.png" alt="Wiring Map" /></p>
 
-<p><a href="#1">External I/O Connector (Pin Define)</a> | <a href="#2">Remote Board (Pin Define)</a></p>
+<p><a href="#1">Coaxlink I/O Connector (Pin Define)</a> | <a href="#2">Terminal Board (Pin Define)</a>|<a href="https://ampro1-my.sharepoint.com/:b:/g/personal/darren_hung_adlinktech_com/Ea3kprcxYfRNihD-6Ds4G4EB5wV48ts9VtjTrI7zyeOjRA?e=27wWzd">Terminal Board Datasheet</a></p>
 
 <p>You can find more information in the <a href="https://documentation.euresys.com/Products/COAXLINK/COAXLINK/10/en-us/Content/03_Interfaces/hardware-manual/meca/connectors/inst200.htm">official Euresys documentation</a>.</p>
 
-<h2 id="1">External I/O Connector</h2>
+<h2 id="1">Coaxlink I/O Connector</h2>
 
 <table>
 <thead>
@@ -3084,9 +3084,10 @@
 </tbody>
 </table>
 
-<p><a href="#connecting-and-signal-detection-for-external-encoder">Back to Wiring Map</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#top">Back to Top</a></p>
+<p><a href="#terminal-board-signal-wiring-and-frame-grabber-system-architecture-overview">Back to Wiring Map</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#top">Back to Top</a></p>
 
-<h2 id="2">Remote Board</h2>
+<h2 id="2">Terminal Board Pin Define</h2>
 
 <table>
 <thead>
@@ -3222,15 +3223,15 @@
 
 <p><a href="#connecting-and-signal-detection-for-external-encoder">Back to Wiring Map</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#top">Back to Top</a></p>
 
-<h2 id="wiring-external-input-signals-to-the-remote-board">Wiring External Input Signals to the Remote Board</h2>
+<h2 id="wiring-external-input-signals-to-the-terminal-board">Wiring External Input Signals to the Terminal Board</h2>
 
-<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_DIN11_1.png" alt="Wiring on Remote board" /></p>
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_DIN11_1.png" alt="Wiring on Terminal Board " /></p>
 
 <p>In this case, as encoder signals are being used, the <span style="background-color: yellow;">High-speed differential input #11</span> has been selected as the connection point for its capability to handle high-speed signals. For signals that are not high-speed, standard input ports can be utilized. It&rsquo;s important to select an appropriate input port based on the signal speed to ensure optimal performance and accuracy of the system.</p>
 
 <p><a href="#top">Back to Top</a></p>
 
-<h2 id="wiring-strob-output-from-the-remote-board">Wiring  Strob Output from the Remote Board</h2>
+<h2 id="wiring-strob-output-from-the-terminal-board">Wiring  Strob Output from the Terminal Board</h2>
 
 <p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_TTLIO11.png" alt="wiring_TTLIO11" /></p>
 
@@ -3389,6 +3390,8 @@ This parameter sets the activation mode of the input tool. It determines how the
 <div class="notices note" ><p>Once you have configured the Divider Tool, remember to revisit <strong>Step 1</strong> to adjust the &lsquo;Cycle Trigger Source&rsquo; accordingly. Additionally, you can verify the functionality by modifying the &lsquo;EventSelector&rsquo; in <strong>Step 4</strong>. These steps ensure that your settings are consistent and functional across the system.</p>
 </div>
 
+
+<p><a href="#top">Back to Top</a></p>
 
 
 
@@ -5129,19 +5132,19 @@ This parameter sets the activation mode of the input tool. It determines how the
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1723712857"></script>
-    <script src="/js/perfect-scrollbar.min.js?1723712857"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1723712857"></script>
-    <script src="/js/jquery.sticky.js?1723712857"></script>
-    <script src="/js/featherlight.min.js?1723712857"></script>
-    <script src="/js/highlight.pack.js?1723712857"></script>
+    <script src="/js/clipboard.min.js?1723713624"></script>
+    <script src="/js/perfect-scrollbar.min.js?1723713624"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1723713624"></script>
+    <script src="/js/jquery.sticky.js?1723713624"></script>
+    <script src="/js/featherlight.min.js?1723713624"></script>
+    <script src="/js/highlight.pack.js?1723713624"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1723712857"></script>
-    <script src="/js/learn.js?1723712857"></script>
-    <script src="/js/hugo-learn.js?1723712857"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1723713624"></script>
+    <script src="/js/learn.js?1723713624"></script>
+    <script src="/js/hugo-learn.js?1723713624"></script>
 
-    <link href="/mermaid/mermaid.css?1723712857" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1723712857"></script>
+    <link href="/mermaid/mermaid.css?1723713624" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1723713624"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
