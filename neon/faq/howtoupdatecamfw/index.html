@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>MCM-204 :: Connected Factory</title>
+    <title>How to update Camera Firmware of Neon-20XA-Series? :: Connected Factory</title>
 
     
     <link href="/css/nucleus.css?1723712857" rel="stylesheet">
@@ -44,7 +44,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/mcm-204/">
+  <body class="" data-url="/neon/faq/howtoupdatecamfw/">
     <nav id="sidebar" class="">
 
 
@@ -87,8 +87,8 @@
   
     
     <li data-nav-id="/mcm-204/" title="MCM-204" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/mcm-204/">
@@ -2121,7 +2121,7 @@
   
     
     <li data-nav-id="/neon/" title="NEONs" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2148,7 +2148,7 @@
   
     
     <li data-nav-id="/neon/faq/" title="FAQ" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2295,8 +2295,8 @@
   
     
     <li data-nav-id="/neon/faq/howtoupdatecamfw/" title="How to update Camera Firmware of Neon-20XA-Series?" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/neon/faq/howtoupdatecamfw/">
@@ -2852,7 +2852,19 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > MCM-204
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon/'>NEONs</a> > <a href='/neon/faq/'>FAQ</a> > How to update Camera Firmware of Neon-20XA-Series?
+          
+         
+          
+         
           
          
           
@@ -2868,9 +2880,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              How to update Camera Firmware of Neon-20XA-Series?
+            </h1>
           
 
         
@@ -2880,11 +2895,40 @@
 
 	
 
-<h3 id="adlink-ist-connected-factory">ADLINK IST Connected Factory</h3>
+<p>Keeping your Neon Camera updated with the latest firmware ensures more stable performance for your application.</p>
 
-<h1 id="mcm-204">MCM-204</h1>
+<table>
+  <tr>
+    <th style="text-align:center;">Neon-Series</th>
+    <th style="text-align:center;">Neon-201A</th>
+    <th style="text-align:center;">Neon-202A</th>
+  </tr>
+  <tr>
+    <td style="text-align:center;">Latest FW Version</td>
+    <td style="text-align:center;"><a href="http://sftp.adlinktech.com/image/Neon/RS_M12MO_AR0234C70E.zip">23414</a></td>
+    <td style="text-align:center;"><a href="http://sftp.adlinktech.com/image/Neon/RS_M12MO_IMX334C70D.zip">33413</a></td>
+  </tr>
+</table>
 
-<p>Discover how to use the MCM-204 and find the releated questions.</p>
+<h3 id="step-1-check-camera-fw-version">Step 1: Check camera FW version</h3>
+
+<p><code>v4l2-ctl -C version</code></p>
+
+<h3 id="step-2-update-camera-fw">Step 2: Update camera FW</h3>
+
+<pre><code>//Here is an example where the FW file has been pre-downloaded and extracted to /home/adlink.
+cd FW-24314
+sudo dd if=RS_M12MO_AR0234C70E.bin of=/sys/kernel/debug/m12mo_a/fwupdate obs=2093056
+//The default password of Neon is adlink
+</code></pre>
+
+<h3 id="step-3-unplug-neon-power-and-power-on-after-flash-procedure">Step 3: Unplug Neon power and power on after flash procedure</h3>
+
+<h3 id="step-4-check-the-fw-version-again">Step 4: Check the FW version again</h3>
+
+<p><code>v4l2-ctl -C version</code></p>
+
+<p><img src="/NEON/FAQ/howtoUpdateCamFW/images/FW.png" alt="drawing" width="800"/></p>
 
 
 
@@ -2894,8 +2938,6 @@
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -2927,6 +2969,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -2942,9 +2986,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -4185,6 +4226,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -4199,6 +4241,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -4215,6 +4258,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -4295,6 +4341,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -4313,6 +4360,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4605,10 +4655,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="ADLINK-IST Connected Factories"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/neon/faq/howtobackupandextendsdcard/" title="How to backup and extend microSD card?"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/mcm-204/gettingstart/" title="Getting Start" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/neon/neon-1000-mdx/" title="Neon-1000-MDX" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
