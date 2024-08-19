@@ -12,18 +12,18 @@
     <title>Sample program :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1723713624" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1723713624" rel="stylesheet">
-    <link href="/css/hybrid.css?1723713624" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1723713624" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1723713624" rel="stylesheet">
-    <link href="/css/auto-complete.css?1723713624" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1723713624" rel="stylesheet">
-    <link href="/css/theme.css?1723713624" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1723713624" rel="stylesheet">
+    <link href="/css/nucleus.css?1724029278" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1724029278" rel="stylesheet">
+    <link href="/css/hybrid.css?1724029278" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1724029278" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1724029278" rel="stylesheet">
+    <link href="/css/auto-complete.css?1724029278" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1724029278" rel="stylesheet">
+    <link href="/css/theme.css?1724029278" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1724029278" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1723713624"></script>
+    <script src="/js/jquery-3.3.1.min.js?1724029278"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1723713624"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1723713624"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1724029278"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1724029278"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1723713624"></script>
+<script type="text/javascript" src="/js/search.js?1724029278"></script>
 
     
   </div>
@@ -2287,30 +2287,6 @@
 
             
           
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/neon/faq/howtoupdatecamfw/" title="How to update Camera Firmware of Neon-20XA-Series?" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/neon/faq/howtoupdatecamfw/">
-          How to update Camera Firmware of Neon-20XA-Series?
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
         
         </ul>
               
@@ -2910,48 +2886,44 @@
 
 <pre><code>sudo apt-get update
 sudo apt install --fix-broken 
-sudo apt-get install cmake 
-</code></pre></li>
+sudo apt-get install cmake
 
-<li><h4 id="untar-the-file">Untar the file</h4>
+- #### Untar the file
+</code></pre>
 
-<pre><code>tar -zxvf Neon-RB5_sample.tar.gz -C /home/adlink/Desktop
+<p>tar -zxvf Neon-RB5_sample.tar.gz -C /home/adlink/Desktop
 cd /home/adlink/Desktop/Neon-RB5_sample
 cp /home/adlink/Desktop/Neon-RB5_sample/yolov6n_base_quantized.dlc /home/adlink
-tar -zxvf snpe-1.68.0.3932.tar.gz -C /home/adlink
-</code></pre></li>
+tar -zxvf snpe-1.68.0.3932.tar.gz -C /home/adlink</p></li>
 
 <li><h4 id="modidy-bashrc-and-add-content-below">modidy .bashrc and add content below</h4>
 
 <pre><code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/adlink/snpe-1.68.0.3932/lib/aarch64-ubuntu-gcc7.5:/usr/local/lib/
 export ADSP_LIBRARY_PATH=&quot;/home/adlink/snpe-1.68.0.3932/lib/dsp;/usr/lib/rfsa/adsp/;/vendor/lib/rfsa/dsp/testsig;/system/lib/rfsa/adsp;/system/vendor/lib/rfsa/adsp;/dsp&quot;
 export PATH=$PATH:/home/adlink/snpe-1.68.0.3932/bin/aarch64-ubuntu-gcc7.5
-</code></pre></li>
 
-<li><h4 id="reload-the-bashrc-setting">Reload the .bashrc setting</h4>
+- #### Reload the .bashrc setting
+</code></pre>
 
-<pre><code>source ~/.bashrc
-</code></pre></li>
+<p>source ~/.bashrc</p></li>
 
 <li><h4 id="compile-the-sample">Compile the sample</h4>
 
 <pre><code>cd /home/adlink/Desktop/Neon-RB5_sample/samples
 mkdir build &amp;&amp; cd build
 cmake .. &amp;&amp; make
-</code></pre></li>
-
-<li><h4 id="execute-the-inference-sample">Execute the inference sample</h4>
-
-<pre><code>cd /home/adlink/Desktop/Neon-RB5_sample/samples/build
-./yolov6_snpe
+- #### Execute the inference sample
 </code></pre>
 
-<h2 id="procedure-of-model-conversion">Procedure of Model Conversion</h2></li>
+<p>cd /home/adlink/Desktop/Neon-RB5_sample/samples/build
+./yolov6_snpe</p></li>
 </ul>
+
+<h2 id="procedure-of-model-conversion">Procedure of Model Conversion</h2>
 
 <h3 id="required-hardware">Required hardware</h3>
 
-<pre><code>- x86 Host PC with [ubuntu18.04](https://releases.ubuntu.com/18.04)
+<pre><code>- x86 Host PC with [ubuntu18.04](https://releases.ubuntu.com/18.04/)
 - Neon-RB5
 </code></pre>
 
@@ -3009,8 +2981,8 @@ python3 ./deploy/ONNX/export_onnx.py \
 
 <p>Replace *.dlc in /home/adlink/Desktop/Neon-RB5_sample/samples/build</p>
 
-<pre><code>    cd /home/adlink/Desktop/Neon-RB5_sample/samples/build
-    ./yolov6_snpe
+<pre><code>	cd /home/adlink/Desktop/Neon-RB5_sample/samples/build
+	./yolov6_snpe
 </code></pre>
 
 
@@ -4418,22 +4390,6 @@ python3 ./deploy/ONNX/export_onnx.py \
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -4754,19 +4710,19 @@ python3 ./deploy/ONNX/export_onnx.py \
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1723713624"></script>
-    <script src="/js/perfect-scrollbar.min.js?1723713624"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1723713624"></script>
-    <script src="/js/jquery.sticky.js?1723713624"></script>
-    <script src="/js/featherlight.min.js?1723713624"></script>
-    <script src="/js/highlight.pack.js?1723713624"></script>
+    <script src="/js/clipboard.min.js?1724029278"></script>
+    <script src="/js/perfect-scrollbar.min.js?1724029278"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1724029278"></script>
+    <script src="/js/jquery.sticky.js?1724029278"></script>
+    <script src="/js/featherlight.min.js?1724029278"></script>
+    <script src="/js/highlight.pack.js?1724029278"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1723713624"></script>
-    <script src="/js/learn.js?1723713624"></script>
-    <script src="/js/hugo-learn.js?1723713624"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1724029278"></script>
+    <script src="/js/learn.js?1724029278"></script>
+    <script src="/js/hugo-learn.js?1724029278"></script>
 
-    <link href="/mermaid/mermaid.css?1723713624" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1723713624"></script>
+    <link href="/mermaid/mermaid.css?1724029278" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1724029278"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
