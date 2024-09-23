@@ -315,6 +315,10 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/demo/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-ono/</loc>
   </url>
   
@@ -384,10 +388,6 @@
   
   <url>
     <loc>https://aiot-ist.github.io/neon/neon-rb5/samples/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/neon/neon-rb5/train_custom_data/</loc>
   </url>
   
   <url>

@@ -9,21 +9,21 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>FAQ :: Connected Factory</title>
+    <title>People count application With Deepstream SDK and Transfer Learning Toolkit :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1727052385" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1727052385" rel="stylesheet">
-    <link href="/css/hybrid.css?1727052385" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1727052385" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1727052385" rel="stylesheet">
-    <link href="/css/auto-complete.css?1727052385" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1727052385" rel="stylesheet">
-    <link href="/css/theme.css?1727052385" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1727052385" rel="stylesheet">
+    <link href="/css/nucleus.css?1727052386" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727052386" rel="stylesheet">
+    <link href="/css/hybrid.css?1727052386" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727052386" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727052386" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727052386" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727052386" rel="stylesheet">
+    <link href="/css/theme.css?1727052386" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727052386" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1727052385"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727052386"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -44,7 +44,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/eos-iseries/faq/">
+  <body class="" data-url="/neon/neon-2000-jnx/demo/">
     <nav id="sidebar" class="">
 
 
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1727052385"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1727052385"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727052386"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727052386"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1727052385"></script>
+<script type="text/javascript" src="/js/search.js?1727052386"></script>
 
     
   </div>
@@ -217,7 +217,7 @@
   
     
     <li data-nav-id="/eos-iseries/" title="EOS-iSeries" class="dd-item 
-        parent
+        
         
         
         ">
@@ -268,8 +268,8 @@
   
     
     <li data-nav-id="/eos-iseries/faq/" title="FAQ" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/eos-iseries/faq/">
@@ -2121,7 +2121,7 @@
   
     
     <li data-nav-id="/neon/" title="NEONs" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2460,7 +2460,7 @@
   
     
     <li data-nav-id="/neon/neon-2000-jnx/" title="Neon-2000-JNX" class="dd-item 
-        
+        parent
         
         
         ">
@@ -2511,8 +2511,8 @@
   
     
     <li data-nav-id="/neon/neon-2000-jnx/demo/" title="People count application With Deepstream SDK and Transfer Learning Toolkit" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/neon/neon-2000-jnx/demo/">
@@ -2880,7 +2880,13 @@
             
           
           
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/eos-iseries/'>EOS-iSeries</a> > FAQ
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/neon/'>NEONs</a> > <a href='/neon/neon-2000-jnx/'>Neon-2000-JNX</a> > People count application With Deepstream SDK and Transfer Learning Toolkit
+          
+         
           
          
           
@@ -2902,7 +2908,7 @@
           
             <h1>
               
-              FAQ
+              People count application With Deepstream SDK and Transfer Learning Toolkit
             </h1>
           
 
@@ -2913,25 +2919,107 @@
 
 	
 
-<p>Frequently asked questions (FAQ) about Pylon</p>
+<p><strong>People count application With Deepstream SDK and Transfer Learning Toolkit</strong></p>
 
-<h2 id="how-to-grab-the-image-from-the-gige-basler">How to grab the Image from the GigE Basler.</h2>
+<p>Git repo: <a href="https://github.com/AIoT-IST/deepstream-occupancy-analytics/tree/master">https://github.com/AIoT-IST/deepstream-occupancy-analytics/tree/master</a></p>
 
 <ul>
-<li>#### Step1 : Set the Lan port IP address ?
-Assign the TCP/IP4 IP to be 192.168.11.1</li>
-<li>#### Step2: How to set the Camera IP by Pylon?
-Set the Ip 192.168.11.4 by Pylon IP configurator.
-&mdash;</li>
+<li><a href="#description">Description</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#GettingStarted">Getting Started</a></li>
+<li><a href="#build">Build</a></li>
+<li><a href="#run">Run</a></li>
+<li><a href="#output">Output</a></li>
+<li><a href="#references">References</a>
+<p align="center">
+<img src="images/test.png">
+</p></li>
 </ul>
 
-<h2 id="video">Video</h2>
+<h2 id="description">Description</h2>
 
+<p>This is a sample application for counting people entering/leaving in a building using NVIDIA Deepstream SDK, Transfer Learning Toolkit (TLT) and pre-trained models. This application can be used to build real-time occupancy analytics application for smart buildings, hospitals, retail, etc. The application is based on deepstream-test5 sample application.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/THuuqRE3JC0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<p>It can take streaming video or Neon camera as input, counts the number of people crossing a tripwire. In this application, you will learn:</p>
 
+<ul>
+<li>How to use PeopleNet model from NGC</li>
+<li>How to use NvDsAnalytics plugin to draw line and count people crossing the line</li>
+</ul>
+
+<p>You can extend this application to change region of interest, use cloud-to-edge messaging to trigger record in the DeepStream application or build analytic dashboard or database to store the metadata.</p>
+
+<p>To learn how to build this demo step-by-step, check out the on-demand webinar on <a href="https://info.nvidia.com/iva-occupancy-webinar-reg-page.html?ondemandrgt=yes">Creating Intelligent places using DeepStream SDK</a>.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+<li><p>Neon-201A-JNX or Neon-202A-JNX with jetpack <a href="https://aiot-ist.github.io/neon/neon-2000-jnx/howtoflashimage/">5.1.2</a></p></li>
+
+<li><p>Download PeopleNet model: [<a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/peoplenet/files">https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/peoplenet/files</a>]</p></li>
+
+<li><p>This application is based on deepstream-test5 application. More about test5 application: [<a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_ref_app_test5.html">https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_ref_app_test5.html</a>]</p></li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<ul>
+<li><p>Preferably clone the repo in /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps</p>
+
+<pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
+sudo apt-get install libjson-glib-dev libgstrtspserver-1.0-dev -y
+sudo chmod 777 -R /opt/nvidia/deepstream/deepstream-6.3/
+git clone https://github.com/AIoT-IST/deepstream-occupancy-analytics.git /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics/
+</code></pre></li>
+
+<li><p>Download peoplnet model:</p>
+
+<pre><code>cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics/config &amp;&amp; ./model.sh
+</code></pre></li>
+
+<li><p>For Jetson use:  bin/jetson/libnvds_msgconv.so</p></li>
+</ul>
+
+<h2 id="build-and-configure">Build and Configure</h2>
+
+<ul>
+<li>Set CUDA_VER in the MakeFile as per platform.</li>
+</ul>
+
+<p>For Jetson, CUDA_VER=11.4</p>
+
+<pre><code>  cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics &amp;&amp; make
+</code></pre>
+
+<h2 id="run">Run</h2>
+
+<pre><code>  cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics/
+  ./deepstream-test5-analytics -c config/dstest_occupancy_analytics.txt
+</code></pre>
+
+<h2 id="modify-the-boarder">Modify the boarder</h2>
+
+<pre><code>  cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics/tool
+  python3 preview.py
+</code></pre>
+
+<h2 id="output">Output</h2>
+
+<p>The output will look like this:</p>
+
+<p><img src="images/kafka_messages.gif" alt="alt-text" /></p>
+
+<p>Where you can see the kafka messages for entry and exit count.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li>CREATE INTELLIGENT PLACES USING NVIDIA PRE-TRAINED VISION MODELS AND DEEPSTREAM SDK: [<a href="https://info.nvidia.com/iva-occupancy-webinar-reg-page.html?ondemandrgt=yes">https://info.nvidia.com/iva-occupancy-webinar-reg-page.html?ondemandrgt=yes</a>]</li>
+<li>Deepstream SDK: [<a href="https://developer.nvidia.com/deepstream-sdk">https://developer.nvidia.com/deepstream-sdk</a>]</li>
+<li>Deepstream Quick Start Guide: [<a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/index.html#page/DeepStream_Development_Guide/deepstream_quick_start.html#">https://docs.nvidia.com/metropolis/deepstream/dev-guide/index.html#page/DeepStream_Development_Guide/deepstream_quick_start.html#</a>]</li>
+<li>Transfer Learning Toolkit: [<a href="https://developer.nvidia.com/transfer-learning-toolkit">https://developer.nvidia.com/transfer-learning-toolkit</a>]</li>
+<li>forked from <a href="https://github.com/NVIDIA-AI-IOT/deepstream-occupancy-analytics">https://github.com/NVIDIA-AI-IOT/deepstream-occupancy-analytics</a></li>
+</ul>
 
 
 
@@ -3057,7 +3145,6 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
             
                 
                     
-                    
                 
                 
 
@@ -3072,9 +3159,6 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3091,7 +3175,6 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
             
             
                 
-                    
                     
                 
                 
@@ -3112,9 +3195,6 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -4237,6 +4317,7 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
             
                 
                     
+                    
                 
                 
 
@@ -4251,6 +4332,9 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4448,6 +4532,7 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
             
                 
                     
+                    
                 
                 
 
@@ -4462,6 +4547,9 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4478,6 +4566,7 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
             
             
                 
+                    
                     
                 
                 
@@ -4497,6 +4586,9 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4673,10 +4765,10 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
 	 
 	 
 		
-			<a class="nav nav-prev" href="/eos-iseries/gettingstart/" title="Getting start with Yolov3"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/neon/neon-2000-jnx/howtoflashimage/" title="How to flash image?"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/euresys/" title="Euresys" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/neon/neon-2000-ono/" title="Neon-2000-ONO" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4686,19 +4778,19 @@ Set the Ip 192.168.11.4 by Pylon IP configurator.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1727052385"></script>
-    <script src="/js/perfect-scrollbar.min.js?1727052385"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1727052385"></script>
-    <script src="/js/jquery.sticky.js?1727052385"></script>
-    <script src="/js/featherlight.min.js?1727052385"></script>
-    <script src="/js/highlight.pack.js?1727052385"></script>
+    <script src="/js/clipboard.min.js?1727052386"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727052386"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727052386"></script>
+    <script src="/js/jquery.sticky.js?1727052386"></script>
+    <script src="/js/featherlight.min.js?1727052386"></script>
+    <script src="/js/highlight.pack.js?1727052386"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1727052385"></script>
-    <script src="/js/learn.js?1727052385"></script>
-    <script src="/js/hugo-learn.js?1727052385"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727052386"></script>
+    <script src="/js/learn.js?1727052386"></script>
+    <script src="/js/hugo-learn.js?1727052386"></script>
 
-    <link href="/mermaid/mermaid.css?1727052385" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1727052385"></script>
+    <link href="/mermaid/mermaid.css?1727052386" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727052386"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
