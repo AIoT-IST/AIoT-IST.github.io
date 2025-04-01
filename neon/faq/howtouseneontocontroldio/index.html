@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Hugo 0.58.2" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>How to use NEON to control DI/O? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1743470009" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1743470009" rel="stylesheet">
-    <link href="/css/hybrid.css?1743470009" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1743470009" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1743470009" rel="stylesheet">
-    <link href="/css/auto-complete.css?1743470009" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1743470009" rel="stylesheet">
-    <link href="/css/theme.css?1743470009" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1743470009" rel="stylesheet">
+    <link href="/css/nucleus.css?1743497300" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1743497300" rel="stylesheet">
+    <link href="/css/hybrid.css?1743497300" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1743497300" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1743497300" rel="stylesheet">
+    <link href="/css/auto-complete.css?1743497300" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1743497300" rel="stylesheet">
+    <link href="/css/theme.css?1743497300" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1743497300" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1743470009"></script>
+    <script src="/js/jquery-3.3.1.min.js?1743497300"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1743470009"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1743470009"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1743497300"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1743497300"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1743470009"></script>
+<script type="text/javascript" src="/js/search.js?1743497300"></script>
 
     
   </div>
@@ -2174,12 +2174,12 @@
  
   
     
-    <li data-nav-id="/neon/faq/wd--fov/" title="Neon &amp; Lens selector" class="dd-item 
+    <li data-nav-id="/neon/faq/wd-fov/" title="Neon &amp; Lens selector" class="dd-item 
         
         
         
         ">
-      <a href="/neon/faq/wd--fov/">
+      <a href="/neon/faq/wd-fov/">
           Neon &amp; Lens selector
           
       </a>
@@ -2223,7 +2223,7 @@
   
     
     <li data-nav-id="/neon/faq/howtouseneontocontroldio/" title="How to use NEON to control DI/O?" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -2917,25 +2917,38 @@
 
 
 
-	<p>Here is the list for our demo devices. Different devices might have different default settings. Please adjust the procedures based on your corresponding devices.</p>
+	
+
+<p>Here is the list for our demo devices. Different devices might have different default settings. Please adjust the procedures based on your corresponding devices.</p>
+
 <ul>
 <li><a href="#easy">Easy</a></li>
 <li><a href="#intermediate">Intermediate</a></li>
 </ul>
+
 <h2 id="easy">Easy</h2>
+
 <h3 id="devices-list">Devices List:</h3>
+
 <ul>
 <li><a href="https://www.adlinktech.com/Products/Machine_Vision/SmartCamera/NEON-2000-JNX_Series_Starter_Kit">NEON-2000-JNX Series Starter Kit</a></li>
 <li><a href="https://www.adlinktech.com/Products/Data_Acquisition/TerminalBoards/DIN-37D-01">ADLINK DIN-37D-01</a></li>
 <li><a href="https://www.patlite.com/product/detail0000000093.html">PATLITE MES-_02A</a></li>
 <li>24V Power Supply</li>
 </ul>
+
 <h3 id="architecture-diagram">Architecture diagram</h3>
-<img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/architecture_diagram.JPG" alt="drawing" width="700"/>
+
+<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/architecture_diagram.JPG" alt="drawing" width="700"/></p>
+
 <h3 id="overview">Overview</h3>
-<img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/outlook.jpg" alt="drawing" width="700"/>
+
+<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/outlook.jpg" alt="drawing" width="700"/></p>
+
 <h3 id="wiring">Wiring</h3>
-<img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/wiring.JPG" alt="drawing" width="1200"/>
+
+<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/wiring.JPG" alt="drawing" width="1200"/></p>
+
 <ul>
 <li>Step 1.
 Connect the Neon with the din board through a connector.</li>
@@ -2949,71 +2962,105 @@ It shorts the two wires at pin20 which is reserved as terminal.</li>
 <li>Step 5.
 Use Neon to control the LED.</li>
 <li>Use the command <code>cd /usr/src/Neon/Sample/Neon_Setting</code> to adjust Neon setting.</li>
-<li>Use <code>sudo ./NeonSet DO 1 1</code> to turn on the LED, use <code>sudo ./NeonSet DO 1 0 </code> to turn off the LED conversely.</li>
+<li>Use <code>sudo ./NeonSet DO 1 1</code> to turn on the LED, use <code>sudo ./NeonSet DO 1 0</code> to turn off the LED conversely.</li>
 </ul>
+
 <h3 id="note">Note</h3>
+
 <p>Due to dual function of DO0 and DI0, the default function of DO0 is strobe out and DI0 is trigger in.
 If you want to set them as general DO and DI. Please configure it as following:</p>
+
 <ul>
 <li><strong>DIO0Config 1</strong>: Set DIO0 as GPDI and GPDO0</li>
 <li><strong>DIO0Config 0</strong>: Set DIO0 as Trigger in and Strobe out (default)</li>
 </ul>
+
 <h4 id="set-dio0-as-gpdi-and-gpdo0">Set DIO0 as GPDI and GPDO0</h4>
+
 <p><code>sudo /usr/src/Neon/Sample/Neon_Setting/NeonSet DIO0Config 1</code>
-<img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/DIO1.JPG" alt="Note1">
+<img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/DIO1.JPG" alt="Note1" />
 Check the information of DIO.
 <code>sudo /usr/src/Neon/Sample/Neon_Information/NeonInformation</code>
-<img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/DIO2.JPG" alt="Note2"></p>
+<img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/DIO2.JPG" alt="Note2" /></p>
+
 <h2 id="intermediate">Intermediate</h2>
+
 <h3 id="devices-list-1">Devices List:</h3>
+
 <ul>
 <li>ADLINK NEON-1000-MDX</li>
 <li>ADLINK DIN-37D-01</li>
 <li>High Bright Tech PC-24V24W-2-S</li>
 <li>5V Power Supply</li>
 </ul>
+
 <h3 id="step-1">Step 1.</h3>
+
 <p>Connect the light with the light controller at channel 1.
 <img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/1-1.jpg" alt="drawing" width="700"/></p>
+
 <h3 id="step-2">Step 2.</h3>
+
 <p>Connect the light controller with din board at strobe channel 1. Plug the positive wire in pin 3 for device output, and plug the negative wire in the pin 10 for grounding.</p>
-<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/2-12.jpg" alt="step2-1&amp;2">
+
+<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/2-12.jpg" alt="step2-1&amp;2" />
 <img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/2-3.jpg" alt="drawing" width="700"/></p>
+
 <h3 id="step-3">Step 3.</h3>
+
 <p>Connect the Neon with the din board through a connector.
 <img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/3-1.jpg" alt="drawing" width="700"/></p>
+
 <h3 id="step-4">Step 4.</h3>
+
 <p>Connect a trigger device on the din board. Insert the positive wire at pin 11 for trigger in, insert the negative wire at pin 10 for grounding. Here we used a 5V power supply for demonstration, you could connect your own device for your own purposes.</p>
-<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/4-12.jpg" alt="step4-1&amp;2">
+
+<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/4-12.jpg" alt="step4-1&amp;2" />
 <img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/4-3.jpg" alt="drawing" width="700"/></p>
+
 <h3 id="step-5">Step 5.</h3>
+
 <p>Adjust the default settings from Neon. Please enter the specific file path to adjust the settings. We modified the strobe-out polarity to set turning off the light as default, this step might be different due to your controller devices. Once the Neon reboots, the setting would be restored.</p>
+
 <ul>
 <li>Use command <code>sudo -i</code> to get in root mode.</li>
 </ul>
-<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/5-1.jpg" alt="step5-1"></p>
+
+<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/5-1.jpg" alt="step5-1" /></p>
+
 <ul>
 <li>Use the command <code>cd /sys/class/neon_camctrl</code> to change directory.</li>
 </ul>
-<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/5-2.jpg" alt="step5-2"></p>
+
+<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/5-2.jpg" alt="step5-2" /></p>
+
 <ul>
 <li>Use <code>cat</code> command to check current status. To change the default setting of strobe-out polarity, use the command <code>echo 1 &gt;StrobeOutPolarity</code>.</li>
 </ul>
-<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/5-3.jpg" alt="step5-3"></p>
+
+<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/5-3.jpg" alt="step5-3" /></p>
+
 <h3 id="step-6">Step 6.</h3>
+
 <p>To extend or narrow the device strobe out time, please follow the steps</p>
+
 <ul>
 <li>Use the command <code>cd /usr/src/Neon/Sample/Neon_Setting</code> to change the current working directory.</li>
 </ul>
-<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/6-1.jpg" alt="step6-1"></p>
+
+<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/6-1.jpg" alt="step6-1" /></p>
+
 <ul>
 <li>To adjust the strobe out time, use the command <code>sudo ./NeonSet StrobeOutPulseWidth N</code>. The parameter N is the time of the width, the unit is us(10^-6 second).</li>
 </ul>
-<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/6-2.jpg" alt="step6-2"></p>
+
+<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/6-2.jpg" alt="step6-2" /></p>
+
 <ul>
 <li>For checking current infos of Neon, please change the directory with the command <code>cd /usr/src/Neon/Sample/Neon_Information</code>. Use <code>sudo ./NeonInformation</code> to get current status.</li>
 </ul>
-<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/6-3.jpg" alt="step6-3"></p>
+
+<p><img src="/NEON/FAQ/howtouseNeontocontrolDIO/images/6-3.jpg" alt="step6-3" /></p>
 
 
 
@@ -4769,19 +4816,19 @@ Check the information of DIO.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1743470009"></script>
-    <script src="/js/perfect-scrollbar.min.js?1743470009"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1743470009"></script>
-    <script src="/js/jquery.sticky.js?1743470009"></script>
-    <script src="/js/featherlight.min.js?1743470009"></script>
-    <script src="/js/highlight.pack.js?1743470009"></script>
+    <script src="/js/clipboard.min.js?1743497300"></script>
+    <script src="/js/perfect-scrollbar.min.js?1743497300"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1743497300"></script>
+    <script src="/js/jquery.sticky.js?1743497300"></script>
+    <script src="/js/featherlight.min.js?1743497300"></script>
+    <script src="/js/highlight.pack.js?1743497300"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1743470009"></script>
-    <script src="/js/learn.js?1743470009"></script>
-    <script src="/js/hugo-learn.js?1743470009"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1743497300"></script>
+    <script src="/js/learn.js?1743497300"></script>
+    <script src="/js/hugo-learn.js?1743497300"></script>
 
-    <link href="/mermaid/mermaid.css?1743470009" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1743470009"></script>
+    <link href="/mermaid/mermaid.css?1743497300" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1743497300"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

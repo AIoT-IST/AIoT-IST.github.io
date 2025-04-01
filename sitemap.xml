@@ -1,215 +1,425 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://aiot-ist.github.io/mcm-204/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/visioncard/usb3vision/u300/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/visioncard/usb3vision/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/faq/</loc>
-  </url><url>
-    <loc>https://aiot-ist.github.io/neon/faq/wd--fov/</loc>
-  </url><url>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/neon/faq/wd-fov/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/faq/howtochooselenses/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/faq/howtouseneontocontroldio/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/faq/howtosetupneon/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/faq/howtobackupandextendsdcard/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/faq/howtoupdatecamfw/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eos-iseries/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/visioncard/gigevision/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/visioncard/gigevision/gie7/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eos-iseries/gettingstart/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-1000-mdx/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eos-iseries/faq/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/visioncard/gigevision/gie7/powerbudget/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex_kvm/datasheet/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/newloadproject/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/quicklystart/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/instruction/goto/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/layer/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/unboxing/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex_kvm/script/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex_kvm/unboxing/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/addscript/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/instruction/mouse/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/instruction/keyin/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/pageid/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/instruction/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/instruction/ocrandlog/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/backup/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/instruction/loop/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/instruction/pageidetify/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/autorun/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/instruction/restful/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/instruction/ledcontrol/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/instruction/printscreen/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/video/video-source/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/instruction/opscreen/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/video/video-quality/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/video/resolution/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys-grab-card/coaxlink-quad/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/mouse/ps2metadata/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/mouse/disablemouseaccelerator/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys-grab-card/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys-grab-card/cxp-for-camera-triggering-with-encoder/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/easydeeplearning/deep-learning-studio/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/dongle/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/easycolor/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/easydeeplearning/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/easyfind/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/easyfind/qa/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/easygauge/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/easyimage/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/easymatch/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/easyobject/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys-grab-card/bayer2rgb/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys-grab-card/ffc/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/dongle/how2activate/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys/parameters/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/gettingstart/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/howtoflashimage/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-jt2/howtobackupneonibymicrosd/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/video/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/mouse/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/dexpro/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/faq/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/sdkfwversion/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/visioncard/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/mcm-204/gettingstart/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/mcm-204/customalgorithm/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/mcm-204/customalgorithmdev/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/mcm-204/faq/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/howtoflashimage/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/demo/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-ono/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-ono/howtoflashimage/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-onx/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-onx/howtoflashimage/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/dex_kvm/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eva/1_quick_start/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eva/2_showroom/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eva/3_showcase/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eva/4_template/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eva/5_qa/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eva/6_performance/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eva/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-rb5/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/devkit/gettingstart/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-rb5/howtoflashimage/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/devkit/flashimg/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-rb5/samples/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/devkit/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eos-jnx/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eos-jnx/howtoflashimage/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/eos-jnx/howtobootfromssd/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/categories/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/tags/</loc>
   </url>
+  
 </urlset>

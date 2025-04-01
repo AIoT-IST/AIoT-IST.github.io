@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Hugo 0.58.2" />
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>How to flash image? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1743470008" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1743470008" rel="stylesheet">
-    <link href="/css/hybrid.css?1743470008" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1743470008" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1743470008" rel="stylesheet">
-    <link href="/css/auto-complete.css?1743470008" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1743470008" rel="stylesheet">
-    <link href="/css/theme.css?1743470008" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1743470008" rel="stylesheet">
+    <link href="/css/nucleus.css?1743497300" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1743497300" rel="stylesheet">
+    <link href="/css/hybrid.css?1743497300" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1743497300" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1743497300" rel="stylesheet">
+    <link href="/css/auto-complete.css?1743497300" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1743497300" rel="stylesheet">
+    <link href="/css/theme.css?1743497300" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1743497300" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1743470008"></script>
+    <script src="/js/jquery-3.3.1.min.js?1743497300"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1743470008"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1743470008"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1743497300"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1743497300"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1743470008"></script>
+<script type="text/javascript" src="/js/search.js?1743497300"></script>
 
     
   </div>
@@ -2174,12 +2174,12 @@
  
   
     
-    <li data-nav-id="/neon/faq/wd--fov/" title="Neon &amp; Lens selector" class="dd-item 
+    <li data-nav-id="/neon/faq/wd-fov/" title="Neon &amp; Lens selector" class="dd-item 
         
         
         
         ">
-      <a href="/neon/faq/wd--fov/">
+      <a href="/neon/faq/wd-fov/">
           Neon &amp; Lens selector
           
       </a>
@@ -2799,7 +2799,7 @@
   
     
     <li data-nav-id="/neon/devkit/flashimg/" title="How to flash image?" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -2917,79 +2917,90 @@
 
 
 
-	<p>This page cover the process to flash a new operating system onto a <a href="https://www.adlinktech.com/Products/Machine_Vision/SmartCamera/AI_Camera_Dev_Kit">AI Camera Dev Kit</a> device.</p>
+	
+
+<p>This page cover the process to flash a new operating system onto a <a href="https://www.adlinktech.com/Products/Machine_Vision/SmartCamera/AI_Camera_Dev_Kit">AI Camera Dev Kit</a> device.</p>
+
 <p>The process to flash one of these device is slightly different to the process to flash a NEON-2000-JT2 device. To flash a dev kit you need to flash both the internal eMMC and external storage device. The internal eMMC device hosts the bootloader and kernel, the external storage device hosts the operating system and Jetpack.</p>
+
 <p>Other useful information about flashing a Jetson based device can be found <a href="https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/SD/FlashingSupport.html">here</a>.</p>
+
 <h3 id="step-1-download-image-to-your-host-pc-with-ubuntu">Step 1: Download image to your host pc with Ubuntu</h3>
+
 <h4 id="ai-camera-dev-kit">AI Camera Dev Kit</h4>
+
 <ul>
 <li>microSD image
+
 <ul>
 <li><a href="https://ampro1-my.sharepoint.com/:u:/g/personal/kevinyw_lin_adlinktech_com/ERgldL9HT45DnWb9JalWEMwBpeY3RlkfHPbnhRQ_jUYCkg?e=xl09sm">Jetpack 4.6.1</a></li>
 <li><a href="https://sftp.adlinktech.com/image/AI_Vison_DEV_kit.zip">backup link</a></li>
 <li>MD5:C417A00B3BD500A617D201BC9B9D4421</li>
+</ul></li>
 </ul>
-</li>
-</ul>
+
 <h4 id="checksum">Checksum</h4>
+
 <ul>
-<li>Check the md5 checksum to make sure image file is correct
+<li><p>Check the md5 checksum to make sure image file is correct</p>
+
 <ul>
-<li>Linux
-<ul>
-<li>
-<pre tabindex="0"><code>$ md5sum [file]
+<li>Linux</li>
+
+<li><pre><code>$ md5sum [file]
 </code></pre></li>
-<li>
-<pre tabindex="0"><code>$ md5sum AI_Vison_DEV_kit.zip
+
+<li><pre><code>$ md5sum AI_Vison_DEV_kit.zip
 </code></pre></li>
-</ul>
-</li>
-<li>Windows 10
-<ul>
-<li>
-<pre tabindex="0"><code>$ certutil -hashfile [file] MD5
+
+<li><p>Windows 10</p></li>
+
+<li><pre><code>$ certutil -hashfile [file] MD5
 </code></pre></li>
-<li>
-<pre tabindex="0"><code>$ certutil -hashfile AI_Vison_DEV_kit.zip MD5
+
+<li><pre><code>$ certutil -hashfile AI_Vison_DEV_kit.zip MD5
 </code></pre></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
+
 <h3 id="step-2-flash-microsd-card-image">Step 2: Flash microSD card image</h3>
+
 <p>To flash the microSD card you are going to need the following:</p>
+
 <ul>
 <li>microSD of at least 32GB</li>
 <li>microSD card reader</li>
 </ul>
+
 <p><strong>Make sure to use a high quality microSD card to prevent corruption</strong></p>
+
 <ol>
-<li>Unzip the microSD zip file downloaded in Step 1 to get a <code>.img</code> file</li>
-</ol>
-<pre tabindex="0"><code>unzip AI_Vison_DEV_kit.zip
-</code></pre><ol start="2">
-<li>Clone image file to microSD card using one of the following methods
+<li><p>Unzip the microSD zip file downloaded in Step 1 to get a <code>.img</code> file</p>
+
+<pre><code>unzip AI_Vison_DEV_kit.zip
+</code></pre></li>
+
+<li><p>Clone image file to microSD card using one of the following methods</p>
+
 <ul>
 <li>Ubuntu Disk Manager
+
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-JNX/Flash_Neon_microSD.mp4">Video of process to clone image to microSD card</a></li>
 <li>Steps:
+
 <ol>
 <li>Format disk with <code>GPT</code> partitioning</li>
 <li>Create a volume on the disk of type <code>Ext4</code></li>
 <li>Restore image to SD card</li>
-</ol>
-</li>
-</ul>
-</li>
+</ol></li>
+</ul></li>
 <li>Linux or Mac using <code>sudo dd if=&lt;image file&gt;.img of=/dev/sdX bs=4M conv=fsync</code></li>
 <li>Windows using <a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a></li>
 <li>Linux, MacOS or Windows using <a href="https://www.balena.io/etcher/">Balena Etcher</a></li>
-</ul>
-</li>
-<li>Insert SD card into the NEON camera</li>
+</ul></li>
+
+<li><p>Insert SD card into the NEON camera</p></li>
 </ol>
 
 
@@ -4746,19 +4757,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1743470008"></script>
-    <script src="/js/perfect-scrollbar.min.js?1743470008"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1743470008"></script>
-    <script src="/js/jquery.sticky.js?1743470008"></script>
-    <script src="/js/featherlight.min.js?1743470008"></script>
-    <script src="/js/highlight.pack.js?1743470008"></script>
+    <script src="/js/clipboard.min.js?1743497300"></script>
+    <script src="/js/perfect-scrollbar.min.js?1743497300"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1743497300"></script>
+    <script src="/js/jquery.sticky.js?1743497300"></script>
+    <script src="/js/featherlight.min.js?1743497300"></script>
+    <script src="/js/highlight.pack.js?1743497300"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1743470008"></script>
-    <script src="/js/learn.js?1743470008"></script>
-    <script src="/js/hugo-learn.js?1743470008"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1743497300"></script>
+    <script src="/js/learn.js?1743497300"></script>
+    <script src="/js/hugo-learn.js?1743497300"></script>
 
-    <link href="/mermaid/mermaid.css?1743470008" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1743470008"></script>
+    <link href="/mermaid/mermaid.css?1743497300" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1743497300"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
