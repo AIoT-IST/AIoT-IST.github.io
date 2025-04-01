@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="generator" content="Hugo 0.145.0">
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>How to flash image? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1727052386" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1727052386" rel="stylesheet">
-    <link href="/css/hybrid.css?1727052386" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1727052386" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1727052386" rel="stylesheet">
-    <link href="/css/auto-complete.css?1727052386" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1727052386" rel="stylesheet">
-    <link href="/css/theme.css?1727052386" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1727052386" rel="stylesheet">
+    <link href="/css/nucleus.css?1743470009" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1743470009" rel="stylesheet">
+    <link href="/css/hybrid.css?1743470009" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1743470009" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1743470009" rel="stylesheet">
+    <link href="/css/auto-complete.css?1743470009" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1743470009" rel="stylesheet">
+    <link href="/css/theme.css?1743470009" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1743470009" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1727052386"></script>
+    <script src="/js/jquery-3.3.1.min.js?1743470009"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1727052386"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1727052386"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1743470009"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1743470009"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1727052386"></script>
+<script type="text/javascript" src="/js/search.js?1743470009"></script>
 
     
   </div>
@@ -2174,12 +2174,12 @@
  
   
     
-    <li data-nav-id="/neon/faq/wd-fov/" title="Neon &amp; Lens selector" class="dd-item 
+    <li data-nav-id="/neon/faq/wd--fov/" title="Neon &amp; Lens selector" class="dd-item 
         
         
         
         ">
-      <a href="/neon/faq/wd-fov/">
+      <a href="/neon/faq/wd--fov/">
           Neon &amp; Lens selector
           
       </a>
@@ -2691,7 +2691,7 @@
   
     
     <li data-nav-id="/neon/neon-rb5/howtoflashimage/" title="How to flash image?" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -2917,132 +2917,103 @@
 
 
 
-	
-
-<pre><code class="language-shell">This page provides detailed instructions on how to flash the image for Neon-RB5 using Windows.
-
-1. Prerequisite
-	1.0 Download and Install Android Debug Bridge (ADB) and Fastboot Drivers
-2. How to Flash Image
-  	2.1 Updation of Board Support Package(BSP) Image
-</code></pre>
-
-<p><span style="font-size: 24px;"><strong>1 Prerequisite</strong></span></p>
-
+	<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>This page provides detailed instructions on how to flash the image <span style="color:#66d9ef">for</span> Neon-RB5 using Windows.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. Prerequisite
+</span></span><span style="display:flex;"><span>	1.0 Download and Install Android Debug Bridge <span style="color:#f92672">(</span>ADB<span style="color:#f92672">)</span> and Fastboot Drivers
+</span></span><span style="display:flex;"><span>2. How to Flash Image
+</span></span><span style="display:flex;"><span>  	2.1 Updation of Board Support Package<span style="color:#f92672">(</span>BSP<span style="color:#f92672">)</span> Image
+</span></span></code></pre></div><p><span style="font-size: 24px;"><strong>1 Prerequisite</strong></span></p>
 <ul>
 <li>A Windows PC(Win10/Win11) is required to flash the image on the Neon-RB5 Module</li>
 <li><a href="https://sftp.adlinktech.com/image/Neon-RB5/LEC-QRB5165_UBUNTU_ARM_QUALCOMM_RB5_NEON_4G_2v1.0.4.zip">BSP image md5: e7b7d72383bf80fd2b1e768a29519d96</a></li>
 </ul>
-
-<h2 id="span-style-font-size-22px-1-0-download-and-install-adb-and-fastboot-drivers-span"><span style="font-size: 22px;"><strong>1.0 Download and install ADB and Fastboot drivers</strong></span></h2>
-
-<p>​           Please download the ADB and Fastboot drivers and install them using the link provided below.</p>
-
-<p>​           [Android USB Driver] :  <a href="https://adb.clockworkmod.com">https://adb.clockworkmod.com</a></p>
-
-<p>​           [ADB Fastboot Tool] :   <a href="https://xiaomifirmware.com/download-link/?dlm-dp-dl=2696">https://xiaomifirmware.com/download-link/?dlm-dp-dl=2696</a></p>
-
-<p><img src="/NEON/Neon-RB5/howtoflashimage/images/adbdriver.png" alt="" /></p>
-
-<p>​   <strong>Note:</strong> If you encounter “<strong>0 Files Copied Error”,</strong> download and install the “<strong>15_Second_ADB_Installer_v1.3.0</strong>” version as the latest version might not be compatible with the Windows version of your computer.</p>
-
+<h2 id="10-download-and-install-adb-and-fastboot-drivers"><span style="font-size: 22px;"><strong>1.0 Download and install ADB and Fastboot drivers</strong></span></h2>
+<p>​			Please download the ADB and Fastboot drivers and install them using the link provided below.</p>
+<p>​			[Android USB Driver] :  <a href="https://adb.clockworkmod.com">https://adb.clockworkmod.com</a></p>
+<p>​			[ADB Fastboot Tool] :   <a href="https://xiaomifirmware.com/download-link/?dlm-dp-dl=2696">https://xiaomifirmware.com/download-link/?dlm-dp-dl=2696</a></p>
+<p><img src="/NEON/Neon-RB5/howtoflashimage/images/adbdriver.png" alt=""></p>
+<p>​	<strong>Note:</strong> If you encounter “<strong>0 Files Copied Error”,</strong> download and install the “<strong>15_Second_ADB_Installer_v1.3.0</strong>” version as the latest version might not be compatible with the Windows version of your computer.</p>
 <p><span style="font-size: 22px;"><strong>2.1 Updation of BSP Image (Kernel and Filesystem)</strong> </span></p>
-
 <p>Update the kernel and filesystem and not the NON-HLOS firmware or bootloader, follow the steps below:</p>
-
 <ol>
-<li><p>Image needed <strong>qti-ubuntu-robotics-image-qrb5165-rb5-boot.img</strong>, <strong>qti-ubuntu-robotics-image-qrb5165-rb5-sysfs.ext4</strong> and <strong>abl.elf</strong></p></li>
-
-<li><p>Image can found on path :</p></li>
+<li>
+<p>Image needed <strong>qti-ubuntu-robotics-image-qrb5165-rb5-boot.img</strong>, <strong>qti-ubuntu-robotics-image-qrb5165-rb5-sysfs.ext4</strong> and <strong>abl.elf</strong></p>
+</li>
+<li>
+<p>Image can found on path :</p>
+</li>
 </ol>
-
 <p>#windows_Drive: /LEC-RB5-NEON-8G-UBUNTU_20_04-HLOS_2v1.0.10_24_02_19</p>
-
-<ol>
-<li><p>Connect the USB OTG between Target and Host PC</p></li>
-
-<li><p>Power on the Target board.</p></li>
-
-<li><p>Open command prompt</p></li>
-
-<li><p>#windows_Drive: /LEC-RB5-NEON-8G-UBUNTU_20_04-HLOS_2v1.0.10_24_02_19</p></li>
-
-<li><p>Check Target board (Neon-RB5) got detected using below command. It will take minutes to show the device name after power up the target device.</p>
-
-<pre><code class="language-shell">#cd LEC-RB5-NEON-8G-UBUNTU_20_04-HLOS_2v1.0.10_24_02_19
-
-#adb devices -l
-</code></pre></li>
+<ol start="3">
+<li>
+<p>Connect the USB OTG between Target and Host PC</p>
+</li>
+<li>
+<p>Power on the Target board.</p>
+</li>
+<li>
+<p>Open command prompt</p>
+</li>
+<li>
+<p>#windows_Drive: /LEC-RB5-NEON-8G-UBUNTU_20_04-HLOS_2v1.0.10_24_02_19</p>
+</li>
+<li>
+<p>Check Target board (Neon-RB5) got detected using below command. It will take minutes to show the device name after power up the target device.</p>
+</li>
 </ol>
-
-<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv00.png" alt="" /></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#cd LEC-RB5-NEON-8G-UBUNTU_20_04-HLOS_2v1.0.10_24_02_19</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#adb devices -l</span>
+</span></span></code></pre></div><p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv00.png" alt=""></p>
 <p><strong>Note</strong>: In case the &ldquo;<strong>#adb devices”</strong> command shows no device , please check your Device Manager for any yellow bang in the Qualcomm USB driver as shown in the image below:
-<img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv01.png" alt="" /></p>
-
+<img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv01.png" alt=""></p>
 <ul>
 <li>The driver may have to be manually selected and updated as detailed in the screenshots below:
-<img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv02.png" alt="" /><br />
-<br /></li>
+<img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv02.png" alt=""></li>
 </ul>
-
-<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv03.png" alt="" /></p>
-
-<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv04.png" alt="" /></p>
-
+<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv03.png" alt=""></p>
+<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv04.png" alt=""></p>
 <p>The driver is already present in the system at this stage and should be available in the list as ‘<strong>Android ADB Interface’</strong></p>
-
-<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv05.png" alt="" /></p>
-
-<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv06.png" alt="" /></p>
-
-<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv07.png" alt="" /></p>
-
-<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv08.png" alt="" /></p>
-
+<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv05.png" alt=""></p>
+<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv06.png" alt=""></p>
+<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv07.png" alt=""></p>
+<p><img src="/NEON/Neon-RB5/howtoflashimage/images/updatedrv08.png" alt=""></p>
 <p>After Updating Driver, please follow below to enter into ADB mode on <strong>Host PC</strong> and check Neon-RB5 detected as <strong>fastboot device</strong></p>
-
 <p>Your target device should have been listed in your command prompt terminal. If not, please check and update the driver in the device manager on your development host.</p>
-
-<pre><code class="language-shell"># adb root
-# adb reboot bootloader
-
-</code></pre>
-
-<p>The target device will be rebooted. It will take minutes to show the device name after power up the target device.</p>
-
-<pre><code class="language-shell">#fastboot devices
-</code></pre>
-
-<p>​        In case of device not listed , please check device manager for yellow bang and update driver</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># adb root</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># adb reboot bootloader</span>
+</span></span></code></pre></div><p>The target device will be rebooted. It will take minutes to show the device name after power up the target device.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#fastboot devices</span>
+</span></span></code></pre></div><p>​        In case of device not listed , please check device manager for yellow bang and update driver</p>
 <p>Enter into Fastboot mode</p>
-
-<pre><code class="language-powershell">#fastboot flash abl_a abl.elf
-#fastboot flash abl_b abl.elf
-#fastboot flash system qti-ubuntu-robotics-image-qrb5165-rb5-sysfs.ext4
-#fastboot flash boot_a qti-ubuntu-robotics-image-qrb5165-rb5-boot.img
-#fastboot flash boot_b qti-ubuntu-robotics-image-qrb5165-rb5-boot.img
-#fastboot reboot
-</code></pre>
-
-<p>The image has been successfully flashed on targeted device and it will be rebooted by itself.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e">#fastboot flash abl_a abl.elf</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#fastboot flash abl_b abl.elf</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#fastboot flash system qti-ubuntu-robotics-image-qrb5165-rb5-sysfs.ext4</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#fastboot flash boot_a qti-ubuntu-robotics-image-qrb5165-rb5-boot.img</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#fastboot flash boot_b qti-ubuntu-robotics-image-qrb5165-rb5-boot.img</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#fastboot reboot</span>
+</span></span></code></pre></div><p>The image has been successfully flashed on targeted device and it will be rebooted by itself.
 The device is now ready to be used.</p>
-
 <ul>
-<li><p><span style="font-size: 24px;"> <strong>Attention: Don&rsquo;t turn off (or) Reset the target device manually. It causes the image packages to
-break, resulting in the inability to boot.</strong> </span></p></li>
-
-<li><p><span style="font-size: 24px;">Please take a coffee, It will take around <strong>30 minutes</strong> to install all the packages and desktop
-image. </span></p></li>
-
-<li><p>Once, everything is installed you could see the <strong>Ubuntu Login page</strong> in the monitor.
-<img src="/NEON/Neon-RB5/howtoflashimage/images/login.png" alt="" /></p></li>
-
-<li><p>Log in as a Ubuntu On Wayland.
+<li>
+<p><span style="font-size: 24px;"> <strong>Attention: Don&rsquo;t turn off (or) Reset the target device manually. It causes the image packages to
+break, resulting in the inability to boot.</strong> </span></p>
+</li>
+<li>
+<p><span style="font-size: 24px;">Please take a coffee, It will take around <strong>30 minutes</strong> to install all the packages and desktop
+image. </span></p>
+</li>
+<li>
+<p>Once, everything is installed you could see the <strong>Ubuntu Login page</strong> in the monitor.
+<img src="/NEON/Neon-RB5/howtoflashimage/images/login.png" alt=""></p>
+</li>
+<li>
+<p>Log in as a Ubuntu On Wayland.
 Username: adlink
 Password: adlink
-<img src="/NEON/Neon-RB5/howtoflashimage/images/login_wayland.png" alt="" /></p></li>
+<img src="/NEON/Neon-RB5/howtoflashimage/images/login_wayland.png" alt=""></p>
+</li>
 </ul>
 
 
@@ -4799,19 +4770,19 @@ Password: adlink
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1727052386"></script>
-    <script src="/js/perfect-scrollbar.min.js?1727052386"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1727052386"></script>
-    <script src="/js/jquery.sticky.js?1727052386"></script>
-    <script src="/js/featherlight.min.js?1727052386"></script>
-    <script src="/js/highlight.pack.js?1727052386"></script>
+    <script src="/js/clipboard.min.js?1743470009"></script>
+    <script src="/js/perfect-scrollbar.min.js?1743470009"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1743470009"></script>
+    <script src="/js/jquery.sticky.js?1743470009"></script>
+    <script src="/js/featherlight.min.js?1743470009"></script>
+    <script src="/js/highlight.pack.js?1743470009"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1727052386"></script>
-    <script src="/js/learn.js?1727052386"></script>
-    <script src="/js/hugo-learn.js?1727052386"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1743470009"></script>
+    <script src="/js/learn.js?1743470009"></script>
+    <script src="/js/hugo-learn.js?1743470009"></script>
 
-    <link href="/mermaid/mermaid.css?1727052386" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1727052386"></script>
+    <link href="/mermaid/mermaid.css?1743470009" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1743470009"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

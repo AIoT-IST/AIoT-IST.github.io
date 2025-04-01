@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="generator" content="Hugo 0.145.0">
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>How to flash image? :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1727052386" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1727052386" rel="stylesheet">
-    <link href="/css/hybrid.css?1727052386" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1727052386" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1727052386" rel="stylesheet">
-    <link href="/css/auto-complete.css?1727052386" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1727052386" rel="stylesheet">
-    <link href="/css/theme.css?1727052386" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1727052386" rel="stylesheet">
+    <link href="/css/nucleus.css?1743470009" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1743470009" rel="stylesheet">
+    <link href="/css/hybrid.css?1743470009" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1743470009" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1743470009" rel="stylesheet">
+    <link href="/css/auto-complete.css?1743470009" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1743470009" rel="stylesheet">
+    <link href="/css/theme.css?1743470009" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1743470009" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1727052386"></script>
+    <script src="/js/jquery-3.3.1.min.js?1743470009"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1727052386"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1727052386"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1743470009"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1743470009"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1727052386"></script>
+<script type="text/javascript" src="/js/search.js?1743470009"></script>
 
     
   </div>
@@ -2174,12 +2174,12 @@
  
   
     
-    <li data-nav-id="/neon/faq/wd-fov/" title="Neon &amp; Lens selector" class="dd-item 
+    <li data-nav-id="/neon/faq/wd--fov/" title="Neon &amp; Lens selector" class="dd-item 
         
         
         
         ">
-      <a href="/neon/faq/wd-fov/">
+      <a href="/neon/faq/wd--fov/">
           Neon &amp; Lens selector
           
       </a>
@@ -2631,7 +2631,7 @@
   
     
     <li data-nav-id="/neon/neon-2000-onx/howtoflashimage/" title="How to flash image?" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -2917,100 +2917,94 @@
 
 
 
-	
-
-<h3 id="step-1-download-image-to-your-host-pc-with-ubuntu">Step 1: Download image to your host pc with Ubuntu</h3>
-
+	<h3 id="step-1-download-image-to-your-host-pc-with-ubuntu">Step 1: Download image to your host pc with Ubuntu</h3>
 <h4 id="neon-2000-onx">Neon-2000-ONX</h4>
-
 <ul>
 <li>eMMC image - required if changing Jetpack version
-
 <ul>
 <li><a href="https://sftp.adlinktech.com/image/Neon-ONX/mfi_jetson-orin-nano-neon2000-onx_8-35.4.1-rel.1v1.0.tbz2">Jetpack 5.1.3 emmc image</a>
 MD5:8af092371359db985ce30da934a9eed7</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h4 id="checksum">Checksum</h4>
-
 <ul>
-<li><p>Check the md5 checksum to make sure image file is correct</p>
-
+<li>Check the md5 checksum to make sure image file is correct
 <ul>
-<li>Linux</li>
-
-<li><pre><code>$ md5sum [file]
+<li>Linux
+<ul>
+<li>
+<pre tabindex="0"><code>$ md5sum [file]
 </code></pre></li>
-
-<li><pre><code>$ md5sum mfi_jetson-orin-nano-neon2000-onx_8-35.4.1-rel.1v1.0.tbz2
+<li>
+<pre tabindex="0"><code>$ md5sum mfi_jetson-orin-nano-neon2000-onx_8-35.4.1-rel.1v1.0.tbz2
 </code></pre></li>
-
-<li><p>Windows 10</p></li>
-
-<li><pre><code>$ certutil -hashfile [file] MD5
-</code></pre></li>
-
-<li><pre><code>$ certutil -hashfile mfi_jetson-orin-nano-neon2000-onx_8-35.4.1-rel.1v1.0.tbz2 MD5
-</code></pre></li>
-</ul></li>
 </ul>
-
+</li>
+<li>Windows 10
+<ul>
+<li>
+<pre tabindex="0"><code>$ certutil -hashfile [file] MD5
+</code></pre></li>
+<li>
+<pre tabindex="0"><code>$ certutil -hashfile mfi_jetson-orin-nano-neon2000-onx_8-35.4.1-rel.1v1.0.tbz2 MD5
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="step-2-flash-emmc-image">Step 2: Flash eMMC image</h3>
-
 <p>This step involves connecting the NEON camera to the Host machine and flashing the image.</p>
-
 <p>To perform this step the following equipment is required:</p>
-
 <ul>
 <li>A bare metal machine running Ubuntu. <strong>Must not be a virtual machine</strong></li>
 <li>microUSB cable</li>
 <li>2 x pin jumpers</li>
 </ul>
-
 <p>There is also a <a href="https://drive.google.com/open?id=1Mu40rDiNP1Jggak3bWoyDDgGCxQXEVyX">video</a> and <a href="https://sftp.adlinktech.com/image/Neon-JNX/Flash_Neon_eMMC.pdf">PDF</a> showing the process</p>
-
 <ol>
-<li><p>On the Host PC unzip the file downloaded in Step 1</p>
-
-<pre><code>sudo tar -I lbzip2 -xf mfi_jetson-orin-nano-neon2000-onx_8-35.4.1-rel.1v1.0.tbz2
+<li>
+<p>On the Host PC unzip the file downloaded in Step 1</p>
+<pre tabindex="0"><code>sudo tar -I lbzip2 -xf mfi_jetson-orin-nano-neon2000-onx_8-35.4.1-rel.1v1.0.tbz2
 </code></pre></li>
-
-<li><p>Put the NEON into recovery mode
+<li>
+<p>Put the NEON into recovery mode
 You can refer to pin definition below, and try to enter recover mode.
-<img src="/NEON-2000-JT2/howtoflashimage/images/1.png" alt="pin define 1" />
-<img src="/NEON-2000-JT2/howtoflashimage/images/2.png" alt="pin define 2" /></p>
-
+<img src="/NEON-2000-JT2/howtoflashimage/images/1.png" alt="pin define 1">
+<img src="/NEON-2000-JT2/howtoflashimage/images/2.png" alt="pin define 2"></p>
 <ol>
 <li>Power on the NEON</li>
 <li>Short <strong>pins 5 and 6</strong> (recovery), using the provided jumpers</li>
 <li>Short <strong>pins 3 and 4</strong> (reset), for 2 seconds until the power LED goes out using the provided jumpers</li>
 <li>When the jumper for pins 3 and 4 is removed the power LED will light up again</li>
-</ol></li>
-
-<li><p>Connect the microUSB cable to the NEON and the Host PC</p></li>
-
-<li><p>Open a terminal and execute the <code>lsusb</code> command, to see if the NEON is connected. If a device called <code>Nvidia Corp.</code> is detected, the device has successfully entered recovery mode.
-<img src="/NEON-2000-JT2/howtoflashimage/images/lsusb.png" alt="lsusb" /></p></li>
-
-<li><p>Go to folder unzipped in step 1</p>
-
-<pre><code>cd mfi_jetson-orin-nano-neon2000-onx_8-35.4.1-rel.1v1.0
-</code></pre></li>
-
-<li><p>Flash the Neon-2000-ONO</p>
-
-<pre><code>sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 15 --network usb0
-</code></pre></li>
-
-<li><p>Once the flash script is complete and shows <code>Flash complete (SUCCESS)</code> reboot the NEON</p></li>
 </ol>
-
+</li>
+<li>
+<p>Connect the microUSB cable to the NEON and the Host PC</p>
+</li>
+<li>
+<p>Open a terminal and execute the <code>lsusb</code> command, to see if the NEON is connected. If a device called <code>Nvidia Corp.</code> is detected, the device has successfully entered recovery mode.
+<img src="/NEON-2000-JT2/howtoflashimage/images/lsusb.png" alt="lsusb"></p>
+</li>
+<li>
+<p>Go to folder unzipped in step 1</p>
+</li>
+</ol>
+<pre tabindex="0"><code>cd mfi_jetson-orin-nano-neon2000-onx_8-35.4.1-rel.1v1.0
+</code></pre><ol start="6">
+<li>
+<p>Flash the Neon-2000-ONO</p>
+<pre tabindex="0"><code>sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 15 --network usb0
+</code></pre></li>
+<li>
+<p>Once the flash script is complete and shows <code>Flash complete (SUCCESS)</code> reboot the NEON</p>
+</li>
+</ol>
 <p>Below is a video of the process to flash a NEON
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/MCpVP3L4aSI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/MCpVP3L4aSI?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 </p>
 
 
@@ -4767,19 +4761,19 @@ You can refer to pin definition below, and try to enter recover mode.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1727052386"></script>
-    <script src="/js/perfect-scrollbar.min.js?1727052386"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1727052386"></script>
-    <script src="/js/jquery.sticky.js?1727052386"></script>
-    <script src="/js/featherlight.min.js?1727052386"></script>
-    <script src="/js/highlight.pack.js?1727052386"></script>
+    <script src="/js/clipboard.min.js?1743470009"></script>
+    <script src="/js/perfect-scrollbar.min.js?1743470009"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1743470009"></script>
+    <script src="/js/jquery.sticky.js?1743470009"></script>
+    <script src="/js/featherlight.min.js?1743470009"></script>
+    <script src="/js/highlight.pack.js?1743470009"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1727052386"></script>
-    <script src="/js/learn.js?1727052386"></script>
-    <script src="/js/hugo-learn.js?1727052386"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1743470009"></script>
+    <script src="/js/learn.js?1743470009"></script>
+    <script src="/js/hugo-learn.js?1743470009"></script>
 
-    <link href="/mermaid/mermaid.css?1727052386" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1727052386"></script>
+    <link href="/mermaid/mermaid.css?1743470009" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1743470009"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

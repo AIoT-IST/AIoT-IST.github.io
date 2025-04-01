@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="generator" content="Hugo 0.145.0">
     <meta name="description" content="">
 
 
@@ -12,18 +12,18 @@
     <title>People count application With Deepstream SDK and Transfer Learning Toolkit :: Connected Factory</title>
 
     
-    <link href="/css/nucleus.css?1727052386" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1727052386" rel="stylesheet">
-    <link href="/css/hybrid.css?1727052386" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1727052386" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1727052386" rel="stylesheet">
-    <link href="/css/auto-complete.css?1727052386" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1727052386" rel="stylesheet">
-    <link href="/css/theme.css?1727052386" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1727052386" rel="stylesheet">
+    <link href="/css/nucleus.css?1743470008" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1743470008" rel="stylesheet">
+    <link href="/css/hybrid.css?1743470008" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1743470008" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1743470008" rel="stylesheet">
+    <link href="/css/auto-complete.css?1743470008" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1743470008" rel="stylesheet">
+    <link href="/css/theme.css?1743470008" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1743470008" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1727052386"></script>
+    <script src="/js/jquery-3.3.1.min.js?1743470008"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -63,14 +63,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1727052386"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1727052386"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1743470008"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1743470008"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1727052386"></script>
+<script type="text/javascript" src="/js/search.js?1743470008"></script>
 
     
   </div>
@@ -2174,12 +2174,12 @@
  
   
     
-    <li data-nav-id="/neon/faq/wd-fov/" title="Neon &amp; Lens selector" class="dd-item 
+    <li data-nav-id="/neon/faq/wd--fov/" title="Neon &amp; Lens selector" class="dd-item 
         
         
         
         ">
-      <a href="/neon/faq/wd-fov/">
+      <a href="/neon/faq/wd--fov/">
           Neon &amp; Lens selector
           
       </a>
@@ -2511,7 +2511,7 @@
   
     
     <li data-nav-id="/neon/neon-2000-jnx/demo/" title="People count application With Deepstream SDK and Transfer Learning Toolkit" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -2917,12 +2917,8 @@
 
 
 
-	
-
-<p><strong>People count application With Deepstream SDK and Transfer Learning Toolkit</strong></p>
-
+	<p><strong>People count application With Deepstream SDK and Transfer Learning Toolkit</strong></p>
 <p>Git repo: <a href="https://github.com/AIoT-IST/deepstream-occupancy-analytics/tree/master">https://github.com/AIoT-IST/deepstream-occupancy-analytics/tree/master</a></p>
-
 <ul>
 <li><a href="#description">Description</a></li>
 <li><a href="#prerequisites">Prerequisites</a></li>
@@ -2930,94 +2926,73 @@
 <li><a href="#build">Build</a></li>
 <li><a href="#run">Run</a></li>
 <li><a href="#output">Output</a></li>
-<li><a href="#references">References</a>
-<p align="center">
-<img src="images/test.png">
-</p></li>
+<li><a href="#references">References</a></li>
 </ul>
-
+<p align="center">
+  <img src="images/test.png">
+</p>
 <h2 id="description">Description</h2>
-
 <p>This is a sample application for counting people entering/leaving in a building using NVIDIA Deepstream SDK, Transfer Learning Toolkit (TLT) and pre-trained models. This application can be used to build real-time occupancy analytics application for smart buildings, hospitals, retail, etc. The application is based on deepstream-test5 sample application.</p>
-
 <p>It can take streaming video or Neon camera as input, counts the number of people crossing a tripwire. In this application, you will learn:</p>
-
 <ul>
 <li>How to use PeopleNet model from NGC</li>
 <li>How to use NvDsAnalytics plugin to draw line and count people crossing the line</li>
 </ul>
-
 <p>You can extend this application to change region of interest, use cloud-to-edge messaging to trigger record in the DeepStream application or build analytic dashboard or database to store the metadata.</p>
-
 <p>To learn how to build this demo step-by-step, check out the on-demand webinar on <a href="https://info.nvidia.com/iva-occupancy-webinar-reg-page.html?ondemandrgt=yes">Creating Intelligent places using DeepStream SDK</a>.</p>
-
 <h2 id="prerequisites">Prerequisites</h2>
-
 <ul>
-<li><p>Neon-201A-JNX or Neon-202A-JNX with jetpack <a href="https://aiot-ist.github.io/neon/neon-2000-jnx/howtoflashimage/">5.1.2</a></p></li>
-
-<li><p>Download PeopleNet model: [<a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/peoplenet/files">https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/peoplenet/files</a>]</p></li>
-
-<li><p>This application is based on deepstream-test5 application. More about test5 application: [<a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_ref_app_test5.html">https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_ref_app_test5.html</a>]</p></li>
+<li>
+<p>Neon-201A-JNX or Neon-202A-JNX with jetpack <a href="https://aiot-ist.github.io/neon/neon-2000-jnx/howtoflashimage/">5.1.2</a></p>
+</li>
+<li>
+<p>Download PeopleNet model: [https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/peoplenet/files]</p>
+</li>
+<li>
+<p>This application is based on deepstream-test5 application. More about test5 application: [https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_ref_app_test5.html]</p>
+</li>
 </ul>
-
 <h2 id="getting-started">Getting Started</h2>
-
 <ul>
-<li><p>Preferably clone the repo in /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps</p>
-
-<pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
+<li>
+<p>Preferably clone the repo in /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps</p>
+<pre tabindex="0"><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
 sudo apt-get install libjson-glib-dev libgstrtspserver-1.0-dev -y
 sudo chmod 777 -R /opt/nvidia/deepstream/deepstream-6.3/
 git clone https://github.com/AIoT-IST/deepstream-occupancy-analytics.git /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics/
 </code></pre></li>
-
-<li><p>Download peoplnet model:</p>
-
-<pre><code>cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics/config &amp;&amp; ./model.sh
-</code></pre></li>
-
-<li><p>For Jetson use:  bin/jetson/libnvds_msgconv.so</p></li>
+<li>
+<p>Download peoplnet model:</p>
+</li>
 </ul>
-
+<pre tabindex="0"><code>cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics/config &amp;&amp; ./model.sh
+</code></pre><ul>
+<li>For Jetson use:  bin/jetson/libnvds_msgconv.so</li>
+</ul>
 <h2 id="build-and-configure">Build and Configure</h2>
-
 <ul>
-<li>Set CUDA_VER in the MakeFile as per platform.</li>
-</ul>
-
+<li>
+<p>Set CUDA_VER in the MakeFile as per platform.</p>
 <p>For Jetson, CUDA_VER=11.4</p>
-
-<pre><code>  cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics &amp;&amp; make
-</code></pre>
-
+<pre tabindex="0"><code>cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics &amp;&amp; make
+</code></pre></li>
+</ul>
 <h2 id="run">Run</h2>
-
-<pre><code>  cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics/
-  ./deepstream-test5-analytics -c config/dstest_occupancy_analytics.txt
-</code></pre>
-
-<h2 id="modify-the-boarder">Modify the boarder</h2>
-
-<pre><code>  cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics/tool
-  python3 preview.py
-</code></pre>
-
-<h2 id="output">Output</h2>
-
+<pre tabindex="0"><code>cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics/
+./deepstream-test5-analytics -c config/dstest_occupancy_analytics.txt
+</code></pre><h2 id="modify-the-boarder">Modify the boarder</h2>
+<pre tabindex="0"><code>cd /opt/nvidia/deepstream/deepstream-6.3/sources/apps/sample_apps/deepstream-occupancy-analytics/tool
+python3 preview.py
+</code></pre><h2 id="output">Output</h2>
 <p>The output will look like this:</p>
-
-<p><img src="images/kafka_messages.gif" alt="alt-text" /></p>
-
+<p><img src="images/kafka_messages.gif" alt="alt-text"></p>
 <p>Where you can see the kafka messages for entry and exit count.</p>
-
 <h2 id="references">References</h2>
-
 <ul>
-<li>CREATE INTELLIGENT PLACES USING NVIDIA PRE-TRAINED VISION MODELS AND DEEPSTREAM SDK: [<a href="https://info.nvidia.com/iva-occupancy-webinar-reg-page.html?ondemandrgt=yes">https://info.nvidia.com/iva-occupancy-webinar-reg-page.html?ondemandrgt=yes</a>]</li>
-<li>Deepstream SDK: [<a href="https://developer.nvidia.com/deepstream-sdk">https://developer.nvidia.com/deepstream-sdk</a>]</li>
-<li>Deepstream Quick Start Guide: [<a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/index.html#page/DeepStream_Development_Guide/deepstream_quick_start.html#">https://docs.nvidia.com/metropolis/deepstream/dev-guide/index.html#page/DeepStream_Development_Guide/deepstream_quick_start.html#</a>]</li>
-<li>Transfer Learning Toolkit: [<a href="https://developer.nvidia.com/transfer-learning-toolkit">https://developer.nvidia.com/transfer-learning-toolkit</a>]</li>
+<li>CREATE INTELLIGENT PLACES USING NVIDIA PRE-TRAINED VISION MODELS AND DEEPSTREAM SDK: [https://info.nvidia.com/iva-occupancy-webinar-reg-page.html?ondemandrgt=yes]</li>
+<li>Deepstream SDK: [https://developer.nvidia.com/deepstream-sdk]</li>
+<li>Deepstream Quick Start Guide: [https://docs.nvidia.com/metropolis/deepstream/dev-guide/index.html#page/DeepStream_Development_Guide/deepstream_quick_start.html#]</li>
+<li>Transfer Learning Toolkit: [https://developer.nvidia.com/transfer-learning-toolkit]</li>
 <li>forked from <a href="https://github.com/NVIDIA-AI-IOT/deepstream-occupancy-analytics">https://github.com/NVIDIA-AI-IOT/deepstream-occupancy-analytics</a></li>
 </ul>
 
@@ -4778,19 +4753,19 @@ git clone https://github.com/AIoT-IST/deepstream-occupancy-analytics.git /opt/nv
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1727052386"></script>
-    <script src="/js/perfect-scrollbar.min.js?1727052386"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1727052386"></script>
-    <script src="/js/jquery.sticky.js?1727052386"></script>
-    <script src="/js/featherlight.min.js?1727052386"></script>
-    <script src="/js/highlight.pack.js?1727052386"></script>
+    <script src="/js/clipboard.min.js?1743470008"></script>
+    <script src="/js/perfect-scrollbar.min.js?1743470008"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1743470008"></script>
+    <script src="/js/jquery.sticky.js?1743470008"></script>
+    <script src="/js/featherlight.min.js?1743470008"></script>
+    <script src="/js/highlight.pack.js?1743470008"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1727052386"></script>
-    <script src="/js/learn.js?1727052386"></script>
-    <script src="/js/hugo-learn.js?1727052386"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1743470008"></script>
+    <script src="/js/learn.js?1743470008"></script>
+    <script src="/js/hugo-learn.js?1743470008"></script>
 
-    <link href="/mermaid/mermaid.css?1727052386" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1727052386"></script>
+    <link href="/mermaid/mermaid.css?1743470008" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1743470008"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
