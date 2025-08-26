@@ -1,0 +1,53 @@
+/* static/css/custom-table.css */
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #eee;
+  z-index: 1;
+}
+.scrollable-table {
+  display: block;
+  overflow-y: auto;
+  height: 800px; /* Adjust based on your needs */
+}
+table {
+  width: 100%;
+  border-collapse: separate; /* Changed for spacing */
+  border-spacing: 0;
+}
+th, td {
+  padding: 14px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+.licenses {
+  background-color: #FFC0CB; /* Pink */
+}
+.evision {
+  background-color: #FFFFB3; /* Yellow */
+}
+.eol, .eol-only-background {
+  /*background-color: #FFD1D1;  Light red */
+  background-color: #e0f2f1;
+}
+.eol {
+  text-decoration: line-through; /* Strikethrough */
+}
+th.licenses, th.evision,th.library {
+  font-size: 24px;
+}
+tbody td {
+  font-size: 20px;
+}
+tbody td:hover {
+  background-color: #e0f7fa;  /* 鼠标悬停时的背景颜色 */
+  border-color: #ff0000; /* 鼠标悬停时的边框颜色 */
+  border: 2px solid #ff0000; /* 增加边框宽度并设置为红色 */
+}
+.bg-licenses {
+  background-color: #FFC0CB; /* 粉色，与 .licenses 相同 */
+}
+.bg-evision {
+  background-color: #FFFFB3; /* 浅黄色，与 .evision 相同 */
+}
