@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-tw" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>使用 Euresys Coaxlink 搭配端子板進行相機觸發 :: Connected Factory</title>
+    <link rel="stylesheet" href="/css/custom-table.css">
+
+    
+    <link href="/css/nucleus.css?1780370709" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1780370709" rel="stylesheet">
+    <link href="/css/hybrid.css?1780370709" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1780370709" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1780370709" rel="stylesheet">
+    <link href="/css/auto-complete.css?1780370709" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1780370709" rel="stylesheet">
+    <link href="/css/theme.css?1780370709" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1780370709" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1780370709"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZXVWNR8SN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KZXVWNR8SN');
+    </script>
+
+  </head>
+  <body class="" data-url="/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://aiot-ist.github.io/">
+  IST Connected Factory
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1780370709"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1780370709"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/aiot-ist.github.io\/\/zh-tw";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1780370709"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/euresys-grab-card/" title="Euresys-Grab-cards" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/zh-tw/euresys-grab-card/">
+          Euresys-Grab-cards
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/" title="使用 Euresys Coaxlink 搭配端子板進行相機觸發" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/">
+          使用 Euresys Coaxlink 搭配端子板進行相機觸發
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="https://aiot-ist.github.io/euresys-grab-card/cxp-for-camera-triggering-with-encoder/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="zh-tw" value="https://aiot-ist.github.io/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/" selected>繁體中文</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/matcornic/hugo-theme-learn">learn theme</a></p>
+<p>Copyright 2020, <a href="https://www.adlinktech.com">ADLINK IST Connected Factory</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/zh-tw/'>Connected Factory</a> > <a href='/zh-tw/euresys-grab-card/'>Euresys-Grab-cards</a> > 使用 Euresys Coaxlink 搭配端子板進行相機觸發
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+          <div id="chapter">
+        
+        <div id="body-inner">
+          
+
+        
+
+
+
+
+	
+
+<p><a id="top"></a></p>
+
+<ul>
+<li><a href="#terminal-board-signal-wiring-and-frame-grabber-system-architecture-overview">端子板訊號接線與訊框擷取卡系統架構概觀</a></li>
+<li><a href="#wiring-external-input-signals-to-the-terminal-board">將外部輸入訊號接到端子板</a></li>
+<li><a href="#wiring-strob-output-from-the-terminal-board">從端子板接出 Strobe 輸出</a></li>
+<li><a href="#trigger-camera-control-method">觸發相機的控制方式</a>
+
+<ul>
+<li><a href="#configuration-in-the-device-tab-step-1">在 Device 分頁的設定（Step 1）</a></li>
+<li><a href="#setting-the-triggersource-step-2">設定 TriggerSource（Step 2）</a></li>
+<li><a href="#setting-the-inputtool-step-3">設定 InputTool（Step 3）</a></li>
+<li><a href="#verifying-operation-with-eventcount-step-4">用 EventCount 驗證運作（Step 4）</a></li>
+<li><a href="#setting-the-strobe-output-step-5">設定 Strobe 輸出（Step 5）</a></li>
+<li><a href="#setting-the-cycle-trigger-source-step-6">設定 Cycle Trigger Source（Step 6）</a></li>
+</ul></li>
+</ul>
+
+<h2 id="terminal-board-signal-wiring-and-frame-grabber-system-architecture-overview">端子板訊號接線與訊框擷取卡系統架構概觀</h2>
+
+<p>本節說明如何將端子板（Terminal Board）連接到 Coaxlink 的 I/O 板，並驗證訊號是否正確接收。
+<img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_map.png" alt="Wiring Map" /></p>
+
+<p><a href="#1"> CXP 系列 &amp; Grablink Duo I/O 接頭（腳位定義）</a> | <a href="#2">端子板（腳位定義）</a>|<a href="https://ampro1-my.sharepoint.com/:b:/g/personal/darren_hung_adlinktech_com/Ea3kprcxYfRNihD-6Ds4G4EB5wV48ts9VtjTrI7zyeOjRA?e=27wWzd">端子板 Datasheet</a></p>
+
+<p>更多資訊可參考 <a href="https://documentation.euresys.com/Products/COAXLINK/COAXLINK/10/en-us/Content/03_Interfaces/hardware-manual/meca/connectors/inst200.htm">Euresys 官方文件</a>。</p>
+
+<h2 id="1">CXP 系列 &amp; Grablink Duo I/O 接頭</h2>
+
+<table>
+<thead>
+<tr>
+<th>腳位</th>
+<th>訊號</th>
+<th>用途</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td>接地</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>DIN12+</td>
+<td>高速差動輸入 #12 – 正極</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>IIN11+</td>
+<td>隔離輸入 #11 – 正極</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>IIN13-</td>
+<td>隔離輸入 #13 – 負極</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>IIN14-</td>
+<td>隔離輸入 #14 – 負極</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>IOUT12-</td>
+<td>隔離接點輸出 #12 – 負極</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>GND</td>
+<td>接地</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td></td>
+<td>未連接</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>GND</td>
+<td>接地</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>GND</td>
+<td>接地</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>DIN12-</td>
+<td>高速差動輸入 #12 – 負極</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>IIN11-</td>
+<td>隔離輸入 #11 – 負極</td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>IIN12+</td>
+<td>隔離輸入 #12 – 正極</td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>IIN13+</td>
+<td>隔離輸入 #13 – 正極</td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>IIN14+</td>
+<td>隔離輸入 #14 – 正極</td>
+</tr>
+
+<tr>
+<td>16</td>
+<td>IOUT12+</td>
+<td>隔離接點輸出 #12 – 正極</td>
+</tr>
+
+<tr>
+<td>17</td>
+<td>TTLIO12</td>
+<td>TTL 輸入／輸出 #12</td>
+</tr>
+
+<tr>
+<td>18</td>
+<td>GND</td>
+<td>接地</td>
+</tr>
+
+<tr>
+<td>19</td>
+<td>DIN11-</td>
+<td>高速差動輸入 #11 – 負極</td>
+</tr>
+
+<tr>
+<td>20</td>
+<td>DIN11+</td>
+<td>高速差動輸入 #11 – 正極</td>
+</tr>
+
+<tr>
+<td>21</td>
+<td>IIN12-</td>
+<td>隔離輸入 #12 – 負極</td>
+</tr>
+
+<tr>
+<td>22</td>
+<td>IOUT11-</td>
+<td>隔離接點輸出 #11 – 負極</td>
+</tr>
+
+<tr>
+<td>23</td>
+<td>IOUT11+</td>
+<td>隔離接點輸出 #11 – 正極</td>
+</tr>
+
+<tr>
+<td>24</td>
+<td>GND</td>
+<td>接地</td>
+</tr>
+
+<tr>
+<td>25</td>
+<td>TTLIO11</td>
+<td>TTL 輸入／輸出 #11</td>
+</tr>
+
+<tr>
+<td>26</td>
+<td>+12V</td>
+<td>+12 V 電源輸出</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#terminal-board-signal-wiring-and-frame-grabber-system-architecture-overview">回到接線圖</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#top">回到頂端</a></p>
+
+<h2 id="2">端子板腳位定義（CXP 系列 &amp; Grablink Duo）</h2>
+
+<table>
+<thead>
+<tr>
+<th>腳位</th>
+<th>訊號</th>
+<th>用途</th>
+<th>腳位</th>
+<th>訊號</th>
+<th>用途</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>+12V</td>
+<td>+12 V 電源輸出</td>
+<td>14</td>
+<td>GND</td>
+<td>接地</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>DIN11+</td>
+<td>高速差動輸入 #11 – 正極</td>
+<td>15</td>
+<td>DIN11-</td>
+<td>高速差動輸入 #11 – 負極</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>DIN12+</td>
+<td>高速差動輸入 #12 – 正極</td>
+<td>16</td>
+<td>DIN12-</td>
+<td>高速差動輸入 #12 – 負極</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>GND</td>
+<td>接地</td>
+<td>17</td>
+<td>GND</td>
+<td>接地</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>IIN11+</td>
+<td>隔離輸入 #11 – 正極</td>
+<td>18</td>
+<td>IIN11-</td>
+<td>隔離輸入 #11 – 負極</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>IIN12+</td>
+<td>隔離輸入 #12 – 正極</td>
+<td>19</td>
+<td>IIN12-</td>
+<td>隔離輸入 #12 – 負極</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>IIN13+</td>
+<td>隔離輸入 #13 – 正極</td>
+<td>20</td>
+<td>IIN13-</td>
+<td>隔離輸入 #13 – 負極</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>IIN14+</td>
+<td>隔離輸入 #14 – 正極</td>
+<td>21</td>
+<td>IIN14-</td>
+<td>隔離輸入 #14 – 負極</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td></td>
+<td>未連接</td>
+<td>22</td>
+<td>GND</td>
+<td>接地</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>IOUT11+</td>
+<td>隔離接點輸出 #11 – 正極</td>
+<td>23</td>
+<td>IOUT11-</td>
+<td>隔離接點輸出 #11 – 負極</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>IOUT12+</td>
+<td>隔離接點輸出 #12 – 正極</td>
+<td>24</td>
+<td>IOUT12-</td>
+<td>隔離接點輸出 #12 – 負極</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>TTLIO11</td>
+<td>TTL 輸入／輸出 #11</td>
+<td>25</td>
+<td>GND</td>
+<td>接地</td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>TTLIO12</td>
+<td>TTL 輸入／輸出 #12</td>
+<td>26</td>
+<td>GND</td>
+<td>接地</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#terminal-board-signal-wiring-and-frame-grabber-system-architecture-overview">回到接線圖</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#top">回到頂端</a></p>
+
+<h2 id="wiring-external-input-signals-to-the-terminal-board">將外部輸入訊號接到端子板</h2>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_DIN11_1.png" alt="Wiring on Terminal Board " /></p>
+
+<p>在這個案例中，由於使用的是編碼器（encoder）訊號，因此選用 <span style="background-color: yellow;">高速差動輸入 #11（High-speed differential input #11）</span> 作為連接點，因為它能處理高速訊號。對於非高速的訊號，則可使用一般的標準輸入埠。請務必依訊號速度選擇合適的輸入埠，以確保系統的效能與精度達到最佳。</p>
+
+<p><a href="#top">回到頂端</a></p>
+
+<h2 id="wiring-strob-output-from-the-terminal-board">從端子板接出 Strobe 輸出</h2>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/wiring_TTLIO11.png" alt="wiring_TTLIO11" /></p>
+
+<h2 id="trigger-camera-control-method">觸發相機的控制方式</h2>
+
+<div style="font-size: 20px;">
+Coaxlink 卡支援以下幾種相機觸發模式：
+<ul>
+    <li>NC 模式（Freerun 自由運行）：</li>
+相機以自己的步調連續擷取影像，不受外部訊號控制。
+    <li>RC 模式（Rate Control 速率控制）：</li>
+由訊框擷取卡控制相機的週期速率（每個週期由 grabber 觸發），但曝光時間（exposure duration）由相機自己決定。適用於非同步重置（asynchronous-reset）相機。
+    <li>RG 模式（Asynchronous 非同步）：</li>  
+由訊框擷取卡同時主導相機的週期速率與曝光，並與編碼器等外部觸發訊號同步。
+</ul>
+</div>
+
+<p>當需要精準的時序控制（例如高速成像或同步事件擷取）時，<strong>RG 模式</strong> 是理想選擇。請依您的應用需求選擇最適合的模式。</p>
+
+<h3 id="configuration-in-the-device-tab-step-1"><strong>在 Device 分頁的設定（Step 1）</strong></h3>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/RG-setting-1.png" alt="RG Settings" /></p>
+
+<div style="font-size: 20px;">
+在 Device 分頁中調整以下參數以設定 RG 模式：
+</div>
+
+<div style="font-size: 20px;">
+<ul>
+    <li>將 Camera Control Method 設為 <span style="background-color: yellow;">RG。</span></li>
+    <li><span style="background-color: yellow;">啟用 Exposure Readout Overlap </span>讓曝光與讀出（readout）程序可以重疊，藉此最佳化相機的週期時間。</li>
+    <li>將 Cycle Trigger Source 設為 <span style="background-color: yellow;">Immediate</span>，使相機週期不必等待外部觸發即可啟動。</li>
+    <li><span style="background-color: yellow;">Cycle Trigger Source</span> 是關鍵設定。請選擇 <a href="#setting-the-inputtool-step-3"><span style="background-color: yellow;">LIN1</span></a>（詳細設定見 <a href="#setting-the-inputtool-step-3">Step 3</a>）或 <a href="#setting-the-cycle-trigger-source-step-6"><span style="background-color: yellow;">Divider</span></a> 作為來源。務必正確設定此參數，系統才能正常運作。</li>
+</ul>
+</div>
+
+<h3 id="計算-cycle-minimum-period-週期最小時間">計算 Cycle Minimum Period（週期最小時間）</h3>
+
+<div align="left" style="font-size: 20px;">
+為確保正確的相機週期速率，請用以下公式計算 Cycle Minimum Period：
+</div>
+<br>
+<div align="left" style="font-size: 20px;">
+舉例來說，若相機的影格率（FPS）為 40，計算如下：
+</div>
+<div style="font-size: 20px;">
+<ul>
+    <li> <span style="background-color: yellow;">Cycle Minimum Period </span>= 1 / 40 FPS = 0.025 秒 = 25 毫秒（ms）</li>
+</ul>
+</div>
+<div align="left" style="font-size: 20px;">
+在 25 ms 的 Cycle Minimum Period 之下，請將 Exposure Time 與 Strobe Duration 都設為 20 毫秒（20000 微秒），確保兩者都在此運作上限內。如此可讓相機的曝光與照明良好協調，並避免超過允許的最大週期時間。
+</div>
+
+<div style="font-size: 20px;">
+<ul>
+    <li> <span style="background-color: yellow;"> Exposure Time</span> = 20000 微秒（20 ms），小於 25 ms 上限。</li>
+    <li>  <span style="background-color: yellow;">Strobe Duration</span> = 20000 微秒（20 ms），同樣未超過 25 ms 上限。</li>
+</ul>
+</div>
+
+<p><a href="#top">回到頂端</a></p>
+
+<h3 id="setting-the-triggersource-step-2"><strong>設定 TriggerSource（Step 2）</strong></h3>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/TriggerSource_1.png" alt="TriggerSource" /></p>
+
+<p>
+<div class="notices note" ><p>不同的相機製造商對其參數可能使用不同的名稱。設定參數前，請務必向相機製造商確認。</p>
+</div>
+
+<a href="#top">回到頂端</a></p>
+
+<h3 id="setting-the-inputtool-step-3"><strong>設定 InputTool（Step 3）</strong></h3>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/Interface_inputtool.png" alt="InputTool" /></p>
+
+<p>在系統中設定 InputTool 時，了解每個參數的功能很重要：</p>
+
+<div style="font-size: 20px;">
+<ul>
+    <li> <span style="background-color: yellow;"> LineInputToolSelector:</span> </li>
+此參數是 InputTool 設定的中央參考點，涵蓋所選的輸入來源與啟動模式。一旦設定，LineInputToolSelector 可確保整個系統的一致性；對此參數所做的任何變更，都會自動更新所有引用它的相關設定。此特性簡化了修改輸入來源或觸發方式的流程——只需在這個中央點調整一次即可。
+    <li> <span style="background-color: yellow;">LineInputToolSource: </span> </li>
+此參數定義輸入訊號的來源，可用來指定訊號從何而來，例如特定的硬體埠或內部來源。
+    <li><span style="background-color: yellow;"> LineInputToolActivation:</span> </li>
+此參數設定 InputTool 的啟動模式，決定工具如何回應輸入訊號，例如以上升緣（rising edge）、下降緣（falling edge）或其他條件觸發。
+<ul>
+</div>
+
+<p>正確設定這些參數，可確保系統準確地回應外部訊號與觸發。
+<a href="#top">回到頂端</a></p>
+
+<h3 id="verifying-operation-with-eventcount-step-4"><strong>用 EventCount 驗證運作（Step 4）</strong></h3>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/EventSelector.png" alt="EventSelector" /></p>
+
+<div style="font-size: 20px;">
+<ul>
+    <li><span style="background-color: yellow;">EventSelector:</span></li>
+    此參數可讓您選擇事件監看的來源。可設為 <a href="#setting-the-inputtool-step-3"><span style="background-color: yellow;">LIN1</span></a>（如 Step 3 所述）或選擇 <a href="#setting-the-cycle-trigger-source-step-6"><span style="background-color: yellow;">Divider</span></a> 作為來源。選擇正確的 EventSelector，即可追蹤與您輸入設定相關的特定事件。
+
+    <li><span style="background-color: yellow;">EventCount:</span></li>
+    此參數顯示偵測到的事件計數。EventCount 有數值即代表運作成功。對於固定距離的一致移動，您會看到 EventCount 數值有相對應的累加。
+
+    <li><span style="background-color: yellow;">EventCountReset:</span></li>
+    此參數可用來重設 EventCount 數值，方便清除計數以利新事件的追蹤與計算。
+</ul>
+</div>
+
+
+<div class="notices note" ><p>點擊下圖所示的按鈕，即可讀取目前的計數值。</p>
+</div>
+
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/updatethecounter.png" alt="update_the_counter" /></p>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/animated_eventcount.gif" alt="animated_eventcount" /></p>
+
+<p><a href="#top">回到頂端</a></p>
+
+<h3 id="setting-the-strobe-output-step-5"><strong>設定 Strobe 輸出（Step 5）</strong></h3>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/DigitalIOControl.png" alt="Strobe-Output" /></p>
+
+<div style="font-size: 20px;">
+<ul>
+    <li><span style="background-color: yellow;">LineSelector [Selector]:</span></li>
+    此參數設為 TTLIO11，以選擇對應的線路來設定 strobe 輸出。
+
+    <li><span style="background-color: yellow;">LineMode:</span></li>
+    線路模式設為 Output，將所選線路設定為輸出，用以驅動 strobe 訊號。
+
+    <li><span style="background-color: yellow;">LineSource:</span></li>
+    線路的來源設為 Device0Strobe。
+</ul>
+</div>
+
+<p><a href="#top">回到頂端</a></p>
+
+<h3 id="setting-the-cycle-trigger-source-step-6"><strong>設定 Cycle Trigger Source（Step 6）</strong></h3>
+
+<p>大多數編碼器發出的是高頻訊號，往往太快而無法直接用於相機觸發。透過分頻器（Divider），可將這些訊號調整為較低的頻率，以利相機穩定地啟動，確保影像擷取的準確與一致。</p>
+
+<p><img src="/Euresys-Grab-card/CXP-for-Camera-Triggering-with-Encoder/Images/DividerTool.png" alt="DividerTool" /></p>
+
+<div style="font-size: 20px;">
+<ul>
+    <li><span style="background-color: yellow;">DividerToolSelector:</span></li>
+    此參數是 Divider Tool 設定的中央識別點，整合了所選來源（由 DividerToolSource 指定）、啟動控制（由 DividerToolEnableControl 決定）以及分頻係數（由 DividerToolDivisionfactor 設定）。一旦設定好 DividerToolSelector，即可確保整個系統的一致性；之後對來源、啟動或分頻係數所做的任何修改，都會透過這個單一參數集中管理。這種整合簡化了調整流程，讓您只需在一處變更，即可套用到所有相關設定。
+
+<li><span style="background-color: yellow;">DividerToolSource:</span> 選擇 LIN1 作為來源，如先前 Step 3 所述。</li>
+<li><span style="background-color: yellow;">DividerToolEnableControl:</span> 設為 'Enable' 以啟用分頻器工具。</li>
+<li><span style="background-color: yellow;">DividerToolDivisionfactor:</span> 輸入您要用於分頻的分頻係數值。</li>
+
+</ul>
+</div>
+
+
+<div class="notices note" ><p>設定好 Divider Tool 之後，記得回到 <strong>Step 1</strong> 對應調整 &lsquo;Cycle Trigger Source&rsquo;。此外，您也可以透過修改 <strong>Step 4</strong> 的 &lsquo;EventSelector&rsquo; 來驗證功能是否正常。這些步驟可確保整個系統的設定一致且正常運作。</p>
+</div>
+
+
+<p><a href="#top">回到頂端</a></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+            </div> 
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/zh-tw/euresys-grab-card/" title="Euresys-Grab-cards"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1780370709"></script>
+    <script src="/js/perfect-scrollbar.min.js?1780370709"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1780370709"></script>
+    <script src="/js/jquery.sticky.js?1780370709"></script>
+    <script src="/js/featherlight.min.js?1780370709"></script>
+    <script src="/js/highlight.pack.js?1780370709"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1780370709"></script>
+    <script src="/js/learn.js?1780370709"></script>
+    <script src="/js/hugo-learn.js?1780370709"></script>
+
+    <link href="/mermaid/mermaid.css?1780370709" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1780370709"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

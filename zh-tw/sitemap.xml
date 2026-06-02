@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/euresys-grab-card/cxp-for-camera-triggering-with-encoder/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/euresys-grab-card/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/euresys-grab-card/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/euresys-grab-card/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/tags/"
+                />
+  </url>
+  
+</urlset>

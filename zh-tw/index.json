@@ -1,0 +1,36 @@
+[
+{
+	"uri": "https://aiot-ist.github.io/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/",
+	"title": "使用 Euresys Coaxlink 搭配端子板進行相機觸發",
+	"tags": [],
+	"description": "",
+	"content": " \n 端子板訊號接線與訊框擷取卡系統架構概觀 將外部輸入訊號接到端子板 從端子板接出 Strobe 輸出 觸發相機的控制方式  在 Device 分頁的設定（Step 1） 設定 TriggerSource（Step 2） 設定 InputTool（Step 3） 用 EventCount 驗證運作（Step 4） 設定 Strobe 輸出（Step 5） 設定 Cycle Trigger Source（Step 6）   端子板訊號接線與訊框擷取卡系統架構概觀 本節說明如何將端子板（Terminal Board）連接到 Coaxlink 的 I/O 板，並驗證訊號是否正確接收。 CXP 系列 \u0026amp; Grablink Duo I/O 接頭（腳位定義） | 端子板（腳位定義）|端子板 Datasheet\n更多資訊可參考 Euresys 官方文件。\nCXP 系列 \u0026amp; Grablink Duo I/O 接頭    腳位 訊號 用途     1 GND 接地   2 DIN12+ 高速差動輸入 #12 – 正極   3 IIN11+ 隔離輸入 #11 – 正極   4 IIN13- 隔離輸入 #13 – 負極   5 IIN14- 隔離輸入 #14 – 負極   6 IOUT12- 隔離接點輸出 #12 – 負極   7 GND 接地   8  未連接   9 GND 接地   10 GND 接地   11 DIN12- 高速差動輸入 #12 – 負極   12 IIN11- 隔離輸入 #11 – 負極   13 IIN12+ 隔離輸入 #12 – 正極   14 IIN13+ 隔離輸入 #13 – 正極   15 IIN14+ 隔離輸入 #14 – 正極   16 IOUT12+ 隔離接點輸出 #12 – 正極   17 TTLIO12 TTL 輸入／輸出 #12   18 GND 接地   19 DIN11- 高速差動輸入 #11 – 負極   20 DIN11+ 高速差動輸入 #11 – 正極   21 IIN12- 隔離輸入 #12 – 負極   22 IOUT11- 隔離接點輸出 #11 – 負極   23 IOUT11+ 隔離接點輸出 #11 – 正極   24 GND 接地   25 TTLIO11 TTL 輸入／輸出 #11   26 +12V +12 V 電源輸出    回到接線圖 \u0026nbsp;\u0026nbsp;\u0026nbsp;\u0026nbsp;\u0026nbsp;\u0026nbsp;\u0026nbsp;\u0026nbsp; 回到頂端\n端子板腳位定義（CXP 系列 \u0026amp; Grablink Duo）    腳位 訊號 用途 腳位 訊號 用途     1 +12V +12 V 電源輸出 14 GND 接地   2 DIN11+ 高速差動輸入 #11 – 正極 15 DIN11- 高速差動輸入 #11 – 負極   3 DIN12+ 高速差動輸入 #12 – 正極 16 DIN12- 高速差動輸入 #12 – 負極   4 GND 接地 17 GND 接地   5 IIN11+ 隔離輸入 #11 – 正極 18 IIN11- 隔離輸入 #11 – 負極   6 IIN12+ 隔離輸入 #12 – 正極 19 IIN12- 隔離輸入 #12 – 負極   7 IIN13+ 隔離輸入 #13 – 正極 20 IIN13- 隔離輸入 #13 – 負極   8 IIN14+ 隔離輸入 #14 – 正極 21 IIN14- 隔離輸入 #14 – 負極   9  未連接 22 GND 接地   10 IOUT11+ 隔離接點輸出 #11 – 正極 23 IOUT11- 隔離接點輸出 #11 – 負極   11 IOUT12+ 隔離接點輸出 #12 – 正極 24 IOUT12- 隔離接點輸出 #12 – 負極   12 TTLIO11 TTL 輸入／輸出 #11 25 GND 接地   13 TTLIO12 TTL 輸入／輸出 #12 26 GND 接地    回到接線圖\u0026nbsp;\u0026nbsp;\u0026nbsp;\u0026nbsp;\u0026nbsp; 回到頂端\n將外部輸入訊號接到端子板 在這個案例中，由於使用的是編碼器（encoder）訊號，因此選用 高速差動輸入 #11（High-speed differential input #11） 作為連接點，因為它能處理高速訊號。對於非高速的訊號，則可使用一般的標準輸入埠。請務必依訊號速度選擇合適的輸入埠，以確保系統的效能與精度達到最佳。\n回到頂端\n從端子板接出 Strobe 輸出 觸發相機的控制方式 Coaxlink 卡支援以下幾種相機觸發模式：  NC 模式（Freerun 自由運行）： 相機以自己的步調連續擷取影像，不受外部訊號控制。 RC 模式（Rate Control 速率控制）： 由訊框擷取卡控制相機的週期速率（每個週期由 grabber 觸發），但曝光時間（exposure duration）由相機自己決定。適用於非同步重置（asynchronous-reset）相機。 RG 模式（Asynchronous 非同步）： 由訊框擷取卡同時主導相機的週期速率與曝光，並與編碼器等外部觸發訊號同步。   當需要精準的時序控制（例如高速成像或同步事件擷取）時，RG 模式 是理想選擇。請依您的應用需求選擇最適合的模式。\n在 Device 分頁的設定（Step 1） 在 Device 分頁中調整以下參數以設定 RG 模式：   將 Camera Control Method 設為 RG。 啟用 Exposure Readout Overlap 讓曝光與讀出（readout）程序可以重疊，藉此最佳化相機的週期時間。 將 Cycle Trigger Source 設為 Immediate，使相機週期不必等待外部觸發即可啟動。 Cycle Trigger Source 是關鍵設定。請選擇 LIN1（詳細設定見 Step 3）或 Divider 作為來源。務必正確設定此參數，系統才能正常運作。   計算 Cycle Minimum Period（週期最小時間） 為確保正確的相機週期速率，請用以下公式計算 Cycle Minimum Period：  舉例來說，若相機的影格率（FPS）為 40，計算如下：    Cycle Minimum Period = 1 / 40 FPS = 0.025 秒 = 25 毫秒（ms）   在 25 ms 的 Cycle Minimum Period 之下，請將 Exposure Time 與 Strobe Duration 都設為 20 毫秒（20000 微秒），確保兩者都在此運作上限內。如此可讓相機的曝光與照明良好協調，並避免超過允許的最大週期時間。    Exposure Time = 20000 微秒（20 ms），小於 25 ms 上限。  Strobe Duration = 20000 微秒（20 ms），同樣未超過 25 ms 上限。   回到頂端\n設定 TriggerSource（Step 2）  不同的相機製造商對其參數可能使用不同的名稱。設定參數前，請務必向相機製造商確認。\n 回到頂端\n設定 InputTool（Step 3） 在系統中設定 InputTool 時，了解每個參數的功能很重要：\n  LineInputToolSelector:  此參數是 InputTool 設定的中央參考點，涵蓋所選的輸入來源與啟動模式。一旦設定，LineInputToolSelector 可確保整個系統的一致性；對此參數所做的任何變更，都會自動更新所有引用它的相關設定。此特性簡化了修改輸入來源或觸發方式的流程——只需在這個中央點調整一次即可。  LineInputToolSource:   此參數定義輸入訊號的來源，可用來指定訊號從何而來，例如特定的硬體埠或內部來源。 LineInputToolActivation:  此參數設定 InputTool 的啟動模式，決定工具如何回應輸入訊號，例如以上升緣（rising edge）、下降緣（falling edge）或其他條件觸發。   正確設定這些參數，可確保系統準確地回應外部訊號與觸發。 回到頂端\n用 EventCount 驗證運作（Step 4）  EventSelector: 此參數可讓您選擇事件監看的來源。可設為 LIN1（如 Step 3 所述）或選擇 Divider 作為來源。選擇正確的 EventSelector，即可追蹤與您輸入設定相關的特定事件。 EventCount: 此參數顯示偵測到的事件計數。EventCount 有數值即代表運作成功。對於固定距離的一致移動，您會看到 EventCount 數值有相對應的累加。 EventCountReset: 此參數可用來重設 EventCount 數值，方便清除計數以利新事件的追蹤與計算。   點擊下圖所示的按鈕，即可讀取目前的計數值。\n 回到頂端\n設定 Strobe 輸出（Step 5）  LineSelector [Selector]: 此參數設為 TTLIO11，以選擇對應的線路來設定 strobe 輸出。 LineMode: 線路模式設為 Output，將所選線路設定為輸出，用以驅動 strobe 訊號。 LineSource: 線路的來源設為 Device0Strobe。   回到頂端\n設定 Cycle Trigger Source（Step 6） 大多數編碼器發出的是高頻訊號，往往太快而無法直接用於相機觸發。透過分頻器（Divider），可將這些訊號調整為較低的頻率，以利相機穩定地啟動，確保影像擷取的準確與一致。\n DividerToolSelector: 此參數是 Divider Tool 設定的中央識別點，整合了所選來源（由 DividerToolSource 指定）、啟動控制（由 DividerToolEnableControl 決定）以及分頻係數（由 DividerToolDivisionfactor 設定）。一旦設定好 DividerToolSelector，即可確保整個系統的一致性；之後對來源、啟動或分頻係數所做的任何修改，都會透過這個單一參數集中管理。這種整合簡化了調整流程，讓您只需在一處變更，即可套用到所有相關設定。 DividerToolSource: 選擇 LIN1 作為來源，如先前 Step 3 所述。 DividerToolEnableControl: 設為 'Enable' 以啟用分頻器工具。 DividerToolDivisionfactor: 輸入您要用於分頻的分頻係數值。   設定好 Divider Tool 之後，記得回到 Step 1 對應調整 \u0026lsquo;Cycle Trigger Source\u0026rsquo;。此外，您也可以透過修改 Step 4 的 \u0026lsquo;EventSelector\u0026rsquo; 來驗證功能是否正常。這些步驟可確保整個系統的設定一致且正常運作。\n 回到頂端\n"
+},
+{
+	"uri": "https://aiot-ist.github.io/zh-tw/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://aiot-ist.github.io/zh-tw/",
+	"title": "Connected Factory",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://aiot-ist.github.io/zh-tw/euresys-grab-card/",
+	"title": "Euresys-Grab-cards",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://aiot-ist.github.io/zh-tw/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
