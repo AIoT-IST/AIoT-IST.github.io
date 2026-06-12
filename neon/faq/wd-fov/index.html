@@ -13,18 +13,18 @@
     <link rel="stylesheet" href="/css/custom-table.css">
 
     
-    <link href="/css/nucleus.css?1781235151" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1781235151" rel="stylesheet">
-    <link href="/css/hybrid.css?1781235151" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1781235151" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1781235151" rel="stylesheet">
-    <link href="/css/auto-complete.css?1781235151" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1781235151" rel="stylesheet">
-    <link href="/css/theme.css?1781235151" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1781235151" rel="stylesheet">
+    <link href="/css/nucleus.css?1781235772" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1781235772" rel="stylesheet">
+    <link href="/css/hybrid.css?1781235772" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1781235772" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1781235772" rel="stylesheet">
+    <link href="/css/auto-complete.css?1781235772" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1781235772" rel="stylesheet">
+    <link href="/css/theme.css?1781235772" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1781235772" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1781235151"></script>
+    <script src="/js/jquery-3.3.1.min.js?1781235772"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -64,14 +64,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1781235151"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1781235151"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1781235772"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1781235772"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1781235151"></script>
+<script type="text/javascript" src="/js/search.js?1781235772"></script>
 
     
   </div>
@@ -2495,7 +2495,7 @@
       <option value="NEON-202B">NEON-202B</option>
       <option value="NEON-203B">NEON-203B</option>
       <option value="NEON-204B">NEON-204B</option>
-      <option value="NEON-201A">NEON-201A</option>
+      <option value="NEON-201A" selected>NEON-201A</option>
       <option value="NEON-202A">NEON-202A</option>
     </select>
   </div>
@@ -2506,7 +2506,7 @@
     <select id="selectLens" onchange="calculate()">
       <option value="">None</option>
       <option value="3.5mm">3.5mm</option>
-      <option value="8mm">8mm</option>
+      <option value="8mm" selected>8mm</option>
       <option value="12mm">12mm</option>
       <option value="16mm">16mm</option>
     </select>
@@ -2518,27 +2518,27 @@
 
   <div style="margin-right: 20px; position: absolute; top: 170px; left: 600px;">
     Please enter WD (mm):  
-    <input type="text" id="wdInput" onchange="updateSlider()" style="width: 100px;">
-    <input type="range" min="150" max="2000" value="400" id="wdSlider" oninput="updateInput()">
+    <input type="text" id="wdInput" value="1000" onchange="updateSlider()" style="width: 100px;">
+    <input type="range" min="150" max="2000" value="1000" id="wdSlider" oninput="updateInput()">
   </div>
 
-<p><div style="position: absolute; top: 170px; left: 1020px;">
-    VFOV (mm):
-    <span id="vfovInput" class="disabled-input"></span>
-  </div></p>
-
-<p><div style="position: absolute; top: 40px; left: 880px;">
-    HFOV (mm):
+<p><div style="position: absolute; top: 40px; left: 1020px;">
+    HFOV (mm):<br>
     <span id="hfovInput" class="disabled-input"></span>
   </div></p>
 
-<p><div style="position: absolute; top: 40px; left: 1000px;">
-    HFOV(mm/pixel):
+<p><div style="position: absolute; top: 40px; left: 1160px;">
+    HFOV (mm/pixel):<br>
     <span id="hfov_r" class="disabled-input"></span>
   </div></p>
 
-<p><div style="position: absolute; top: 170px; left: 1140px;">
-    VFOV(mm/pixel):
+<p><div style="position: absolute; top: 170px; left: 1020px;">
+    VFOV (mm):<br>
+    <span id="vfovInput" class="disabled-input"></span>
+  </div></p>
+
+<p><div style="position: absolute; top: 170px; left: 1160px;">
+    VFOV (mm/pixel):<br>
     <span id="vfov_r" class="disabled-input"></span>
   </div>
 </div></p>
@@ -2695,6 +2695,8 @@ document.getElementById('hfov_r').textContent = hfov_resolution.toFixed(2);
 }
   }
   
+  // 頁面載入時依預設值（NEON-201A / 8mm / WD 1000）立即計算一次
+  window.addEventListener('load', calculate);
 </script>
 
 <style>
@@ -4119,19 +4121,19 @@ document.getElementById('hfov_r').textContent = hfov_resolution.toFixed(2);
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1781235151"></script>
-    <script src="/js/perfect-scrollbar.min.js?1781235151"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1781235151"></script>
-    <script src="/js/jquery.sticky.js?1781235151"></script>
-    <script src="/js/featherlight.min.js?1781235151"></script>
-    <script src="/js/highlight.pack.js?1781235151"></script>
+    <script src="/js/clipboard.min.js?1781235772"></script>
+    <script src="/js/perfect-scrollbar.min.js?1781235772"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1781235772"></script>
+    <script src="/js/jquery.sticky.js?1781235772"></script>
+    <script src="/js/featherlight.min.js?1781235772"></script>
+    <script src="/js/highlight.pack.js?1781235772"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1781235151"></script>
-    <script src="/js/learn.js?1781235151"></script>
-    <script src="/js/hugo-learn.js?1781235151"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1781235772"></script>
+    <script src="/js/learn.js?1781235772"></script>
+    <script src="/js/hugo-learn.js?1781235772"></script>
 
-    <link href="/mermaid/mermaid.css?1781235151" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1781235151"></script>
+    <link href="/mermaid/mermaid.css?1781235772" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1781235772"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
