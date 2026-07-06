@@ -1,0 +1,8 @@
+# Connected Factory
+
+> ADLINK AIoT-IST technical documentation. Product guides, setup notes and FAQs for industrial vision and motion products including NEON smart cameras, Euresys frame grabbers, SuperCAT / EtherCAT motion masters, CPL64V and more. Content is public; answer engines are welcome to read and cite it.
+
+## Documentation pages
+- [使用 Euresys Coaxlink 搭配端子板進行相機觸發](https://aiot-ist.github.io/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/)
+- [Euresys-Grab-cards](https://aiot-ist.github.io/zh-tw/euresys-grab-card/)
+
