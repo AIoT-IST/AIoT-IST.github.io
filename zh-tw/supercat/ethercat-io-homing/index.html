@@ -13,18 +13,18 @@
     <link rel="stylesheet" href="/css/custom-table.css">
 
     
-    <link href="/css/nucleus.css?1783326468" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1783326468" rel="stylesheet">
-    <link href="/css/hybrid.css?1783326468" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1783326468" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1783326468" rel="stylesheet">
-    <link href="/css/auto-complete.css?1783326468" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1783326468" rel="stylesheet">
-    <link href="/css/theme.css?1783326468" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1783326468" rel="stylesheet">
+    <link href="/css/nucleus.css?1783326868" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1783326868" rel="stylesheet">
+    <link href="/css/hybrid.css?1783326868" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1783326868" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1783326868" rel="stylesheet">
+    <link href="/css/auto-complete.css?1783326868" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1783326868" rel="stylesheet">
+    <link href="/css/theme.css?1783326868" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1783326868" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1783326468"></script>
+    <script src="/js/jquery-3.3.1.min.js?1783326868"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1783326468"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1783326468"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1783326868"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1783326868"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/\/zh-tw";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1783326468"></script>
+<script type="text/javascript" src="/js/search.js?1783326868"></script>
 
     
   </div>
@@ -514,54 +514,69 @@ APS_set_axis_param(ax, PRA_MOTION_SGN_MAP_EN,  0xE)        # 開啟 ORG/MEL/PEL
 
 <h3 id="call-sequence">依程式實際順序的完整呼叫流程</h3>
 
-<p><svg viewBox="0 0 620 470" style="width:100%;max-width:640px;height:auto;font-family:sans-serif" role="img" aria-label="開機到尋原點的呼叫順序:initial、取軸、啟動匯流排、用 config 註冊、綁定訊號、home move、運行讀 DI">
+<p><svg viewBox="0 0 660 664" style="width:100%;max-width:660px;height:auto;font-family:sans-serif" role="img" aria-label="完整開機到尋原點呼叫順序:開卡、取軸、啟動匯流排、用 config 註冊、選 IO 存取、綁定訊號、設極性、開啟綁定、Servo On、設 home 參數、home move、運行讀 DI">
   <defs><marker id="sq2" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#4a5666"/></marker></defs>
-  <rect x="10" y="8" width="84" height="150" rx="7" fill="#f4f6f9" stroke="#d5dbe3"/>
-  <text x="52" y="86" text-anchor="middle" fill="#8b97a7" font-size="12" font-weight="500" transform="rotate(-90 52 86)">1 · 開機</text>
-  <rect x="110" y="8" width="500" height="30" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
-  <text x="124" y="21" fill="#1f2733" font-size="11.5" font-weight="500">開卡</text>
-  <text x="124" y="33" fill="#1d4ed8" font-size="10.5" font-family="monospace">APS_initial()</text>
-  <line x1="360" y1="38" x2="360" y2="46" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
-  <rect x="110" y="48" width="500" height="30" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
-  <text x="124" y="61" fill="#1f2733" font-size="11.5" font-weight="500">取軸號</text>
-  <text x="124" y="73" fill="#1d4ed8" font-size="10.5" font-family="monospace">APS_get_first_axisId()</text>
-  <line x1="360" y1="78" x2="360" y2="86" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
-  <rect x="110" y="88" width="500" height="30" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
-  <text x="124" y="101" fill="#1f2733" font-size="11.5" font-weight="500">啟動 EtherCAT 匯流排</text>
-  <text x="124" y="113" fill="#1d4ed8" font-size="10.5" font-family="monospace">APS_start_field_bus()</text>
-  <line x1="360" y1="118" x2="360" y2="126" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
-  <rect x="110" y="128" width="500" height="38" rx="6" fill="#eef4ff" stroke="#b9ceff"/>
-  <text x="124" y="144" fill="#1d4ed8" font-size="11.5" font-weight="500">* 註冊 ECAT-2055 為 DIO 模組 (MOD1)</text>
-  <text x="124" y="160" fill="#1d4ed8" font-size="10.5" font-family="monospace">APS_load_config_from_file(&hellip;0001.csv)</text>
-  <line x1="360" y1="166" x2="360" y2="178" stroke="#4a5666" stroke-width="1.3" marker-end="url(#sq2)"/>
-  <rect x="10" y="180" width="84" height="150" rx="7" fill="#f4f6f9" stroke="#d5dbe3"/>
-  <text x="52" y="255" text-anchor="middle" fill="#8b97a7" font-size="12" font-weight="500" transform="rotate(-90 52 255)">2 · 綁定</text>
-  <rect x="110" y="180" width="500" height="30" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
-  <text x="124" y="193" fill="#1f2733" font-size="11.5" font-weight="500">選 IO 存取來源</text>
-  <text x="124" y="205" fill="#1d4ed8" font-size="10" font-family="monospace">APS_set_board_param(PRB_IO_ACCESS_SEL, 3)</text>
-  <line x1="360" y1="210" x2="360" y2="218" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
-  <rect x="110" y="220" width="500" height="44" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
-  <text x="124" y="235" fill="#1f2733" font-size="11.5" font-weight="500">綁 ORG/MEL/PEL 到 DI0/DI1/DI2,設極性</text>
-  <text x="124" y="250" fill="#1d4ed8" font-size="10" font-family="monospace">APS_set_axis_param(PRA_MOTION<em>SGN</em><em>_MAP / PRA_EL_LOGIC)</text>
-  <text x="124" y="261" fill="#8b97a7" font-size="10" font-family="monospace">EL_LOGIC=1 -&gt; B 接點反相</text>
-  <line x1="360" y1="264" x2="360" y2="272" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
-  <rect x="110" y="274" width="500" height="38" rx="6" fill="#eef4ff" stroke="#b9ceff"/>
-  <text x="124" y="290" fill="#1d4ed8" font-size="11.5" font-weight="500">開啟綁定 (bit1~3 = MEL/PEL/ORG)</text>
-  <text x="124" y="306" fill="#1d4ed8" font-size="10.5" font-family="monospace">APS_set_axis_param(PRA_MOTION_SGN_MAP_EN, 0xE)</text>
-  <line x1="360" y1="312" x2="360" y2="324" stroke="#4a5666" stroke-width="1.3" marker-end="url(#sq2)"/>
-  <rect x="10" y="326" width="84" height="110" rx="7" fill="#f4f6f9" stroke="#d5dbe3"/>
-  <text x="52" y="381" text-anchor="middle" fill="#8b97a7" font-size="12" font-weight="500" transform="rotate(-90 52 381)">3 · 尋原點</text>
-  <rect x="110" y="326" width="500" height="30" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
-  <text x="124" y="339" fill="#1f2733" font-size="11.5" font-weight="500">Servo On,設 home 參數 (mode 0 = ORG)</text>
-  <text x="124" y="351" fill="#1d4ed8" font-size="10" font-family="monospace">APS_set_servo_on() ; APS_set_axis_param(PRA<em>HOME</em></em>)</text>
-  <line x1="360" y1="356" x2="360" y2="364" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
-  <rect x="110" y="366" width="500" height="38" rx="6" fill="#eef4ff" stroke="#b9ceff"/>
-  <text x="124" y="382" fill="#1d4ed8" font-size="11.5" font-weight="500">執行回原點 -&gt; 引擎抓到 ORG</text>
-  <text x="124" y="398" fill="#1d4ed8" font-size="10.5" font-family="monospace">APS_home_move(ax)</text>
-  <line x1="360" y1="404" x2="360" y2="414" stroke="#4a5666" stroke-width="1.3" marker-end="url(#sq2)"/>
-  <rect x="10" y="416" width="600" height="46" rx="7" fill="#fdf0ee" stroke="#f3c0b8"/>
-  <text x="24" y="435" fill="#c0392b" font-size="11" font-weight="500">跳過註冊 (沒載 0001.csv) -&gt; 引擎讀 DI 為 0 -&gt; B 接點反相下 +OT/-OT 同時看似觸發</text>
-  <text x="24" y="452" fill="#c0392b" font-size="11">-&gt; 馬達不動,也永遠抓不到 ORG。根因是缺註冊,不是限位。</text>
+  <rect x="10" y="8" width="94" height="172" rx="7" fill="#f4f6f9" stroke="#d5dbe3"/>
+  <text x="57" y="94" text-anchor="middle" fill="#8b97a7" font-size="12" font-weight="500" transform="rotate(-90 57 94)">1 · 開機</text>
+  <rect x="110" y="8" width="540" height="34" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
+  <text x="122" y="22" fill="#1f2733" font-size="11.5" font-weight="500">開卡</text>
+  <text x="122" y="36" fill="#1d4ed8" font-size="10" font-family="monospace">APS_initial()</text>
+  <line x1="380" y1="42" x2="380" y2="51" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
+  <rect x="110" y="52" width="540" height="34" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
+  <text x="122" y="66" fill="#1f2733" font-size="11.5" font-weight="500">取軸號</text>
+  <text x="122" y="80" fill="#1d4ed8" font-size="10" font-family="monospace">APS_get_first_axisId()</text>
+  <line x1="380" y1="86" x2="380" y2="95" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
+  <rect x="110" y="96" width="540" height="34" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
+  <text x="122" y="110" fill="#1f2733" font-size="11.5" font-weight="500">啟動 EtherCAT 匯流排</text>
+  <text x="122" y="124" fill="#1d4ed8" font-size="10" font-family="monospace">APS_start_field_bus()</text>
+  <line x1="380" y1="130" x2="380" y2="139" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
+  <rect x="110" y="140" width="540" height="40" rx="6" fill="#eef4ff" stroke="#b9ceff"/>
+  <text x="122" y="156" fill="#1d4ed8" font-size="11.5" font-weight="500">★ 註冊 ECAT-2055 為 DIO 模組 (MOD1)</text>
+  <text x="122" y="172" fill="#1d4ed8" font-size="10" font-family="monospace">APS_load_config_from_file(…\MCPRO2\0001.csv)</text>
+  <line x1="380" y1="180" x2="380" y2="191" stroke="#4a5666" stroke-width="1.3" marker-end="url(#sq2)"/>
+  <rect x="10" y="192" width="94" height="204" rx="7" fill="#f4f6f9" stroke="#d5dbe3"/>
+  <text x="57" y="294" text-anchor="middle" fill="#8b97a7" font-size="12" font-weight="500" transform="rotate(-90 57 294)">2 · 綁定</text>
+  <rect x="110" y="192" width="540" height="34" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
+  <text x="122" y="206" fill="#1f2733" font-size="11.5" font-weight="500">選 IO 存取來源</text>
+  <text x="122" y="220" fill="#1d4ed8" font-size="10" font-family="monospace">APS_set_board_param(PRB_IO_ACCESS_SEL, 3)</text>
+  <line x1="380" y1="226" x2="380" y2="235" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
+  <rect x="110" y="236" width="540" height="50" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
+  <text x="122" y="251" fill="#1f2733" font-size="11.5" font-weight="500">把限位／原點對到 DI bit · PEL←DI2、MEL←DI1、ORG←DI0</text>
+  <text x="122" y="266" fill="#1d4ed8" font-size="10" font-family="monospace">APS_set_axis_param(PRA_MOTION_SGN_PEL/MEL/ORG_MAP,</text>
+  <text x="122" y="278" fill="#1d4ed8" font-size="10" font-family="monospace">   (1&lt;&lt;8)|bit)</text>
+  <line x1="380" y1="286" x2="380" y2="295" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
+  <rect x="110" y="296" width="540" height="50" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
+  <text x="122" y="311" fill="#1f2733" font-size="11.5" font-weight="500">設接點極性 · B 接點反相</text>
+  <text x="122" y="326" fill="#1d4ed8" font-size="10" font-family="monospace">APS_set_axis_param(PRA_EL_LOGIC, 1)</text>
+  <text x="122" y="338" fill="#1d4ed8" font-size="10" font-family="monospace">APS_set_axis_param(PRA_ORG_LOGIC, 0)</text>
+  <line x1="380" y1="346" x2="380" y2="355" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
+  <rect x="110" y="356" width="540" height="40" rx="6" fill="#eef4ff" stroke="#b9ceff"/>
+  <text x="122" y="372" fill="#1d4ed8" font-size="11.5" font-weight="500">開啟綁定 (bit1~3 = MEL/PEL/ORG)</text>
+  <text x="122" y="388" fill="#1d4ed8" font-size="10" font-family="monospace">APS_set_axis_param(PRA_MOTION_SGN_MAP_EN, 0xE)</text>
+  <line x1="380" y1="396" x2="380" y2="407" stroke="#4a5666" stroke-width="1.3" marker-end="url(#sq2)"/>
+  <rect x="10" y="408" width="94" height="144" rx="7" fill="#f4f6f9" stroke="#d5dbe3"/>
+  <text x="57" y="480" text-anchor="middle" fill="#8b97a7" font-size="12" font-weight="500" transform="rotate(-90 57 480)">3 · 尋原點</text>
+  <rect x="110" y="408" width="540" height="34" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
+  <text x="122" y="422" fill="#1f2733" font-size="11.5" font-weight="500">Servo On</text>
+  <text x="122" y="436" fill="#1d4ed8" font-size="10" font-family="monospace">APS_set_servo_on(ax, 1)</text>
+  <line x1="380" y1="442" x2="380" y2="451" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
+  <rect x="110" y="452" width="540" height="50" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
+  <text x="122" y="467" fill="#1f2733" font-size="11.5" font-weight="500">設 home 參數 (mode 0 = ORG、dir、EZ 對齊、shift…)</text>
+  <text x="122" y="482" fill="#1d4ed8" font-size="10" font-family="monospace">APS_set_axis_param(PRA_HOME_MODE / DIR / EZA /</text>
+  <text x="122" y="494" fill="#1d4ed8" font-size="10" font-family="monospace">   ACC / VM / VO / SHIFT)</text>
+  <line x1="380" y1="502" x2="380" y2="511" stroke="#4a5666" stroke-width="1.1" marker-end="url(#sq2)"/>
+  <rect x="110" y="512" width="540" height="40" rx="6" fill="#eef4ff" stroke="#b9ceff"/>
+  <text x="122" y="528" fill="#1d4ed8" font-size="11.5" font-weight="500">執行回原點 → 引擎抓到 ORG (需 ★ + 開啟綁定)</text>
+  <text x="122" y="544" fill="#1d4ed8" font-size="10" font-family="monospace">APS_home_move(ax)</text>
+  <line x1="380" y1="552" x2="380" y2="563" stroke="#4a5666" stroke-width="1.3" marker-end="url(#sq2)"/>
+  <rect x="10" y="564" width="94" height="40" rx="7" fill="#f4f6f9" stroke="#d5dbe3"/>
+  <text x="57" y="584" text-anchor="middle" fill="#8b97a7" font-size="12" font-weight="500" transform="rotate(-90 57 584)">4 · 運行</text>
+  <rect x="110" y="564" width="540" height="40" rx="6" fill="#ffffff" stroke="#9aa5b4"/>
+  <text x="122" y="580" fill="#1f2733" font-size="11.5" font-weight="500">讀 DI 顯示,100 ms (by-module,★ 之後才通)</text>
+  <text x="122" y="596" fill="#1d4ed8" font-size="10" font-family="monospace">APS_get_field_bus_d_port_input(board,0,MOD1,…)</text>
+  <rect x="10" y="616" width="640" height="44" rx="7" fill="#fdf0ee" stroke="#f3c0b8"/>
+  <text x="24" y="635" fill="#c0392b" font-size="11" font-weight="500">跳過註冊 (沒載 0001.csv) → 引擎讀 DI 為 0 → B 接點反相下 +OT/−OT 同時看似觸發</text>
+  <text x="24" y="652" fill="#c0392b" font-size="11">→ 馬達不動,也永遠抓不到 ORG。根因是缺註冊,不是限位。</text>
 </svg></p>
 
 <p><strong>旁路。</strong> <code>APS_get_address_mapping_in_byte()</code> 可以不經註冊,直接讀 process image 的原始 byte。手動看一下 DI 值很方便,但引擎在你完成註冊+綁定前不會拿它去 home。這是還沒走 config 檔路線前的早期繞法。</p>
@@ -729,19 +744,19 @@ APS_set_axis_param(ax, PRA_MOTION_SGN_MAP_EN,  0xE)        # 開啟 ORG/MEL/PEL
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1783326468"></script>
-    <script src="/js/perfect-scrollbar.min.js?1783326468"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1783326468"></script>
-    <script src="/js/jquery.sticky.js?1783326468"></script>
-    <script src="/js/featherlight.min.js?1783326468"></script>
-    <script src="/js/highlight.pack.js?1783326468"></script>
+    <script src="/js/clipboard.min.js?1783326868"></script>
+    <script src="/js/perfect-scrollbar.min.js?1783326868"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1783326868"></script>
+    <script src="/js/jquery.sticky.js?1783326868"></script>
+    <script src="/js/featherlight.min.js?1783326868"></script>
+    <script src="/js/highlight.pack.js?1783326868"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1783326468"></script>
-    <script src="/js/learn.js?1783326468"></script>
-    <script src="/js/hugo-learn.js?1783326468"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1783326868"></script>
+    <script src="/js/learn.js?1783326868"></script>
+    <script src="/js/hugo-learn.js?1783326868"></script>
 
-    <link href="/mermaid/mermaid.css?1783326468" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1783326468"></script>
+    <link href="/mermaid/mermaid.css?1783326868" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1783326868"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
