@@ -49,6 +49,20 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/supercat/esi-download-links/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/supercat/esi-download-links/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/supercat/esi-download-links/"
+                />
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/visioncard/usb3vision/u300/</loc>
   </url>
   

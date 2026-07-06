@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.58.2" />
-    <meta name="description" content="">
+    <meta name="description" content="A running list of official ESI / device-description file download sources for EtherCAT slaves used on a SuperCAT master (Yaskawa, ICP DAS and more), with versions and verified dates.">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>3 - Create new resolution :: Connected Factory</title>
+    <title>ESI download sources :: Connected Factory</title>
     <link rel="stylesheet" href="/css/custom-table.css">
 
     
@@ -38,7 +38,7 @@
 
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"3 - Create new resolution","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Connected Factory","url":"https://aiot-ist.github.io/"},"publisher":{"@type":"Organization","name":"ADLINK Technology"},"url":"https://aiot-ist.github.io/dex/video/resolution/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"A running list of official ESI / device-description file download sources for EtherCAT slaves used on a SuperCAT master (Yaskawa, ICP DAS and more), with versions and verified dates.","headline":"ESI download sources","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Connected Factory","url":"https://aiot-ist.github.io/"},"publisher":{"@type":"Organization","name":"ADLINK Technology"},"url":"https://aiot-ist.github.io/supercat/esi-download-links/"}</script>
 
 
     
@@ -53,7 +53,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/dex/video/resolution/">
+  <body class="" data-url="/supercat/esi-download-links/">
     <nav id="sidebar" class="">
 
 
@@ -226,7 +226,7 @@
   
     
     <li data-nav-id="/supercat/" title="SuperCAT" class="dd-item 
-        
+        parent
         
         
         ">
@@ -301,8 +301,8 @@
   
     
     <li data-nav-id="/supercat/esi-download-links/" title="ESI download sources" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/supercat/esi-download-links/">
@@ -1092,7 +1092,7 @@
   
     
     <li data-nav-id="/dex/" title="DEX-100" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1167,7 +1167,7 @@
   
     
     <li data-nav-id="/dex/video/" title="02-Video Source" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1242,8 +1242,8 @@
   
     
     <li data-nav-id="/dex/video/resolution/" title="3 - Create new resolution" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/dex/video/resolution/">
@@ -2368,10 +2368,22 @@
                   
                     
                     
-                      <option id="en" value="https://aiot-ist.github.io/dex/video/resolution/" selected>English</option>
+                      <option id="en" value="https://aiot-ist.github.io/supercat/esi-download-links/" selected>English</option>
                     
                   
               
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="zh-tw" value="https://aiot-ist.github.io/zh-tw/supercat/esi-download-links/">繁體中文</option>
+                    
                   
               
           
@@ -2420,6 +2432,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -2434,13 +2448,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/dex/'>DEX-100</a> > <a href='/dex/video/'>02-Video Source</a> > 3 - Create new resolution
-          
-         
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/supercat/'>SuperCAT</a> > ESI download sources
           
          
           
@@ -2451,6 +2459,21 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#sources">Official ESI sources</a></li>
+<li><a href="#install-path">Where the files go</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -2458,9 +2481,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              ESI download sources
+            </h1>
           
 
         
@@ -2470,167 +2496,60 @@
 
 	
 
-<h1 id="how-to-increase-a-new-resolution">How to increase a new resolution</h1>
+<p>A running list of <strong>official ESI</strong> (device-description XML) download sources for EtherCAT slaves used on a SuperCAT master. Always prefer the official file that matches the slave&rsquo;s firmware revision over hand-editing the XML — it avoids the <code>-1014</code> recognition error.</p>
 
-<ul>
-<li><a href="#equipment-wiring-map">Frame Grabber Setting </a></li>
-<li><a href="#attachments">Attachments </a></li>
-</ul>
-
-<h3 id="frame-grabber-setting">Frame Grabber Setting</h3>
-
-<pre><code> Path  -&gt; DEX-Pro -&gt; Tool -&gt; Config -&gt; Frame Grabber Setting 
-</code></pre>
-
-<ul>
-<li><p>Select an Auto mode in &ldquo;Frame Grabbe Configuration.&rdquo;</p></li>
-
-<li><p><img src="/DEX/Video/Resolution/images/1.PNG" alt="Normal machine" /></p></li>
-</ul>
-
-<h1 id="steps">Steps ()</h1>
-
-<h2 id="1-get-the-new-resolution-by-screen">1 Get the new resolution by Screen.</h2>
-
-<ul>
-<li><img src="/DEX/Video/Resolution/images/9.PNG" alt="Normal machine" /></li>
-</ul>
-
-<h2 id="2-run-the-adlink-sfdt">2 Run the ADLINK_SFDT</h2>
-
-<p>Run the ADLINK_SFDT.exe follow the below path.</p>
-
-<pre><code> Path  -&gt; C:\Program Files\ADLINK\DEX-100\utility\ADLINK_SFDT
-</code></pre>
-
-<ul>
-<li><p><img src="/DEX/Video/Resolution/images/2.PNG" alt="Normal machine" /></p>
-
-<h2 id="3-detect-the-parameters-from-the-current-video">3 Detect the parameters from the current video</h2>
-
-<p>You can get the parameters from the current resolution after clicking the “Sense ”button.</p></li>
-
-<li><p><img src="/DEX/Video/Resolution/images/3.PNG" alt="Normal machine" /></p></li>
-</ul>
+<p><em>Last updated: 2026-07-06</em></p>
 
 
-<div class="notices note" ><p>If no parameters are displayed, please refer to the below link (troubleshooting)</p>
+<div class="notices tip" ><p>For how to install an ESI and re-scan (and the <code>-1014</code> fix), see <a href="/supercat/bus-setup-scan-esi/">Bus setup: scan, ESI &amp; device recognition</a>.</p>
 </div>
 
 
-<p><a href="https://aiot-ist.github.io/dex/video-source/">video-source</a></p>
+<h2 id="sources">Official ESI sources</h2>
 
-<h2 id="4-backup-the-dex100-rgb-txt">4 Backup the dex100_rgb.txt</h2>
+<table>
+<thead>
+<tr>
+<th>Vendor</th>
+<th>Series / device</th>
+<th>Official ESI download</th>
+<th>ESI version</th>
+<th>Verified</th>
+<th>Notes</th>
+</tr>
+</thead>
 
-<p>Clone the dex100.rgb to desktop and copy one more to be a backup file.</p>
+<tbody>
+<tr>
+<td>Yaskawa</td>
+<td>Sigma-7 (SGD7S)</td>
+<td><a href="https://www.yaskawa.com/downloads/search-index/details?showType=details&amp;docnum=Yaskawa_Sigma-7_CoE_ESI_Files">Sigma-7 CoE ESI Files</a></td>
+<td>rev 8.23 (<code>0x80023</code>)</td>
+<td>2026-07-06</td>
+<td>file <code>Yaskawa_SGD7S-xxxxA0x.xml</code>; no login required</td>
+</tr>
 
-<pre><code> Path  -&gt; C:\Windows\dex100_rgb.txt
+<tr>
+<td>ICP DAS</td>
+<td>ECAT-2000 series (incl. ECAT-2055)</td>
+<td><a href="http://ftp.icpdas.com/pub/cd/fieldbus_cd/ethercat/slave/ecat-2000/software/ICPDAS%20ECAT-2000_V1.10.xml">ECAT-2000 combined XML</a></td>
+<td>V1.10</td>
+<td>2026-07-06</td>
+<td>one file covers the whole ECAT-2000 series; <a href="http://ftp.icpdas.com/pub/cd/fieldbus_cd/ethercat/slave/ecat-2000/software/">FTP folder</a></td>
+</tr>
+</tbody>
+</table>
+
+<p><em>More vendors will be added here over time.</em></p>
+
+<h2 id="install-path">Where the files go</h2>
+
+<p>On a PCIe-833x SuperCAT install, drop the downloaded ESI/XML into:</p>
+
+<pre><code class="language-text">E:\Program Files (x86)\ADLINK\PCIe-833x\EtherCAT\EtherCAT
 </code></pre>
 
-<ul>
-<li><img src="/DEX/Video/Resolution/images/5.PNG" alt="Normal machine" /><br /></li>
-</ul>
-
-<h2 id="5-increase-a-new-resolution-table">5 Increase a new resolution table</h2>
-
-<blockquote>
-<p>Please search for a set of resolutions closest to your desire and copy it to the top of the &ldquo;dex100_rgb.txt&rdquo;.</p>
-</blockquote>
-
-<ul>
-<li><img src="/DEX/Video/Resolution/images/6.PNG" alt="Normal machine" /></li>
-</ul>
-
-<h2 id="6-edit-the-resolution-name-width-height-fps-interlace">6 Edit the resolution name [Width Height fps Interlace]</h2>
-
-<blockquote>
-<p>Name the new title and modify the parameters (Width、Height 、FPS) to quickly selected the resolution list.</p>
-</blockquote>
-
-<ul>
-<li><img src="/DEX/Video/Resolution/images/7.PNG" alt="Normal machine" /></li>
-</ul>
-
-<h2 id="7-fill-in-the-parameters-hf-vf-vtotal-vsw">7 Fill in the parameters [HF VF VTotal Vsw]</h2>
-
-<blockquote>
-<p>Fill in the parameters from the ADLINK_SFDT tool in “dex100_rgb.txt.”</p>
-</blockquote>
-
-<ul>
-<li><img src="/DEX/Video/Resolution/images/8.PNG" alt="Normal machine" /></li>
-</ul>
-
-<h2 id="8-get-the-unknown-parameters">8 Get the unknown parameters</h2>
-
-<blockquote>
-<p>Get the unknown parameters by filling in the new resolution((Width、Height 、FPS) in the first sheet “CVT” of VesaCVT.xlsx</p>
-</blockquote>
-
-<ul>
-<li><img src="/DEX/Video/Resolution/images/10.PNG" alt="Normal machine" /></li>
-</ul>
-
-<h2 id="9-fill-in-the-parameters-to-way-2">9 Fill in the parameters to Way_2</h2>
-
-<p>Fill in the parameters from the ADLINK_SFD in the sheet of Way_2.</p>
-
-<ul>
-<li><img src="/DEX/Video/Resolution/images/11.PNG" alt="Normal machine" /></li>
-</ul>
-
-<h2 id="10-fill-in-the-parameters-hf-htotal-hsv-hbp-vf-vtotal-vsw-vbp-pclock-cr">10 Fill in the parameters [Hf HTotal Hsv Hbp Vf VTotal Vsw Vbp PClock Cr]</h2>
-
-<p>Please key-in each color-bound box parameter to dex100_rgb.</p>
-
-<ul>
-<li><img src="/DEX/Video/Resolution/images/12.PNG" alt="Normal machine" /></li>
-</ul>
-
-<h2 id="11-fill-in-the-parameters-in-content-of-the-new-resolution-set">11 Fill in the parameters in content of the new resolution set</h2>
-
-<p>Please key-in each color-bound box parameter to dex100_rgb.</p>
-
-<ul>
-<li><img src="/DEX/Video/Resolution/images/13.PNG" alt="Normal machine" /></li>
-</ul>
-
-<h2 id="12-save-the-txt">12 Save the txt</h2>
-
-<h2 id="13-replace-the-dex100-rgb-txt">13 Replace the dex100_rgb.txt</h2>
-
-<p>Replace the new dex100_rgb.txt to this C:\Windows\dex100_rgb.txt.</p>
-
-<h2 id="14-reboot-the-dex-100">14 Reboot the Dex-100</h2>
-
-<h2 id="15-reuse-the-diag-exe">15 Reuse the Diag.exe</h2>
-
-<pre><code> Path  -&gt; C:\Program Files\ADLINK\DEX-100\utility\Diag.exe
-</code></pre>
-
-<h2 id="15-checking-the-resolution-table-can-be-choiced">15 Checking the resolution table can be choiced.</h2>
-
-<ul>
-<li><img src="/DEX/Video/Resolution/images/14.PNG" alt="Normal machine" /></li>
-</ul>
-
-<h2 id="16-choice-the-new-list-and-click-the-button-on-start">16 Choice the new list and click the button on start</h2>
-
-<ul>
-<li><img src="/DEX/Video/Resolution/images/15.PNG" alt="Normal machine" /></li>
-</ul>
-
-<h2 id="17-align-the-screen-edge-by-button-of-frame-adjust">17 Align the screen edge by button of Frame Adjust</h2>
-
-<ul>
-<li><img src="/DEX/Video/Resolution/images/16.PNG" alt="Normal machine" /></li>
-</ul>
-
-<h3 id="attachments">Attachments</h3>
-
-<p><a href="https://sftp.adlinktech.com/image/DEX-100/VesaCVT.xlsx">VesaCVT.xlsx</a></p>
-
-<p><a href="https://sftp.adlinktech.com/image/DEX-100/dex100_rgb.txt">dex100_rgb.txt</a></p>
+<p>After a successful scan, the generated topology XML (ENI) appears in <code>…\EtherCAT\ENI</code>. Writing into <code>Program Files (x86)</code> needs Windows administrator (UAC) rights; re-scan / rebuild the cache after adding a file.</p>
 
 
 
@@ -2640,8 +2559,6 @@
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -2758,6 +2675,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2772,6 +2690,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2805,55 +2726,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2874,20 +2746,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
                         
-                    
-                    
-
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -2898,239 +2758,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -3226,6 +2853,304 @@
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
@@ -3276,7 +3201,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3291,9 +3215,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3327,7 +3248,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3342,9 +3262,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3378,7 +3295,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3397,9 +3313,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -4084,10 +3997,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/dex/video/video-quality/" title="2 - Video quality adjustment"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/supercat/ethercat-io-homing/" title="EtherCAT IO &amp; homing"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/dex/mouse/" title="03-Mouse" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/eos-iseries/" title="EOS-iSeries" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4097,19 +4010,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1783328085"></script>
-    <script src="/js/perfect-scrollbar.min.js?1783328085"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1783328085"></script>
-    <script src="/js/jquery.sticky.js?1783328085"></script>
-    <script src="/js/featherlight.min.js?1783328085"></script>
-    <script src="/js/highlight.pack.js?1783328085"></script>
+    <script src="/js/clipboard.min.js?1783328084"></script>
+    <script src="/js/perfect-scrollbar.min.js?1783328084"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1783328084"></script>
+    <script src="/js/jquery.sticky.js?1783328084"></script>
+    <script src="/js/featherlight.min.js?1783328084"></script>
+    <script src="/js/highlight.pack.js?1783328084"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1783328085"></script>
-    <script src="/js/learn.js?1783328085"></script>
-    <script src="/js/hugo-learn.js?1783328085"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1783328084"></script>
+    <script src="/js/learn.js?1783328084"></script>
+    <script src="/js/hugo-learn.js?1783328084"></script>
 
-    <link href="/mermaid/mermaid.css?1783328085" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1783328085"></script>
+    <link href="/mermaid/mermaid.css?1783328084" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1783328084"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

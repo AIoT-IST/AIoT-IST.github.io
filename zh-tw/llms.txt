@@ -6,6 +6,7 @@
 - [SuperCAT](https://aiot-ist.github.io/zh-tw/supercat/) — ADLINK SuperCAT EtherCAT 主站 — 匯流排建置、設備識別、讀 IO 與單軸尋原點的實戰筆記。
 - [匯流排建置 — 掃描、ESI 與識別](https://aiot-ist.github.io/zh-tw/supercat/bus-setup-scan-esi/) — 在 SuperCAT 主站上,為什麼 scan 完 slave 沒被識別 — ENI 產生失敗 -1014 的根因,以及安川 SGD7S 與 ICPDAS ECAT-2055 的解法與官方 ESI 下載來源。
 - [EtherCAT IO 與尋原點](https://aiot-ist.github.io/zh-tw/supercat/ethercat-io-homing/) — 在 SuperCAT EtherCAT 主站上讀 ICPDAS ECAT-2055 — 為什麼 ORG / OT 輸入一定要註冊並綁定,否則軸不會動,附實際 APS168 呼叫順序。
+- [ESI 下載來源](https://aiot-ist.github.io/zh-tw/supercat/esi-download-links/) — SuperCAT 主站上各家 EtherCAT slave 的官方 ESI(裝置描述檔)下載來源清單(安川、泓格等),含版本與確認日期,持續更新。
 - [使用 Euresys Coaxlink 搭配端子板進行相機觸發](https://aiot-ist.github.io/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/)
 - [Euresys-Grab-cards](https://aiot-ist.github.io/zh-tw/euresys-grab-card/)
 

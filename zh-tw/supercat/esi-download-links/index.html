@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.58.2" />
-    <meta name="description" content="在 SuperCAT 主站上,為什麼 scan 完 slave 沒被識別 — ENI 產生失敗 -1014 的根因,以及安川 SGD7S 與 ICPDAS ECAT-2055 的解法與官方 ESI 下載來源。">
+    <meta name="description" content="SuperCAT 主站上各家 EtherCAT slave 的官方 ESI(裝置描述檔)下載來源清單(安川、泓格等),含版本與確認日期,持續更新。">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>匯流排建置 — 掃描、ESI 與識別 :: Connected Factory</title>
+    <title>ESI 下載來源 :: Connected Factory</title>
     <link rel="stylesheet" href="/css/custom-table.css">
 
     
@@ -38,7 +38,7 @@
 
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"在 SuperCAT 主站上,為什麼 scan 完 slave 沒被識別 — ENI 產生失敗 -1014 的根因,以及安川 SGD7S 與 ICPDAS ECAT-2055 的解法與官方 ESI 下載來源。","headline":"匯流排建置 — 掃描、ESI 與識別","inLanguage":"zh-tw","isPartOf":{"@type":"WebSite","name":"Connected Factory","url":"https://aiot-ist.github.io/"},"publisher":{"@type":"Organization","name":"ADLINK Technology"},"url":"https://aiot-ist.github.io/zh-tw/supercat/bus-setup-scan-esi/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"SuperCAT 主站上各家 EtherCAT slave 的官方 ESI(裝置描述檔)下載來源清單(安川、泓格等),含版本與確認日期,持續更新。","headline":"ESI 下載來源","inLanguage":"zh-tw","isPartOf":{"@type":"WebSite","name":"Connected Factory","url":"https://aiot-ist.github.io/"},"publisher":{"@type":"Organization","name":"ADLINK Technology"},"url":"https://aiot-ist.github.io/zh-tw/supercat/esi-download-links/"}</script>
 
 
     
@@ -53,7 +53,7 @@
     </script>
 
   </head>
-  <body class="" data-url="/zh-tw/supercat/bus-setup-scan-esi/">
+  <body class="" data-url="/zh-tw/supercat/esi-download-links/">
     <nav id="sidebar" class="">
 
 
@@ -123,8 +123,8 @@
   
     
     <li data-nav-id="/zh-tw/supercat/bus-setup-scan-esi/" title="匯流排建置 — 掃描、ESI 與識別" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/zh-tw/supercat/bus-setup-scan-esi/">
@@ -171,8 +171,8 @@
   
     
     <li data-nav-id="/zh-tw/supercat/esi-download-links/" title="ESI 下載來源" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/zh-tw/supercat/esi-download-links/">
@@ -277,7 +277,7 @@
                   
                     
                     
-                      <option id="en" value="https://aiot-ist.github.io/supercat/bus-setup-scan-esi/">English</option>
+                      <option id="en" value="https://aiot-ist.github.io/supercat/esi-download-links/">English</option>
                     
                   
               
@@ -291,7 +291,7 @@
                   
                     
                     
-                      <option id="zh-tw" value="https://aiot-ist.github.io/zh-tw/supercat/bus-setup-scan-esi/" selected>繁體中文</option>
+                      <option id="zh-tw" value="https://aiot-ist.github.io/zh-tw/supercat/esi-download-links/" selected>繁體中文</option>
                     
                   
               
@@ -357,7 +357,7 @@
             
           
           
-            <a href='/zh-tw/'>Connected Factory</a> > <a href='/zh-tw/supercat/'>SuperCAT</a> > 匯流排建置 — 掃描、ESI 與識別
+            <a href='/zh-tw/'>Connected Factory</a> > <a href='/zh-tw/supercat/'>SuperCAT</a> > ESI 下載來源
           
          
           
@@ -374,11 +374,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#what-scan-does">1 · Scan 在做什麼</a></li>
-<li><a href="#error-1014">2 · 為什麼認不到:ENI 產生失敗 -1014</a></li>
-<li><a href="#two-fixes">3 · 兩種解法</a></li>
-<li><a href="#config1-vs-config2">4 · Config1 vs Config2 的坑</a></li>
-<li><a href="#esi-download">5 · 官方 ESI 下載與放置</a></li>
+<li><a href="#sources">官方 ESI 來源</a></li>
+<li><a href="#install-path">檔案放哪</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -397,7 +394,7 @@
           
             <h1>
               
-              匯流排建置 — 掃描、ESI 與識別
+              ESI 下載來源
             </h1>
           
 
@@ -408,82 +405,60 @@
 
 	
 
-<p>在 <strong>SuperCAT</strong> 主站上,為什麼 scan 完 slave 沒上線 — <code>-1014</code> ENI 產生失敗的根因,以及安川 SGD7S 伺服與 ICPDAS ECAT-2055 IO 模組的實際解法。</p>
+<p>SuperCAT 主站上各家 EtherCAT slave 的<strong>官方 ESI</strong>(裝置描述 XML)下載來源清單。優先使用「與韌體版號相符的官方檔」,不要手動改 XML —— 這樣才能避免 <code>-1014</code> 設備認不到的問題。</p>
 
-<ul>
-<li><a href="#what-scan-does">1 · Scan 在做什麼</a></li>
-<li><a href="#error-1014">2 · 為什麼認不到:ENI 產生失敗 -1014</a></li>
-<li><a href="#two-fixes">3 · 兩種解法</a></li>
-<li><a href="#config1-vs-config2">4 · Config1 vs Config2 的坑</a></li>
-<li><a href="#esi-download">5 · 官方 ESI 下載與放置</a></li>
-</ul>
+<p><em>最後更新:2026-07-06</em></p>
 
 
-<div class="notices tip" ><p>這裡讓 slave 被識別後,接著看 <a href="/zh-tw/supercat/ethercat-io-homing/">EtherCAT IO 與尋原點</a> — 讀 IO、抓 ORG／OT 訊號。</p>
+<div class="notices tip" ><p>ESI 怎麼安裝、怎麼重掃(以及 <code>-1014</code> 解法),見 <a href="/zh-tw/supercat/bus-setup-scan-esi/">匯流排建置:掃描、ESI 與設備識別</a>。</p>
 </div>
 
 
-<h2 id="what-scan-does">1 · Scan 在做什麼</h2>
+<h2 id="sources">官方 ESI 來源</h2>
 
-<p>按下 Scan,master 會逐一問每顆 slave 的 <strong>身分</strong>(VendorId／ProductCode／RevisionNo),再拿這組身分去 <code>ESI</code> 檔找對應描述,組出連線設定(ENI)。找得到、對得上,slave 才會上線。</p>
+<table>
+<thead>
+<tr>
+<th>廠牌</th>
+<th>系列 / 裝置</th>
+<th>官方 ESI 下載</th>
+<th>ESI 版本</th>
+<th>確認日期</th>
+<th>備註</th>
+</tr>
+</thead>
 
-<p><svg viewBox="0 0 540 210" style="width:100%;max-width:560px;height:auto;font-family:sans-serif" role="img" aria-label="Scan 比對 slave 硬體身分與 ESI 檔;只差版號就會產生 -1014">
-  <defs><marker id="bs1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8" fill="#4a5666"/></marker></defs>
-  <rect x="4" y="14" width="200" height="86" rx="8" fill="#ffffff" stroke="#9aa5b4"/>
-  <text x="18" y="34" fill="#1f2733" font-size="12" font-weight="500">hardware truth (slave)</text>
-  <text x="18" y="54" fill="#4a5666" font-size="10.5" font-family="monospace">VendorId 0x539</text>
-  <text x="18" y="70" fill="#4a5666" font-size="10.5" font-family="monospace">Product  0x2200301</text>
-  <text x="18" y="86" fill="#c0392b" font-size="10.5" font-family="monospace">Revision 0x80023</text>
-  <rect x="336" y="14" width="200" height="86" rx="8" fill="#ffffff" stroke="#9aa5b4"/>
-  <text x="350" y="34" fill="#1f2733" font-size="12" font-weight="500">ESI file (newest on hand)</text>
-  <text x="350" y="54" fill="#4a5666" font-size="10.5" font-family="monospace">VendorId 0x539 ok</text>
-  <text x="350" y="70" fill="#4a5666" font-size="10.5" font-family="monospace">Product  0x2200301 ok</text>
-  <text x="350" y="86" fill="#c0392b" font-size="10.5" font-family="monospace">Revision 0x80003 X</text>
-  <text x="270" y="48" text-anchor="middle" fill="#8b97a7" font-size="11">scan 比對</text>
-  <line x1="206" y1="57" x2="334" y2="57" stroke="#4a5666" stroke-width="1.3" marker-end="url(#bs1)"/>
-  <rect x="120" y="130" width="300" height="60" rx="8" fill="#fdf0ee" stroke="#f3c0b8"/>
-  <text x="270" y="152" text-anchor="middle" fill="#c0392b" font-size="12" font-weight="500">只差 minor 版號 -&gt; 對不上</text>
-  <text x="270" y="172" text-anchor="middle" fill="#c0392b" font-size="11" font-family="monospace">-1014 ESI not found for Slave 1001</text>
-  <line x1="270" y1="100" x2="270" y2="128" stroke="#4a5666" stroke-width="1.3" marker-end="url(#bs1)"/>
-</svg></p>
+<tbody>
+<tr>
+<td>安川 Yaskawa</td>
+<td>Sigma-7 (SGD7S)</td>
+<td><a href="https://www.yaskawa.com/downloads/search-index/details?showType=details&amp;docnum=Yaskawa_Sigma-7_CoE_ESI_Files">Sigma-7 CoE ESI Files</a></td>
+<td>rev 8.23 (<code>0x80023</code>)</td>
+<td>2026-07-06</td>
+<td>檔名 <code>Yaskawa_SGD7S-xxxxA0x.xml</code>;免登入</td>
+</tr>
 
-<h2 id="error-1014">2 · 為什麼認不到:ENI 產生失敗 -1014</h2>
+<tr>
+<td>泓格 ICP DAS</td>
+<td>ECAT-2000 系列(含 ECAT-2055)</td>
+<td><a href="http://ftp.icpdas.com/pub/cd/fieldbus_cd/ethercat/slave/ecat-2000/software/ICPDAS%20ECAT-2000_V1.10.xml">ECAT-2000 系列合一 XML</a></td>
+<td>V1.10</td>
+<td>2026-07-06</td>
+<td>單一檔含整個 ECAT-2000 系列;<a href="http://ftp.icpdas.com/pub/cd/fieldbus_cd/ethercat/slave/ecat-2000/software/">FTP 目錄</a></td>
+</tr>
+</tbody>
+</table>
 
-<p>錯誤碼 <code>ERR_MissConfig_2_Xml (-1014)</code>,log(<code>EniBuilderForCpp.log</code>)寫 <code>ESI not found for Slave 1001</code>。</p>
+<p><em>之後會陸續補上更多廠牌。</em></p>
 
-<ul>
-<li><strong>安川 SGD7S</strong> — 韌體回報 <code>RevisionNo 0x80023</code>,但 ESI rev 8.03 只到 <code>0x80003</code>。VendorId／ProductCode 都吻合,<strong>只差 minor 版號</strong>就整顆認不到。</li>
-<li><strong>ICPDAS ECAT-2055</strong> — 少了對應的系列 ESI(ECAT-2000 系列合一 XML)。</li>
-</ul>
+<h2 id="install-path">檔案放哪</h2>
 
-<h2 id="two-fixes">3 · 兩種解法</h2>
+<p>在 PCIe-833x SuperCAT 環境,把下載的 ESI/XML 放到:</p>
 
-<p><strong>① 手動改版號(應急)。</strong> 複製 rev 8.03 ESI,把 <code>RevisionNo 0x00080003</code> → <code>0x00080023</code>,另存回 ESI 夾,重 Scan。</p>
-
-<p><strong>② 換官方 ESI(推薦,乾淨)。</strong> 直接下載官方已含正確版號的 ESI(安川 rev 8.23 / ICPDAS ECAT-2000),免手動改 XML。</p>
-
-<h2 id="config1-vs-config2">4 · Config1 vs Config2 的坑</h2>
-
-
-<div class="notices warning" ><p>改 <code>Config1.xml</code> 沒用 — <strong>Scan 會用硬體真值覆寫它。</strong> 要嘛改 ESI 版號、要嘛換官方 ESI,再重掃,讓系統產出 <code>Config2.xml</code>。</p>
-</div>
-
-
-<h2 id="esi-download">5 · 官方 ESI 下載與放置</h2>
-
-<ul>
-<li><strong>安川 Sigma-7 CoE ESI</strong>(含 rev 8.23,免登入):Yaskawa 官方下載頁 → <code>Yaskawa_SGD7S-xxxxA0x.xml</code></li>
-<li><strong>ICPDAS ECAT-2000 系列合一 XML</strong>:泓格官方 FTP(單一檔含整個 ECAT-2000 系列,包含 ECAT-2055)。</li>
-</ul>
-
-<p>在 PCIe-833x SuperCAT 安裝環境下,檔案放哪:</p>
-
-<pre><code class="language-text">新 ESI / XML  -&gt;  E:\Program Files (x86)\ADLINK\PCIe-833x\EtherCAT\EtherCAT
-Scan 成功後,拓樸 XML(ENI)會出現在:
-                 E:\Program Files (x86)\ADLINK\PCIe-833x\EtherCAT\ENI
+<pre><code class="language-text">E:\Program Files (x86)\ADLINK\PCIe-833x\EtherCAT\EtherCAT
 </code></pre>
 
-<p>寫入 <code>Program Files (x86)</code> 需要 Windows 管理員(UAC)權限;放好後重新掃描／重建 cache。Scan 也會產生 <a href="/zh-tw/supercat/ethercat-io-homing/">EtherCAT IO 與尋原點</a> 用到的 <code>0001.csv</code> IO mapping。</p>
+<p>Scan 成功後,產生的拓樸 XML(ENI)會出現在 <code>…\EtherCAT\ENI</code>。寫入 <code>Program Files (x86)</code> 需要 Windows 管理員(UAC)權限;加檔後重新掃描／重建 cache。</p>
 
 
 
@@ -540,23 +515,6 @@ Scan 成功後,拓樸 XML(ENI)會出現在:
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -587,6 +545,23 @@ Scan 成功後,拓樸 XML(ENI)會出現在:
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -594,6 +569,9 @@ Scan 成功後,拓樸 XML(ENI)會出現在:
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -633,10 +611,10 @@ Scan 成功後,拓樸 XML(ENI)會出現在:
 	 
 	 
 		
-			<a class="nav nav-prev" href="/zh-tw/supercat/" title="SuperCAT"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/zh-tw/supercat/ethercat-io-homing/" title="EtherCAT IO 與尋原點"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/zh-tw/supercat/ethercat-io-homing/" title="EtherCAT IO 與尋原點" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/zh-tw/euresys-grab-card/" title="Euresys-Grab-cards" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -7,6 +7,7 @@
 - [SuperCAT](https://aiot-ist.github.io/supercat/) — ADLINK SuperCAT EtherCAT master — practical guides for bus setup, device recognition, reading IO and homing a single axis.
 - [Bus setup — scan, ESI & recognition](https://aiot-ist.github.io/supercat/bus-setup-scan-esi/) — Why an EtherCAT slave isn't recognized after a scan on a SuperCAT master — ENI build error -1014 explained, with the Yaskawa SGD7S and ICPDAS ECAT-2055 fixes and the official ESI download sources.
 - [EtherCAT IO & homing](https://aiot-ist.github.io/supercat/ethercat-io-homing/) — Reading an ICPDAS ECAT-2055 on a SuperCAT EtherCAT master — why the ORG / OT inputs must be registered and bound, or the axis won't move, with the exact APS168 calls.
+- [ESI download sources](https://aiot-ist.github.io/supercat/esi-download-links/) — A running list of official ESI / device-description file download sources for EtherCAT slaves used on a SuperCAT master (Yaskawa, ICP DAS and more), with versions and verified dates.
 - [PCIe-U300 Series](https://aiot-ist.github.io/visioncard/usb3vision/u300/)
 - [USB3 Vision](https://aiot-ist.github.io/visioncard/usb3vision/)
 - [FAQ](https://aiot-ist.github.io/neon/faq/)
