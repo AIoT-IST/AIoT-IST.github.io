@@ -1,0 +1,4008 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="description" content="Why an EtherCAT slave isn&#39;t recognized after a scan on a SuperCAT master — ENI build error -1014 explained, with the Yaskawa SGD7S and ICPDAS ECAT-2055 fixes and the official ESI download sources.">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Bus setup — scan, ESI &amp; recognition :: Connected Factory</title>
+    <link rel="stylesheet" href="/css/custom-table.css">
+
+    
+    <link href="/css/nucleus.css?1783325792" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1783325792" rel="stylesheet">
+    <link href="/css/hybrid.css?1783325792" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1783325792" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1783325792" rel="stylesheet">
+    <link href="/css/auto-complete.css?1783325792" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1783325792" rel="stylesheet">
+    <link href="/css/theme.css?1783325792" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1783325792" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1783325792"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"Why an EtherCAT slave isn't recognized after a scan on a SuperCAT master — ENI build error -1014 explained, with the Yaskawa SGD7S and ICPDAS ECAT-2055 fixes and the official ESI download sources.","headline":"Bus setup — scan, ESI \u0026 recognition","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Connected Factory","url":"https://aiot-ist.github.io/"},"publisher":{"@type":"Organization","name":"ADLINK Technology"},"url":"https://aiot-ist.github.io/supercat/bus-setup-scan-esi/"}</script>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZXVWNR8SN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KZXVWNR8SN');
+    </script>
+
+  </head>
+  <body class="" data-url="/supercat/bus-setup-scan-esi/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://aiot-ist.github.io/">
+  IST Connected Factory
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1783325792"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1783325792"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/aiot-ist.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1783325792"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mcm-204/" title="MCM-204" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mcm-204/">
+          MCM-204
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mcm-204/gettingstart/" title="Getting Start" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mcm-204/gettingstart/">
+          Getting Start
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mcm-204/customalgorithm/" title="Custom Algorithm Deploy Sample" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mcm-204/customalgorithm/">
+          Custom Algorithm Deploy Sample
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mcm-204/customalgorithmdev/" title="Custom Algorithm Development" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mcm-204/customalgorithmdev/">
+          Custom Algorithm Development
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mcm-204/faq/" title="FAQ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mcm-204/faq/">
+          FAQ
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/supercat/" title="SuperCAT" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/supercat/">
+          SuperCAT
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/supercat/bus-setup-scan-esi/" title="Bus setup — scan, ESI &amp; recognition" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/supercat/bus-setup-scan-esi/">
+          Bus setup — scan, ESI &amp; recognition
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/supercat/ethercat-io-homing/" title="EtherCAT IO &amp; homing" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/supercat/ethercat-io-homing/">
+          EtherCAT IO &amp; homing
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/eos-iseries/" title="EOS-iSeries" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/eos-iseries/">
+          EOS-iSeries
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/eos-iseries/gettingstart/" title="Getting start with Yolov3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/eos-iseries/gettingstart/">
+          Getting start with Yolov3
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/eos-iseries/faq/" title="FAQ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/eos-iseries/faq/">
+          FAQ
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/" title="Euresys" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/">
+          Euresys
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/dongle/" title="Dongle &amp; License ID" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/dongle/">
+          Dongle &amp; License ID
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/dongle/how2activate/" title="How to activate the license" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/dongle/how2activate/">
+          How to activate the license
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/easycolor/" title="EasyColor" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/easycolor/">
+          EasyColor
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/easydeeplearning/" title="EasyDeepLearning" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/easydeeplearning/">
+          EasyDeepLearning
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/easydeeplearning/deep-learning-studio/" title="Deep Learning Studio" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/easydeeplearning/deep-learning-studio/">
+          Deep Learning Studio
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/easyfind/" title="EasyFind" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/easyfind/">
+          EasyFind
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/easyfind/qa/" title="EasyFind (Q&amp;A)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/easyfind/qa/">
+          EasyFind (Q&amp;A)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/easygauge/" title="EasyGauge" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/easygauge/">
+          EasyGauge
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/easyimage/" title="EasyImage" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/easyimage/">
+          EasyImage
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/easymatch/" title="EasyMatch" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/easymatch/">
+          EasyMatch
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/easyobject/" title="EasyObject" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/easyobject/">
+          EasyObject
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys/parameters/" title="Parameters" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys/parameters/">
+          Parameters
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys-grab-card/" title="Euresys Grab card" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys-grab-card/">
+          Euresys Grab card
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys-grab-card/coaxlink-quad/" title="Coaxlink Quad" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys-grab-card/coaxlink-quad/">
+          Coaxlink Quad
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys-grab-card/cxp-for-camera-triggering-with-encoder/" title="Using Euresys Coaxlink with Terminal Board  for Camera Triggering" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys-grab-card/cxp-for-camera-triggering-with-encoder/">
+          Using Euresys Coaxlink with Terminal Board  for Camera Triggering
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys-grab-card/bayer2rgb/" title="Euresys Bayer to RGB by FPGA" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys-grab-card/bayer2rgb/">
+          Euresys Bayer to RGB by FPGA
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/euresys-grab-card/ffc/" title="Euresys Grabber Card with FFC Support (FFC)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/euresys-grab-card/ffc/">
+          Euresys Grabber Card with FFC Support (FFC)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/visioncard/" title="Vision Card" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/visioncard/">
+          Vision Card
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/visioncard/usb3vision/" title="USB3 Vision" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/visioncard/usb3vision/">
+          USB3 Vision
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/visioncard/usb3vision/u300/" title="PCIe-U300 Series" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/visioncard/usb3vision/u300/">
+          PCIe-U300 Series
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/visioncard/gigevision/" title="GigE Vision" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/visioncard/gigevision/">
+          GigE Vision
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/visioncard/gigevision/gie7/" title="PCIe-GIE7x Series" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/visioncard/gigevision/gie7/">
+          PCIe-GIE7x Series
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/visioncard/gigevision/gie7/powerbudget/" title="What is PCIe-GIE74P PoE Budget Mode？" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/visioncard/gigevision/gie7/powerbudget/">
+          What is PCIe-GIE74P PoE Budget Mode？
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/" title="DEX-100" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/">
+          DEX-100
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/quicklystart/" title="00-Quckly start (Video)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/quicklystart/">
+          00-Quckly start (Video)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/unboxing/" title="01-Unboxing" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/unboxing/">
+          01-Unboxing
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/video/" title="02-Video Source" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/video/">
+          02-Video Source
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/video/video-source/" title="1 - Choice the Dex-100 Video Source" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/video/video-source/">
+          1 - Choice the Dex-100 Video Source
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/video/video-quality/" title="2 - Video quality adjustment" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/video/video-quality/">
+          2 - Video quality adjustment
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/video/resolution/" title="3 - Create new resolution" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/video/resolution/">
+          3 - Create new resolution
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/mouse/" title="03-Mouse" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/mouse/">
+          03-Mouse
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/mouse/ps2metadata/" title="Detect the PS2 metadata" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/mouse/ps2metadata/">
+          Detect the PS2 metadata
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/mouse/disablemouseaccelerator/" title="Disable Mouse accelerator" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/mouse/disablemouseaccelerator/">
+          Disable Mouse accelerator
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/" title="04-Dex-pro" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/">
+          04-Dex-pro
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/newloadproject/" title="00-New project &amp; Run Script &amp; combine Script" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/newloadproject/">
+          00-New project &amp; Run Script &amp; combine Script
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/layer/" title="01-Layer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/layer/">
+          01-Layer
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/addscript/" title="02-Add script" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/addscript/">
+          02-Add script
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/pageid/" title="03-PageID" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/pageid/">
+          03-PageID
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/instruction/" title="04-Instruction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/instruction/">
+          04-Instruction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/instruction/goto/" title="01-Jump" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/instruction/goto/">
+          01-Jump
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/instruction/mouse/" title="02-Mouse" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/instruction/mouse/">
+          02-Mouse
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/instruction/keyin/" title="03-Keyin" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/instruction/keyin/">
+          03-Keyin
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/instruction/ocrandlog/" title="04-OCR and Log" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/instruction/ocrandlog/">
+          04-OCR and Log
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/instruction/loop/" title="05-LOOP" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/instruction/loop/">
+          05-LOOP
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/instruction/pageidetify/" title="06-PageIdentify" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/instruction/pageidetify/">
+          06-PageIdentify
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/instruction/restful/" title="07-Restful" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/instruction/restful/">
+          07-Restful
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/instruction/ledcontrol/" title="08-LED control" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/instruction/ledcontrol/">
+          08-LED control
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/instruction/printscreen/" title="09-Printscreen" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/instruction/printscreen/">
+          09-Printscreen
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/instruction/opscreen/" title="10-OPScreen" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/instruction/opscreen/">
+          10-OPScreen
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/backup/" title="05-Backup/Restore" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/backup/">
+          05-Backup/Restore
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/dexpro/autorun/" title="06-Script Setting &amp; AutoRun" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/dexpro/autorun/">
+          06-Script Setting &amp; AutoRun
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/faq/" title="10-FAQ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/faq/">
+          10-FAQ
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex/sdkfwversion/" title="11-SDK &amp; FW Version &amp; Manual" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex/sdkfwversion/">
+          11-SDK &amp; FW Version &amp; Manual
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/dex_kvm/" title="DEX-100 with KVM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex_kvm/">
+          DEX-100 with KVM
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex_kvm/datasheet/" title="00-Datasheet" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex_kvm/datasheet/">
+          00-Datasheet
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex_kvm/script/" title="01-Unboxing the KVM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex_kvm/script/">
+          01-Unboxing the KVM
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/dex_kvm/unboxing/" title="01-Unboxing the KVM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/dex_kvm/unboxing/">
+          01-Unboxing the KVM
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/eos-jnx/" title="EOS-JNX" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/eos-jnx/">
+          EOS-JNX
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/eos-jnx/howtoflashimage/" title="How to flash image?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/eos-jnx/howtoflashimage/">
+          How to flash image?
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/eos-jnx/howtobootfromssd/" title="How to boot from m.2 SSD?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/eos-jnx/howtobootfromssd/">
+          How to boot from m.2 SSD?
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/neon/" title="NEONs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon/">
+          NEONs
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/neon/faq/" title="FAQ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon/faq/">
+          FAQ
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/neon/faq/wd-fov/" title="Neon &amp; Lens selector" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon/faq/wd-fov/">
+          Neon &amp; Lens selector
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/neon/faq/howtochooselenses/" title="How to choose suitable lens for Neon?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon/faq/howtochooselenses/">
+          How to choose suitable lens for Neon?
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/neon/faq/howtouseneontocontroldio/" title="How to use NEON to control DI/O?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon/faq/howtouseneontocontroldio/">
+          How to use NEON to control DI/O?
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/neon/faq/howtosetupneon/" title="How to set up Neon camera?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon/faq/howtosetupneon/">
+          How to set up Neon camera?
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/neon/faq/howtobackupandextendsdcard/" title="How to backup and extend microSD card?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon/faq/howtobackupandextendsdcard/">
+          How to backup and extend microSD card?
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/neon/faq/howtoupdatecamfw/" title="How to update Camera Firmware of Neon-20XA-Series?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon/faq/howtoupdatecamfw/">
+          How to update Camera Firmware of Neon-20XA-Series?
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+             
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/neon/neon-2000-ono/" title="Neon-2000-ONO" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon/neon-2000-ono/">
+          Neon-2000-ONO
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/neon/neon-2000-ono/howtoflashimage/" title="How to flash image?" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/neon/neon-2000-ono/howtoflashimage/">
+          How to flash image?
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="https://aiot-ist.github.io/supercat/bus-setup-scan-esi/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="zh-tw" value="https://aiot-ist.github.io/zh-tw/supercat/bus-setup-scan-esi/">繁體中文</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/matcornic/hugo-theme-learn">learn theme</a></p>
+<p>Copyright 2020, <a href="https://www.adlinktech.com">ADLINK IST Connected Factory</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>ADLINK-IST Connected Factories</a> > <a href='/supercat/'>SuperCAT</a> > Bus setup — scan, ESI & recognition
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#bus-setup-scan-esi-amp-device-recognition">Bus setup: scan, ESI &amp; device recognition</a>
+<ul>
+<li><a href="#what-scan-does">1 · What a scan does</a></li>
+<li><a href="#error-1014">2 · Why it isn&rsquo;t recognized: ENI build fails -1014</a></li>
+<li><a href="#two-fixes">3 · Two fixes</a></li>
+<li><a href="#config1-vs-config2">4 · The Config1 vs Config2 trap</a></li>
+<li><a href="#esi-download">5 · Official ESI download &amp; where the files go</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Bus setup — scan, ESI &amp; recognition
+            </h1>
+          
+
+        
+
+
+
+
+	
+
+<h1 id="bus-setup-scan-esi-amp-device-recognition">Bus setup: scan, ESI &amp; device recognition</h1>
+
+<p>Why a slave doesn&rsquo;t come up after a scan on a <strong>SuperCAT</strong> master — the <code>-1014</code> ENI build error explained, with the exact fixes for a Yaskawa SGD7S servo and an ICPDAS ECAT-2055 IO module.</p>
+
+
+<div class="notices tip" ><p>Once the slaves are recognized here, continue to <a href="/supercat/ethercat-io-homing/">EtherCAT IO &amp; homing</a> — reading the IO and catching the ORG / OT signals.</p>
+</div>
+
+
+<h2 id="what-scan-does">1 · What a scan does</h2>
+
+<p>When you scan, the master asks every slave for its <strong>identity</strong> (VendorId / ProductCode / RevisionNo), then looks that identity up against the <code>ESI</code> files to build the connection config (ENI). A slave only comes online when a matching ESI is found.</p>
+
+<p><svg viewBox="0 0 540 210" style="width:100%;max-width:560px;height:auto;font-family:sans-serif" role="img" aria-label="Scan compares the slave hardware identity against the ESI file; a revision-only mismatch yields error -1014">
+  <defs><marker id="bs1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8" fill="#4a5666"/></marker></defs>
+  <rect x="4" y="14" width="200" height="86" rx="8" fill="#ffffff" stroke="#9aa5b4"/>
+  <text x="18" y="34" fill="#1f2733" font-size="12" font-weight="500">hardware truth (slave)</text>
+  <text x="18" y="54" fill="#4a5666" font-size="10.5" font-family="monospace">VendorId 0x539</text>
+  <text x="18" y="70" fill="#4a5666" font-size="10.5" font-family="monospace">Product  0x2200301</text>
+  <text x="18" y="86" fill="#c0392b" font-size="10.5" font-family="monospace">Revision 0x80023</text>
+  <rect x="336" y="14" width="200" height="86" rx="8" fill="#ffffff" stroke="#9aa5b4"/>
+  <text x="350" y="34" fill="#1f2733" font-size="12" font-weight="500">ESI file (newest on hand)</text>
+  <text x="350" y="54" fill="#4a5666" font-size="10.5" font-family="monospace">VendorId 0x539 ok</text>
+  <text x="350" y="70" fill="#4a5666" font-size="10.5" font-family="monospace">Product  0x2200301 ok</text>
+  <text x="350" y="86" fill="#c0392b" font-size="10.5" font-family="monospace">Revision 0x80003 X</text>
+  <text x="270" y="48" text-anchor="middle" fill="#8b97a7" font-size="11">scan compares</text>
+  <line x1="206" y1="57" x2="334" y2="57" stroke="#4a5666" stroke-width="1.3" marker-end="url(#bs1)"/>
+  <rect x="120" y="130" width="300" height="60" rx="8" fill="#fdf0ee" stroke="#f3c0b8"/>
+  <text x="270" y="152" text-anchor="middle" fill="#c0392b" font-size="12" font-weight="500">minor revision differs -&gt; no match</text>
+  <text x="270" y="172" text-anchor="middle" fill="#c0392b" font-size="11" font-family="monospace">-1014 ESI not found for Slave 1001</text>
+  <line x1="270" y1="100" x2="270" y2="128" stroke="#4a5666" stroke-width="1.3" marker-end="url(#bs1)"/>
+</svg></p>
+
+<h2 id="error-1014">2 · Why it isn&rsquo;t recognized: ENI build fails -1014</h2>
+
+<p>The error is <code>ERR_MissConfig_2_Xml (-1014)</code>; the log (<code>EniBuilderForCpp.log</code>) says <code>ESI not found for Slave 1001</code>.</p>
+
+<ul>
+<li><strong>Yaskawa SGD7S</strong> — the firmware reports <code>RevisionNo 0x80023</code>, but the ESI rev 8.03 only goes up to <code>0x80003</code>. VendorId and ProductCode match; <strong>a minor-revision difference alone</strong> leaves the whole slave unrecognized.</li>
+<li><strong>ICPDAS ECAT-2055</strong> — the matching series ESI (the ECAT-2000 combined XML) is simply missing.</li>
+</ul>
+
+<h2 id="two-fixes">3 · Two fixes</h2>
+
+<p><strong>① Patch the revision (quick).</strong> Copy the rev 8.03 ESI, change <code>RevisionNo 0x00080003</code> → <code>0x00080023</code>, save it back into the ESI folder, and re-scan.</p>
+
+<p><strong>② Use the official ESI (recommended, clean).</strong> Download the official ESI that already carries the correct revision (Yaskawa rev 8.23 / ICPDAS ECAT-2000) — no manual XML editing.</p>
+
+<h2 id="config1-vs-config2">4 · The Config1 vs Config2 trap</h2>
+
+
+<div class="notices warning" ><p>Editing <code>Config1.xml</code> does nothing — <strong>the scan overwrites it with the hardware truth.</strong> You must either fix the ESI revision or swap in the official ESI, then re-scan so the system produces <code>Config2.xml</code>.</p>
+</div>
+
+
+<h2 id="esi-download">5 · Official ESI download &amp; where the files go</h2>
+
+<ul>
+<li><strong>Yaskawa Sigma-7 CoE ESI</strong> (contains rev 8.23, no login): Yaskawa&rsquo;s official download page → <code>Yaskawa_SGD7S-xxxxA0x.xml</code></li>
+<li><strong>ICPDAS ECAT-2000 combined XML</strong>: ICP DAS official FTP (one file covers the whole ECAT-2000 series, including the ECAT-2055).</li>
+</ul>
+
+<p>Where the files go on a PCIe-833x SuperCAT install:</p>
+
+<pre><code class="language-text">new ESI / XML  -&gt;  E:\Program Files (x86)\ADLINK\PCIe-833x\EtherCAT\EtherCAT
+after a successful scan, the topology XML (ENI) appears in:
+                   E:\Program Files (x86)\ADLINK\PCIe-833x\EtherCAT\ENI
+</code></pre>
+
+<p>Writing into <code>Program Files (x86)</code> needs Windows administrator (UAC) rights; after dropping the file in, re-scan / rebuild the cache. The scan also produces the <code>0001.csv</code> IO mapping used in <a href="/supercat/ethercat-io-homing/">EtherCAT IO &amp; homing</a>.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/supercat/" title="SuperCAT"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/supercat/ethercat-io-homing/" title="EtherCAT IO &amp; homing" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1783325792"></script>
+    <script src="/js/perfect-scrollbar.min.js?1783325792"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1783325792"></script>
+    <script src="/js/jquery.sticky.js?1783325792"></script>
+    <script src="/js/featherlight.min.js?1783325792"></script>
+    <script src="/js/highlight.pack.js?1783325792"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1783325792"></script>
+    <script src="/js/learn.js?1783325792"></script>
+    <script src="/js/hugo-learn.js?1783325792"></script>
+
+    <link href="/mermaid/mermaid.css?1783325792" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1783325792"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

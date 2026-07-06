@@ -3,6 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://aiot-ist.github.io/zh-tw/supercat/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/supercat/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/supercat/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/supercat/bus-setup-scan-esi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/supercat/bus-setup-scan-esi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/supercat/bus-setup-scan-esi/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/supercat/ethercat-io-homing/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/supercat/ethercat-io-homing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/supercat/ethercat-io-homing/"
+                />
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/</loc>
     <xhtml:link
                 rel="alternate"

@@ -7,6 +7,48 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/supercat/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/supercat/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/supercat/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/supercat/bus-setup-scan-esi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/supercat/bus-setup-scan-esi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/supercat/bus-setup-scan-esi/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/supercat/ethercat-io-homing/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/supercat/ethercat-io-homing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/supercat/ethercat-io-homing/"
+                />
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/visioncard/usb3vision/u300/</loc>
   </url>
   
