@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-tw" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="description" content="SuperCAT 常見故障的系統化排查 — 從症狀到根因,一步步縮小範圍。">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>疑難排解 :: Connected Factory</title>
+    <link rel="stylesheet" href="/css/custom-table.css">
+
+    
+    <link href="/css/nucleus.css?1783390228" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1783390228" rel="stylesheet">
+    <link href="/css/hybrid.css?1783390228" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1783390228" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1783390228" rel="stylesheet">
+    <link href="/css/auto-complete.css?1783390228" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1783390228" rel="stylesheet">
+    <link href="/css/theme.css?1783390228" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1783390228" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1783390228"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"SuperCAT 常見故障的系統化排查 — 從症狀到根因,一步步縮小範圍。","headline":"疑難排解","inLanguage":"zh-tw","isPartOf":{"@type":"WebSite","name":"Connected Factory","url":"https://aiot-ist.github.io/"},"publisher":{"@type":"Organization","name":"ADLINK Technology"},"url":"https://aiot-ist.github.io/zh-tw/supercat/troubleshooting/"}</script>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZXVWNR8SN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KZXVWNR8SN');
+    </script>
+
+  </head>
+  <body class="" data-url="/zh-tw/supercat/troubleshooting/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://aiot-ist.github.io/">
+  IST Connected Factory
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1783390228"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1783390228"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/aiot-ist.github.io\/\/zh-tw";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1783390228"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/" title="SuperCAT" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/zh-tw/supercat/">
+          SuperCAT
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/bus-setup-scan-esi/" title="匯流排建置 — 掃描、ESI 與識別" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/bus-setup-scan-esi/">
+          匯流排建置 — 掃描、ESI 與識別
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/ethercat-io-homing/" title="EtherCAT IO 與尋原點" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/ethercat-io-homing/">
+          EtherCAT IO 與尋原點
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/esi-download-links/" title="ESI 下載來源" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/esi-download-links/">
+          ESI 下載來源
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/troubleshooting/" title="疑難排解" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/zh-tw/supercat/troubleshooting/">
+          疑難排解
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/troubleshooting/pcie-bus/" title="PCIe Bus 偏移導致通訊斷線" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/troubleshooting/pcie-bus/">
+          PCIe Bus 偏移導致通訊斷線
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/euresys-grab-card/" title="Euresys-Grab-cards" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/euresys-grab-card/">
+          Euresys-Grab-cards
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/" title="使用 Euresys Coaxlink 搭配端子板進行相機觸發" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/">
+          使用 Euresys Coaxlink 搭配端子板進行相機觸發
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="zh-tw" value="https://aiot-ist.github.io/zh-tw/supercat/troubleshooting/" selected>繁體中文</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/matcornic/hugo-theme-learn">learn theme</a></p>
+<p>Copyright 2020, <a href="https://www.adlinktech.com">ADLINK IST Connected Factory</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/zh-tw/'>Connected Factory</a> > <a href='/zh-tw/supercat/'>SuperCAT</a> > 疑難排解
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+          <div id="chapter">
+        
+        <div id="body-inner">
+          
+
+        
+
+
+
+
+	
+
+<h3 id="adlink-ist-connected-factory">ADLINK IST Connected Factory</h3>
+
+<h1 id="supercat-疑難排解">SuperCAT 疑難排解</h1>
+
+<p>當 SuperCAT 出問題時,別急著試錯。這裡收錄系統化的排查邏輯 — 從症狀、證據到根因。</p>
+
+<ul>
+<li><a href="/zh-tw/supercat/troubleshooting/pcie-bus/">PCIe Bus 偏移導致通訊斷線</a> — <code>Open() Failed to open link layer!</code> 的完整診斷:環境鎖定 → 服務自檢 → 日誌監聽 → 數值比對 → 根因修復。</li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+            </div> 
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/zh-tw/supercat/esi-download-links/" title="ESI 下載來源"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/zh-tw/supercat/troubleshooting/pcie-bus/" title="PCIe Bus 偏移導致通訊斷線" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1783390228"></script>
+    <script src="/js/perfect-scrollbar.min.js?1783390228"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1783390228"></script>
+    <script src="/js/jquery.sticky.js?1783390228"></script>
+    <script src="/js/featherlight.min.js?1783390228"></script>
+    <script src="/js/highlight.pack.js?1783390228"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1783390228"></script>
+    <script src="/js/learn.js?1783390228"></script>
+    <script src="/js/hugo-learn.js?1783390228"></script>
+
+    <link href="/mermaid/mermaid.css?1783390228" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1783390228"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

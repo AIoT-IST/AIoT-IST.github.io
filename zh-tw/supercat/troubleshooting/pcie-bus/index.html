@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="zh-tw" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="description" content="SuperCAT 出現 Open() Failed to open link layer! 時的系統化排查 — 環境鎖定、服務自檢、日誌監聽、數值比對到根因修復,附實際畫面。">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>PCIe Bus 偏移導致通訊斷線 :: Connected Factory</title>
+    <link rel="stylesheet" href="/css/custom-table.css">
+
+    
+    <link href="/css/nucleus.css?1783390228" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1783390228" rel="stylesheet">
+    <link href="/css/hybrid.css?1783390228" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1783390228" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1783390228" rel="stylesheet">
+    <link href="/css/auto-complete.css?1783390228" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1783390228" rel="stylesheet">
+    <link href="/css/theme.css?1783390228" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1783390228" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1783390228"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"SuperCAT 出現 Open() Failed to open link layer! 時的系統化排查 — 環境鎖定、服務自檢、日誌監聽、數值比對到根因修復,附實際畫面。","headline":"PCIe Bus 偏移導致通訊斷線","inLanguage":"zh-tw","isPartOf":{"@type":"WebSite","name":"Connected Factory","url":"https://aiot-ist.github.io/"},"publisher":{"@type":"Organization","name":"ADLINK Technology"},"url":"https://aiot-ist.github.io/zh-tw/supercat/troubleshooting/pcie-bus/"}</script>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZXVWNR8SN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KZXVWNR8SN');
+    </script>
+
+  </head>
+  <body class="" data-url="/zh-tw/supercat/troubleshooting/pcie-bus/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://aiot-ist.github.io/">
+  IST Connected Factory
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1783390228"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1783390228"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/aiot-ist.github.io\/\/zh-tw";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1783390228"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/" title="SuperCAT" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/zh-tw/supercat/">
+          SuperCAT
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/bus-setup-scan-esi/" title="匯流排建置 — 掃描、ESI 與識別" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/bus-setup-scan-esi/">
+          匯流排建置 — 掃描、ESI 與識別
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/ethercat-io-homing/" title="EtherCAT IO 與尋原點" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/ethercat-io-homing/">
+          EtherCAT IO 與尋原點
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/esi-download-links/" title="ESI 下載來源" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/esi-download-links/">
+          ESI 下載來源
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/troubleshooting/" title="疑難排解" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/zh-tw/supercat/troubleshooting/">
+          疑難排解
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/troubleshooting/pcie-bus/" title="PCIe Bus 偏移導致通訊斷線" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/zh-tw/supercat/troubleshooting/pcie-bus/">
+          PCIe Bus 偏移導致通訊斷線
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/euresys-grab-card/" title="Euresys-Grab-cards" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/euresys-grab-card/">
+          Euresys-Grab-cards
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/" title="使用 Euresys Coaxlink 搭配端子板進行相機觸發" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/">
+          使用 Euresys Coaxlink 搭配端子板進行相機觸發
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="zh-tw" value="https://aiot-ist.github.io/zh-tw/supercat/troubleshooting/pcie-bus/" selected>繁體中文</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/matcornic/hugo-theme-learn">learn theme</a></p>
+<p>Copyright 2020, <a href="https://www.adlinktech.com">ADLINK IST Connected Factory</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/zh-tw/'>Connected Factory</a> > <a href='/zh-tw/supercat/'>SuperCAT</a> > <a href='/zh-tw/supercat/troubleshooting/'>疑難排解</a> > PCIe Bus 偏移導致通訊斷線
+          
+         
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#logic-map">排查邏輯地圖</a></li>
+<li><a href="#stage-1">第一階段 · 穩定基礎盤點</a></li>
+<li><a href="#stage-2">第二階段 · 診斷啟動與初步測試</a></li>
+<li><a href="#stage-3">第三階段 · 日誌監聽與工具比對</a></li>
+<li><a href="#compare">揪出「失蹤」的網卡</a></li>
+<li><a href="#stage-4">第四階段 · 根因修復與原廠金律</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              PCIe Bus 偏移導致通訊斷線
+            </h1>
+          
+
+        
+
+
+
+
+	
+
+<p>當 SuperCAT 報 <code>Open() Failed to open link layer!</code>,別急著試錯。故障排查不是盲目 Trial and Error,而是用邏輯不斷<strong>縮小範圍</strong>的過程。這篇帶你走一遍系統化診斷:從鎖定環境、驗證服務、監聽日誌,到揪出 <strong>PCIe Bus 偏移</strong>這個根因。</p>
+
+<ul>
+<li><a href="#logic-map">排查邏輯地圖</a></li>
+<li><a href="#stage-1">第一階段 · 穩定基礎盤點</a></li>
+<li><a href="#stage-2">第二階段 · 診斷啟動與初步測試</a></li>
+<li><a href="#stage-3">第三階段 · 日誌監聽與工具比對</a></li>
+<li><a href="#compare">揪出「失蹤」的網卡</a></li>
+<li><a href="#stage-4">第四階段 · 根因修復與原廠金律</a></li>
+</ul>
+
+<h2 id="logic-map">排查邏輯地圖</h2>
+
+<p>整個排查是一個<strong>漏斗式篩選</strong>:每一階段排除一層可能,最後只剩唯一真相。先在腦中建立這張地圖。</p>
+
+<p><svg viewBox="0 0 700 132" style="width:100%;max-width:700px;height:auto;font-family:sans-serif" role="img" aria-label="排查五階段:環境鎖定、服務自檢、日誌監聽、數值比對、根因修復">
+  <defs><marker id="lm" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9" fill="#4a5666"/></marker></defs>
+  <g font-size="12.5" font-weight="500">
+    <rect x="2"   y="34" width="118" height="52" rx="8" fill="#eef4ff" stroke="#b9ceff"/>
+    <text x="61"  y="56" fill="#1d4ed8" text-anchor="middle">1 環境鎖定</text>
+    <text x="61"  y="73" fill="#4a5666" text-anchor="middle" font-size="10.5" font-weight="400">關更新/省電/插槽</text>
+    <rect x="146" y="34" width="118" height="52" rx="8" fill="#eef4ff" stroke="#b9ceff"/>
+    <text x="205" y="56" fill="#1d4ed8" text-anchor="middle">2 服務自檢</text>
+    <text x="205" y="73" fill="#4a5666" text-anchor="middle" font-size="10.5" font-weight="400">-startlog / -stop</text>
+    <rect x="290" y="34" width="118" height="52" rx="8" fill="#eef4ff" stroke="#b9ceff"/>
+    <text x="349" y="56" fill="#1d4ed8" text-anchor="middle">3 日誌監聽</text>
+    <text x="349" y="73" fill="#4a5666" text-anchor="middle" font-size="10.5" font-weight="400">Log Level 2 + Putty</text>
+    <rect x="434" y="34" width="118" height="52" rx="8" fill="#eef4ff" stroke="#b9ceff"/>
+    <text x="493" y="56" fill="#1d4ed8" text-anchor="middle">4 數值比對</text>
+    <text x="493" y="73" fill="#4a5666" text-anchor="middle" font-size="10.5" font-weight="400">Monitor vs 裝置管理員</text>
+    <rect x="578" y="34" width="118" height="52" rx="8" fill="#e7f7ee" stroke="#a8e0c0"/>
+    <text x="637" y="56" fill="#1a7a4a" text-anchor="middle">5 根因修復</text>
+    <text x="637" y="73" fill="#4a5666" text-anchor="middle" font-size="10.5" font-weight="400">重配置/還原插槽</text>
+  </g>
+  <g stroke="#4a5666" stroke-width="1.4">
+    <line x1="121" y1="60" x2="144" y2="60" marker-end="url(#lm)"/>
+    <line x1="265" y1="60" x2="288" y2="60" marker-end="url(#lm)"/>
+    <line x1="409" y1="60" x2="432" y2="60" marker-end="url(#lm)"/>
+    <line x1="553" y1="60" x2="576" y2="60" marker-end="url(#lm)"/>
+  </g>
+</svg></p>
+
+<h2 id="stage-1">第一階段 · 穩定基礎盤點</h2>
+
+<p>分析程式碼或通訊協定之前,第一步永遠是<strong>鎖定環境</strong>。如果作業系統本身處於變動狀態,任何診斷結果都失去信度。確保 RTOS 穩定運行的核心,在於維持環境的「絕對靜態」。</p>
+
+<table>
+<thead>
+<tr>
+<th>盤查項目</th>
+<th>標準設定值</th>
+<th>忽略此項的風險</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Windows 自動更新</td>
+<td>徹底關閉</td>
+<td>背景無預警變更底層組件或配置,系統重啟後配置失效</td>
+</tr>
+
+<tr>
+<td>系統電源模式</td>
+<td>設定為「高效能」</td>
+<td>省電機制會使網卡/PCIe 設備降速或暫停供電,引發嚴重通訊延遲</td>
+</tr>
+
+<tr>
+<td>休眠機制</td>
+<td>徹底關閉</td>
+<td>喚醒後 RTOS 往往無法正確重新接管硬體,導致通訊中斷</td>
+</tr>
+
+<tr>
+<td>驅動程式狀態</td>
+<td>安裝後保持固定版本</td>
+<td>隨意更新驅動可能與原本相容的底層介面衝突,破壞穩定性</td>
+</tr>
+
+<tr>
+<td>PCIe 插槽變動</td>
+<td>配置後嚴禁變更</td>
+<td>即使微小插拔都會觸發系統重新分配 PCIe Bus 編號,使軟體找不到網卡</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="notices warning" ><p><strong>核心風險就在最後一列。</strong> 即便系統報 <code>RTOS has been closed, license not found</code>,只要先確認環境靜態,就能排除外部干擾,把焦點轉到軟體服務與硬體配對的驗證。</p>
+</div>
+
+
+<h2 id="stage-2">第二階段 · 診斷啟動與初步測試</h2>
+
+<p>此階段的邏輯是<strong>排除核心異常</strong> — 確認 SuperCAT 的核心服務與授權機制能不能運作。如果核心能啟動但功能失效,代表問題不在軟體本身,而是指向外部連接(如網卡通訊層)。</p>
+
+<pre><code class="language-bat">:: 1. 導航至運行工具路徑
+cd C:\Users\ADLINK\AppData\Roaming\ADLINK\runbat
+
+:: 2. 啟動診斷監聽工具以檢查核心狀態
+RTOS_service_tool.exe -startlog
+</code></pre>
+
+<p>觀察視窗最下方,若出現 <code>RTOS started successfully. Ok</code>,代表<strong>軟體核心與授權都正常</strong>,問題就鎖定在「軟體找不到硬體網卡」。</p>
+
+<p><img src="/SuperCAT/troubleshooting/pcie-bus/images/startlog-ok.png" alt="RTOS_service_tool -startlog 顯示 RTOS started successfully" width="620"/></p>
+
+
+<div class="notices info" ><p>進行下一步日誌分析前,<strong>必須先停止服務</strong>,避免系統掛在錯誤狀態:</p>
+
+<pre><code class="language-bat">RTOS_service_tool.exe -stop
+</code></pre>
+</div>
+
+
+<h2 id="stage-3">第三階段 · 日誌監聽與工具比對</h2>
+
+<p>這是診斷思維中最關鍵的<strong>證據驅動</strong>環節。我們不再猜測,而是透過提高日誌精細度,強制系統暴露硬體溝通的斷點。</p>
+
+<ol>
+<li><strong>調整日誌層級</strong> — 開啟 RTOS configurator,把 Log Level 設為 <code>2</code>。只有 Level 2 才能完整擷取 Link Layer 初始化(Handshake)的詳細過程。</li>
+<li><strong>啟動監聽器</strong> — 開啟 Putty 連到系統輸出(通常是 Serial 或專屬監聽埠),隨後再次執行 RTOS。</li>
+<li><strong>識別致命錯誤</strong> — 若 Putty 終端出現紅字 <code>Open() Failed to open link layer!</code>,這就是硬體連結層失效的<strong>確鑿證據</strong>:系統明確表示,它在指定的門牌號碼找不到網卡。</li>
+</ol>
+
+<p><img src="/SuperCAT/troubleshooting/pcie-bus/images/putty-open-failed.png" alt="Putty 顯示 Open() Failed to open link layer 與 Error opening EtherCAT device" width="640"/></p>
+
+<h2 id="compare">揪出「失蹤」的網卡</h2>
+
+<p>證據指向網卡位址偏移。接著做「現況」與「配置」的數值並排比對:</p>
+
+<ul>
+<li><strong>配置值(記憶中的位址)</strong> — 查 RTOS System Monitor,<code>Assign NIC</code> 記錄的是當初寫入參數的位址。</li>
+<li><strong>現況值(真實的位址)</strong> — 開 Windows 裝置管理員,看該網卡內容的「位置(Location)」。</li>
+</ul>
+
+<div style="display:flex;gap:16px;flex-wrap:wrap;margin:12px 0">
+  <div style="flex:1;min-width:280px">
+    <img src="/SuperCAT/troubleshooting/pcie-bus/images/monitor-match.png" alt="NIC bus 5 與 Location bus 5 一致" style="width:100%;border:2px solid #a8e0c0;border-radius:6px"/>
+    <p style="margin:6px 0 0;font-size:13px;color:#1a7a4a">✔ 正常:<code>Assign NIC = bus 5</code> 與 <code>Location = PCI bus 5</code> 一致 → 通訊正常</p>
+  </div>
+  <div style="flex:1;min-width:280px">
+    <img src="/SuperCAT/troubleshooting/pcie-bus/images/monitor-mismatch.png" alt="NIC bus 5 但 Location 變成 bus 6" style="width:100%;border:2px solid #e6a3a3;border-radius:6px"/>
+    <p style="margin:6px 0 0;font-size:13px;color:#c0392b">✘ 故障:<code>Assign NIC = bus 5</code> 但 <code>Location = PCI bus 6</code> → Bus 偏移,系統必敗</p>
+  </div>
+</div>
+
+<p>證據比對清單:</p>
+
+<ul>
+<li><strong>Bus Number</strong> — 是否依然為 <code>Bus 5</code>?(若變成 <code>Bus 6</code>,系統必敗)</li>
+<li><strong>Device / Function</strong> — 數值是否與配置檔中的 <code>EC_T_LINK_PARMS</code> 完全吻合?</li>
+</ul>
+
+<h2 id="stage-4">第四階段 · 根因修復與原廠金律</h2>
+
+<p>一旦確認是 PCIe Bus 偏移導致通訊斷裂,依標準作業程序還原,並建立長期預防機制。</p>
+
+<p><strong>修復執行清單</strong></p>
+
+<ul>
+<li><strong>軟體重置(推薦)</strong> — 在 RTOS 配置介面把 <code>NIC Assignment</code> 退回給 Windows 系統,再重新做一次網卡分配與配置,讓系統重新寫入正確的 Bus ID。</li>
+<li><strong>硬體還原</strong> — 若問題是新加裝卡片引起,可把卡片移除或退回原本的槽位,試圖恢復原始的總線分配。</li>
+</ul>
+
+
+<div class="notices tip" ><p><strong>原廠金律:靜態環境宣告</strong> — 要達到工業級穩定,遵守三條:</p>
+
+<ol>
+<li><strong>環境靜態化</strong> — 保持 OS 靜態,關閉所有會觸發重新掃描硬體總線的機制(自動更新、休眠)。</li>
+<li><strong>配置鎖定</strong> — 「配置好所有硬體卡片與 Windows 更新後,再安裝 SuperCAT,之後就不再更動。」這是避免 Bus ID 偏移的唯一真理。</li>
+<li><strong>架構固定化</strong> — 即使不相關的 PCIe 卡片,位置變動也可能觸發主機板重新分配 NIC 位址。嚴禁系統上線後隨意更動任何硬體插槽。</li>
+</ol>
+</div>
+
+
+<p>透過這套邏輯,你不再只是在「嘗試修復」,而是在<strong>證明真相</strong>。</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/zh-tw/supercat/troubleshooting/" title="疑難排解"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/zh-tw/euresys-grab-card/" title="Euresys-Grab-cards" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1783390228"></script>
+    <script src="/js/perfect-scrollbar.min.js?1783390228"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1783390228"></script>
+    <script src="/js/jquery.sticky.js?1783390228"></script>
+    <script src="/js/featherlight.min.js?1783390228"></script>
+    <script src="/js/highlight.pack.js?1783390228"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1783390228"></script>
+    <script src="/js/learn.js?1783390228"></script>
+    <script src="/js/hugo-learn.js?1783390228"></script>
+
+    <link href="/mermaid/mermaid.css?1783390228" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1783390228"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

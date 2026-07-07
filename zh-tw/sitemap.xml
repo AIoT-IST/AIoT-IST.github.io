@@ -17,6 +17,10 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/zh-tw/supercat/troubleshooting/pcie-bus/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/zh-tw/supercat/bus-setup-scan-esi/</loc>
     <xhtml:link
                 rel="alternate"
@@ -56,6 +60,10 @@
                 hreflang="zh-tw"
                 href="https://aiot-ist.github.io/zh-tw/supercat/esi-download-links/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/supercat/troubleshooting/</loc>
   </url>
   
   <url>
