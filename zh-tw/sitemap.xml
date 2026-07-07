@@ -18,6 +18,16 @@
   
   <url>
     <loc>https://aiot-ist.github.io/zh-tw/supercat/troubleshooting/pcie-bus/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/supercat/troubleshooting/pcie-bus/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/supercat/troubleshooting/pcie-bus/"
+                />
   </url>
   
   <url>
@@ -64,6 +74,16 @@
   
   <url>
     <loc>https://aiot-ist.github.io/zh-tw/supercat/troubleshooting/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/supercat/troubleshooting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/supercat/troubleshooting/"
+                />
   </url>
   
   <url>
