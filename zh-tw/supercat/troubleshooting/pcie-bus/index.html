@@ -13,18 +13,18 @@
     <link rel="stylesheet" href="/css/custom-table.css">
 
     
-    <link href="/css/nucleus.css?1783390927" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1783390927" rel="stylesheet">
-    <link href="/css/hybrid.css?1783390927" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1783390927" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1783390927" rel="stylesheet">
-    <link href="/css/auto-complete.css?1783390927" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1783390927" rel="stylesheet">
-    <link href="/css/theme.css?1783390927" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1783390927" rel="stylesheet">
+    <link href="/css/nucleus.css?1783391259" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1783391259" rel="stylesheet">
+    <link href="/css/hybrid.css?1783391259" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1783391259" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1783391259" rel="stylesheet">
+    <link href="/css/auto-complete.css?1783391259" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1783391259" rel="stylesheet">
+    <link href="/css/theme.css?1783391259" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1783391259" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1783390927"></script>
+    <script src="/js/jquery-3.3.1.min.js?1783391259"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -76,14 +76,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1783390927"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1783390927"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1783391259"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1783391259"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/aiot-ist.github.io\/\/zh-tw";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1783390927"></script>
+<script type="text/javascript" src="/js/search.js?1783391259"></script>
 
     
   </div>
@@ -443,7 +443,7 @@
 <li><a href="#stage-2">第二階段 · 診斷啟動與初步測試</a></li>
 <li><a href="#stage-3">第三階段 · 日誌監聽與工具比對</a></li>
 <li><a href="#compare">揪出「失蹤」的網卡</a></li>
-<li><a href="#stage-4">第四階段 · 根因修復與原廠金律</a></li>
+<li><a href="#stage-4">第四階段 · 根因修復與原廠鐵則</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -481,7 +481,7 @@
 <li><a href="#stage-2">第二階段 · 診斷啟動與初步測試</a></li>
 <li><a href="#stage-3">第三階段 · 日誌監聽與工具比對</a></li>
 <li><a href="#compare">揪出「失蹤」的網卡</a></li>
-<li><a href="#stage-4">第四階段 · 根因修復與原廠金律</a></li>
+<li><a href="#stage-4">第四階段 · 根因修復與原廠鐵則</a></li>
 </ul>
 
 <h2 id="logic-map">排查邏輯地圖</h2>
@@ -505,7 +505,7 @@
     <text x="493" y="73" fill="#4a5666" text-anchor="middle" font-size="10.5" font-weight="400">Monitor vs 裝置管理員</text>
     <rect x="578" y="34" width="118" height="52" rx="8" fill="#e7f7ee" stroke="#a8e0c0"/>
     <text x="637" y="56" fill="#1a7a4a" text-anchor="middle">5 根因修復</text>
-    <text x="637" y="73" fill="#4a5666" text-anchor="middle" font-size="10.5" font-weight="400">重配置/還原插槽</text>
+    <text x="637" y="73" fill="#4a5666" text-anchor="middle" font-size="10.5" font-weight="400">重新設定/還原插槽</text>
   </g>
   <g stroke="#4a5666" stroke-width="1.4">
     <line x1="121" y1="60" x2="144" y2="60" marker-end="url(#lm)"/>
@@ -517,7 +517,7 @@
 
 <h2 id="stage-1">第一階段 · 穩定基礎盤點</h2>
 
-<p>分析程式碼或通訊協定之前,第一步永遠是<strong>鎖定環境</strong>。如果作業系統本身處於變動狀態,任何診斷結果都失去信度。確保 RTOS 穩定運行的核心,在於維持環境的「絕對靜態」。</p>
+<p>分析程式碼或通訊協定之前,第一步永遠是<strong>鎖定環境</strong>。如果作業系統本身處於變動狀態,任何診斷結果都失去可信度。確保 RTOS 穩定運作的核心,在於維持環境的「絕對靜態」。</p>
 
 <table>
 <thead>
@@ -532,13 +532,13 @@
 <tr>
 <td>Windows 自動更新</td>
 <td>徹底關閉</td>
-<td>背景無預警變更底層組件或配置,系統重啟後配置失效</td>
+<td>背景無預警變更底層元件或設定,系統重啟後設定失效</td>
 </tr>
 
 <tr>
 <td>系統電源模式</td>
 <td>設定為「高效能」</td>
-<td>省電機制會使網卡/PCIe 設備降速或暫停供電,引發嚴重通訊延遲</td>
+<td>省電機制會使網卡/PCIe 裝置降速或暫停供電,引發嚴重通訊延遲</td>
 </tr>
 
 <tr>
@@ -555,7 +555,7 @@
 
 <tr>
 <td>PCIe 插槽變動</td>
-<td>配置後嚴禁變更</td>
+<td>設定後嚴禁變更</td>
 <td>即使微小插拔都會觸發系統重新分配 PCIe Bus 編號,使軟體找不到網卡</td>
 </tr>
 </tbody>
@@ -570,7 +570,7 @@
 
 <p>此階段的邏輯是<strong>排除核心異常</strong> — 確認 SuperCAT 的核心服務與授權機制能不能運作。如果核心能啟動但功能失效,代表問題不在軟體本身,而是指向外部連接(如網卡通訊層)。</p>
 
-<pre><code class="language-bat">:: 1. 導航至運行工具路徑
+<pre><code class="language-bat">:: 1. 進入工具程式所在路徑
 cd C:\Users\ADLINK\AppData\Roaming\ADLINK\runbat
 
 :: 2. 啟動診斷監聽工具以檢查核心狀態
@@ -596,17 +596,17 @@ RTOS_service_tool.exe -startlog
 <ol>
 <li><strong>調整日誌層級</strong> — 開啟 RTOS configurator,把 Log Level 設為 <code>2</code>。只有 Level 2 才能完整擷取 Link Layer 初始化(Handshake)的詳細過程。</li>
 <li><strong>啟動監聽器</strong> — 開啟 Putty 連到系統輸出(通常是 Serial 或專屬監聽埠),隨後再次執行 RTOS。</li>
-<li><strong>識別致命錯誤</strong> — 若 Putty 終端出現紅字 <code>Open() Failed to open link layer!</code>,這就是硬體連結層失效的<strong>確鑿證據</strong>:系統明確表示,它在指定的門牌號碼找不到網卡。</li>
+<li><strong>識別致命錯誤</strong> — 若 Putty 終端出現紅字 <code>Open() Failed to open link layer!</code>,這就是硬體連結層失效的<strong>鐵證</strong>:系統明確表示,它在指定的門牌號碼找不到網卡。</li>
 </ol>
 
 <p><img src="/SuperCAT/troubleshooting/pcie-bus/images/putty-open-failed.png" alt="Putty 顯示 Open() Failed to open link layer 與 Error opening EtherCAT device" width="640"/></p>
 
 <h2 id="compare">揪出「失蹤」的網卡</h2>
 
-<p>證據指向網卡位址偏移。接著做「現況」與「配置」的數值並排比對:</p>
+<p>證據指向網卡位址偏移。接著做「現況」與「設定」的數值並排比對:</p>
 
 <ul>
-<li><strong>配置值(記憶中的位址)</strong> — 查 RTOS System Monitor,<code>Assign NIC</code> 記錄的是當初寫入參數的位址。</li>
+<li><strong>設定值(記憶中的位址)</strong> — 查 RTOS System Monitor,<code>Assign NIC</code> 記錄的是當初寫入參數的位址。</li>
 <li><strong>現況值(真實的位址)</strong> — 開 Windows 裝置管理員,看該網卡內容的「位置(Location)」。</li>
 </ul>
 
@@ -625,26 +625,26 @@ RTOS_service_tool.exe -startlog
 
 <ul>
 <li><strong>Bus Number</strong> — 是否依然為 <code>Bus 5</code>?(若變成 <code>Bus 6</code>,系統必敗)</li>
-<li><strong>Device / Function</strong> — 數值是否與配置檔中的 <code>EC_T_LINK_PARMS</code> 完全吻合?</li>
+<li><strong>Device / Function</strong> — 數值是否與設定檔中的 <code>EC_T_LINK_PARMS</code> 完全吻合?</li>
 </ul>
 
-<h2 id="stage-4">第四階段 · 根因修復與原廠金律</h2>
+<h2 id="stage-4">第四階段 · 根因修復與原廠鐵則</h2>
 
 <p>一旦確認是 PCIe Bus 偏移導致通訊斷裂,依標準作業程序還原,並建立長期預防機制。</p>
 
 <p><strong>修復執行清單</strong></p>
 
 <ul>
-<li><strong>軟體重置(推薦)</strong> — 在 RTOS 配置介面把 <code>NIC Assignment</code> 退回給 Windows 系統,再重新做一次網卡分配與配置,讓系統重新寫入正確的 Bus ID。</li>
-<li><strong>硬體還原</strong> — 若問題是新加裝卡片引起,可把卡片移除或退回原本的槽位,試圖恢復原始的總線分配。</li>
+<li><strong>軟體重置(推薦)</strong> — 在 RTOS 設定介面把 <code>NIC Assignment</code> 退回給 Windows 系統,再重新做一次網卡分配與設定,讓系統重新寫入正確的 Bus ID。</li>
+<li><strong>硬體還原</strong> — 若問題是新加裝卡片引起,可把卡片移除或退回原本的槽位,試圖恢復原始的匯流排分配。</li>
 </ul>
 
 
-<div class="notices tip" ><p><strong>原廠金律:靜態環境宣告</strong> — 要達到工業級穩定,遵守三條:</p>
+<div class="notices tip" ><p><strong>原廠鐵則:靜態環境宣告</strong> — 要達到工業級穩定,遵守三條:</p>
 
 <ol>
-<li><strong>環境靜態化</strong> — 保持 OS 靜態,關閉所有會觸發重新掃描硬體總線的機制(自動更新、休眠)。</li>
-<li><strong>配置鎖定</strong> — 「配置好所有硬體卡片與 Windows 更新後,再安裝 SuperCAT,之後就不再更動。」這是避免 Bus ID 偏移的唯一真理。</li>
+<li><strong>環境靜態化</strong> — 保持 OS 靜態,關閉所有會觸發重新掃描硬體匯流排的機制(自動更新、休眠)。</li>
+<li><strong>設定鎖定</strong> — 「設定好所有硬體卡片與 Windows 更新後,再安裝 SuperCAT,之後就不再更動。」這是避免 Bus ID 偏移的唯一真理。</li>
 <li><strong>架構固定化</strong> — 即使不相關的 PCIe 卡片,位置變動也可能觸發主機板重新分配 NIC 位址。嚴禁系統上線後隨意更動任何硬體插槽。</li>
 </ol>
 </div>
@@ -851,19 +851,19 @@ RTOS_service_tool.exe -startlog
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1783390927"></script>
-    <script src="/js/perfect-scrollbar.min.js?1783390927"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1783390927"></script>
-    <script src="/js/jquery.sticky.js?1783390927"></script>
-    <script src="/js/featherlight.min.js?1783390927"></script>
-    <script src="/js/highlight.pack.js?1783390927"></script>
+    <script src="/js/clipboard.min.js?1783391259"></script>
+    <script src="/js/perfect-scrollbar.min.js?1783391259"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1783391259"></script>
+    <script src="/js/jquery.sticky.js?1783391259"></script>
+    <script src="/js/featherlight.min.js?1783391259"></script>
+    <script src="/js/highlight.pack.js?1783391259"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1783390927"></script>
-    <script src="/js/learn.js?1783390927"></script>
-    <script src="/js/hugo-learn.js?1783390927"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1783391259"></script>
+    <script src="/js/learn.js?1783391259"></script>
+    <script src="/js/hugo-learn.js?1783391259"></script>
 
-    <link href="/mermaid/mermaid.css?1783390927" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1783390927"></script>
+    <link href="/mermaid/mermaid.css?1783391259" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1783391259"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
