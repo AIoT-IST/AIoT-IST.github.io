@@ -45,16 +45,16 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/zh-tw/supercat/ethercat-io-homing/</loc>
+    <loc>https://aiot-ist.github.io/zh-tw/supercat/how-to/external-io-homing/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aiot-ist.github.io/supercat/ethercat-io-homing/"
+                href="https://aiot-ist.github.io/supercat/how-to/external-io-homing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://aiot-ist.github.io/zh-tw/supercat/ethercat-io-homing/"
+                href="https://aiot-ist.github.io/zh-tw/supercat/how-to/external-io-homing/"
                 />
   </url>
   
@@ -69,6 +69,20 @@
                 rel="alternate"
                 hreflang="zh-tw"
                 href="https://aiot-ist.github.io/zh-tw/supercat/esi-download-links/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/supercat/how-to/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/supercat/how-to/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/supercat/how-to/"
                 />
   </url>
   

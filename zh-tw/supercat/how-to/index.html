@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zh-tw" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="description" content="SuperCAT 一步步的操作指南 — 完成一件事,從外部 IO、尋原點到韌體與授權。">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>操作指南 :: Connected Factory</title>
+    <link rel="stylesheet" href="/css/custom-table.css">
+
+    
+    <link href="/css/nucleus.css?1783402382" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1783402382" rel="stylesheet">
+    <link href="/css/hybrid.css?1783402382" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1783402382" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1783402382" rel="stylesheet">
+    <link href="/css/auto-complete.css?1783402382" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1783402382" rel="stylesheet">
+    <link href="/css/theme.css?1783402382" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1783402382" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1783402382"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","description":"SuperCAT 一步步的操作指南 — 完成一件事,從外部 IO、尋原點到韌體與授權。","headline":"操作指南","inLanguage":"zh-tw","isPartOf":{"@type":"WebSite","name":"Connected Factory","url":"https://aiot-ist.github.io/"},"publisher":{"@type":"Organization","name":"ADLINK Technology"},"url":"https://aiot-ist.github.io/zh-tw/supercat/how-to/"}</script>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZXVWNR8SN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KZXVWNR8SN');
+    </script>
+
+  </head>
+  <body class="" data-url="/zh-tw/supercat/how-to/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://aiot-ist.github.io/">
+  IST Connected Factory
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1783402382"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1783402382"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/aiot-ist.github.io\/\/zh-tw";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1783402382"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/" title="SuperCAT" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/zh-tw/supercat/">
+          SuperCAT
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/bus-setup-scan-esi/" title="匯流排建置 — 掃描、ESI 與識別" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/bus-setup-scan-esi/">
+          匯流排建置 — 掃描、ESI 與識別
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/esi-download-links/" title="ESI 下載來源" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/esi-download-links/">
+          ESI 下載來源
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/how-to/" title="操作指南" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/zh-tw/supercat/how-to/">
+          操作指南
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/how-to/external-io-homing/" title="讀取外部 IO 與尋原點" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/how-to/external-io-homing/">
+          讀取外部 IO 與尋原點
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/troubleshooting/" title="疑難排解" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/troubleshooting/">
+          疑難排解
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/troubleshooting/pcie-bus/" title="PCIe Bus 偏移導致通訊斷線" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/troubleshooting/pcie-bus/">
+          PCIe Bus 偏移導致通訊斷線
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/euresys-grab-card/" title="Euresys-Grab-cards" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/euresys-grab-card/">
+          Euresys-Grab-cards
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/" title="使用 Euresys Coaxlink 搭配端子板進行相機觸發" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/">
+          使用 Euresys Coaxlink 搭配端子板進行相機觸發
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+              
+                  
+              
+                  
+              
+              
+                <option value="https://aiot-ist.github.io/supercat/how-to/">English</option>
+              
+          
+              
+              
+              
+                  
+              
+                  
+              
+              
+                <option value="https://aiot-ist.github.io/zh-tw/supercat/how-to/" selected>繁體中文</option>
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/matcornic/hugo-theme-learn">learn theme</a></p>
+<p>Copyright 2020, <a href="https://www.adlinktech.com">ADLINK IST Connected Factory</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/zh-tw/'>Connected Factory</a> > <a href='/zh-tw/supercat/'>SuperCAT</a> > 操作指南
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+          <div id="chapter">
+        
+        <div id="body-inner">
+          
+
+        
+
+
+
+
+	
+
+<h3 id="adlink-ist-connected-factory">ADLINK IST Connected Factory</h3>
+
+<h1 id="supercat-操作指南">SuperCAT 操作指南</h1>
+
+<p>任務導向的指南:照著步驟,把一件事做完。</p>
+
+<ul>
+<li><a href="/zh-tw/supercat/how-to/external-io-homing/">讀取外部 IO 與尋原點</a> — 註冊並綁定外部 ECAT-2055 的 IO,讓尋原點抓得到 ORG、OT 保護到位。</li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+            </div> 
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/zh-tw/supercat/esi-download-links/" title="ESI 下載來源"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/zh-tw/supercat/how-to/external-io-homing/" title="讀取外部 IO 與尋原點" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1783402382"></script>
+    <script src="/js/perfect-scrollbar.min.js?1783402382"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1783402382"></script>
+    <script src="/js/jquery.sticky.js?1783402382"></script>
+    <script src="/js/featherlight.min.js?1783402382"></script>
+    <script src="/js/highlight.pack.js?1783402382"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1783402382"></script>
+    <script src="/js/learn.js?1783402382"></script>
+    <script src="/js/hugo-learn.js?1783402382"></script>
+
+    <link href="/mermaid/mermaid.css?1783402382" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1783402382"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+<style>
+#body-inner img { cursor: zoom-in; transition: opacity .15s; }
+#body-inner img:hover { opacity: .85; }
+#img-lightbox {
+  position: fixed; inset: 0; z-index: 9999;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(0,0,0,.88); cursor: zoom-out; padding: 2vmin;
+}
+#img-lightbox.open { display: flex; }
+#img-lightbox img {
+  max-width: 96vw; max-height: 94vh;
+  box-shadow: 0 4px 40px rgba(0,0,0,.6); cursor: zoom-out;
+  border-radius: 4px;
+}
+#img-lightbox .lb-hint {
+  position: fixed; top: 14px; right: 20px;
+  color: #eee; font-size: 13px; opacity: .8; user-select: none;
+}
+</style>
+<div id="img-lightbox" aria-hidden="true">
+  <span class="lb-hint">點任意處或按 Esc 關閉</span>
+  <img alt="放大圖" />
+</div>
+<script>
+(function () {
+  var box = document.getElementById('img-lightbox');
+  var big = box.querySelector('img');
+  function open(src, alt) {
+    big.src = src; big.alt = alt || '放大圖';
+    box.classList.add('open'); box.setAttribute('aria-hidden', 'false');
+  }
+  function close() {
+    box.classList.remove('open'); box.setAttribute('aria-hidden', 'true');
+    big.src = '';
+  }
+  var content = document.getElementById('body-inner');
+  if (content) {
+    content.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t && t.tagName === 'IMG') {
+        e.preventDefault();
+        open(t.currentSrc || t.src, t.alt);
+      }
+    });
+  }
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && box.classList.contains('open')) close();
+  });
+})();
+</script>
+
+  </body>
+</html>
