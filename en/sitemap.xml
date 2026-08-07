@@ -265,6 +265,10 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/visioncard/cameralink/</loc>
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/euresys-grab-card/coaxlink-quad/</loc>
   </url>
   
@@ -292,6 +296,10 @@
                 hreflang="en"
                 href="https://aiot-ist.github.io/euresys-grab-card/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/visioncard/cameralink/cpl64v/</loc>
   </url>
   
   <url>
