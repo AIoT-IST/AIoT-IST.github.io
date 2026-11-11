@@ -401,6 +401,20 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/neon/howtoflashimage/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/neon/howtoflashimage/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/neon/howtoflashimage/"
+                />
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/</loc>
   </url>
   
@@ -409,7 +423,35 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/neon/howtocheckbootdevice/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/neon/howtocheckbootdevice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/neon/howtocheckbootdevice/"
+                />
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/mcm-204/customalgorithmdev/</loc>
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/neon/jetpacksupport/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/neon/jetpacksupport/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/neon/jetpacksupport/"
+                />
   </url>
   
   <url>
@@ -417,19 +459,7 @@
   </url>
   
   <url>
-    <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/howtoflashimage/</loc>
-  </url>
-  
-  <url>
     <loc>https://aiot-ist.github.io/neon/neon-2000-jnx/demo/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/neon/neon-2000-ono/</loc>
-  </url>
-  
-  <url>
-    <loc>https://aiot-ist.github.io/neon/neon-2000-ono/howtoflashimage/</loc>
   </url>
   
   <url>
@@ -534,6 +564,16 @@
   
   <url>
     <loc>https://aiot-ist.github.io/neon/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/neon/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/neon/"
+                />
   </url>
   
   <url>

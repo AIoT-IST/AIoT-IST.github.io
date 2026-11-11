@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="zh-tw" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.58.2" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>如何燒錄 image？ :: Connected Factory</title>
+    <link rel="stylesheet" href="/css/custom-table.css">
+
+    
+    <link href="/css/nucleus.css?1794373406" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1794373406" rel="stylesheet">
+    <link href="/css/hybrid.css?1794373406" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1794373406" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1794373406" rel="stylesheet">
+    <link href="/css/auto-complete.css?1794373406" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1794373406" rel="stylesheet">
+    <link href="/css/theme.css?1794373406" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1794373406" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1794373406"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"如何燒錄 image？","inLanguage":"zh-tw","isPartOf":{"@type":"WebSite","name":"Connected Factory","url":"https://aiot-ist.github.io/"},"publisher":{"@type":"Organization","name":"ADLINK Technology"},"url":"https://aiot-ist.github.io/zh-tw/neon/howtoflashimage/"}</script>
+
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZXVWNR8SN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KZXVWNR8SN');
+    </script>
+
+  </head>
+  <body class="" data-url="/zh-tw/neon/howtoflashimage/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://aiot-ist.github.io/">
+  IST Connected Factory
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1794373406"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1794373406"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/aiot-ist.github.io\/\/zh-tw";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1794373406"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/" title="SuperCAT" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/">
+          SuperCAT
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/bus-setup-scan-esi/" title="匯流排建置 — 掃描、ESI 與識別" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/bus-setup-scan-esi/">
+          匯流排建置 — 掃描、ESI 與識別
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/esi-download-links/" title="ESI 下載來源" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/esi-download-links/">
+          ESI 下載來源
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/how-to/" title="操作指南" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/how-to/">
+          操作指南
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/how-to/external-io-homing/" title="讀取外部 IO 與尋原點" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/how-to/external-io-homing/">
+          讀取外部 IO 與尋原點
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/troubleshooting/" title="疑難排解" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/troubleshooting/">
+          疑難排解
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/supercat/troubleshooting/pcie-bus/" title="PCIe Bus 偏移導致通訊斷線" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/supercat/troubleshooting/pcie-bus/">
+          PCIe Bus 偏移導致通訊斷線
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/euresys-grab-card/" title="Euresys-Grab-cards" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/euresys-grab-card/">
+          Euresys-Grab-cards
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/" title="使用 Euresys Coaxlink 搭配端子板進行相機觸發" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/">
+          使用 Euresys Coaxlink 搭配端子板進行相機觸發
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/neon/" title="NEONs" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/zh-tw/neon/">
+          NEONs
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/neon/howtoflashimage/" title="如何燒錄 image？" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/zh-tw/neon/howtoflashimage/">
+          如何燒錄 image？
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/neon/howtocheckbootdevice/" title="如何確認開機裝置（eMMC 或 microSD）？" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/neon/howtocheckbootdevice/">
+          如何確認開機裝置（eMMC 或 microSD）？
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/zh-tw/neon/jetpacksupport/" title="JetPack 支援版本" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/zh-tw/neon/jetpacksupport/">
+          JetPack 支援版本
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+              
+                  
+              
+                  
+              
+              
+                <option value="https://aiot-ist.github.io/neon/howtoflashimage/">English</option>
+              
+          
+              
+              
+              
+                  
+              
+                  
+              
+              
+                <option value="https://aiot-ist.github.io/zh-tw/neon/howtoflashimage/" selected>繁體中文</option>
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/matcornic/hugo-theme-learn">learn theme</a></p>
+<p>Copyright 2020, <a href="https://www.adlinktech.com">ADLINK IST Connected Factory</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/zh-tw/'>Connected Factory</a> > <a href='/zh-tw/neon/'>NEONs</a> > 如何燒錄 image？
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              如何燒錄 image？
+            </h1>
+          
+
+        
+
+
+
+
+	
+
+<p>本頁說明如何在 NEON 相機上燒錄新的作業系統。</p>
+
+<p><a id="neon-2000-jnx"></a><a id="neon-2000-ono"></a></p>
+
+<div class="cols">
+<div class="col"><div class="col-title">Neon-2000-JNX（Jetson Xavier NX）</div><ul>
+<li>要燒錄：內建 eMMC <strong>+</strong> microSD 卡</li>
+<li>步驟：1 → 2 → 3 → 4</li>
+<li><a href="https://www.adlinktech.com/Products/Machine_Vision/SmartCamera/NEON-2000-JNX_Series">產品頁</a> / <a href="https://www.adlinktech.com/Products/Machine_Vision/VisionSystems/EOS-JNX_Series">EOS-JNX</a></li>
+</ul></div>
+
+<div class="col ono"><div class="col-title">Neon-2000-ONO（Jetson Orin Nano）</div><ul>
+<li>要燒錄：內建 eMMC</li>
+<li>步驟：1 → 3 → 4</li>
+</ul></div>
+
+</div>
+
+
+<ul>
+<li>不確定系統是跑在 eMMC 還是 microSD 卡？請看 <a href="/zh-tw/neon/howtocheckbootdevice/">如何確認開機裝置？</a></li>
+<li>各機型 NVIDIA 支援的最高版本：<a href="/zh-tw/neon/jetpacksupport/">JetPack 支援版本</a></li>
+<li>查詢 NEON 目前的版本：<code>head -n1 /etc/nv_tegra_release</code></li>
+</ul>
+
+<p>需要準備：</p>
+
+<ul>
+<li>一台裝 Ubuntu 的電腦，用 microUSB 連接 NEON 進行燒錄</li>
+<li>microUSB 傳輸線</li>
+<li>短路帽（jumper）2 個，NEON 隨貨附</li>
+<li>僅 JNX：32GB 以上的 microSD 卡和讀卡機</li>
+</ul>
+
+<hr />
+
+<h2 id="step1">步驟 1：下載 image</h2>
+
+<p><a id="jnx-step1"></a><a id="ono-step1"></a></p>
+
+<div class="cols">
+<div class="col"><div class="col-title">Neon-2000-JNX</div><strong>eMMC 和 microSD 必須是相同的 JetPack 版本。</strong>請下載<strong>同一列</strong>的 microSD image <strong>和</strong> eMMC image。</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">JetPack（L4T）</th>
+<th align="left">microSD image</th>
+<th align="left">eMMC image</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><strong>5.1.2</strong> (35.4.1)<br>最新版</td>
+<td align="left"><a href="https://sftp.adlinktech.com/image/Neon-JNX/NeonJNX_A3_JP512_microSD_v1.0.9_woEVA.img.tar.gz">v1.0.9（pylon 5.2，不含 EVA）</a><br>MD5: <code>81992a6ada7f01ee30206680bdc4e878</code></td>
+<td align="left"><a href="https://sftp.adlinktech.com/image/Neon-JNX/NeonJNX_A3_JP512_emmc_v1.0.9.tar.gz">v1.0.9</a><br>MD5: <code>dc01fad05c3ca7df2b5096bc27877b95</code></td>
+</tr>
+
+<tr>
+<td align="center"><strong>5.0.2</strong> (35.1)</td>
+<td align="left"><a href="https://sftp.adlinktech.com/image/Neon-JNX/NeonJNX_A3_JP502_microSD_v1.0.8_EVA402.img.tar.gz">v1.0.8（pylon 7.2.1 + EVA 4.0.2）</a><br>MD5: <code>79d87d4dc0ef2440845dccb1d0a33d4b</code><br><a href="https://sftp.adlinktech.com/image/Neon-JNX/NeonJNX_A3_JP502_microSD_v1.0.7_woEVA.img.tar.gz">v1.0.7（pylon 5.2）</a><br>MD5: <code>c60395f01cd76131c25f3bf96ed53543</code></td>
+<td align="left"><a href="https://sftp.adlinktech.com/image/Neon-JNX/NeonJNX_A3_JP502_emmc_v1.0.7.tar.gz">v1.0.7</a><br>MD5: <code>73758afcdf0119a98b27c9d1630add6a</code></td>
+</tr>
+
+<tr>
+<td align="center"><strong>4.6.1</strong> (32.7.1)</td>
+<td align="left"><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP461_microSD_v1.0.5.tar.gz">v1.0.5</a><br>MD5: <code>564951bdd6074db6e853037b1338e905</code><br><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP461_microSD_v1.0.6_EVAv3.8.3.tar.gz">v1.0.6（EVA 3.8.3）</a><br>MD5: <code>8b4e3d4ce7bf7e69bc90b04e98e14851</code></td>
+<td align="left"><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP461_emmc_v1.0.5.tar.gz">v1.0.5</a><br>MD5: <code>f08d89a8aa4927b7df7af449c2f8edd9</code></td>
+</tr>
+
+<tr>
+<td align="center"><strong>4.5</strong> (32.5.0)</td>
+<td align="left"><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP45_microSD_v1.0.3.tar.gz">v1.0.3</a><br>MD5: <code>243b98f10a873f2830e4f635eab7c80d</code><br><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP45_microSD_v1.0.4.tar.gz">v1.0.4（EVA 3.5）</a><br>MD5: <code>43b5931b625e3b598423e0bb4a131d6e</code></td>
+<td align="left"><a href="https://sftp.adlinktech.com/image/Neon-JNX/JNX_JP45_emmc_v1.0.3.tar.gz">v1.0.3</a><br>MD5: <code>e603db76e8ab1bbe5596760d40adb90c</code></td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="col ono"><div class="col-title">Neon-2000-ONO</div>只需要 eMMC image。</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">JetPack（L4T）</th>
+<th align="left">eMMC image</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><strong>6.2</strong> (36.4.3)<br>最新版</td>
+<td align="left"><a href="https://sftp.adlinktech.com/image/Neon-ONO/mfi_jetson-orin-nano-neon2000-ono_4-36.4.3-rel.1v3.0_release.tbz2">rel.1v3.0</a><br>MD5: <code>9cd28146af3d9c3b7eff096be710d719</code></td>
+</tr>
+
+<tr>
+<td align="center"><strong>6.1</strong> (36.4)</td>
+<td align="left"><a href="https://sftp.adlinktech.com/image/Neon-ONO/mfi_jetson-orin-nano-neon2000-ono_4-36.4-rel.1v2.0.tbz2">rel.1v2.0</a><br>MD5: <code>7c4b8a25a7abcda047fefde757315059</code></td>
+</tr>
+
+<tr>
+<td align="center"><strong>5.1.2</strong> (35.4.1)</td>
+<td align="left"><a href="https://sftp.adlinktech.com/image/Neon-ONO/mfi_jetson-orin-nano-neon2000-ono_4-35.4.1-rel.1v1.0.tbz2">rel.1v1.0</a><br>MD5: <code>1863fa4d85d1624f9f2901886ee19d60</code></td>
+</tr>
+</tbody>
+</table></div>
+
+</div>
+
+
+<h3 id="checksum">比對 MD5</h3>
+
+<p>確認下載的檔案完整，結果要跟上表的 MD5 一致。</p>
+
+<ul>
+<li>Linux：<code>md5sum &lt;檔案&gt;</code></li>
+<li>Windows：<code>certutil -hashfile &lt;檔案&gt; MD5</code></li>
+</ul>
+
+<hr />
+
+<h2 id="jnx-step2">步驟 2：燒錄 microSD 卡</h2>
+
+<div class="cols">
+<div class="col"><div class="col-title">Neon-2000-JNX</div><ol>
+<li>解壓縮 microSD 檔案，取得 <code>.img</code> 檔：<code>tar -zxvf &lt;檔案&gt;</code></li>
+<li>把 <code>.img</code> 寫入 microSD 卡
+
+<ul>
+<li>Ubuntu：<code>sudo dd if=&lt;image file&gt;.img of=/dev/sdX bs=4M conv=fsync</code>，或「磁碟」（Disks）工具（<a href="https://sftp.adlinktech.com/image/Neon-JNX/Flash_Neon_microSD.mp4">影片</a>）</li>
+<li>Windows：<a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a></li>
+<li>Linux、macOS 或 Windows：<a href="https://www.balena.io/etcher/">Balena Etcher</a></li>
+</ul></li>
+<li>把 microSD 卡插入 NEON</li>
+</ol>
+
+<p>請使用高品質的 microSD 卡，避免資料損毀。</div>
+
+<div class="col ono skip"><div class="col-title">Neon-2000-ONO</div>不需要，直接到步驟 3。</div>
+
+</div>
+
+
+<hr />
+
+<h2 id="recovery">步驟 3：進入恢復模式（recovery mode）</h2>
+
+<p><a id="jnx-step3"></a></p>
+
+<p><img src="/NEON/howtoflashimage/images/jumpers.jpg" alt="jumpers" />
+<img src="/NEON/howtoflashimage/images/recovery_pins.png" alt="recovery pins" />
+<img src="/NEON/howtoflashimage/images/2.png" alt="pin define 2" /></p>
+
+<ol>
+<li>NEON 接上電源開機</li>
+<li>短路 <strong>pin 5 和 6</strong>（RECOVERY，綠框），<strong>這個短路帽一直插著</strong>，直到燒錄完成</li>
+<li>短路 <strong>pin 3 和 4</strong>（RESET，橙框）約 2 秒，電源燈熄滅後拔掉這個短路帽，電源燈會再亮起</li>
+<li>用 microUSB 線連接 NEON 和電腦</li>
+</ol>
+
+<p>操作影片：
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/MCpVP3L4aSI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
+
+<hr />
+
+<h2 id="flash-emmc">步驟 4：燒錄 eMMC</h2>
+
+<p>先在電腦上執行 <code>lsusb</code>，清單中出現 <code>Nvidia Corp.</code> = NEON 已進入恢復模式，可以燒錄。</p>
+
+<p><img src="/NEON/howtoflashimage/images/lsusb.png" alt="lsusb" /></p>
+
+<p>接著解壓縮 eMMC image，進入資料夾，執行燒錄指令。
+燒錄期間請勿拔除 microUSB 線或電源。</p>
+
+<div class="cols">
+<div class="col"><div class="col-title">Neon-2000-JNX</div>解壓縮：<code>tar -zxvf &lt;檔案&gt;</code></p>
+
+<table>
+<thead>
+<tr>
+<th align="center">JetPack</th>
+<th align="left">解壓後的資料夾</th>
+<th align="left">燒錄指令</th>
+<th align="left">看到這個代表完成</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">5.1.2</td>
+<td align="left"><code>NeonJNX_A3_JP512_emmc_v1.0.9</code></td>
+<td align="left"><code>sudo apt-get install sshpass</code><br><code>sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1</code></td>
+<td align="left"><code>Success</code>（約 13 分鐘）</td>
+</tr>
+
+<tr>
+<td align="center">5.0.2</td>
+<td align="left"><code>NeonJNX_A3_JP502_emmc_v1.0.7</code></td>
+<td align="left"><code>sudo apt-get install sshpass</code><br><code>sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1</code></td>
+<td align="left"><code>Success</code></td>
+</tr>
+
+<tr>
+<td align="center">4.6.1</td>
+<td align="left"><code>JNX_JP461_emmc_v1.0.5</code></td>
+<td align="left"><code>sudo ./flash.sh</code></td>
+<td align="left"><code>Flash complete (SUCCESS)</code></td>
+</tr>
+
+<tr>
+<td align="center">4.5</td>
+<td align="left"><code>JNX_JP45_v1.0.2</code></td>
+<td align="left"><code>sudo ./flash.sh</code></td>
+<td align="left"><code>Flash complete (SUCCESS)</code>（約 5 分鐘）</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="col ono"><div class="col-title">Neon-2000-ONO</div>解壓縮：<code>sudo tar -I lbzip2 -xf &lt;檔案&gt;</code></p>
+
+<table>
+<thead>
+<tr>
+<th align="center">JetPack</th>
+<th align="left">解壓後的資料夾</th>
+<th align="left">燒錄指令</th>
+<th align="left">看到這個代表完成</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">6.2 / 6.1 / 5.1.2</td>
+<td align="left"><code>mfi_jetson-orin-nano-neon2000-ono_4-&lt;L4T&gt;-rel.&lt;版本&gt;</code><br>（沒有 <code>_release</code> 字尾）</td>
+<td align="left"><code>sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 15 --network usb0</code></td>
+<td align="left"><code>Flash complete (SUCCESS)</code></td>
+</tr>
+</tbody>
+</table></div>
+
+</div>
+
+
+<p>完成後：關閉 NEON 電源，<strong>拔掉 pin 5-6 的短路帽</strong>，（JNX）確認已插入步驟 2 的 microSD 卡，再開機。
+確認版本：<code>head -n1 /etc/nv_tegra_release</code></p>
+
+<p>Jetson 燒錄的更多資訊：<a href="https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/SD/FlashingSupport.html">NVIDIA 文件</a></p>
+
+<hr />
+
+<h2 id="jnx-restore-emmc">附錄：備份與還原 JNX eMMC</h2>
+
+<ul>
+<li><p>方法 1</p>
+
+<ol>
+<li>在 Linux x86 Ubuntu 電腦下載環境：<a href="https://sftp.adlinktech.com/image/Neon-JNX/deploy.neonjnx.tar.gz（MD5:">https://sftp.adlinktech.com/image/Neon-JNX/deploy.neonjnx.tar.gz（MD5:</a> <code>d9e7e4ff4030f7d81f72c353aad6d272</code>）</li>
+<li><code>tar -zxvf deploy.neonjnx.tar.gz</code></li>
+<li><code>sudo ./flash.sh -r -k APP -G backup.img &lt;board 名稱&gt; mmcblk0p1</code>
+
+<ul>
+<li>HW A3：<code>jetson-neonjnx-a3-emmc</code></li>
+<li>HW A2：<code>jetson-xavier-nx-neonjnx-emmc</code></li>
+</ul></li>
+</ol></li>
+
+<li><p>方法 2</p>
+
+<ul>
+<li>備份</li>
+</ul>
+
+<video controls preload="metadata" width="640"><source src="https://sftp.adlinktech.com/image/EOS-JNX/sop/Backup_emmc.mp4" type="video/mp4">瀏覽器無法播放此影片，<a href="https://sftp.adlinktech.com/image/EOS-JNX/sop/Backup_emmc.mp4">下載影片</a>。</video>
+
+<pre><code>cd ~/
+mkdir mntTemp
+sudo mount /dev/mmcblk0p1 mntTemp
+cd mntTemp
+sudo tar -jcf ../customerEMMC.tbz2 *
+sync
+cd ../
+sudo umount mntTemp
+rmdir mntTemp
+</code></pre>
+
+<ul>
+<li>還原</li>
+</ul>
+
+<video controls preload="metadata" width="640"><source src="https://sftp.adlinktech.com/image/EOS-JNX/sop/Restore_emmc.mp4" type="video/mp4">瀏覽器無法播放此影片，<a href="https://sftp.adlinktech.com/image/EOS-JNX/sop/Restore_emmc.mp4">下載影片</a>。</video>
+
+<pre><code>cd ~/
+mkdir mntTemp
+sudo mount /dev/mmcblk0p1 mntTemp
+sudo tar jxf customerEMMC.tbz2 -C mntTemp
+sync
+sudo umount mntTemp
+rmdir mntTemp
+</code></pre></li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/zh-tw/neon/" title="NEONs"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/zh-tw/neon/howtocheckbootdevice/" title="如何確認開機裝置（eMMC 或 microSD）？" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1794373406"></script>
+    <script src="/js/perfect-scrollbar.min.js?1794373406"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1794373406"></script>
+    <script src="/js/jquery.sticky.js?1794373406"></script>
+    <script src="/js/featherlight.min.js?1794373406"></script>
+    <script src="/js/highlight.pack.js?1794373406"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1794373406"></script>
+    <script src="/js/learn.js?1794373406"></script>
+    <script src="/js/hugo-learn.js?1794373406"></script>
+
+    <link href="/mermaid/mermaid.css?1794373406" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1794373406"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+<style>
+#body-inner img { cursor: zoom-in; transition: opacity .15s; }
+#body-inner img:hover { opacity: .85; }
+#img-lightbox {
+  position: fixed; inset: 0; z-index: 9999;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(0,0,0,.88); cursor: zoom-out; padding: 2vmin;
+}
+#img-lightbox.open { display: flex; }
+#img-lightbox img {
+  max-width: 96vw; max-height: 94vh;
+  box-shadow: 0 4px 40px rgba(0,0,0,.6); cursor: zoom-out;
+  border-radius: 4px;
+}
+#img-lightbox .lb-hint {
+  position: fixed; top: 14px; right: 20px;
+  color: #eee; font-size: 13px; opacity: .8; user-select: none;
+}
+</style>
+<div id="img-lightbox" aria-hidden="true">
+  <span class="lb-hint">點任意處或按 Esc 關閉</span>
+  <img alt="放大圖" />
+</div>
+<script>
+(function () {
+  var box = document.getElementById('img-lightbox');
+  var big = box.querySelector('img');
+  function open(src, alt) {
+    big.src = src; big.alt = alt || '放大圖';
+    box.classList.add('open'); box.setAttribute('aria-hidden', 'false');
+  }
+  function close() {
+    box.classList.remove('open'); box.setAttribute('aria-hidden', 'true');
+    big.src = '';
+  }
+  var content = document.getElementById('body-inner');
+  if (content) {
+    content.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t && t.tagName === 'IMG') {
+        e.preventDefault();
+        open(t.currentSrc || t.src, t.alt);
+      }
+    });
+  }
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && box.classList.contains('open')) close();
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var content = document.getElementById('body-inner');
+  if (!content) return;
+  var here = location.pathname;
+  content.querySelectorAll('a[href]').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (!href || href.charAt(0) === '#' || /^(mailto|tel|javascript):/i.test(href)) return;
+    var u;
+    try { u = new URL(href, location.href); } catch (e) { return; }
+    if (u.origin === location.origin && u.pathname === here) return; 
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+  });
+})();
+</script>
+
+<style>
+#body-inner td code { white-space: normal; overflow-wrap: anywhere; }
+</style>
+
+<style>
+#body-inner .cols { display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch; margin: 12px 0 18px; }
+#body-inner .cols > .col { flex: 3 1 420px; min-width: 0; border: 2px solid #1d8ac7; border-radius: 6px; background: #f4f9fd; padding: 0 14px 10px; }
+#body-inner .cols > .col.ono { flex: 2 1 320px; border-color: #e3000f; background: #fdf5f5; }
+#body-inner .cols > .col .col-title { margin: 0 -14px 10px; padding: 6px 14px; background: #1d8ac7; color: #fff; font-weight: 700; font-size: 1.05em; border-radius: 3px 3px 0 0; }
+#body-inner .cols > .col.ono .col-title { background: #e3000f; }
+#body-inner .cols > .col table { width: 100%; background: #fff; }
+#body-inner .cols > .col.skip { color: #888; font-style: italic; }
+#body-inner .cols td, #body-inner .cols td code { font-size: 13px; }
+</style>
+
+  </body>
+</html>

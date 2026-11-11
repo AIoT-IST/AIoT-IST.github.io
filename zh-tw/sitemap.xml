@@ -115,6 +115,48 @@
   </url>
   
   <url>
+    <loc>https://aiot-ist.github.io/zh-tw/neon/howtoflashimage/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/neon/howtoflashimage/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/neon/howtoflashimage/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/neon/howtocheckbootdevice/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/neon/howtocheckbootdevice/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/neon/howtocheckbootdevice/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/neon/jetpacksupport/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/neon/jetpacksupport/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/neon/jetpacksupport/"
+                />
+  </url>
+  
+  <url>
     <loc>https://aiot-ist.github.io/zh-tw/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -153,6 +195,20 @@
                 rel="alternate"
                 hreflang="zh-tw"
                 href="https://aiot-ist.github.io/zh-tw/euresys-grab-card/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aiot-ist.github.io/zh-tw/neon/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aiot-ist.github.io/neon/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://aiot-ist.github.io/zh-tw/neon/"
                 />
   </url>
   

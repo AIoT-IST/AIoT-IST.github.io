@@ -11,5 +11,9 @@
 - [操作指南](https://aiot-ist.github.io/zh-tw/supercat/how-to/) — SuperCAT 一步步的操作指南 — 完成一件事,從外部 IO、尋原點到韌體與授權。
 - [疑難排解](https://aiot-ist.github.io/zh-tw/supercat/troubleshooting/) — SuperCAT 常見故障的系統化排查 — 從症狀到根因,一步步縮小範圍。
 - [使用 Euresys Coaxlink 搭配端子板進行相機觸發](https://aiot-ist.github.io/zh-tw/euresys-grab-card/cxp-for-camera-triggering-with-encoder/)
+- [如何燒錄 image？](https://aiot-ist.github.io/zh-tw/neon/howtoflashimage/)
+- [如何確認開機裝置（eMMC 或 microSD）？](https://aiot-ist.github.io/zh-tw/neon/howtocheckbootdevice/)
+- [JetPack 支援版本](https://aiot-ist.github.io/zh-tw/neon/jetpacksupport/)
 - [Euresys-Grab-cards](https://aiot-ist.github.io/zh-tw/euresys-grab-card/)
+- [NEONs](https://aiot-ist.github.io/zh-tw/neon/)
 
